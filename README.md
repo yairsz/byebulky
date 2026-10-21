@@ -20,7 +20,8 @@ Verified, city-by-city ways to get rid of couches, mattresses, furniture, and ap
 ## LoadUp placeholder
 `build.py` → `loadup_slot()` renders `<!-- LOADUP_WIDGET_PLACEHOLDER -->` on city and guide pages until `site.json.loadup_widget_html` holds an approved official embed. When filled, it renders with an affiliate label. Also update the disclosure text in `about()` at that point.
 
-## Hosting (not deployed; needs Yair's approval)
-- GitHub Pages: free for public repos (`gh` is logged in as `yairsz`, with `repo` scope). Push `site/` (or build with Actions) and point a custom domain at it.
-- Cloudflare Pages: free tier allows 500 builds/month. Direct upload of `site/` is possible with `wrangler` (not installed). Needs a Cloudflare account.
-- Netlify free: 300 credits/month, and each production deploy costs 15 credits, so nightly deploys (~450 credits/month) would exceed it. Not recommended.
+## Hosting (live)
+- Repo: https://github.com/yairsz/byebulky (public). Site: https://yairsz.github.io/byebulky/
+- Pages source: `gh-pages` branch (root). `./publish.sh` builds and force-pushes `site/` there. GitHub's built-in `pages-build-deployment` run then deploys it.
+- Why not a custom Actions workflow: the box's `gh` token lacks the `workflow` scope, so pushing `.github/workflows/*` is rejected. A ready workflow is in `docs-ops/pages-workflow.yml.disabled`. To use it later: `gh auth refresh -s workflow` (interactive, Yair), move it to `.github/workflows/pages.yml`, and switch Pages to "GitHub Actions" in Settings.
+- Custom domain: see DOMAIN.md (not set yet; byebulky.com not registered).
