@@ -1,0 +1,7 @@
+# build output (GitHub Actions rebuilds it)
+site/
+# raw page snapshots are kept on the box only (third-party content; used for verification)
+research/*/
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,10 @@
+{
+  "site_name": "ByeBulky",
+  "tagline": "Verified ways to get rid of big stuff, city by city.",
+  "base_url": "https://yairsz.github.io/byebulky",
+  "contact_email": "",
+  "loadup_widget_html": "",
+  "loadup_widget_note": "LEAVE EMPTY until Yair has an approved LoadUp (Awin or Brand Builder) account. Paste only the official embed/link code here. Never add a guessed or fake affiliate link.",
+  "cname": "byebulky.com",
+  "base_url_note": "Switch base_url to https://byebulky.com once the custom domain is live (canonical URLs + sitemap use it). Links are relative, so nothing else changes."
+}

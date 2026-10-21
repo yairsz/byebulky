@@ -1,0 +1,35 @@
+# Content queue (priority order)
+Tick `[x]` when published, and log it in published-log.md. Keep about 30 items queued. Priority = evident demand (Reddit/X threads in /workspace/niche-research/report.md) × quality of official data available.
+
+- [x] Boston city page (/boston/), done 2026-10-21
+- [x] How to get rid of a mattress in Boston (/boston/mattress/), done 2026-10-21
+- [ ] How to get rid of a couch/sofa in Boston (/boston/couch/): reuse curbside furniture, ReSupply, Furnishing Hope, Household Goods; add a note on who refuses sofas (Habitat: slip-covered sofas/sofa beds; Thrift Shop of Boston)
+- [ ] How to get rid of a refrigerator / AC / TV in Boston (/boston/appliances/): City special collection + Habitat (<8 yrs) + Household Goods (<10 yrs)
+- [ ] Boston: verify and add The Furniture Trust, St. Vincent de Paul Boston, Goodwill Mass furniture policy, Boomerangs (sites failed to load 2026-10-21)
+- [ ] Cambridge, MA city page (Cambridge DPW bulky item / mattress rules)
+- [ ] Somerville, MA city page
+- [ ] Dallas, TX city page (Dallas Sanitation bulk & brush; Dallas Area Habitat ReStore pickup page)
+- [ ] Plano, TX city page (Plano bulk trash; Habitat Collin County free pickup; Salvation Army)
+- [ ] San Antonio, TX city page (SA Solid Waste brush/bulky; Habitat; Arms of Hope; Salvation Army)
+- [ ] New York City page (DSNY bulk items & mattress bagging rule; Big Reuse; Habitat NYC ReStore)
+- [ ] How to get rid of a mattress in NYC
+- [ ] Omaha, NE city page (The Furniture Project; Youth Mart; New Life Thrift)
+- [ ] Northern New Jersey (city TBD) page (Interfaith Furnishings; Habitat ReStores)
+- [ ] Roseville / Sacramento, CA page
+- [ ] Cincinnati, OH page (New Life Furniture Bank free pickup)
+- [ ] Chicago, IL page (Streets & San bulk; mattress rules)
+- [ ] Philadelphia, PA page (Streets Dept bulk; sanitation convenience centers)
+- [ ] Washington, DC page (DPW bulk appointment)
+- [ ] Seattle, WA page (SPU bulky item fee pickup)
+- [ ] Austin, TX page (Austin Resource Recovery bulk)
+- [ ] Houston, TX page (Solid Waste heavy trash schedule)
+- [ ] Denver, CO page (large item pickup)
+- [ ] Atlanta, GA page
+- [ ] Phoenix, AZ page (bulk trash schedule)
+- [ ] Los Angeles, CA page (LASAN bulky item free pickup via 311)
+- [ ] San Diego, CA page
+- [ ] Minneapolis, MN page
+- [ ] Portland, OR page
+- [ ] Nationwide guide: "Which charities still pick up furniture?" (Salvation Army, Habitat ReStores, ReSupply; sources only)
+- [ ] Nationwide guide: "Mattress disposal rules by state" (start with states with laws: MA ban, CA/CT/RI/OR mattress stewardship programs, each sourced)
+- [ ] Boston: "Moving out of a Boston apartment on Sept 1: getting rid of furniture" (curbside rules only; no invented dates)

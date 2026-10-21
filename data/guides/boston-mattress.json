@@ -1,0 +1,48 @@
+{
+  "path": "boston/mattress",
+  "city": "boston",
+  "short": "Mattress",
+  "last_verified": "2026-10-21",
+  "title": "How to Get Rid of a Mattress in Boston (City Pickup, Donation & Haulers)",
+  "meta_description": "Mattresses are banned from Massachusetts trash. Here's how to book Boston's curbside mattress pickup, the rules for 7+ unit buildings, and donation and hauler options, with sources.",
+  "h1": "How to get rid of a mattress in Boston",
+  "intro": "Mattresses and box springs can't go out with regular trash in Boston, because Massachusetts bans them from disposal. Which option you use mostly depends on how many units your building has.",
+  "sections": [
+    {
+      "h": "Building with 6 units or fewer: book the City pickup",
+      "p": "The City of Boston collects mattresses and box springs curbside by appointment only, for buildings with 6 units or fewer. Put it at the curb by 6 a.m. on your appointment day (or after 5 p.m. the night before). If it's soiled or has bed bugs, bag and seal it completely. Don't cut or crush it. Each address can have up to 10 items a calendar year."
+    },
+    {
+      "h": "Building with 7 or more units",
+      "p": "The City does not collect mattresses from buildings with more than six units. Ask your property manager, or use one of the private mattress haulers the City lists (below)."
+    },
+    {
+      "h": "Donating a mattress",
+      "p": "Some furniture banks take clean mattresses with no stains or rips, such as Furnishing Hope and Household Goods below. Many donation outlets, including the Habitat Greater Boston ReStore, don't take mattresses at all."
+    },
+    {
+      "h": "Buying a new one?",
+      "p": "The City suggests asking the seller whether it will take your old mattress for recycling when it delivers the new one."
+    }
+  ],
+  "listing_ids": [
+    "boston-mattress-recycling",
+    "furnishing-hope",
+    "household-goods-acton",
+    "resupply-boston",
+    "saatva-mattress-removal",
+    "mattress-casa-blanca",
+    "mattress-handup",
+    "mattress-classic-cleanouts",
+    "mattress-green-mattress",
+    "mattress-raw-material-recovery",
+    "mattress-tough-stuff",
+    "mattress-mattress-pro",
+    "mattress-junk-dispatch",
+    "mattress-marvin",
+    "mattress-burns",
+    "mattress-lug-away",
+    "mattress-cc-junk",
+    "mattress-truck-taxi"
+  ]
+}
