@@ -5,6 +5,7 @@
   "contact_email": "",
   "loadup_widget_html": "",
   "loadup_widget_note": "LEAVE EMPTY until Yair has an approved LoadUp (Awin or Brand Builder) account. Paste only the official embed/link code here. Never add a guessed or fake affiliate link.",
-  "cname": "byebulky.com",
-  "base_url_note": "Switch base_url to https://byebulky.com once the custom domain is live (canonical URLs + sitemap use it). Links are relative, so nothing else changes."
+  "base_url_note": "Switch base_url to https://byebulky.com once the custom domain is live (canonical URLs + sitemap use it). Links are relative, so nothing else changes.",
+  "cname_pending": "byebulky.com",
+  "cname_note": "Do NOT rename cname_pending -> cname until DNS for byebulky.com points to GitHub Pages. With gh-pages branch publishing, a CNAME file makes GitHub set the custom domain and redirect yairsz.github.io/byebulky there."
 }
