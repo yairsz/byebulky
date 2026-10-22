@@ -1,0 +1,38 @@
+{
+  "path": "boston/couch",
+  "city": "boston",
+  "short": "Couch",
+  "last_verified": "2026-10-21",
+  "title": "How to Get Rid of a Couch in Boston (Curbside, Donation, Haulers)",
+  "meta_description": "Boston lets you put furniture out with regular trash. Here's how that works, which charities take sofas (and which don't), and paid pickup options, with sources.",
+  "h1": "How to get rid of a couch or sofa in Boston",
+  "intro": "Unlike mattresses, a couch doesn't need a special appointment in Boston: the City says furniture can go out with your normal curbside trash and recycling. If it's still in good shape, a few local furniture banks and charities will take it, but several donation outlets refuse sofas, so check the rules below first.",
+  "sections": [
+    {
+      "h": "Free option: put it out on trash day",
+      "p": "The City of Boston says furniture can be put out with your normal curbside trash and recycling on your scheduled collection day, placed neatly next to your trash barrels. Trash must be at the curb by 6 a.m., and not before 5 p.m. the evening before. The City picks up curbside only, not from inside your home or on private property. The City page doesn't mention a fee; call 311 if you're unsure. If you live in a building with 7 or more units, check the City's large-building page and ask your property manager."
+    },
+    {
+      "h": "Donating a couch that's in good shape",
+      "p": "Household Goods in Acton lists couches, sofa beds, and futons among the furniture it accepts, as long as items are clean, complete, and not torn or stained. Furnishing Hope of Massachusetts accepts sofas and upholstered chairs with no stains, odors, pet hair, or major wear, but its pickup requires at least six substantial furniture items and it requests a donation. The Salvation Army's national pickup FAQ lists sofas, though it says accepted items vary by location, so call 800-SA-TRUCK."
+    },
+    {
+      "h": "Who won't take a couch",
+      "p": "The Habitat for Humanity Greater Boston ReStore accepts some upholstered furniture (not ripped, worn, broken, dated, or faded) but does not accept sofa beds or sofas with slip covers. The Thrift Shop of Boston does not accept couches, futons, or sleep sofas, or chairs with upholstery stains, tears, or sun damage."
+    },
+    {
+      "h": "Need someone to carry it out?",
+      "p": "The City won't come inside, so if your couch is upstairs you'll need help. ReSupply arranges paid donation pickups in Boston, with teams that go up and down stairs; its Boston page lists sofas and bulky furniture starting at $99, plus a separate booking fee, with pricing varying by location and items. LoadUp, a junk removal service, lists couch removal from $85 on its national page and offers an inside-the-home option. Get the final price before booking."
+    }
+  ],
+  "listing_ids": [
+    "boston-curbside-furniture",
+    "household-goods-acton",
+    "furnishing-hope",
+    "salvation-army-satruck",
+    "habitat-greater-boston-restore",
+    "thrift-shop-of-boston",
+    "resupply-boston",
+    "loadup"
+  ]
+}

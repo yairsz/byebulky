@@ -3,7 +3,7 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 
 - [x] Boston city page (/boston/), done 2026-10-21
 - [x] How to get rid of a mattress in Boston (/boston/mattress/), done 2026-10-21
-- [ ] How to get rid of a couch/sofa in Boston (/boston/couch/): reuse curbside furniture, ReSupply, Furnishing Hope, Household Goods; add a note on who refuses sofas (Habitat: slip-covered sofas/sofa beds; Thrift Shop of Boston)
+- [x] How to get rid of a couch/sofa in Boston (/boston/couch/), done 2026-10-21: reuse curbside furniture, ReSupply, Furnishing Hope, Household Goods; add a note on who refuses sofas (Habitat: slip-covered sofas/sofa beds; Thrift Shop of Boston)
 - [ ] How to get rid of a refrigerator / AC / TV in Boston (/boston/appliances/): City special collection + Habitat (<8 yrs) + Household Goods (<10 yrs)
 - [ ] Boston: verify and add The Furniture Trust, St. Vincent de Paul Boston, Goodwill Mass furniture policy, Boomerangs (sites failed to load 2026-10-21)
 - [ ] Cambridge, MA city page (Cambridge DPW bulky item / mattress rules)
@@ -33,3 +33,4 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [ ] Nationwide guide: "Which charities still pick up furniture?" (Salvation Army, Habitat ReStores, ReSupply; sources only)
 - [ ] Nationwide guide: "Mattress disposal rules by state" (start with states with laws: MA ban, CA/CT/RI/OR mattress stewardship programs, each sourced)
 - [ ] Boston: "Moving out of a Boston apartment on Sept 1: getting rid of furniture" (curbside rules only; no invented dates)
+- [ ] Boston: how to get rid of a bed frame or dresser (/boston/bed-frame/): curbside furniture + Habitat/Household Goods/Furnishing Hope rules
