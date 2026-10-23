@@ -38,12 +38,20 @@ def val(s):
 def base_url():
     return os.environ.get("SITE_BASE_URL", CFG["base_url"]).rstrip("/")
 
+def ga_snippet():
+    gid = (CFG.get("ga_measurement_id") or "").strip()
+    if not gid:
+        return ""
+    return f"""
+<script async src="https://www.googletagmanager.com/gtag/js?id={e(gid)}"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){{dataLayer.push(arguments);}}gtag('js', new Date());gtag('config', '{e(gid)}');</script>"""
+
 def page(title, desc, path, body, jsonld=None):
     url = base_url() + path
     ld = f'<script type="application/ld+json">{json.dumps(jsonld)}</script>' if jsonld else ""
     year = datetime.date.today().year
     return f"""<!doctype html>
-<html lang="en"><head>
+<html lang="en"><head>{ga_snippet()}
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
@@ -172,6 +180,8 @@ def about():
 </ul>
 <h2>Affiliate disclosure</h2>
 <p>ByeBulky is free to use and is meant to earn money through affiliate or referral partnerships, for example a commission when you book a paid junk pickup through a partner link. <strong>Right now ByeBulky has no affiliate relationships, and no link on this site earns a commission.</strong> If that changes, affiliate links and partner booking widgets will be clearly labeled where they appear. Free and City options will always be listed, and placement will never be sold in a way that hides them.</p>
+<h2>Analytics</h2>
+<p>ByeBulky uses Google Analytics to collect anonymous traffic statistics, such as which pages are visited, so we can see what's useful.</p>
 <h2>Corrections</h2>
 <p>Rules change often. If a listing is wrong or out of date, let us know and we'll re-check it against the source and update the date.</p>"""
     return page("About ByeBulky: how we verify listings & affiliate disclosure",
