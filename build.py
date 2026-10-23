@@ -5,6 +5,8 @@ Data:  data/cities/<slug>.json      -> /<slug>/
        data/guides/<slug>.json      -> /<city>/<guide-slug>/  (item guides that reuse city listings)
 """
 import json, html, shutil, datetime, re, os
+from ytembed import embed as yt_embed, video_ld
+YT_CHANNEL = "https://www.youtube.com/@ByeBulkyGuide"
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -48,7 +50,8 @@ def ga_snippet():
 
 def page(title, desc, path, body, jsonld=None):
     url = base_url() + path
-    ld = f'<script type="application/ld+json">{json.dumps(jsonld)}</script>' if jsonld else ""
+    lds = [x for x in (jsonld, video_ld(path)) if x]
+    ld = "".join(f'<script type="application/ld+json">{json.dumps(x)}</script>' for x in lds)
     year = datetime.date.today().year
     return f"""<!doctype html>
 <html lang="en"><head>{ga_snippet()}
@@ -65,7 +68,7 @@ def page(title, desc, path, body, jsonld=None):
 <main><div class="wrap">
 {body}
 </div></main>
-<footer><div class="wrap">© {year} {e(CFG['site_name'])}. Information is gathered from official sources and can change. Always confirm with the organization before you haul anything. <a href="{U('/about/')}">Affiliate disclosure &amp; how we verify</a>.</div></footer>
+<footer><div class="wrap">© {year} {e(CFG['site_name'])}. Information is gathered from official sources and can change. Always confirm with the organization before you haul anything. <a href="{U('/about/')}">Affiliate disclosure &amp; how we verify</a>. <a href="{YT_CHANNEL}" rel="noopener" target="_blank">ByeBulky on YouTube</a>.</div></footer>
 </body></html>"""
 
 def listing_card(l):
@@ -151,7 +154,7 @@ def guide_page(g, city):
     secs = "".join(f"<h2>{e(s['h'])}</h2><p>{e(s['p'])}</p>" for s in g.get("sections", []))
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › <a href="{U('/' + city['slug'] + '/')}">{e(city['name'])}</a> › {e(g['short'])}</p>
 <h1>{e(g['h1'])}</h1><p class="lead">{e(g['intro'])}</p><p class="meta">Last verified {e(g['last_verified'])}</p>
-{secs}{loadup_slot()}<h2>Options</h2>{''.join(listing_card(l) for l in ls)}
+{secs}{yt_embed('/' + g['path'] + '/', YT_CHANNEL, 'ByeBulky')}{loadup_slot()}<h2>Options</h2>{''.join(listing_card(l) for l in ls)}
 <p><a href="{U('/' + city['slug'] + '/')}">See all {e(city['name'])} options →</a></p>"""
     return page(g["title"], g["meta_description"], f"/{g['path']}/", body)
 
@@ -222,6 +225,8 @@ def main():
         return today
     urls = "".join(f"<url><loc>{base}{p}</loc><lastmod>{lastmod(p)}</lastmod></url>" for p in pages)
     (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
+    if CFG.get("indexnow_key"):  # IndexNow (Bing/Yandex) key file must sit at the site root
+        (OUT / f"{CFG['indexnow_key']}.txt").write_text(CFG["indexnow_key"])
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n")
     if CFG.get("cname"):
         (OUT / "CNAME").write_text(CFG["cname"].strip() + "\n")
