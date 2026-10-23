@@ -49,3 +49,8 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. One 
 ## Re-verification cadence
 - City pages: re-check every 90 days, or right away if someone reports a change.
 - Anything with a price: re-check every 60 days.
+
+## After publishing (added 2026-10-23)
+- Submit new/changed URLs to IndexNow: POST https://api.indexnow.org/indexnow with {"host","key": site.json indexnow_key, "keyLocation": "https://<host>/<key>.txt", "urlList": [...]} (expect 200/202).
+- Search Console already has the sitemap; for a new page optionally check it with the URL Inspection API (developer@ ADC, quota project plenary-totem-501619-e6).
+- Videos: add an entry to data/videos.json keyed by page path to embed a lazy YouTube player + VideoObject JSON-LD.
