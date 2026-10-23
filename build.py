@@ -50,7 +50,7 @@ def ga_snippet():
 
 def page(title, desc, path, body, jsonld=None):
     url = base_url() + path
-    lds = [x for x in (jsonld, video_ld(path)) if x]
+    lds = [x for x in ((jsonld if isinstance(jsonld, list) else [jsonld]) + [video_ld(path)]) if x]
     ld = "".join(f'<script type="application/ld+json">{json.dumps(x)}</script>' for x in lds)
     year = datetime.date.today().year
     return f"""<!doctype html>
@@ -114,6 +114,23 @@ def loadup_slot():
         return "<!-- LOADUP_WIDGET_PLACEHOLDER: intentionally empty until an approved LoadUp affiliate/Brand Builder embed exists (see site.json). -->"
     return f'<section class="card" id="book-a-haul"><h2>Book a paid junk pickup</h2><p class="meta">Affiliate link: we may earn a commission. See our <a href="{U('/about/')}">disclosure</a>.</p>{w}</section>'
 
+def faq_ld(qas):
+    if not qas:
+        return None
+    return {"@context": "https://schema.org", "@type": "FAQPage",
+            "mainEntity": [{"@type": "Question", "name": x["q"],
+                            "acceptedAnswer": {"@type": "Answer", "text": x["a"]}} for x in qas]}
+
+def crumbs_ld(items):
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList",
+            "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": base_url() + u}
+                                for i, (n, u) in enumerate(items)]}
+
+def qa_block(qas):
+    if not qas:
+        return ""
+    return '<div class="qa">' + "".join(f"<div><strong>{e(x['q'])}</strong>{e(x['a'])}</div>" for x in qas) + "</div>"
+
 def city_page(c):
     set_page(f"/{c['slug']}/")
     used_types = [t for t in TYPES if any(l["type"] == t for l in c["listings"])]
@@ -143,7 +160,8 @@ def city_page(c):
 {FILTER_JS}"""
     ld = {"@context": "https://schema.org", "@type": "ItemList", "name": c["title"],
           "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": l["name"]} for i, l in enumerate(c["listings"])]}
-    return page(c["title"], c["meta_description"], f"/{c['slug']}/", body, ld)
+    lds = [ld, faq_ld(c.get("quick_answers")), crumbs_ld([("Home", "/"), (c["name"], f"/{c['slug']}/")])]
+    return page(c["title"], c["meta_description"], f"/{c['slug']}/", body, lds)
 
 def guide_page(g, city):
     set_page(f"/{g['path']}/")
@@ -154,9 +172,13 @@ def guide_page(g, city):
     secs = "".join(f"<h2>{e(s['h'])}</h2><p>{e(s['p'])}</p>" for s in g.get("sections", []))
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › <a href="{U('/' + city['slug'] + '/')}">{e(city['name'])}</a> › {e(g['short'])}</p>
 <h1>{e(g['h1'])}</h1><p class="lead">{e(g['intro'])}</p><p class="meta">Last verified {e(g['last_verified'])}</p>
-{secs}{yt_embed('/' + g['path'] + '/', YT_CHANNEL, 'ByeBulky')}{loadup_slot()}<h2>Options</h2>{''.join(listing_card(l) for l in ls)}
+{qa_block(g.get("quick_answers"))}{secs}{yt_embed('/' + g['path'] + '/', YT_CHANNEL, 'ByeBulky')}{loadup_slot()}<h2>Options</h2>{''.join(listing_card(l) for l in ls)}
 <p><a href="{U('/' + city['slug'] + '/')}">See all {e(city['name'])} options →</a></p>"""
-    return page(g["title"], g["meta_description"], f"/{g['path']}/", body)
+    for x in g.get("quick_answers", []):
+        assert x.get("q") and x.get("a"), f"guide {g['path']} has an empty quick answer"
+    lds = [faq_ld(g.get("quick_answers")),
+           crumbs_ld([("Home", "/"), (city["name"], f"/{city['slug']}/"), (g["short"], f"/{g['path']}/")])]
+    return page(g["title"], g["meta_description"], f"/{g['path']}/", body, lds)
 
 def home(cities):
     set_page("/")
