@@ -1,0 +1,41 @@
+{
+  "path": "boston/appliances",
+  "city": "boston",
+  "short": "Appliances",
+  "last_verified": "2026-10-22",
+  "title": "Get Rid of a Fridge, AC, or TV in Boston (Free Pickup + Donation)",
+  "meta_description": "Boston picks up fridges, ACs, and TVs free by appointment, but not in the trash. Here are the City's rules, who takes working appliances, and paid haulers.",
+  "h1": "How to get rid of a refrigerator, air conditioner, or TV in Boston",
+  "intro": "Fridges, freezers, air conditioners, dehumidifiers, and old TVs and monitors can't just go out with the trash in Boston. The City says Massachusetts law bans items containing Freon or cathode ray tubes (CRTs) from the trash, so Boston runs a separate special item collection by appointment. If your appliance still works, a few local charities will take it instead.",
+  "sections": [
+    {
+      "h": "Which items need the City's special collection",
+      "p": "The City lists refrigerators and freezers, water coolers, ice makers, air conditioners, and dehumidifiers (items with Freon), plus televisions, laptops, and computer monitors (items with CRTs). Dishwashers, water heaters, and plumbing fixtures are not part of this program; the City says to donate them or hire a private hauler. The City does not collect commercial-grade items."
+    },
+    {
+      "h": "How the free City pickup works",
+      "p": "Schedule an appointment online or call 311 (617-635-4500); the City does not collect special items without one. Put the item where your trash normally goes (curbside, public alley, or dumpster area) by 6 a.m. on your appointment day, or after 5 p.m. the night before, somewhere publicly accessible and not on private property. The City page doesn't mention a fee. Limits: 5 items per appointment and 10 per calendar year. Cancel before 12 p.m. the day before. If it's missed, call 311 within 24 hours."
+    },
+    {
+      "h": "Fridge and TV prep rules (or it won't be taken)",
+      "p": "Remove all doors from fridges and freezers, including mini fridges, and set the doors next to your trash bin for regular collection. Take out all food. Fridges or freezers with doors attached or food inside will not be collected. Don't smash appliances or electronics. TVs and computers must be freestanding, not boxed, and wipe your data from computers first."
+    },
+    {
+      "h": "Donating a working appliance",
+      "p": "The Habitat for Humanity Greater Boston ReStore in West Roxbury accepts appliances less than eight years old, including refrigerators, washers, dryers, free-standing stoves, cooktops, and microwaves, and dishwashers only if never installed; it doesn't take in-wall stoves, and everything must work. Household Goods in Acton takes refrigerators, washers, electric dryers, and air conditioners up to 18\" x 30\" x 24\" if newer than 10 years, plus flat-screen TVs under 55\" and under 10 years old with an attached base and power cord. The Thrift Shop of Boston takes smart flat-screen TVs and small appliances but not older, CRT, or rear-projection TVs. The Salvation Army's national FAQ says it generally takes working, non-built-in appliances such as ACs, microwaves, TVs, and washers and dryers, but not gas appliances or TVs older than 5 years; rules vary by location, so call 800-SA-TRUCK."
+    },
+    {
+      "h": "Paid pickup from inside your home",
+      "p": "The City only collects from the curb, so if you can't move the appliance yourself you'll need help. ReSupply lists appliances among the items it picks up for donation in Boston, with teams that handle stairs; it's a paid service with a separate booking fee. LoadUp, a junk removal service, lists TV disposal from $80, fridge disposal from $115, and washer removal from $85 on its national page, with the final price set by ZIP code, item, and pickup conditions. Confirm the price before you book."
+    }
+  ],
+  "listing_ids": [
+    "boston-special-items",
+    "habitat-greater-boston-restore",
+    "household-goods-acton",
+    "thrift-shop-of-boston",
+    "salvation-army-satruck",
+    "resupply-boston",
+    "loadup"
+  ]
+}
