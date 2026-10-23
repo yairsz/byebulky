@@ -181,7 +181,7 @@ def about():
 <h2>Affiliate disclosure</h2>
 <p>ByeBulky is free to use and is meant to earn money through affiliate or referral partnerships, for example a commission when you book a paid junk pickup through a partner link. <strong>Right now ByeBulky has no affiliate relationships, and no link on this site earns a commission.</strong> If that changes, affiliate links and partner booking widgets will be clearly labeled where they appear. Free and City options will always be listed, and placement will never be sold in a way that hides them.</p>
 <h2>Analytics</h2>
-<p>ByeBulky uses Google Analytics to collect anonymous traffic statistics, such as which pages are visited, so we can see what's useful.</p>
+<p>ByeBulky uses Google Analytics to collect aggregate traffic statistics, such as which pages are visited, so we can see what's useful. It doesn't collect your name or email, though Google may set cookies to tell visits apart.</p>
 <h2>Corrections</h2>
 <p>Rules change often. If a listing is wrong or out of date, let us know and we'll re-check it against the source and update the date.</p>"""
     return page("About ByeBulky: how we verify listings & affiliate disclosure",
