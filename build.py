@@ -5,7 +5,8 @@ Data:  data/cities/<slug>.json      -> /<slug>/
        data/guides/<slug>.json      -> /<city>/<guide-slug>/  (item guides that reuse city listings)
 """
 import json, html, shutil, datetime, re, os
-from ytembed import embed as yt_embed, video_ld
+from ytembed import embed as yt_embed, video_ld, VIDEOS
+import privacy
 YT_CHANNEL = "https://www.youtube.com/@ByeBulkyGuide"
 from pathlib import Path
 
@@ -71,7 +72,7 @@ def page(title, desc, path, body, jsonld=None):
 <main><div class="wrap">
 {body}
 </div></main>
-<footer><div class="wrap">© {year} {e(CFG['site_name'])}. Information is gathered from official sources and can change. Always confirm with the organization before you haul anything. <a href="{U('/about/')}">Affiliate disclosure &amp; how we verify</a>. <a href="{YT_CHANNEL}" rel="noopener" target="_blank">ByeBulky on YouTube</a>.</div></footer>
+<footer><div class="wrap">© {year} {e(CFG['site_name'])}. Information is gathered from official sources and can change. Always confirm with the organization before you haul anything. <a href="{U('/about/')}">Affiliate disclosure &amp; how we verify</a>. <a href="{U('/privacy/')}">Privacy policy</a>. <a href="{YT_CHANNEL}" rel="noopener" target="_blank">ByeBulky on YouTube</a>.</div></footer>
 </body></html>"""
 
 def listing_card(l):
@@ -209,11 +210,46 @@ def about():
 <h2>Affiliate disclosure</h2>
 <p>ByeBulky is free to use and is meant to earn money through affiliate or referral partnerships, for example a commission when you book a paid junk pickup through a partner link. <strong>Right now ByeBulky has no affiliate relationships, and no link on this site earns a commission.</strong> If that changes, affiliate links and partner booking widgets will be clearly labeled where they appear. Free and City options will always be listed, and placement will never be sold in a way that hides them.</p>
 <h2>Analytics</h2>
-<p>ByeBulky uses Google Analytics to collect aggregate traffic statistics, such as which pages are visited, so we can see what's useful. It doesn't collect your name or email, though Google may set cookies to tell visits apart.</p>
+<p>ByeBulky uses Google Analytics to collect aggregate traffic statistics, such as which pages are visited, so we can see what's useful. It doesn't collect your name or email, though Google may set cookies to tell visits apart. Details are in our <a href="../privacy/">privacy policy</a>.</p>
 <h2>Corrections</h2>
 <p>Rules change often. If a listing is wrong or out of date, let us know and we'll re-check it against the source and update the date.</p>"""
     return page("About ByeBulky: how we verify listings & affiliate disclosure",
                 "How ByeBulky verifies every listing against official sources, and how the site makes money (affiliate disclosure).", "/about/", body)
+
+def privacy_page():
+    set_page("/privacy/")
+    vids = [(VIDEOS[k].get("heading", k).split(" (")[0], U(k)) for k in sorted(VIDEOS)]
+    aff = """<h2>Affiliate links</h2>
+<p><strong>ByeBulky has no affiliate relationships right now, and no link on this site earns a commission or carries an affiliate or tracking code.</strong> Because there are no affiliate links, the site sets no affiliate cookies. If we add affiliate links or a partner booking widget later, they'll be labeled where they appear, explained on our <a href="%s">about page</a>, and described here before they go live.</p>""" % U("/about/")
+    body = privacy.body(CFG["site_name"], "byebulky.com", (CFG.get("ga_measurement_id") or "").strip(), vids, aff,
+                        "City pages have a filter box and a type menu for narrowing the list.")
+    return page("Privacy policy | ByeBulky",
+                "What ByeBulky collects (Google Analytics, click-to-play YouTube videos, GitHub Pages hosting logs), what it doesn't, and how to opt out.",
+                "/privacy/", body)
+
+def check_links(out):
+    """Fail the build if any internal href/src in the generated site points at a file that doesn't exist."""
+    import posixpath
+    from urllib.parse import urlparse as up, unquote
+    sub = up(base_url()).path.rstrip("/")
+    bad = []
+    for f in out.rglob("*.html"):
+        r = str(f.parent.relative_to(out)); rel_dir = "/" + ("" if r == "." else r)
+        for u in re.findall(r'(?:href|src)="([^"]+)"', f.read_text()):
+            u = html.unescape(u)
+            if re.match(r"^(?:[a-z][a-z0-9+.-]*:|//|#)", u, re.I): continue
+            path = unquote(u.split("#")[0].split("?")[0])
+            if not path: continue
+            if path.startswith("/"):
+                if sub and path.startswith(sub + "/"): path = path[len(sub):]
+                tgt = posixpath.normpath(path)
+            else:
+                tgt = posixpath.normpath(posixpath.join(rel_dir, path))
+            t = out / tgt.lstrip("/")
+            if not (t.is_file() or (t / "index.html").is_file()):
+                bad.append(f"{f.relative_to(out)} -> {u}")
+    assert not bad, "Broken internal links:\n" + "\n".join(bad)
+    return True
 
 def load_all():
     cities = [json.loads(p.read_text()) for p in sorted((ROOT / "data/cities").glob("*.json"))]
@@ -225,9 +261,9 @@ LLMS_SUMMARY = (CFG["tagline"] + " A directory of real options for getting rid o
 LLMS_NOTES = ["Every listing comes from the organization's own website or an official government page, links to its sources, "
               "and shows the date it was last verified. When a source doesn't state something, the listing says "
               f'"{NS}". ByeBulky publishes no reviews or ratings.']
-LLMS_SECTIONS = [("Cities", lambda p: p.count("/") == 2 and p not in ("/", "/about/")),
+LLMS_SECTIONS = [("Cities", lambda p: p.count("/") == 2 and p not in ("/", "/about/", "/privacy/")),
                  ("Item guides", lambda p: p.count("/") == 3),
-                 ("Home and about", lambda p: p in ("/", "/about/"))]
+                 ("Home, about and privacy", lambda p: p in ("/", "/about/", "/privacy/"))]
 
 # Search and AI-answer crawlers we explicitly welcome (one robots.txt group, RFC 9309).
 # The catch-all group below allows everyone else too; this list just makes intent explicit.
@@ -262,7 +298,7 @@ def main():
     if OUT.exists(): shutil.rmtree(OUT)
     OUT.mkdir()
     shutil.copytree(ROOT / "static", OUT / "static")
-    pages = {"/": home(cities), "/about/": about()}
+    pages = {"/": home(cities), "/about/": about(), "/privacy/": privacy_page()}
     for c in cities: pages[f"/{c['slug']}/"] = city_page(c)
     bycity = {c["slug"]: c for c in cities}
     for g in GUIDES: pages[f"/{g['path']}/"] = guide_page(g, bycity[g["city"]])
@@ -290,7 +326,8 @@ def main():
         shutil.copyfile(ROOT / "BingSiteAuth.xml", OUT / "BingSiteAuth.xml")
     if CFG.get("cname"):
         (OUT / "CNAME").write_text(CFG["cname"].strip() + "\n")
-    print(f"Built {len(pages)} pages, {sum(len(c['listings']) for c in cities)} listings -> {OUT}")
+    check_links(OUT)
+    print(f"Built {len(pages)} pages (internal links OK), {sum(len(c['listings']) for c in cities)} listings -> {OUT}")
 
 if __name__ == "__main__":
     main()
