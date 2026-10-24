@@ -70,11 +70,15 @@ def webpage_ld(title, desc, path):
                          "url": base_url() + "/", "publisher": org_ld()},
             "publisher": {"@id": base_url() + "/#org"}}
 
+# Hand-written complete meta descriptions for pages whose long description would otherwise be cut mid-sentence.
+# Reworded only from the page's own description; no new facts. Keep <= 158 chars.
+META_DESC = {'/boston/mattress/': "Mattresses are banned from Massachusetts trash. Book Boston's curbside mattress pickup (6 units or fewer) or use a hauler in 7+ unit buildings.", '/boston/': 'Every verified way to get rid of a couch, mattress, furniture or appliance in Boston: City pickup, ReStore, furniture banks and haulers, with sources.', '/boston/couch/': "Boston lets you put furniture out with regular trash. Here's how it works, which charities take sofas, and paid pickup options, with sources.", '/': 'Verified, city-by-city ways to get rid of couches, mattresses, furniture and appliances: city pickup, donation pickup, drop-off and haulers.'}
+
 def fit_meta(title, desc, suffix=None):
-    """Keep SERP snippets readable: titles <= 60 chars (drop the site-name suffix if needed),
+    """Keep SERP snippets readable: titles <= 70 chars (keep the brand suffix unless longer; drop the site-name suffix if needed),
     descriptions <= 158 chars (cut at the last full sentence, else the last word + ellipsis).
     Only shortens; never adds wording."""
-    if suffix and title.endswith(suffix) and len(title) > 60:
+    if suffix and title.endswith(suffix) and len(title) > 70:
         title = title[: -len(suffix)]
     if len(desc) > 158:
         cut = desc[:158]
@@ -87,6 +91,7 @@ def fit_meta(title, desc, suffix=None):
     return title, desc
 
 def page(title, desc, path, body, jsonld=None):
+    desc = META_DESC.get(path, desc)
     title, desc = fit_meta(title, desc)
     url = base_url() + path
     META[path] = (title, desc)
