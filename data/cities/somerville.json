@@ -1,0 +1,395 @@
+{
+ "slug": "somerville",
+ "name": "Somerville",
+ "state": "MA",
+ "last_verified": "2026-10-23",
+ "title": "Somerville Bulky Item & Mattress Pickup: 2026 Rules and Options",
+ "meta_description": "Somerville takes 2 furniture items a week free with trash. Mattresses need a $55 sticker and a 311 appointment; appliances a $25 sticker. All sourced.",
+ "intro": "Somerville picks up furniture for free with your trash, but mattresses, box springs and big appliances each need a paid sticker first, and mattresses also need a 311 appointment. Here's what each option takes, what it costs, and where we got it.",
+ "quick_answers": [
+  {
+   "q": "Does Somerville pick up furniture?",
+   "a": "Yes. The City picks up two pieces of furniture per week for free, curbside with your regular trash. Tape any glass or mirrors and tie down or remove drawers and doors."
+  },
+  {
+   "q": "How much is mattress pickup in Somerville?",
+   "a": "$55 per mattress and $55 per box spring since February 1, 2026. Buy a Disposal Sticker for each, then contact 311 by 3:30 p.m. the day before collection to schedule."
+  },
+  {
+   "q": "How do I get rid of a fridge, washer or air conditioner in Somerville?",
+   "a": "Buy a $25 White Goods Sticker for each appliance and place it curbside without blocking the sidewalk. Take the door off a refrigerator first."
+  },
+  {
+   "q": "Does Somerville pick up TVs?",
+   "a": "Yes, for free. Call 311 to schedule a curbside pickup of a TV or computer monitor, or drop it off at the DPW Yard, 1 Franey Road. TVs with broken glass aren't accepted."
+  },
+  {
+   "q": "What large items won't Somerville take?",
+   "a": "Exercise equipment, exercise bikes, metal cabinets, building materials such as toilets, sinks and windows, motorized lawn mowers, snow blowers and car parts must be disposed of privately."
+  }
+ ],
+ "resources": [
+  {
+   "label": "Somerville Trash & Recycling (pickup day lookup, rules)",
+   "url": "https://www.somervillema.gov/trash-and-recycling"
+  },
+  {
+   "label": "Somerville Mattress & Box Spring Recycling Program",
+   "url": "https://www.somervillema.gov/mattressrecycling"
+  },
+  {
+   "label": "Somerville Waste Wizard (how to dispose of any item)",
+   "url": "https://www.somervillema.gov/wastewizard"
+  },
+  {
+   "label": "Buy Somerville stickers online (City payment portal)",
+   "url": "https://www.somervillema.gov/payonline"
+  },
+  {
+   "label": "Somerville 2026 Trash and Recycling Guide (PDF)",
+   "url": "https://s3.amazonaws.com/somervillema-live/s3fs-public/cos-environmental-service-guide.pdf"
+  }
+ ],
+ "listings": [
+  {
+   "items_not_accepted": [
+    "Mattresses and box springs (separate $55 sticker program, see below)",
+    "Large appliances (separate $25 white goods sticker, see below)",
+    "Exercise equipment, exercise bikes and metal cabinets (heavy metal items: private disposal)",
+    "Building or construction materials such as toilets, sinks and windows (unless a building permit with the green sticker is displayed)",
+    "Motorized lawn mowers, snow blowers, aboveground metal pools, car parts"
+   ],
+   "address": null,
+   "notes": null,
+   "book_url": "https://www.somervillema.gov/trash-and-recycling",
+   "phone": "311 or 617-666-3311",
+   "email": null,
+   "last_verified": "2026-10-23",
+   "id": "somerville-curbside-furniture",
+   "name": "City of Somerville curbside furniture & bulky item collection",
+   "type": "city bulk pickup",
+   "items_accepted": [
+    "Furniture (up to two pieces per week)",
+    "Rugs and carpets (rolled, tied, roll no longer than 3 ft)",
+    "Bicycles",
+    "Wooden ladders and metal ladders (broken down to pieces no longer than 4 ft)",
+    "Wooden doors (cut in half)"
+   ],
+   "condition_rules": "Free service limited to two items per week; place curbside with your regular trash. Tape any mirrors or glass on both sides, and tie down or remove drawers and doors. Bins and items can go out after 4 p.m. the day before and must be out by 7 a.m. on collection day. Don't block the sidewalk.",
+   "stairs_inside": "No. Curbside only.",
+   "lead_time": "Your regular weekly trash day (look it up by address on the City's trash page). Collection is delayed one day after City holidays.",
+   "cost": "Free (the City's 2026 Trash and Recycling Guide calls it a free service).",
+   "service_area": "Somerville addresses that receive City trash collection. The City says buildings with more than 6 units that use private trash service are not covered by its mattress program; for furniture, check with your building manager if you have private trash service.",
+   "source_urls": [
+    "https://www.somervillema.gov/trash-and-recycling",
+    "https://s3.amazonaws.com/somervillema-live/s3fs-public/cos-environmental-service-guide.pdf"
+   ]
+  },
+  {
+   "items_not_accepted": [
+    "Futons, mattress pads and toppers (put in regular trash)",
+    "Infant sleeping pads not meant for cribs",
+    "Excessively torn, soiled or moldy items",
+    "Broken, crushed or twisted items",
+    "Air beds and water beds",
+    "Bed-bug-infested mattresses (call 311 first; see notes)"
+   ],
+   "address": "Stickers in person: DPW, One Franey Road (check, credit card or money order; no cash) or City Clerk, City Hall, 93 Highland Avenue",
+   "notes": "If the mattress is soiled or you suspect bed bugs, the City says to contact 311 for special instructions before buying a sticker. Its trash page says bed-bug-infested mattresses and box springs go out with regular trash, wrapped in plastic and clearly marked.",
+   "book_url": "https://www.somervillema.gov/payonline",
+   "phone": "311 or 617-666-3311",
+   "email": null,
+   "last_verified": "2026-10-23",
+   "id": "somerville-mattress-recycling",
+   "name": "City of Somerville mattress & box spring recycling ($55 sticker + 311 appointment)",
+   "type": "city bulk pickup",
+   "items_accepted": [
+    "Mattresses of all sizes, king to crib (foam, spring, mixed material, latex)",
+    "Box springs (all)"
+   ],
+   "condition_rules": "Buy one $55 Disposal Sticker per item (a mattress and a box spring are two items), then contact 311 to schedule no later than 3:30 p.m. the day before collection. Put the sticker on each item, place it curbside after 4 p.m. the day before and by 7 a.m. on pickup day, on public property, with nothing on top, leaving at least 36 inches of sidewalk clear. Limit: 2 bulk items per property per week. Unscheduled mattresses put out with trash are left on the curb and may be fined. Cancel by 12 p.m. the day before.",
+   "stairs_inside": "No. Curbside only; the crew may not enter private property.",
+   "lead_time": "Pickup is one day after your regular trash day (Friday trash households: same day, Friday). Online stickers can take up to 10 days to arrive by mail, and you can't schedule until you have the physical sticker. Buying in person avoids the mail wait.",
+   "cost": "$55 per mattress and $55 per box spring (fee in effect since February 1, 2026).",
+   "service_area": "Residential households in buildings with 6 or fewer units that receive regular City trash collection. Buildings with 7+ units or private trash service are not eligible.",
+   "source_urls": [
+    "https://www.somervillema.gov/mattressrecycling",
+    "https://www.somervillema.gov/trash-and-recycling",
+    "https://s3.amazonaws.com/somervillema-live/s3fs-public/cos-environmental-service-guide.pdf"
+   ]
+  },
+  {
+   "items_not_accepted": [],
+   "address": "Stickers in person: DPW, One Franey Road (check or money order per the trash page; the guide also lists credit and debit) or City Hall (cash, check, credit card or money order)",
+   "notes": null,
+   "book_url": "https://epay.cityhallsystems.com/?key=somerville.ma.us&type=wg",
+   "phone": "311 or 617-666-3311",
+   "email": null,
+   "last_verified": "2026-10-23",
+   "id": "somerville-white-goods",
+   "name": "City of Somerville large appliance (white goods) pickup ($25 sticker)",
+   "type": "city bulk pickup",
+   "items_accepted": [
+    "Air conditioners",
+    "Washers and dryers",
+    "Refrigerators and freezers (remove the door first)",
+    "Stoves",
+    "Dehumidifiers",
+    "Water heaters",
+    "Water coolers (bubblers)"
+   ],
+   "condition_rules": "One $25 White Goods Sticker per item. Place curbside without blocking pedestrian traffic. Remove refrigerator doors before putting them on the sidewalk.",
+   "stairs_inside": "No. Curbside only.",
+   "lead_time": "Not stated, check with them",
+   "cost": "$25 per appliance (sticker).",
+   "service_area": "Somerville residents (eligibility beyond that is not stated on the page, check with 311).",
+   "source_urls": [
+    "https://www.somervillema.gov/trash-and-recycling",
+    "https://s3.amazonaws.com/somervillema-live/s3fs-public/cos-environmental-service-guide.pdf"
+   ]
+  },
+  {
+   "items_not_accepted": [
+    "TVs or monitors with broken glass"
+   ],
+   "address": null,
+   "notes": null,
+   "book_url": "https://www.somervillema.gov/311",
+   "phone": "311 or 617-666-3311",
+   "email": null,
+   "last_verified": "2026-10-23",
+   "id": "somerville-tv-monitor-pickup",
+   "name": "City of Somerville TV & computer monitor pickup (free, via 311)",
+   "type": "city bulk pickup",
+   "items_accepted": [
+    "TVs",
+    "Computer monitors"
+   ],
+   "condition_rules": "Call 311 to schedule a curbside pickup, or drop off at the DPW Yard as electronic waste.",
+   "stairs_inside": "No. Curbside only.",
+   "lead_time": "Not stated, check with them",
+   "cost": "Free.",
+   "service_area": "Somerville residents.",
+   "source_urls": [
+    "https://www.somervillema.gov/trash-and-recycling",
+    "https://s3.amazonaws.com/somervillema-live/s3fs-public/cos-environmental-service-guide.pdf"
+   ]
+  },
+  {
+   "items_not_accepted": [
+    "TVs or monitors with broken glass"
+   ],
+   "address": "DPW Yard, 1 Franey Road, Somerville, MA 02145",
+   "notes": null,
+   "book_url": null,
+   "phone": null,
+   "email": null,
+   "last_verified": "2026-10-23",
+   "id": "somerville-dpw-ewaste",
+   "name": "Somerville DPW Yard electronics & small appliance drop-off",
+   "type": "drop-off",
+   "items_accepted": [
+    "Desktop computers and laptops",
+    "TVs and monitors (no broken glass)",
+    "Printers, copiers and scanners",
+    "Microwave ovens, blenders, toasters, coffee makers and most small plug-in household items",
+    "Electronic and audio equipment, DVD/CD/VHS players, cables"
+   ],
+   "condition_rules": "Residents only, not contractors. Bring proof of residency (such as a driver's license or utility bill) to the guard shack. The City may refuse any drop-off.",
+   "stairs_inside": "No. You bring the items.",
+   "lead_time": "Weekdays 8:30 a.m. to 12 p.m. and 1 p.m. to 3:30 p.m.",
+   "cost": "No fee is mentioned on the City pages.",
+   "service_area": "Somerville residents.",
+   "source_urls": [
+    "https://www.somervillema.gov/trash-and-recycling",
+    "https://www.somervillema.gov/departments/dpw/programs/electronic-waste-recycling-program"
+   ]
+  },
+  {
+   "items_not_accepted": [],
+   "address": null,
+   "notes": null,
+   "book_url": null,
+   "phone": "311 or 617-666-3311",
+   "email": null,
+   "last_verified": "2026-10-23",
+   "id": "somerville-medical-equipment",
+   "name": "City of Somerville medical equipment pickup / Council on Aging donation (via 311)",
+   "type": "city bulk pickup",
+   "items_accepted": [
+    "Hospital beds",
+    "Wheelchairs",
+    "Walkers"
+   ],
+   "condition_rules": "Call 311 to arrange a pickup. Some items in good condition can be donated to the Council on Aging; call 311 to donate.",
+   "stairs_inside": "Not stated, check with them",
+   "lead_time": "Not stated, check with them",
+   "cost": "Not stated, check with them",
+   "service_area": "Somerville residents.",
+   "source_urls": [
+    "https://www.somervillema.gov/trash-and-recycling"
+   ]
+  },
+  {
+   "items_not_accepted": [
+    "Mattresses & box springs",
+    "Sofa beds",
+    "Sofas with slip covers",
+    "Futons",
+    "Platform & trundle beds",
+    "Hutches, sideboards, buffets, china cabinets",
+    "TV armoires & entertainment centers",
+    "Fitness equipment",
+    "In-wall stoves"
+   ],
+   "address": "1580 VFW Parkway, West Roxbury, MA",
+   "notes": null,
+   "book_url": "https://resupply.app.link/habitatbostonrestore",
+   "phone": null,
+   "email": "restore@habitatboston.org",
+   "condition_rules": "All donations must be in working order. Staff can refuse any item based on condition and store need. Email the ReStore for the current list.",
+   "stairs_inside": "Drop-off: staff help unload at the store. In-home pickup is arranged through ReSupply, Habitat's scheduling partner (Habitat says ReSupply works with local movers at a lower cost to you; it's a paid service).",
+   "lead_time": "Donation drop-off Tuesday to Saturday, 9:30 a.m. to 4:00 p.m. (as posted).",
+   "cost": "Drop-off fee: not stated. Pickup is through ReSupply, a paid service.",
+   "service_area": "Drop-off at the West Roxbury store. Habitat says a second ReStore is set to open in Watertown in fall 2026. In-home pickup is booked through ReSupply; whether it serves your Somerville address isn't stated, so check when booking.",
+   "last_verified": "2026-10-23",
+   "id": "habitat-greater-boston-restore",
+   "name": "Habitat for Humanity Greater Boston ReStore (West Roxbury)",
+   "type": "drop-off",
+   "items_accepted": [
+    "Bed frames, headboards & footboards",
+    "Dressers, bureaus & armoires",
+    "Coffee & end tables",
+    "Desks (3' x 5' or smaller)",
+    "Tables & chairs (not conference tables or dated)",
+    "Upholstered furniture (not ripped, worn, broken, dated or faded)",
+    "Outdoor furniture",
+    "Appliances less than eight years old (fridges, washers, dryers, free-standing stoves, cooktops, microwaves, never-installed dishwashers)",
+    "Cabinets, doors, lighting, building materials"
+   ],
+   "source_urls": [
+    "https://habitatboston.org/restore/"
+   ]
+  },
+  {
+   "items_not_accepted": [
+    "Mattresses with any stains or rips",
+    "Office furniture, desks, file cabinets",
+    "Glass-top items",
+    "Outdoor furniture",
+    "Oversized or wall-mounted items"
+   ],
+   "address": "530 Main Street, Acton, MA",
+   "notes": "The City of Somerville's mattress page names householdgoods.org as one donation option for mattresses in good condition.",
+   "book_url": "https://www.householdgoods.org/donate/donate-goods/pickup/",
+   "phone": "978-763-1198",
+   "email": null,
+   "condition_rules": "Clean, complete, and in good working condition; nothing broken, chipped, torn, stained, or recalled.",
+   "stairs_inside": "Volunteer pickup asks that items be in a garage or on the first floor if possible.",
+   "lead_time": "Drop-off Tuesdays, Thursdays, and Saturdays, 9 a.m. to noon. Volunteer pickups typically scheduled 4+ weeks ahead. Paid pickups through ReSupply or ReMARKable Donations in as soon as 2 business days.",
+   "cost": "Drop-off: not stated. Volunteer pickup: minimum $35 donation requested. Paid pickups (ReSupply / ReMARKable Donations): for a fee.",
+   "service_area": "Volunteer pickup only in Acton, Boxborough, Carlisle, Concord, Littleton, Maynard, Stow, Sudbury and Westford, so not Somerville. Somerville donors can drop off in Acton or use the paid pickup partners.",
+   "last_verified": "2026-10-23",
+   "id": "household-goods-acton",
+   "name": "Household Goods (Acton)",
+   "type": "furniture bank",
+   "items_accepted": [
+    "Standard-size mattresses & box springs",
+    "Bed frames (all parts) & bunk beds",
+    "Dressers & armoires",
+    "Couches, sofa beds & futons",
+    "Chairs (no office chairs)",
+    "Kitchen, dining, end & coffee tables",
+    "Refrigerators, washers, electric dryers (newer than 10 years)",
+    "Air conditioners up to 18\" x 30\" x 24\" (newer than 10 years)",
+    "Flat-screen TVs under 55\" (less than 10 years old)"
+   ],
+   "source_urls": [
+    "https://www.householdgoods.org/donate/donate-goods/donation-guidelines/",
+    "https://www.householdgoods.org/donate/donate-goods/pickup/",
+    "https://www.somervillema.gov/mattressrecycling"
+   ]
+  },
+  {
+   "items_not_accepted": [],
+   "address": null,
+   "notes": "The City of Somerville lists the Salvation Army among area charities for gently used household items.",
+   "book_url": "https://satruck.org/",
+   "phone": "1-800-728-7825",
+   "email": null,
+   "condition_rules": "Gently used. Accepted items vary by location, so check when you enter your ZIP or call 1-800-SA-TRUCK. Mattress acceptance is not stated on the satruck.org home page, check with them.",
+   "stairs_inside": "Not stated, check with them",
+   "lead_time": "Not stated, check with them",
+   "cost": "Advertised as a free donation pickup on satruck.org. Local terms: check with them.",
+   "service_area": "Enter your Somerville ZIP on satruck.org to see whether pickup is offered at your address. I could not confirm Somerville coverage (the ZIP check is a script form).",
+   "last_verified": "2026-10-23",
+   "id": "salvation-army-satruck",
+   "name": "The Salvation Army donation pickup (1-800-SA-TRUCK)",
+   "type": "charity pickup",
+   "items_accepted": [
+    "Furniture (as listed on satruck.org)",
+    "Appliances (as listed on satruck.org)",
+    "Clothing and household goods"
+   ],
+   "source_urls": [
+    "https://satruck.org/",
+    "https://www.somervillema.gov/trash-and-recycling"
+   ]
+  },
+  {
+   "items_not_accepted": [
+    "E-bikes",
+    "Trail-a-bikes"
+   ],
+   "address": "284 Amory Street, Jamaica Plain, MA",
+   "notes": "The City of Somerville lists Bikes Not Bombs among area charities. Bicycles can also go out with Somerville's regular trash.",
+   "book_url": "https://bikesnotbombs.org/bike-recycling/",
+   "phone": null,
+   "email": "bikedonations@bikesnotbombs.org",
+   "last_verified": "2026-10-23",
+   "id": "bikes-not-bombs",
+   "name": "Bikes Not Bombs bike donation (Jamaica Plain)",
+   "type": "drop-off",
+   "items_accepted": [
+    "All types of bikes (road, hybrid, mountain, BMX, tandem, etc.)"
+   ],
+   "condition_rules": "Bring bikes inside during regular business hours and fill out a donation form; don't leave bikes outside the building. Or find a bike drive on their events calendar.",
+   "stairs_inside": "No. You bring the bike.",
+   "lead_time": "Regular business hours (hours not captured from the page, check with them).",
+   "cost": "Free to donate; they encourage a $20 to $40 donation per bike to cover recycling, processing and shipping.",
+   "service_area": "Drop-off in Jamaica Plain; bike drives around Greater Boston.",
+   "source_urls": [
+    "https://bikesnotbombs.org/bike-recycling/",
+    "https://www.somervillema.gov/trash-and-recycling"
+   ]
+  },
+  {
+   "items_not_accepted": [],
+   "address": null,
+   "notes": "We do not currently have an affiliate relationship with LoadUp. If that changes, this listing will be labeled.",
+   "book_url": "https://goloadup.com/junk-removal/",
+   "phone": null,
+   "email": null,
+   "condition_rules": "No donation-quality requirement stated; this is junk removal.",
+   "stairs_inside": "Yes. LoadUp says its loaders carry items out from any room (bedroom, basement, attic, upstairs); curbside option also offered.",
+   "lead_time": "Same-day available when you book before noon, subject to local availability (per LoadUp).",
+   "cost": "Per LoadUp's pages: junk removal full-service from $75, curbside from $70, priority from $85. Mattress removal from $85; bed frame add-on from $25 (standalone from $80); dresser add-on from $30 (standalone from $85). Starting prices; the final price is shown by ZIP and item before booking.",
+   "service_area": "LoadUp says it serves customers nationwide. Enter your Somerville ZIP to confirm.",
+   "last_verified": "2026-10-23",
+   "id": "loadup",
+   "name": "LoadUp junk removal",
+   "type": "paid hauler",
+   "items_accepted": [
+    "Furniture",
+    "Mattresses",
+    "Couches",
+    "Appliances",
+    "General junk"
+   ],
+   "source_urls": [
+    "https://goloadup.com/junk-removal/",
+    "https://goloadup.com/mattress-removal/"
+   ]
+  }
+ ]
+}

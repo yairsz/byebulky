@@ -1,0 +1,75 @@
+{
+ "path": "somerville/mattress",
+ "city": "somerville",
+ "short": "Mattress",
+ "last_verified": "2026-10-23",
+ "title": "Somerville Mattress Pickup: $55 Sticker, 311 & Other Options",
+ "meta_description": "Somerville mattress pickup costs $55 per item with a sticker and a 311 appointment by 3:30 p.m. the day before. Rules, limits, donation and hauler options.",
+ "h1": "Somerville mattress pickup: the $55 sticker, 311 scheduling and other options",
+ "intro": "Since February 1, 2026, the City of Somerville charges $55 per mattress or box spring, and it only collects them by appointment. Here are the four steps, who qualifies, what's refused, and what to do if the City pickup doesn't fit.",
+ "quick_answers": [
+  {
+   "q": "Does the City of Somerville pick up mattresses?",
+   "a": "Yes, curbside by appointment, for households in buildings with 6 or fewer units that get City trash collection. You need a $55 Disposal Sticker on each item and a 311 appointment."
+  },
+  {
+   "q": "How much does Somerville mattress disposal cost?",
+   "a": "$55 per mattress and $55 per box spring. A mattress and its box spring count as two items, so the pair costs $110."
+  },
+  {
+   "q": "How do I schedule a Somerville mattress pickup?",
+   "a": "Contact 311 (617-666-3311, the 311 app, online form or live chat) no later than 3:30 p.m. the day before collection. You need the physical sticker in hand before you schedule."
+  },
+  {
+   "q": "Can I just put my mattress out with the trash in Somerville?",
+   "a": "No. Massachusetts bans mattresses from the trash. Unscheduled mattresses put out with trash are left on the curb and may be fined."
+  },
+  {
+   "q": "What if my Somerville building has 7 or more units?",
+   "a": "The City won't collect it. Ask your building manager, or hire a mattress recycling hauler."
+  }
+ ],
+ "sections": [
+  {
+   "h": "Step 1: check that you qualify",
+   "p": "Only residential households in buildings with 6 or fewer units that receive regular City trash collection can use the City's mattress recycling. Buildings with 7 or more units, or with private trash service, are not eligible. Each property can recycle up to 2 bulk items a week, and a mattress and a box spring count as separate items."
+  },
+  {
+   "h": "Step 2: buy a $55 Disposal Sticker for each item",
+   "p": "Buy one sticker per mattress and one per box spring. Online, through the City's payment portal (somervillema.gov/payonline), the sticker comes by mail and can take up to 10 days. In person, go to the DPW offices at One Franey Road (check, credit card or money order, no cash) or the City Clerk's Office at City Hall, 93 Highland Avenue."
+  },
+  {
+   "h": "Step 3: schedule with 311 by 3:30 p.m. the day before",
+   "p": "Once you have the physical sticker, contact 311 at 617-666-3311, or by email, app, live chat, online form, Facebook or X, no later than 3:30 p.m. the day before collection. Pickup is one day after your regular trash day; if your trash day is Friday, mattresses are also picked up on Friday. To cancel, contact 311 by 12 p.m. the day before."
+  },
+  {
+   "h": "Step 4: put it at the curb by 7 a.m.",
+   "p": "Put a sticker on each item and place it on public property after 4 p.m. the day before and by 7 a.m. on pickup day. Put nothing on top of it, and leave at least 36 inches of sidewalk clear. You don't need to be home. If it isn't picked up, contact 311."
+  },
+  {
+   "h": "What the City won't take for recycling",
+   "p": "All mattress sizes from king to crib and all box springs are accepted. Futons, mattress pads and toppers, infant sleeping pads not meant for cribs, air and water beds, and excessively torn, soiled, moldy, broken, crushed or twisted items are refused and should go in the trash instead."
+  },
+  {
+   "h": "Soiled mattress or bed bugs",
+   "p": "If the mattress is soiled or you suspect bed bugs, the City says to contact 311 for special instructions before you buy a sticker. The City's trash page says bed-bug-infested mattresses and box springs go out with regular trash, wrapped in plastic and clearly marked."
+  },
+  {
+   "h": "7+ unit building, or more than two items this week",
+   "p": "The City says buildings with private trash service, and residents over the two-items-a-week limit, need to hire a mattress recycling hauler (or plan pickups over several weeks). LoadUp, below, lists mattress removal from $85 and says its loaders carry it out from any room."
+  },
+  {
+   "h": "Donating, or getting the store to take it",
+   "p": "Some charities take mattresses in good condition with no rips, stains or bed bugs; the City suggests householdgoods.org and says to contact the organization first. Household Goods only takes standard-size mattresses with no stains or rips. If you're buying a new mattress, the City suggests asking the retailer whether pickup and disposal is included."
+  },
+  {
+   "h": "Why Somerville charges a fee",
+   "p": "The City says it spends nearly $300,000 a year on mattress recycling, and that in Fiscal Year 2025 it paid an average of $63.46 per mattress or box spring. The $55 fee covers part of that cost."
+  }
+ ],
+ "listing_ids": [
+  "somerville-mattress-recycling",
+  "household-goods-acton",
+  "loadup"
+ ]
+}
