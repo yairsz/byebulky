@@ -50,10 +50,29 @@ def ga_snippet():
 <script>window.dataLayer = window.dataLayer || [];function gtag(){{dataLayer.push(arguments);}}gtag('js', new Date());gtag('config', '{e(gid)}');</script>"""
 
 META = {}  # path -> (title, description); feeds llms.txt
+# path -> YYYY-MM-DD the page's content was last verified/changed. Filled in main() from the data files
+# (never "today" by default), and used for WebPage dateModified JSON-LD, visible dates and sitemap lastmod.
+MODIFIED = {}
+ABOUT_UPDATED = "2026-10-24"     # bump when /about/ text changes
+PRIVACY_UPDATED = "2026-10-23"   # matches privacy.EFFECTIVE
+
+def org_ld():
+    return {"@type": "Organization", "@id": base_url() + "/#org", "name": CFG["site_name"], "url": base_url() + "/",
+            "sameAs": [YT_CHANNEL]}
+
+def webpage_ld(title, desc, path):
+    if path not in MODIFIED:
+        return None
+    return {"@context": "https://schema.org", "@type": "AboutPage" if path == "/about/" else "WebPage",
+            "@id": base_url() + path, "url": base_url() + path, "name": title, "description": desc,
+            "dateModified": MODIFIED[path], "inLanguage": "en-US",
+            "isPartOf": {"@type": "WebSite", "@id": base_url() + "/#website", "name": CFG["site_name"],
+                         "url": base_url() + "/", "publisher": org_ld()},
+            "publisher": {"@id": base_url() + "/#org"}}
 def page(title, desc, path, body, jsonld=None):
     url = base_url() + path
     META[path] = (title, desc)
-    lds = [x for x in ((jsonld if isinstance(jsonld, list) else [jsonld]) + [video_ld(path)]) if x]
+    lds = [x for x in ((jsonld if isinstance(jsonld, list) else [jsonld]) + [video_ld(path), webpage_ld(title, desc, path)]) if x]
     ld = "".join(f'<script type="application/ld+json">{json.dumps(x)}</script>' for x in lds)
     year = datetime.date.today().year
     return f"""<!doctype html>
@@ -152,7 +171,7 @@ def city_page(c):
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › {e(c['name'])}, {e(c['state'])}</p>
 <h1>How to get rid of a couch, mattress or furniture in {e(c['name'])}</h1>
 <p class="lead">{e(c['intro'])}</p>
-<p class="meta">{len(c['listings'])} options · every listing links to its source · last verified {e(c['last_verified'])}</p>
+<p class="meta">{len(c['listings'])} options · every listing links to its source · last verified {e(c['last_verified'])}{(" · page updated " + e(MODIFIED[f"/{c['slug']}/"])) if MODIFIED.get(f"/{c['slug']}/", c['last_verified']) != c['last_verified'] else ""}</p>
 <div class="qa">{qa}</div>
 {loadup_slot()}
 {glinks}
@@ -175,7 +194,7 @@ def guide_page(g, city):
     assert not missing, f"guide {g['path']} references unknown listings {missing}"
     secs = "".join(f"<h2>{e(s['h'])}</h2><p>{e(s['p'])}</p>" for s in g.get("sections", []))
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › <a href="{U('/' + city['slug'] + '/')}">{e(city['name'])}</a> › {e(g['short'])}</p>
-<h1>{e(g['h1'])}</h1><p class="lead">{e(g['intro'])}</p><p class="meta">Last verified {e(g['last_verified'])}</p>
+<h1>{e(g['h1'])}</h1><p class="lead">{e(g['intro'])}</p><p class="meta">Last verified {e(g['last_verified'])}{(" · page updated " + e(MODIFIED[f"/{g['path']}/"])) if MODIFIED.get(f"/{g['path']}/", g['last_verified']) != g['last_verified'] else ""}</p>
 {qa_block(g.get("quick_answers"))}{secs}{yt_embed('/' + g['path'] + '/', YT_CHANNEL, 'ByeBulky')}{loadup_slot()}<h2>Options</h2>{''.join(listing_card(l) for l in ls)}
 <p><a href="{U('/' + city['slug'] + '/')}">See all {e(city['name'])} options →</a></p>"""
     for x in g.get("quick_answers", []):
@@ -192,12 +211,27 @@ def home(cities):
 <h2>Cities</h2><div class="cities">{cl}</div>
 <h2>Why this exists</h2>
 <p>Charities change what they accept, some stop picking up furniture altogether, and city rules differ from one place to the next. People end up calling three places and still having a couch on the curb. We collect the rules from official sources, link every listing to its source, and date when we last checked it.</p>
+<p class="meta">Listings last verified {e(MODIFIED.get('/', ''))}.</p>
 <p><a href="{U('/about/')}">How we verify listings &amp; how this site makes money →</a></p>"""
     return page(f"{CFG['site_name']}: How to get rid of furniture, mattresses & appliances in your city",
                 "Verified, city-by-city options for getting rid of couches, mattresses, furniture and appliances: city pickup, donation pickup, drop-off, furniture banks and haulers.", "/", body)
 
-def about():
+def about(cities):
     set_page("/about/")
+    ls = [l for c in cities for l in c["listings"]]
+    nsrc = len({u for l in ls for u in l["source_urls"]})
+    dates = sorted(l["last_verified"] for l in ls)
+    nns = sum(1 for l in ls for k in ("condition_rules", "stairs_inside", "lead_time", "cost", "service_area")
+              if (l.get(k) or NS).strip().startswith(NS))
+    cl = ", ".join(f'<a href="{U("/" + c["slug"] + "/")}">{e(c["name"])}</a> ({len(c["listings"])})' for c in cities)
+    nums = f"""<h2>By the numbers</h2>
+<ul>
+<li>{len(ls)} listings across {len(cities)} cities: {cl}, plus {len(GUIDES)} item guides.</li>
+<li>{nsrc} distinct source pages cited, each linked from the listing that uses it.</li>
+<li>Listings were last verified between {e(dates[0])} and {e(dates[-1])}.</li>
+<li>{nns} listing fields say <span class="ns">{e(NS)}</span> because the source doesn't state them. We don't fill those in with guesses.</li>
+</ul>
+<p class="meta">These counts are computed from the site's data each time it's built. This page was last updated {e(ABOUT_UPDATED)}.</p>"""
     body = """<h1>About ByeBulky &amp; how we verify</h1>
 <h2>How we verify</h2>
 <ul>
@@ -212,7 +246,7 @@ def about():
 <h2>Analytics</h2>
 <p>ByeBulky uses Google Analytics to collect aggregate traffic statistics, such as which pages are visited, so we can see what's useful. It doesn't collect your name or email, though Google may set cookies to tell visits apart. Details are in our <a href="../privacy/">privacy policy</a>.</p>
 <h2>Corrections</h2>
-<p>Rules change often. If a listing is wrong or out of date, let us know and we'll re-check it against the source and update the date.</p>"""
+<p>Rules change often. If a listing is wrong or out of date, let us know and we'll re-check it against the source and update the date.</p>""" + nums
     return page("About ByeBulky: how we verify listings & affiliate disclosure",
                 "How ByeBulky verifies every listing against official sources, and how the site makes money (affiliate disclosure).", "/about/", body)
 
@@ -299,9 +333,17 @@ def main():
     if OUT.exists(): shutil.rmtree(OUT)
     OUT.mkdir()
     shutil.copytree(ROOT / "static", OUT / "static")
-    pages = {"/": home(cities), "/about/": about(), "/privacy/": privacy_page()}
-    for c in cities: pages[f"/{c['slug']}/"] = city_page(c)
     bycity = {c["slug"]: c for c in cities}
+    def city_mod(c): return max([c["last_verified"]] + [l["last_verified"] for l in c["listings"]])
+    for c in cities: MODIFIED[f"/{c['slug']}/"] = city_mod(c)
+    for g in GUIDES:
+        used = [l["last_verified"] for l in bycity[g["city"]]["listings"] if l["id"] in g.get("listing_ids", [])]
+        MODIFIED[f"/{g['path']}/"] = max([g["last_verified"]] + used)
+    MODIFIED["/"] = max(city_mod(c) for c in cities)
+    MODIFIED["/about/"] = ABOUT_UPDATED
+    MODIFIED["/privacy/"] = PRIVACY_UPDATED
+    pages = {"/": home(cities), "/about/": about(cities), "/privacy/": privacy_page()}
+    for c in cities: pages[f"/{c['slug']}/"] = city_page(c)
     for g in GUIDES: pages[f"/{g['path']}/"] = guide_page(g, bycity[g["city"]])
     for path, h in pages.items():
         d = OUT / path.strip("/"); d.mkdir(parents=True, exist_ok=True); (d / "index.html").write_text(h)
@@ -312,11 +354,7 @@ def main():
     base = base_url()
     today = datetime.date.today().isoformat()
     def lastmod(path):
-        for c in cities:
-            if path == f"/{c['slug']}/": return c["last_verified"]
-        for g in GUIDES:
-            if path == f"/{g['path']}/": return g["last_verified"]
-        return today
+        return MODIFIED.get(path, today)
     urls = "".join(f"<url><loc>{base}{p}</loc><lastmod>{lastmod(p)}</lastmod></url>" for p in pages)
     (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
     if CFG.get("indexnow_key"):  # IndexNow (Bing/Yandex) key file must sit at the site root
