@@ -48,8 +48,10 @@ def ga_snippet():
 <script async src="https://www.googletagmanager.com/gtag/js?id={e(gid)}"></script>
 <script>window.dataLayer = window.dataLayer || [];function gtag(){{dataLayer.push(arguments);}}gtag('js', new Date());gtag('config', '{e(gid)}');</script>"""
 
+META = {}  # path -> (title, description); feeds llms.txt
 def page(title, desc, path, body, jsonld=None):
     url = base_url() + path
+    META[path] = (title, desc)
     lds = [x for x in ((jsonld if isinstance(jsonld, list) else [jsonld]) + [video_ld(path)]) if x]
     ld = "".join(f'<script type="application/ld+json">{json.dumps(x)}</script>' for x in lds)
     year = datetime.date.today().year
@@ -58,6 +60,7 @@ def page(title, desc, path, body, jsonld=None):
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
+<meta name="msvalidate.01" content="45CDFD465C8824EB2040D1A77F7E20CB" />
 <link rel="canonical" href="{e(url)}">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}">
 <meta property="og:type" content="website"><meta property="og:url" content="{e(url)}">
@@ -217,6 +220,38 @@ def load_all():
     guides = [json.loads(p.read_text()) for p in sorted((ROOT / "data/guides").glob("*.json"))]
     return cities, guides
 
+LLMS_SUMMARY = (CFG["tagline"] + " A directory of real options for getting rid of couches, mattresses, furniture and "
+                "appliances: City bulk and mattress pickup, charities that pick up, drop-off spots, furniture banks and paid haulers.")
+LLMS_NOTES = ["Every listing comes from the organization's own website or an official government page, links to its sources, "
+              "and shows the date it was last verified. When a source doesn't state something, the listing says "
+              f'"{NS}". ByeBulky publishes no reviews or ratings.']
+LLMS_SECTIONS = [("Cities", lambda p: p.count("/") == 2 and p not in ("/", "/about/")),
+                 ("Item guides", lambda p: p.count("/") == 3),
+                 ("Home and about", lambda p: p in ("/", "/about/"))]
+
+# Search and AI-answer crawlers we explicitly welcome (one robots.txt group, RFC 9309).
+# The catch-all group below allows everyone else too; this list just makes intent explicit.
+ALLOWED_BOTS = ["Googlebot", "Bingbot", "Applebot", "DuckDuckBot", "DuckAssistBot", "OAI-SearchBot", "ChatGPT-User",
+                "PerplexityBot", "Perplexity-User", "Claude-SearchBot", "Claude-User", "ClaudeBot", "YandexBot",
+                "SeznamBot", "Yeti", "MojeekBot"]
+def robots_txt(base):
+    group = "".join(f"User-agent: {b}\n" for b in ALLOWED_BOTS)
+    return (f"# {CFG['site_name']}: search engines and AI answer engines are welcome.\n"
+            f"{group}Allow: /\n\nUser-agent: *\nAllow: /\n\nSitemap: {base}/sitemap.xml\n")
+
+def llms_txt(base, pages):
+    """/llms.txt (llmstxt.org format) built only from the site's own page titles and meta descriptions."""
+    def item(path):
+        t, d = META[path]
+        return f"- [{t}]({base}{path}): {d}"
+    out = [f"# {CFG['site_name']}", "", f"> {LLMS_SUMMARY}", ""] + LLMS_NOTES + [""]
+    for heading, test in LLMS_SECTIONS:
+        items = [item(p) for p in pages if test(p)]
+        if items: out += [f"## {heading}", ""] + items + [""]
+    out += ["## Optional", "", f"- [Sitemap]({base}/sitemap.xml): every page with a lastmod date", ""]
+    return "\n".join(out)
+
+
 GUIDES = []
 def main():
     global GUIDES
@@ -249,7 +284,10 @@ def main():
     (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
     if CFG.get("indexnow_key"):  # IndexNow (Bing/Yandex) key file must sit at the site root
         (OUT / f"{CFG['indexnow_key']}.txt").write_text(CFG["indexnow_key"])
-    (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n")
+    (OUT / "robots.txt").write_text(robots_txt(base))
+    (OUT / "llms.txt").write_text(llms_txt(base, pages))
+    if (ROOT / "BingSiteAuth.xml").exists():  # Bing Webmaster Tools verification file, must sit at the site root
+        shutil.copyfile(ROOT / "BingSiteAuth.xml", OUT / "BingSiteAuth.xml")
     if CFG.get("cname"):
         (OUT / "CNAME").write_text(CFG["cname"].strip() + "\n")
     print(f"Built {len(pages)} pages, {sum(len(c['listings']) for c in cities)} listings -> {OUT}")
