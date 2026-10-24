@@ -1,5 +1,20 @@
-{"/boston/mattress/": {"id": "XcW354j7pfM", "heading": "How to get rid of a mattress in Boston (1 minute)",
- "name": "How to Get Rid of a Mattress in Boston (City Pickup Rules)",
- "description": "How to get rid of a mattress in Boston, using the City of Boston's own rules: mattresses can't go in regular trash, how to book the City's curbside mattress pickup (6 units or fewer), what to do in buildings with 7+ units, donation options, and asking the seller to take the old one. Sources: boston.gov (checked 2026-10-21).",
- "caption": "A 1-minute summary of this guide, with the City of Boston's rules (checked 2026-10-21). Narration is computer-generated.",
- "uploadDate": "2026-10-23", "duration": "PT59S"}}
+{
+ "/boston/mattress/": {
+  "id": "XcW354j7pfM",
+  "heading": "How to get rid of a mattress in Boston (1 minute)",
+  "name": "How to Get Rid of a Mattress in Boston (City Pickup Rules)",
+  "description": "How to get rid of a mattress in Boston, using the City of Boston's own rules: mattresses can't go in regular trash, how to book the City's curbside mattress pickup (6 units or fewer), what to do in buildings with 7+ units, donation options, and asking the seller to take the old one. Sources: boston.gov (checked 2026-10-21).",
+  "caption": "A 1-minute summary of this guide, with the City of Boston's rules (checked 2026-10-21). Narration is computer-generated.",
+  "uploadDate": "2026-10-23",
+  "duration": "PT59S"
+ },
+ "/somerville/mattress/": {
+  "id": "ehnWv9_2wKw",
+  "heading": "How to get rid of a mattress in Somerville (1 minute)",
+  "name": "How to Get Rid of a Mattress in Somerville, MA ($55 Sticker + 311)",
+  "description": "How to get rid of a mattress in Somerville, MA, using the City of Somerville's own rules: the $55 per-item Disposal Sticker in effect since February 1, 2026, who qualifies (buildings with 6 or fewer units on City trash), scheduling with 311 by 3:30 p.m. the day before, curb rules on pickup day, and why mattresses can't go out with regular trash. Sources: somervillema.gov (checked 2026-10-23).",
+  "caption": "A 1-minute summary of this guide, with the City of Somerville's rules (checked 2026-10-23). Narration is computer-generated.",
+  "uploadDate": "2026-10-24",
+  "duration": "PT53S"
+ }
+}
