@@ -1,0 +1,27 @@
+# ByeBulky
+
+> Verified ways to get rid of big stuff, city by city. A directory of real options for getting rid of couches, mattresses, furniture and appliances: City bulk and mattress pickup, charities that pick up, drop-off spots, furniture banks and paid haulers.
+
+Every listing comes from the organization's own website or an official government page, links to its sources, and shows the date it was last verified. When a source doesn't state something, the listing says "Not stated, check with them". ByeBulky publishes no reviews or ratings.
+
+## Cities
+
+- [How to Get Rid of a Couch, Mattress or Furniture in Boston (2026 Guide)](https://byebulky.com/boston/): Every verified way to get rid of a couch, mattress, furniture or appliance in Boston: City curbside & mattress pickup, ReStore, furniture banks, and paid…
+- [Somerville Bulky Item & Mattress Pickup: 2026 Rules and Options](https://byebulky.com/somerville/): Somerville takes 2 furniture items a week free with trash. Mattresses need a $55 sticker and a 311 appointment; appliances a $25 sticker. All sourced.
+
+## Item guides
+
+- [Get Rid of a Fridge, AC, or TV in Boston (Free Pickup + Donation)](https://byebulky.com/boston/appliances/): Boston picks up fridges, ACs, and TVs free by appointment, but not in the trash. Here are the City's rules, who takes working appliances, and paid haulers.
+- [How to Get Rid of a Couch in Boston (Curbside, Donation, Haulers)](https://byebulky.com/boston/couch/): Boston lets you put furniture out with regular trash. Here's how that works, which charities take sofas (and which don't), and paid pickup options, with…
+- [How to Get Rid of a Mattress in Boston (City Pickup, Donation & Haulers)](https://byebulky.com/boston/mattress/): Mattresses are banned from Massachusetts trash. Here's how to book Boston's curbside mattress pickup, the rules for 7+ unit buildings, and donation and…
+- [Somerville Mattress Pickup: $55 Sticker, 311 & Other Options](https://byebulky.com/somerville/mattress/): Somerville mattress pickup costs $55 per item with a sticker and a 311 appointment by 3:30 p.m. the day before. Rules, limits, donation and hauler options.
+
+## Home, about and privacy
+
+- [ByeBulky: How to get rid of furniture, mattresses & appliances in your city](https://byebulky.com/): Verified, city-by-city options for getting rid of couches, mattresses, furniture and appliances: city pickup, donation pickup, drop-off, furniture banks and…
+- [About ByeBulky: how we verify listings & affiliate disclosure](https://byebulky.com/about/): How ByeBulky verifies every listing against official sources, and how the site makes money (affiliate disclosure).
+- [Privacy policy | ByeBulky](https://byebulky.com/privacy/): What ByeBulky collects (Google Analytics, click-to-play YouTube videos, GitHub Pages hosting logs), what it doesn't, and how to opt out.
+
+## Optional
+
+- [Sitemap](https://byebulky.com/sitemap.xml): every page with a lastmod date
