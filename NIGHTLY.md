@@ -63,3 +63,6 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. One 
 ## Freshness signals (added 2026-10-24)
 - build.py emits WebPage (AboutPage on /about/) JSON-LD with `dateModified` on every page, plus an Organization with `sameAs` the YouTube channel. `MODIFIED` is computed from the data (latest last_verified/last_checked of what the page shows), never from today; sitemap `lastmod` and the visible "page updated" dates use the same value. Keep it that way: never bump dates without actually re-checking.
 - If you edit /about/ text, bump `ABOUT_UPDATED`; if privacy text changes, bump `PRIVACY_UPDATED` with privacy.EFFECTIVE. /about/ has a computed "By the numbers" block, so it updates itself.
+
+## Computed city-hub answers (added 2026-10-24)
+- `city_faq(c)` in build.py adds two Quick answers + FAQPage entries to every city hub, counted from the listings: who collects from inside the home (`stairs_inside` starting "Yes" / "No." / "Not stated", the rest counted as partial details) and how many options of each type. Keep `stairs_inside` starting with exactly "Yes.", "No." or "Not stated" when it's a clear answer. Never hand-write these.

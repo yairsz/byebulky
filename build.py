@@ -177,11 +177,36 @@ def qa_block(qas):
         return ""
     return '<div class="qa">' + "".join(f"<div><strong>{e(x['q'])}</strong>{e(x['a'])}</div>" for x in qas) + "</div>"
 
+def _names(ls):
+    n = [l["name"] for l in ls]
+    return n[0] if len(n) == 1 else ", ".join(n[:-1]) + " and " + n[-1]
+
+def city_faq(c):
+    """Computed fan-out answers from the listing fields (never hand-written)."""
+    ls = c["listings"]; city = c["name"]; n = len(ls)
+    out = []
+    yes = [l for l in ls if l.get("stairs_inside", "").startswith("Yes")]
+    no = [l for l in ls if l.get("stairs_inside", "").startswith("No.")]
+    unk = [l for l in ls if l.get("stairs_inside", "").startswith("Not stated")]
+    if yes:
+        other = n - len(yes) - len(no) - len(unk)
+        a = (f"Of the {n} options we list for {city}, {len(yes)} {'says it' if len(yes) == 1 else 'say they'} will collect from inside your home: {_names(yes)}. "
+             f"{len(no)} {'is' if len(no) == 1 else 'are'} curbside or drop-off only"
+             + (f", {other} give partial details (see each listing)" if other else "")
+             + f", and {len(unk)} {'doesn' if len(unk) == 1 else 'don'}'t say, so ask them. Fees and conditions vary; check each listing.")
+        out.append({"q": f"Who will pick up bulky items from inside my home in {city}?", "a": a})
+    cnt = [(t, sum(1 for l in ls if l["type"] == t)) for t in TYPES]
+    cnt = [(t, k) for t, k in cnt if k]
+    out.append({"q": f"What are the ways to get rid of bulky items in {city}?",
+                "a": f"We list {n} options in {city}: " + "; ".join(f"{t} ({k})" for t, k in cnt) + ". Each listing links to the page we checked."})
+    return out
+
 def city_page(c):
     set_page(f"/{c['slug']}/")
     used_types = [t for t in TYPES if any(l["type"] == t for l in c["listings"])]
     opts = "".join(f'<option value="{e(t)}">{e(t.title())}</option>' for t in used_types)
-    qa = "".join(f"<div><strong>{e(x['q'])}</strong>{e(x['a'])}</div>" for x in c.get("quick_answers", []))
+    qas = c.get("quick_answers", []) + city_faq(c)
+    qa = "".join(f"<div><strong>{e(x['q'])}</strong>{e(x['a'])}</div>" for x in qas)
     groups = ""
     for t in used_types:
         cards = "".join(listing_card(l) for l in c["listings"] if l["type"] == t)
@@ -206,7 +231,7 @@ def city_page(c):
 {FILTER_JS}"""
     ld = {"@context": "https://schema.org", "@type": "ItemList", "name": c["title"],
           "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": l["name"]} for i, l in enumerate(c["listings"])]}
-    lds = [ld, faq_ld(c.get("quick_answers")), crumbs_ld([("Home", "/"), (c["name"], f"/{c['slug']}/")])]
+    lds = [ld, faq_ld(qas), crumbs_ld([("Home", "/"), (c["name"], f"/{c['slug']}/")])]
     return page(c["title"], c["meta_description"], f"/{c['slug']}/", body, lds)
 
 def sibling_guides(g, city):
