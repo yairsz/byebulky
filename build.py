@@ -186,6 +186,13 @@ def city_page(c):
     lds = [ld, faq_ld(c.get("quick_answers")), crumbs_ld([("Home", "/"), (c["name"], f"/{c['slug']}/")])]
     return page(c["title"], c["meta_description"], f"/{c['slug']}/", body, lds)
 
+def sibling_guides(g, city):
+    """Contextual internal links (added 2026-10-24): other item guides for the same city."""
+    sib = [x for x in GUIDES if x["city"] == city["slug"] and x["path"] != g["path"]]
+    if not sib: return ""
+    return f"<h2>More {e(city['name'])} item guides</h2><ul>" + "".join(
+        f'<li><a href="{U("/" + x["path"] + "/")}">{e(x["title"])}</a></li>' for x in sib) + "</ul>"
+
 def guide_page(g, city):
     set_page(f"/{g['path']}/")
     ids = g.get("listing_ids", [])
@@ -196,12 +203,22 @@ def guide_page(g, city):
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › <a href="{U('/' + city['slug'] + '/')}">{e(city['name'])}</a> › {e(g['short'])}</p>
 <h1>{e(g['h1'])}</h1><p class="lead">{e(g['intro'])}</p><p class="meta">Last verified {e(g['last_verified'])}{(" · page updated " + e(MODIFIED[f"/{g['path']}/"])) if MODIFIED.get(f"/{g['path']}/", g['last_verified']) != g['last_verified'] else ""}</p>
 {qa_block(g.get("quick_answers"))}{secs}{yt_embed('/' + g['path'] + '/', YT_CHANNEL, 'ByeBulky')}{loadup_slot()}<h2>Options</h2>{''.join(listing_card(l) for l in ls)}
-<p><a href="{U('/' + city['slug'] + '/')}">See all {e(city['name'])} options →</a></p>"""
+<p><a href="{U('/' + city['slug'] + '/')}">See all {e(city['name'])} options →</a></p>{sibling_guides(g, city)}"""
     for x in g.get("quick_answers", []):
         assert x.get("q") and x.get("a"), f"guide {g['path']} has an empty quick answer"
     lds = [faq_ld(g.get("quick_answers")),
            crumbs_ld([("Home", "/"), (city["name"], f"/{city['slug']}/"), (g["short"], f"/{g['path']}/")])]
     return page(g["title"], g["meta_description"], f"/{g['path']}/", body, lds)
+
+def home_guides(cities):
+    """Home-page list of every item guide, grouped by city (added 2026-10-24, internal linking)."""
+    out = ""
+    for c in cities:
+        gs = [g for g in GUIDES if g["city"] == c["slug"]]
+        if gs:
+            out += f"<h3>{e(c['name'])}, {e(c['state'])}</h3><ul>" + "".join(
+                f'<li><a href="{U("/" + g["path"] + "/")}">{e(g["title"])}</a></li>' for g in gs) + "</ul>"
+    return ("<h2>Item guides</h2>" + out) if out else ""
 
 def home(cities):
     set_page("/")
@@ -209,6 +226,7 @@ def home(cities):
     body = f"""<h1>Get rid of a couch, mattress or old fridge without the runaround</h1>
 <p class="lead">{e(CFG['tagline'])} For each city we list every real option: City bulk and mattress pickup, charities that pick up, drop-off spots, furniture banks, and paid haulers. You see what each one takes, its condition rules, whether it will come inside or up stairs, and its cost. A cost is only shown when the organization publishes it.</p>
 <h2>Cities</h2><div class="cities">{cl}</div>
+{home_guides(cities)}
 <h2>Why this exists</h2>
 <p>Charities change what they accept, some stop picking up furniture altogether, and city rules differ from one place to the next. People end up calling three places and still having a couch on the curb. We collect the rules from official sources, link every listing to its source, and date when we last checked it.</p>
 <p class="meta">Listings last verified {e(MODIFIED.get('/', ''))}.</p>
