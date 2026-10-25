@@ -66,3 +66,5 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. One 
 
 ## Computed city-hub answers (added 2026-10-24)
 - `city_faq(c)` in build.py adds two Quick answers + FAQPage entries to every city hub, counted from the listings: who collects from inside the home (`stairs_inside` starting "Yes" / "No." / "Not stated", the rest counted as partial details) and how many options of each type. Keep `stairs_inside` starting with exactly "Yes.", "No." or "Not stated" when it's a clear answer. Never hand-write these.
+
+- Entity hubs (2026-10-25): build.py adds to every item guide a prose link to its city hub with computed listing/guide counts, plus "<Item> guides for other cities" (same `short` across cities); every city hub gets "Other Boston-area cities we cover" with computed counts. Keep guide `short` values consistent ("Mattress", "Couch", "Appliances") so the cross-city links match. Don't add cities outside the Boston area without renaming that heading.

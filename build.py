@@ -223,6 +223,7 @@ def city_page(c):
 <div class="qa">{qa}</div>
 {loadup_slot()}
 {glinks}
+{other_city_hubs(c)}
 <div class="filters"><select id="ft" aria-label="Filter by type"><option value="">All types</option>{opts}</select>
 <input id="fq" type="search" placeholder="Filter: mattress, sofa, fridge…" aria-label="Filter by item"></div>
 {groups}
@@ -233,6 +234,31 @@ def city_page(c):
           "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": l["name"]} for i, l in enumerate(c["listings"])]}
     lds = [ld, faq_ld(qas), crumbs_ld([("Home", "/"), (c["name"], f"/{c['slug']}/")])]
     return page(c["title"], c["meta_description"], f"/{c['slug']}/", body, lds)
+
+# Entity hubs (added 2026-10-25): each city page is the hub for that city; each item type ("Mattress") is an entity
+# shared across cities. Item guides link up to their city hub in prose and sideways to the same item in other cities;
+# city hubs link to the other city hubs. All counts are computed from data/.
+def city_hub_line(g, city):
+    n = len(city["listings"]); k = len([x for x in GUIDES if x["city"] == city["slug"]])
+    return (f'<p>This guide is one part of our <a href="{U("/" + city["slug"] + "/")}">{e(city["name"])} bulky item hub</a>, '
+            f'which lists all {n} {e(city["name"])} options we\'ve verified'
+            + (f' and {k - 1} more item guide{"s" if k - 1 != 1 else ""}' if k > 1 else '') + '.</p>')
+
+def same_item_other_cities(g):
+    cmap = {c["slug"]: c for c in CITIES}
+    oth = [x for x in GUIDES if x["short"] == g["short"] and x["city"] != g["city"] and x["city"] in cmap]
+    if not oth: return ""
+    return (f"<h2>{e(g['short'])} guides for other cities</h2><ul>" + "".join(
+        f'<li><a href="{U("/" + x["path"] + "/")}">{e(cmap[x["city"]]["name"])}: {e(x["title"])}</a> '
+        f'({len(x.get("listing_ids", []))} options)</li>' for x in oth) + "</ul>")
+
+def other_city_hubs(c):
+    oth = [o for o in CITIES if o["slug"] != c["slug"]]
+    if not oth: return ""
+    def gcount(o): return len([x for x in GUIDES if x["city"] == o["slug"]])
+    return ("<h2>Other Boston-area cities we cover</h2><ul>" + "".join(
+        f'<li><a href="{U("/" + o["slug"] + "/")}">{e(o["name"])}, {e(o["state"])}</a> ({len(o["listings"])} options'
+        + (f', {gcount(o)} item guide{"s" if gcount(o) != 1 else ""}' if gcount(o) else '') + ')</li>' for o in oth) + "</ul>")
 
 def sibling_guides(g, city):
     """Contextual internal links (added 2026-10-24): other item guides for the same city."""
@@ -250,8 +276,9 @@ def guide_page(g, city):
     secs = "".join(f"<h2>{e(s['h'])}</h2><p>{e(s['p'])}</p>" for s in g.get("sections", []))
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › <a href="{U('/' + city['slug'] + '/')}">{e(city['name'])}</a> › {e(g['short'])}</p>
 <h1>{e(g['h1'])}</h1><p class="lead">{e(g['intro'])}</p><p class="meta">Last verified {e(g['last_verified'])}{(" · page updated " + e(MODIFIED[f"/{g['path']}/"])) if MODIFIED.get(f"/{g['path']}/", g['last_verified']) != g['last_verified'] else ""}</p>
+{city_hub_line(g, city)}
 {qa_block(g.get("quick_answers"))}{secs}{yt_embed('/' + g['path'] + '/', YT_CHANNEL, 'ByeBulky')}{loadup_slot()}<h2>Options</h2>{''.join(listing_card(l) for l in ls)}
-<p><a href="{U('/' + city['slug'] + '/')}">See all {e(city['name'])} options →</a></p>{sibling_guides(g, city)}"""
+<p><a href="{U('/' + city['slug'] + '/')}">See all {e(city['name'])} options →</a></p>{sibling_guides(g, city)}{same_item_other_cities(g)}"""
     for x in g.get("quick_answers", []):
         assert x.get("q") and x.get("a"), f"guide {g['path']} has an empty quick answer"
     lds = [faq_ld(g.get("quick_answers")),
@@ -390,9 +417,11 @@ def llms_txt(base, pages):
 
 
 GUIDES = []
+CITIES = []
 def main():
-    global GUIDES
+    global GUIDES, CITIES
     cities, GUIDES = load_all()
+    CITIES = cities
     for c in cities:
         ids = [l["id"] for l in c["listings"]]
         assert len(ids) == len(set(ids)), f"duplicate listing ids in {c['slug']}"
