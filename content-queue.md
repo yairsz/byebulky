@@ -7,6 +7,8 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [x] How to get rid of a refrigerator / AC / TV in Boston (/boston/appliances/), done 2026-10-22: City special collection + Habitat (<8 yrs) + Household Goods (<10 yrs)
 - [ ] Boston: verify and add The Furniture Trust, St. Vincent de Paul Boston, Goodwill Mass furniture policy, Boomerangs (sites failed to load 2026-10-21)
 - [ ] Cambridge, MA city page (Cambridge DPW bulky item / mattress rules)
+- [ ] Quincy, MA city page (bulky item / mattress rules; metro cluster next to Boston, per Oct 24 learning)
+- [ ] Newton, MA city page (bulky item / mattress rules; metro cluster next to Boston)
 - [x] Somerville, MA city page (/somerville/) + mattress guide (/somerville/mattress/), done 2026-10-23 (keyword-targets ByeBulky row 1)
 - [ ] Dallas, TX city page (Dallas Sanitation bulk & brush; Dallas Area Habitat ReStore pickup page)
 - [ ] Plano, TX city page (Plano bulk trash; Habitat Collin County free pickup; Salvation Army)
