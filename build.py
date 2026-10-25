@@ -201,6 +201,18 @@ def city_faq(c):
                 "a": f"We list {n} options in {city}: " + "; ".join(f"{t} ({k})" for t, k in cnt) + ". Each listing links to the page we checked."})
     return out
 
+# City-specific section headings (learning 2026-10-25, Jesse Cunningham "AI micro directories": every city page is a
+# money page; headings should name the service and the place). Labels describe the listing type only; no ranking words.
+TYPE_HEADINGS = {"city bulk pickup": "City bulk item pickup for {city} residents",
+                 "charity pickup": "Charity donation pickup for {city} residents",
+                 "drop-off": "Drop-off locations for {city} residents",
+                 "furniture bank": "Furniture banks for {city} residents",
+                 "paid hauler": "Paid junk removal and hauling for {city} residents",
+                 "retailer haul-away": "Retailer haul-away for {city} residents"}
+
+def type_heading(t, city):
+    return TYPE_HEADINGS.get(t, t.title()).format(city=city)
+
 def city_page(c):
     set_page(f"/{c['slug']}/")
     used_types = [t for t in TYPES if any(l["type"] == t for l in c["listings"])]
@@ -210,7 +222,8 @@ def city_page(c):
     groups = ""
     for t in used_types:
         cards = "".join(listing_card(l) for l in c["listings"] if l["type"] == t)
-        groups += f"<h2>{e(t.title())}</h2>{cards}"
+        n = sum(1 for l in c["listings"] if l["type"] == t)
+        groups += f"<h2>{e(type_heading(t, c['name']))} ({n})</h2>{cards}"
     res = "".join(f'<li><a href="{e(r["url"])}" rel="nofollow noopener" target="_blank">{e(r["label"])}</a></li>' for r in c.get("resources", []))
     guides = [g for g in GUIDES if g["city"] == c["slug"]]
     glinks = ""
