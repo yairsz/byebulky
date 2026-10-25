@@ -181,6 +181,20 @@ def _names(ls):
     n = [l["name"] for l in ls]
     return n[0] if len(n) == 1 else ", ".join(n[:-1]) + " and " + n[-1]
 
+ITEM_RX = [("mattress", r"mattress"), ("couch", r"couch|sofa|sectional|upholster"),
+           ("refrigerator or other large appliance", r"refrigerat|fridge|freezer|washer|dryer|air condition|appliance")]
+ITEM_EXCLUDE = re.compile(r"small (electronics|appliance|furniture)|no appliance", re.I)
+
+def takes_item(l, rx, item):
+    """Listing explicitly accepts the item (or, for couches, generic Furniture)."""
+    acc = [i for i in l.get("items_accepted", []) if not ITEM_EXCLUDE.search(i)]
+    if any(re.search(rx, i, re.I) for i in acc):
+        return True
+    # Generic "Furniture" counts for couches only if the listing doesn't list couches/sofas as not accepted
+    # (item-specific exclusions like "stained mattresses" are conditions, so they don't remove a listing).
+    return (item == "couch" and any(re.match(r"furniture\b", i, re.I) for i in acc)
+            and not any(re.search(rx, i, re.I) for i in l.get("items_not_accepted", [])))
+
 def city_faq(c):
     """Computed fan-out answers from the listing fields (never hand-written)."""
     ls = c["listings"]; city = c["name"]; n = len(ls)
@@ -195,6 +209,31 @@ def city_faq(c):
              + (f", {other} give partial details (see each listing)" if other else "")
              + f", and {len(unk)} {'doesn' if len(unk) == 1 else 'don'}'t say, so ask them. Fees and conditions vary; check each listing.")
         out.append({"q": f"Who will pick up bulky items from inside my home in {city}?", "a": a})
+    # Multi-condition (item x inside-pickup) answers. Learning 2026-10-25, Neil Patel "AI Mode ... 5 New Rules":
+    # long, specific queries trigger AI answers far more often and need cited sources. Counted from fields only.
+    for item, rx in ITEM_RX:
+        m = [l for l in ls if takes_item(l, rx, item)]
+        my = [l for l in m if l.get("stairs_inside", "").startswith("Yes")]
+        if not my:
+            continue
+        mn = [l for l in m if l.get("stairs_inside", "").startswith("No.")]
+        mu = [l for l in m if l.get("stairs_inside", "").startswith("Not stated")]
+        mo = len(m) - len(my) - len(mn) - len(mu)
+        city_no = [l for l in mn if l["type"] == "city bulk pickup"]
+        rest = []
+        if mn:
+            rest.append(f"{len(mn)} {'is' if len(mn) == 1 else 'are'} curbside or drop-off only"
+                        + (f" (including the city's own pickup, {_names(city_no)})" if city_no else ""))
+        if mo:
+            rest.append(f"{mo} give{'s' if mo == 1 else ''} partial details")
+        if mu:
+            rest.append(f"{len(mu)} {'doesn' if len(mu) == 1 else 'don'}'t say")
+        rest_s = (", ".join(rest[:-1]) + (", and " if len(rest) > 2 else " and ") + rest[-1]) if len(rest) > 1 else (rest[0] if rest else "")
+        a = (f"{len(my)} of the {len(m)} options we list for {city} that take a {item} "
+             f"{'says it' if len(my) == 1 else 'say they'} will collect it from inside your home: {_names(my)}. "
+             + (rest_s[0].upper() + rest_s[1:] + ". " if rest_s else "")
+             + "Prices and conditions differ; check each listing.")
+        out.append({"q": f"Who will take a {item} out of my apartment or house (not just from the curb) in {city}?", "a": a})
     cnt = [(t, sum(1 for l in ls if l["type"] == t)) for t in TYPES]
     cnt = [(t, k) for t, k in cnt if k]
     out.append({"q": f"What are the ways to get rid of bulky items in {city}?",
