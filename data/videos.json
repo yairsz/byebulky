@@ -6,7 +6,17 @@
   "description": "How to get rid of a mattress in Boston, using the City of Boston's own rules: mattresses can't go in regular trash, how to book the City's curbside mattress pickup (6 units or fewer), what to do in buildings with 7+ units, donation options, and asking the seller to take the old one. Sources: boston.gov (checked 2026-10-21).",
   "caption": "A 1-minute summary of this guide, with the City of Boston's rules (checked 2026-10-21). Narration is computer-generated.",
   "uploadDate": "2026-10-23T18:05:34-04:00",
-  "duration": "PT59S"
+  "duration": "PT59S",
+  "transcript": [
+   "How do you get rid of a mattress in Boston? Here's what the City says.",
+   "Mattresses and box springs can't go in regular trash. Massachusetts bans them from disposal.",
+   "Building with six units or fewer? Book the City's curbside pickup. It's by appointment only, online at boston dot gov, or call 311.",
+   "Put it at the curb by 6 a.m. on pickup day, or after 5 p.m. the night before. If it's soiled or has bed bugs, bag and seal it completely. Don't cut or crush it. The limit is 10 items per address per calendar year.",
+   "Seven or more units? The City won't collect it. Ask your property manager, or use a hauler from the City's list.",
+   "Donating? Some furniture banks, like Furnishing Hope and Household Goods, take clean mattresses with no stains or rips. Many donation outlets don't take mattresses at all.",
+   "Buying a new one? The City suggests asking the seller to take the old one for recycling on delivery.",
+   "Every option, with official sources, is at bye bulky dot com. Rules change, so confirm before you haul."
+  ]
  },
  "/somerville/mattress/": {
   "id": "ehnWv9_2wKw",
@@ -15,7 +25,16 @@
   "description": "How to get rid of a mattress in Somerville, MA, using the City of Somerville's own rules: the $55 per-item Disposal Sticker in effect since February 1, 2026, who qualifies (buildings with 6 or fewer units on City trash), scheduling with 311 by 3:30 p.m. the day before, curb rules on pickup day, and why mattresses can't go out with regular trash. Sources: somervillema.gov (checked 2026-10-23).",
   "caption": "A 1-minute summary of this guide, with the City of Somerville's rules (checked 2026-10-23). Narration is computer-generated.",
   "uploadDate": "2026-10-24T00:11:15-04:00",
-  "duration": "PT53S"
+  "duration": "PT53S",
+  "transcript": [
+   "How do you get rid of a mattress in Somerville? Here's what the City says.",
+   "Since February first, 2026, Somerville charges fifty-five dollars per mattress, and fifty-five per box spring. A set counts as two items.",
+   "It's only for buildings with six or fewer units that get City trash pickup. The limit is two bulk items per property a week.",
+   "First buy a Disposal Sticker for each item. Online stickers come by mail and can take up to ten days. Once you have it, contact 311 by 3:30 p.m. the day before.",
+   "Put a sticker on each item and set it out after 4 p.m. the day before, and by 7 a.m. Nothing on top, and leave 36 inches of sidewalk clear.",
+   "Don't just put it out with the trash. Unscheduled mattresses are left on the curb and may be fined.",
+   "Seven or more units, or want to donate? Every option, with sources, is at bye bulky dot com. Rules change, so confirm before you haul."
+  ]
  },
  "/cambridge/mattress/": {
   "id": "WkpE3kgZUvM",
@@ -24,6 +43,15 @@
   "description": "How to get rid of a mattress in Cambridge, MA, using the City of Cambridge's own rules: curbside collection through its contractor UTEC at $45 per mattress and $45 per box spring, booking online, curb timing (by 7 a.m., not before 6 p.m. the night before), what UTEC refuses, the Massachusetts trash ban, and no drop-off locations in Cambridge. Sources: cambridgema.gov and utecinc.org (checked 2026-10-24).",
   "caption": "A 1-minute summary of this guide, with the City of Cambridge's and UTEC's rules (checked 2026-10-24). Narration is computer-generated.",
   "uploadDate": "2026-10-25T03:12:19-04:00",
-  "duration": "PT56S"
+  "duration": "PT56S",
+  "transcript": [
+   "How do you get rid of a mattress in Cambridge? Here's what the City says.",
+   "Cambridge mattress pickup isn't free anymore. The City's contractor, UTEC, charges forty-five dollars per mattress and forty-five per box spring, so a set is ninety.",
+   "Book online with UTEC and choose Cambridge. The City says slots fill up quickly. UTEC takes up to eight pieces per pickup.",
+   "Put it at the curb by 7 a.m., and not before 6 p.m. the night before. You don't need to be home. The City suggests a note with UTEC, your order number and the date.",
+   "UTEC refuses torn, soiled or moldy items, anything with bed bugs or other pests, and futons, toppers, air beds and water beds.",
+   "Don't put it out with the trash. Massachusetts has banned that since 2022, and the City says there are no drop-off spots in Cambridge.",
+   "Paid haulers, donation and drop-off options, each with sources, are at bye bulky dot com. Rules change, so confirm before you haul."
+  ]
  }
 }
