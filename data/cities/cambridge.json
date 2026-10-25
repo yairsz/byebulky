@@ -1,0 +1,473 @@
+{
+ "slug": "cambridge",
+ "name": "Cambridge",
+ "state": "MA",
+ "last_verified": "2026-10-24",
+ "title": "Cambridge MA Bulky Item & Mattress Pickup: 2026 Rules",
+ "meta_description": "Cambridge takes 1 furniture item a week free with trash. Appliances need a $25 permit; mattresses go through UTEC at $45 each. All sourced.",
+ "intro": "Cambridge collects one piece of furniture a week for free with your trash, but appliances need a paid permit and mattresses are booked separately with the City's contractor, UTEC, for $45 each. Here's what each option takes, what it costs, and where we got it.",
+ "quick_answers": [
+  {
+   "q": "Does Cambridge pick up furniture?",
+   "a": "Yes. Each household can put out one piece of bulky waste, such as a couch, table or chair, per week with regular trash collection, free. Metal furniture is banned from the trash; metal desks and filing cabinets need a free permit."
+  },
+  {
+   "q": "How much is Cambridge bulky item pickup for appliances?",
+   "a": "$25 per item, or $20 if you're 62 or older, for items like air conditioners, washers, dryers, refrigerators, stoves and TVs over 20 inches. Items aren't scheduled until the fee is paid."
+  },
+  {
+   "q": "How do I schedule mattress pickup in Cambridge?",
+   "a": "Book online with UTEC at utecinc.org/mattress-recycling. It costs $45 per mattress and $45 per box spring, and the City says slots fill up quickly."
+  },
+  {
+   "q": "Is there a drop-off for large items in Cambridge?",
+   "a": "The City says there are no drop-off locations in Cambridge for mattresses. Its Recycling Center at 147 Hampshire Street takes small electronics and scrap metal, but not appliances."
+  },
+  {
+   "q": "What can't go in the trash in Cambridge?",
+   "a": "Large appliances, metal items such as filing cabinets and furniture, mattresses, textiles, recyclables, yard waste, mercury items and non-alkaline batteries are banned from Cambridge trash."
+  }
+ ],
+ "resources": [
+  {
+   "label": "Cambridge Curbside Collections (all waste programs)",
+   "url": "https://www.cambridgema.gov/Services/CurbsideCollections"
+  },
+  {
+   "label": "Cambridge Furniture, Appliance & Large Item Disposal",
+   "url": "https://www.cambridgema.gov/Services/furnitureappliancelargeitemdisposal"
+  },
+  {
+   "label": "Cambridge Mattress Recycling (UTEC)",
+   "url": "https://www.cambridgema.gov/Services/mattressrecycling"
+  },
+  {
+   "label": "Get Rid of It Right tool (collection day and how to dispose of an item)",
+   "url": "https://www.cambridgema.gov/Departments/publicworks/GetRidOfItRight"
+  },
+  {
+   "label": "Apply for an appliance/large item permit (City portal)",
+   "url": "https://cambridgema.viewpointcloud.com/categories/1101/record-types/6612"
+  }
+ ],
+ "listings": [
+  {
+   "id": "cambridge-curbside-furniture",
+   "name": "City of Cambridge curbside furniture & bulky item collection (no permit)",
+   "type": "city bulk pickup",
+   "items_accepted": [
+    "Furniture such as a couch, table or chair (one piece per week; not metal)",
+    "Carpet or lumber (residential only, up to 3 tied bundles, 3' x 3' x 1')",
+    "Toilet or sink (one per household on collection day)",
+    "Small TVs and computer monitors (20\" or smaller screen, placed close to the curb edge)",
+    "Small electronics such as microwaves, stereos, box fans, small printers or fax machines"
+   ],
+   "items_not_accepted": [
+    "Metal furniture and other metal items such as filing cabinets (banned from Cambridge trash; metal desks and cabinets need a free permit)",
+    "Large appliances (permit and fee required, see below)",
+    "Mattresses and box springs (banned from trash; separate UTEC program)",
+    "Textiles such as clothes, sheets and towels (banned from trash)",
+    "Commercial or industrial items"
+   ],
+   "condition_rules": "Each household may put out one piece of bulky waste per week with trash collection. The City says there are some exceptions and points to its Get Rid of It Right tool to check an item. Items go curbside after 6 p.m. the night before or by 7 a.m. on collection day. Violations of the Refuse & Litter Ordinance can be fined up to $300 per violation per day.",
+   "stairs_inside": "No. Curbside only.",
+   "lead_time": "Your regular weekly trash day (look it up with the Get Rid of It Right tool or the Zero Waste Cambridge app). Collection runs one day behind after a holiday.",
+   "cost": "Free (the City's curbside brochure says one piece of furniture per week, free of charge).",
+   "service_area": "Cambridge residential buildings that get City trash collection. The City's reuse page says the weekly item is for households whose trash the City collects.",
+   "address": null,
+   "book_url": "https://www.cambridgema.gov/Departments/publicworks/GetRidOfItRight",
+   "phone": "617-349-4800 (DPW)",
+   "email": "theworks@cambridgema.gov",
+   "source_urls": [
+    "https://www.cambridgema.gov/Services/trashcollection",
+    "https://www.cambridgema.gov/Services/furnitureappliancelargeitemdisposal",
+    "https://www.cambridgema.gov/Services/reducereuse",
+    "https://www.cambridgema.gov/Services/CurbsideCollections"
+   ],
+   "last_verified": "2026-10-24",
+   "notes": "The City's trash page says one piece per household per week; its older curbside brochure says one piece per building per week. If you share a building, check with DPW."
+  },
+  {
+   "id": "cambridge-appliance-permit",
+   "name": "City of Cambridge appliance & large item pickup (permit required)",
+   "type": "city bulk pickup",
+   "items_accepted": [
+    "Air conditioners and dehumidifiers (Freon removed)",
+    "Clothes washers and dryers",
+    "Refrigerators and freezers (non-commercial; doors removed)",
+    "Stoves",
+    "TVs and computer monitors over 20\"",
+    "Copiers and printers over 40 lbs",
+    "Trash compactors, water coolers and water heaters",
+    "Larger motorized exercise equipment",
+    "Free-permit items: small exercise equipment, bicycles, lawnmowers, radiators, snow blowers, metal filing cabinets and desks"
+   ],
+   "items_not_accepted": [
+    "Commercial or industrial items",
+    "Mattresses and box springs (scheduled separately with UTEC)"
+   ],
+   "condition_rules": "Every item on these lists needs a permit before pickup, even the free ones. The City says an item isn't on the collection schedule until all fees are paid. Remove refrigerator and freezer doors. Place items curbside by 7 a.m. on your collection day, or after 6 p.m. the night before.",
+   "stairs_inside": "No. Curbside pickup.",
+   "lead_time": "Prescheduled. The City says most items are scheduled for Wednesdays or Thursdays. Exact lead time not stated.",
+   "cost": "$25 per item, or $20 if the resident is 62 or older, per the City's permit application page. Free permit for bicycles, metal desks and cabinets, grills, exercise equipment, lawnmowers and snowblowers. Paying online adds a convenience fee ($0.99 + 2.99% by card, or $5.50 by e-check); paying in person avoids it.",
+   "service_area": "Cambridge residents.",
+   "address": "Permits in person: DPW, 147 Hampshire Street (Mon 8:30 a.m.-8 p.m., Tue-Thu 8:30 a.m.-5 p.m., Fri 8:30 a.m.-12 p.m.; check, money order, cash or credit card)",
+   "book_url": "https://cambridgema.viewpointcloud.com/categories/1101/record-types/6612",
+   "phone": "617-349-4800",
+   "email": "theworks@cambridgema.gov",
+   "source_urls": [
+    "https://www.cambridgema.gov/Services/furnitureappliancelargeitemdisposal",
+    "https://cambridgema.viewpointcloud.com/categories/1101/record-types/6612"
+   ],
+   "last_verified": "2026-10-24",
+   "notes": "Fee and convenience-fee amounts are from the City's online permit application page (cambridgema.viewpointcloud.com), which loads with JavaScript; the main City page lists which items need a paid or free permit but not the amount."
+  },
+  {
+   "id": "cambridge-utec-mattress",
+   "name": "City of Cambridge mattress & box spring recycling (UTEC, $45 per item)",
+   "type": "city bulk pickup",
+   "items_accepted": [
+    "Most mattresses",
+    "Box springs"
+   ],
+   "items_not_accepted": [
+    "Excessively torn, punctured, soiled or moldy items",
+    "Items infested (or previously infested) with bed bugs or other pests",
+    "Futons, mattress pads and toppers",
+    "Infant sleeping pads, air beds and water beds",
+    "Couches, bed frames, appliances and other furniture or textiles"
+   ],
+   "condition_rules": "Schedule online with UTEC, the City's contractor, and schedule early because the City says slots fill up quickly. Put items at the curb in front of your address by 7 a.m. on collection day, and not before 6 p.m. the night before. The City suggests taping a note with \"UTEC\", your order number and pickup date to each item. UTEC's limit is 8 pieces per pickup. To cancel for a full refund, UTEC says to email at least 24 hours before the pickup date; a no-show item is still charged.",
+   "stairs_inside": "No. Curbside only; the crew is prohibited from coming onto private property.",
+   "lead_time": "UTEC says Cambridge curbside pickups happen weekly and online requests can be made at any time. The crew picks up before 3 p.m. on your date. Exact wait not stated.",
+   "cost": "$45 per mattress and $45 per box spring (City mattress page, updated July 20, 2026). A $5 discount is available for financial hardship; call UTEC at 978-856-3997.",
+   "service_area": "Cambridge residents. If your building has more than 12 units, the City says to ask your property manager first, because your building may have a different procedure.",
+   "address": null,
+   "book_url": "https://utecinc.org/mattress-recycling/",
+   "phone": "978-856-3997 (UTEC)",
+   "email": "mattress-recycling@utecinc.org (problems: copy recycle@cambridgema.gov)",
+   "source_urls": [
+    "https://www.cambridgema.gov/Services/mattressrecycling",
+    "https://utecinc.org/mattress-recycling/"
+   ],
+   "last_verified": "2026-10-24",
+   "notes": "The City's separate large-item page still says mattress collection is free; the City's dedicated mattress page, updated more recently (July 20, 2026), lists the $45 fee. Massachusetts has banned mattresses from the trash since November 1, 2022."
+  },
+  {
+   "id": "cambridge-recycling-center",
+   "name": "Cambridge DPW Recycling Center (147 Hampshire St)",
+   "type": "drop-off",
+   "items_accepted": [
+    "Small electronics (small appliances, computers, cell phones, string lights)",
+    "Scrap metal items (no sealed containers, no appliances)",
+    "Bulky plastics such as laundry baskets and pails",
+    "Books",
+    "Batteries, fluorescent bulbs and mercury items",
+    "Printer cartridges, plastic bags and blue-cart recyclables"
+   ],
+   "items_not_accepted": [
+    "Appliances",
+    "Trash",
+    "Propane tanks (Household Hazardous Waste days)",
+    "Fire extinguishers",
+    "Paint (oil-based and latex), chemicals and waste fuels"
+   ],
+   "condition_rules": "Check your electronic item with the Get Rid of It Right tool. Contact DPW before bringing more than 50 items.",
+   "stairs_inside": "No. You bring items to the center.",
+   "lead_time": "Open Tuesdays and Thursdays 4 p.m.-7:30 p.m., and Saturdays 9 a.m.-4 p.m. The City also runs neighborhood pop-up events listed on the same page.",
+   "cost": "Not stated, check with them",
+   "service_area": "Cambridge residents, plus Cambridge small businesses and non-profits with 50 or fewer employees.",
+   "address": "147 Hampshire Street, Cambridge, MA (back right corner of the Public Works yard)",
+   "book_url": "https://www.cambridgema.gov/services/recyclingcenter",
+   "phone": "617-349-4800 (DPW)",
+   "email": "theworks@cambridgema.gov",
+   "source_urls": [
+    "https://www.cambridgema.gov/services/recyclingcenter"
+   ],
+   "last_verified": "2026-10-24",
+   "notes": "Not for furniture, mattresses or large appliances."
+  },
+  {
+   "items_not_accepted": [],
+   "address": "131 Mount Auburn Street, Level B, Cambridge, MA 02138",
+   "notes": "Email info@furnishinghopema.org with photos, your pickup address and the date the furniture must be gone. Home goods drop-off: outreachcoordinator@furnishinghopema.org.",
+   "book_url": "https://www.furnishinghopema.org/donate-1",
+   "phone": "(857) 229-7528",
+   "email": "info@furnishinghopema.org",
+   "condition_rules": "New or gently used, clean, complete, and in good working condition. No stains, odors, or pet hair, major wear and tear, or anything needing repair. Send photos before scheduling.",
+   "stairs_inside": "Pickup is handled by professional movers. Whether they go inside or upstairs is not stated, so check with them.",
+   "lead_time": "Home goods can be dropped off at the Harvard Square office Monday to Friday by appointment (email the Outreach Coordinator). Furniture drop-off is in Acton on Tuesdays, Thursdays and Saturdays, 9 a.m. to 12 p.m. Pickup timing: not stated.",
+   "cost": "No pickup fee, but they request a tax-deductible donation, suggested at $250 to $400 depending on the size of the donation. Pickup requires at least six substantial furniture items.",
+   "service_area": "Office at 131 Mount Auburn Street in Harvard Square, Cambridge. Pickup area not stated, check with them. The City of Cambridge's mattress page lists Furnishing Hope as a paid option that needs six substantial pieces of furniture plus the mattress for pickup.",
+   "last_verified": "2026-10-24",
+   "id": "furnishing-hope",
+   "name": "Furnishing Hope of Massachusetts",
+   "type": "furniture bank",
+   "items_accepted": [
+    "Mattresses & box springs",
+    "Beds",
+    "Dressers, night tables & armoires",
+    "Sofas & upholstered chairs",
+    "Coffee & end tables",
+    "TV stands & entertainment centers",
+    "Kitchen/dining tables & chairs",
+    "Buffets, hutches, bookcases, cabinets"
+   ],
+   "source_urls": [
+    "https://www.furnishinghopema.org/donate-1",
+    "https://www.cambridgema.gov/Services/mattressrecycling"
+   ]
+  },
+  {
+   "items_not_accepted": [
+    "Mattresses & box springs",
+    "Sofa beds",
+    "Sofas with slip covers",
+    "Futons",
+    "Platform & trundle beds",
+    "Hutches, sideboards, buffets, china cabinets",
+    "TV armoires & entertainment centers",
+    "Fitness equipment",
+    "In-wall stoves"
+   ],
+   "address": "1580 VFW Parkway, West Roxbury, MA",
+   "notes": null,
+   "book_url": "https://resupply.app.link/habitatbostonrestore",
+   "phone": null,
+   "email": "restore@habitatboston.org",
+   "condition_rules": "All donations must be in working order. Staff can refuse any item based on condition and store need. Email the ReStore for the current list.",
+   "stairs_inside": "Drop-off: staff help unload at the store. In-home pickup is arranged through ReSupply, Habitat's scheduling partner (Habitat says ReSupply works with local movers at a lower cost to you; it's a paid service).",
+   "lead_time": "Donation drop-off Tuesday to Saturday, 9:30 a.m. to 4:00 p.m. (as posted).",
+   "cost": "Drop-off fee: not stated. Pickup is through ReSupply, a paid service.",
+   "service_area": "Drop-off at the West Roxbury store. Habitat says a second ReStore is set to open in Watertown in fall 2026. In-home pickup is booked through ReSupply, whose Boston page lists Cambridge among the communities it serves.",
+   "last_verified": "2026-10-24",
+   "id": "habitat-greater-boston-restore",
+   "name": "Habitat for Humanity Greater Boston ReStore (West Roxbury)",
+   "type": "drop-off",
+   "items_accepted": [
+    "Bed frames, headboards & footboards",
+    "Dressers, bureaus & armoires",
+    "Coffee & end tables",
+    "Desks (3' x 5' or smaller)",
+    "Tables & chairs (not conference tables or dated)",
+    "Upholstered furniture (not ripped, worn, broken, dated or faded)",
+    "Outdoor furniture",
+    "Appliances less than eight years old (fridges, washers, dryers, free-standing stoves, cooktops, microwaves, never-installed dishwashers)",
+    "Cabinets, doors, lighting, building materials"
+   ],
+   "source_urls": [
+    "https://habitatboston.org/restore/",
+    "https://resupply.com/boston/"
+   ]
+  },
+  {
+   "items_not_accepted": [
+    "Mattresses with any stains or rips",
+    "Office furniture, desks, file cabinets",
+    "Glass-top items",
+    "Outdoor furniture",
+    "Oversized or wall-mounted items"
+   ],
+   "address": "530 Main Street, Acton, MA",
+   "notes": null,
+   "book_url": "https://www.householdgoods.org/donate/donate-goods/pickup/",
+   "phone": "978-763-1198",
+   "email": null,
+   "condition_rules": "Clean, complete, and in good working condition; nothing broken, chipped, torn, stained, or recalled.",
+   "stairs_inside": "Volunteer pickup asks that items be in a garage or on the first floor if possible.",
+   "lead_time": "Drop-off Tuesdays, Thursdays, and Saturdays, 9 a.m. to noon. Volunteer pickups typically scheduled 4+ weeks ahead. Paid pickups through ReSupply or ReMARKable Donations in as soon as 2 business days.",
+   "cost": "Drop-off: not stated. Volunteer pickup: minimum $35 donation requested. Paid pickups (ReSupply / ReMARKable Donations): for a fee.",
+   "service_area": "Volunteer pickup only in Acton, Boxborough, Carlisle, Concord, Littleton, Maynard, Stow, Sudbury and Westford, so not Cambridge. Cambridge donors can drop off in Acton or use the paid pickup partners (ReSupply or Mark's Moving/ReMARKable Donations).",
+   "last_verified": "2026-10-24",
+   "id": "household-goods-acton",
+   "name": "Household Goods (Acton)",
+   "type": "furniture bank",
+   "items_accepted": [
+    "Standard-size mattresses & box springs",
+    "Bed frames (all parts) & bunk beds",
+    "Dressers & armoires",
+    "Couches, sofa beds & futons",
+    "Chairs (no office chairs)",
+    "Kitchen, dining, end & coffee tables",
+    "Refrigerators, washers, electric dryers (newer than 10 years)",
+    "Air conditioners up to 18\" x 30\" x 24\" (newer than 10 years)",
+    "Flat-screen TVs under 55\" (less than 10 years old)"
+   ],
+   "source_urls": [
+    "https://www.householdgoods.org/donate/donate-goods/donation-guidelines/",
+    "https://www.householdgoods.org/donate/donate-goods/pickup/"
+   ]
+  },
+  {
+   "items_not_accepted": [],
+   "address": null,
+   "notes": "Habitat Greater Boston ReStore and Household Goods both point donors to ReSupply for in-home pickup.",
+   "book_url": "https://resupply.com/boston/",
+   "phone": null,
+   "email": null,
+   "condition_rules": "Items should be clean, sturdy, complete, and usable (no broken frames, missing parts, or pet damage). Items the charity can't accept may carry a recycling fee, charged in $10 increments.",
+   "stairs_inside": "Yes. Furniture teams collect from inside your home, including upper floors of walk-ups and triple-deckers. Disassembly is available; additional fees may apply.",
+   "lead_time": "Priority donation pickups within 24 hours (per ReSupply's Boston page).",
+   "cost": "Paid service. Starting at $19, $49 and $99 depending on the pickup (bags and boxes up to bulky furniture), plus a separate booking fee that is non-refundable unless ReSupply can't complete the pickup. Pricing varies by location, items and handling needs; you can decline the final quote on site.",
+   "service_area": "ReSupply's Boston page lists Cambridge among the communities it serves. The City of Cambridge's reuse page describes ReSupply as an in-home, fee-based pickup option.",
+   "last_verified": "2026-10-24",
+   "id": "resupply-boston",
+   "name": "ReSupply donation pickup (Boston area)",
+   "type": "paid hauler",
+   "items_accepted": [
+    "Furniture (tables, dressers, bed frames, bookcases, etc.)",
+    "Couches, sectionals, recliners, futons",
+    "Mattresses",
+    "Appliances",
+    "Clothing, boxes & bags",
+    "Office furniture"
+   ],
+   "source_urls": [
+    "https://resupply.com/boston/",
+    "https://www.cambridgema.gov/Services/reducereuse",
+    "https://www.cambridgema.gov/Services/mattressrecycling"
+   ]
+  },
+  {
+   "items_not_accepted": [],
+   "address": null,
+   "notes": "The City of Cambridge's reuse page links satruck.org among its donation resources.",
+   "book_url": "https://satruck.org/",
+   "phone": "1-800-728-7825",
+   "email": null,
+   "condition_rules": "Gently used. Accepted items vary by location, so check when you enter your ZIP or call 1-800-SA-TRUCK. Mattress acceptance is not stated on the satruck.org home page, check with them.",
+   "stairs_inside": "Not stated, check with them",
+   "lead_time": "Not stated, check with them",
+   "cost": "Advertised as a free donation pickup on satruck.org. Local terms: check with them.",
+   "service_area": "Enter your Cambridge ZIP on satruck.org to see whether pickup is offered at your address. I could not confirm Cambridge coverage (the ZIP check is a script form).",
+   "last_verified": "2026-10-24",
+   "id": "salvation-army-satruck",
+   "name": "The Salvation Army donation pickup (1-800-SA-TRUCK)",
+   "type": "charity pickup",
+   "items_accepted": [
+    "Furniture (as listed on satruck.org)",
+    "Appliances (as listed on satruck.org)",
+    "Clothing and household goods"
+   ],
+   "source_urls": [
+    "https://satruck.org/",
+    "https://www.cambridgema.gov/Services/reducereuse"
+   ]
+  },
+  {
+   "items_not_accepted": [],
+   "address": null,
+   "notes": "We do not currently have an affiliate relationship with LoadUp. If that changes, this listing will be labeled.",
+   "book_url": "https://goloadup.com/junk-removal/",
+   "phone": null,
+   "email": null,
+   "condition_rules": "No donation-quality requirement stated; this is junk removal.",
+   "stairs_inside": "Yes. LoadUp says its loaders carry items out from any room (bedroom, basement, attic, upstairs); curbside option also offered.",
+   "lead_time": "Next-day or same-day pickup when you book before 12 p.m. (per LoadUp's Cambridge page).",
+   "cost": "Per LoadUp's pages: junk removal full-service from $75, curbside from $70, priority from $85. Mattress removal from $85. Starting prices; the final price is shown by ZIP and item before booking.",
+   "service_area": "LoadUp has a Cambridge, MA page covering Cambridgeport, North Cambridge and East Cambridge. Enter your ZIP to confirm.",
+   "last_verified": "2026-10-24",
+   "id": "loadup",
+   "name": "LoadUp junk removal",
+   "type": "paid hauler",
+   "items_accepted": [
+    "Furniture",
+    "Mattresses",
+    "Couches",
+    "Appliances",
+    "General junk"
+   ],
+   "source_urls": [
+    "https://goloadup.com/junk-removal/ma/cambridge/",
+    "https://goloadup.com/junk-removal/",
+    "https://goloadup.com/mattress-removal/"
+   ]
+  },
+  {
+   "id": "mattress-mattress-pro",
+   "name": "Mattress Pro Recycling",
+   "type": "paid hauler",
+   "items_accepted": [
+    "Mattresses (any size, including memory foam and hybrid)",
+    "Box springs",
+    "Futons",
+    "Mattress toppers",
+    "Bed frames and other items by quote (text photos)"
+   ],
+   "items_not_accepted": [
+    "Wet, moldy or pest-infested mattresses"
+   ],
+   "condition_rules": "Mattresses must be dry and free of mold or pests. Pickup only; no customer drop-offs.",
+   "stairs_inside": "Not stated, check with them",
+   "lead_time": "Book a date online. For a same-day pickup after 2 p.m., call or text 857-404-2496.",
+   "cost": "$125 per mattress, $100 per box spring, $50 per topper, any size (per its booking page). Bed frames and unlisted items: quote by text.",
+   "service_area": "Its home page lists Cambridge among the towns it serves (also Somerville, Newton, Brookline, Watertown, Belmont, Arlington and more).",
+   "address": "221 Jackson Street, Newton, MA 02459 (as listed by the City of Boston)",
+   "book_url": "https://mattressprorecycling.com/schedule/",
+   "phone": "857-404-2496",
+   "email": null,
+   "source_urls": [
+    "https://mattressprorecycling.com/schedule/",
+    "https://mattressprorecycling.com/",
+    "https://www.cambridgema.gov/Services/mattressrecycling",
+    "https://www.boston.gov/departments/public-works/large-residential-buildings"
+   ],
+   "last_verified": "2026-10-24",
+   "notes": "The City of Cambridge lists Mattress Pro Recycling as a paid option and notes it also takes futon mattresses, toppers and bed frames."
+  },
+  {
+   "id": "mattress-handup",
+   "name": "HandUp Mattress Recycling & Resale (New Bedford drop-off)",
+   "type": "paid hauler",
+   "items_accepted": [
+    "Mattresses",
+    "Box springs"
+   ],
+   "items_not_accepted": [
+    "Mattresses or box springs visibly containing mold or bed bugs"
+   ],
+   "condition_rules": "Drop-off for a fixed price per mattress or box spring. Pickup for towns outside HandUp's scheduled routes is by quote through its contact form.",
+   "stairs_inside": "Not stated, check with them",
+   "lead_time": "Recycling drop-off: Monday to Friday, 8 a.m. to 4 p.m. Pickup timing: not stated.",
+   "cost": "Drop-off $35 at HandUp Mattress Recycling (100 Duchaine Blvd, Dock #15) or $40 at HandUp Mattress Resale (229 Coffin Ave), both in New Bedford. Pickup: by quote.",
+   "service_area": "Cambridge isn't on HandUp's list of regularly scheduled curbside towns, so pickup is by quote. The City of Cambridge says to select \"Boston\" as your town.",
+   "address": "100 Duchaine Boulevard (Dock #15), New Bedford, MA 02745",
+   "book_url": "https://handupmattress.com/pages/mattress-recycling",
+   "phone": "774-271-8744",
+   "email": "info@handupus.org",
+   "source_urls": [
+    "https://handupmattress.com/pages/mattress-recycling",
+    "https://www.cambridgema.gov/Services/mattressrecycling"
+   ],
+   "last_verified": "2026-10-24",
+   "notes": "The City of Cambridge says some HandUp mattresses are sanitized and resold."
+  },
+  {
+   "id": "mattress-marvin",
+   "name": "Marvin Junk Removal",
+   "type": "paid hauler",
+   "items_accepted": [
+    "Mattresses and box springs",
+    "Furniture (sofas, bed frames, dressers)",
+    "Appliances",
+    "Scrap metal, cast iron radiators and boilers"
+   ],
+   "items_not_accepted": [],
+   "condition_rules": "Free estimate by phone or text.",
+   "stairs_inside": "Yes. Marvin says it carries items out from any floor, including walk-ups and basements.",
+   "lead_time": "Marvin says it is often same day.",
+   "cost": "Junk removal starts at $120 and mattress disposal starts at $180 (per its Cambridge page). Final price by estimate.",
+   "service_area": "Has a Cambridge, MA service page.",
+   "address": null,
+   "book_url": "https://marvinjunkremoval.net/cambridge-junk-removal",
+   "phone": "781-267-5966",
+   "email": null,
+   "source_urls": [
+    "https://marvinjunkremoval.net/cambridge-junk-removal",
+    "https://www.cambridgema.gov/Services/mattressrecycling"
+   ],
+   "last_verified": "2026-10-24",
+   "notes": "Listed by the City of Cambridge as a paid mattress option. Its page describes Cambridge's UTEC program as free, which no longer matches the City's $45 fee."
+  }
+ ]
+}

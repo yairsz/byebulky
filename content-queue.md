@@ -6,7 +6,7 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [x] How to get rid of a couch/sofa in Boston (/boston/couch/), done 2026-10-21: reuse curbside furniture, ReSupply, Furnishing Hope, Household Goods; add a note on who refuses sofas (Habitat: slip-covered sofas/sofa beds; Thrift Shop of Boston)
 - [x] How to get rid of a refrigerator / AC / TV in Boston (/boston/appliances/), done 2026-10-22: City special collection + Habitat (<8 yrs) + Household Goods (<10 yrs)
 - [ ] Boston: verify and add The Furniture Trust, St. Vincent de Paul Boston, Goodwill Mass furniture policy, Boomerangs (sites failed to load 2026-10-21)
-- [ ] Cambridge, MA city page (Cambridge DPW bulky item / mattress rules)
+- [x] Cambridge, MA city page (/cambridge/) + mattress guide (/cambridge/mattress/), done 2026-10-24 (keyword-targets ByeBulky row 2)
 - [ ] Quincy, MA city page (bulky item / mattress rules; metro cluster next to Boston, per Oct 24 learning)
 - [ ] Newton, MA city page (bulky item / mattress rules; metro cluster next to Boston)
 - [x] Somerville, MA city page (/somerville/) + mattress guide (/somerville/mattress/), done 2026-10-23 (keyword-targets ByeBulky row 1)
@@ -37,6 +37,7 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [ ] Boston: "Moving out of a Boston apartment on Sept 1: getting rid of furniture" (curbside rules only; no invented dates)
 - [ ] Boston: how to get rid of a bed frame or dresser (/boston/bed-frame/): curbside furniture + Habitat/Household Goods/Furnishing Hope rules
 - [ ] Boston: how to get rid of a washer, dryer, or dishwasher (not in City special collection; donation + haulers only)
-- [ ] Cambridge, MA: how to get rid of a fridge or AC (Cambridge DPW appliance rules)
+- [ ] Cambridge, MA: appliances guide (/cambridge/appliances/): $25 permit ($20 age 62+), free-permit items, Wed/Thu scheduling (data already in cambridge.json)
+- [ ] Cambridge: get a saved snapshot of the City permit portal fee text (JS page) and re-confirm whether the City's large-item page drops the 'mattresses are free' note
 - [ ] Somerville: appliances guide (/somerville/appliances/): $25 white goods sticker, free TV/monitor 311 pickup, DPW e-waste drop-off (data already in somerville.json)
 - [ ] Somerville: check whether ReSupply or Furnishing Hope pick up in Somerville (not stated on 2026-10-23); find Waste Wizard rules for couches with bed bugs

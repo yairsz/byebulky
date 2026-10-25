@@ -1,0 +1,72 @@
+{
+ "path": "cambridge/mattress",
+ "city": "cambridge",
+ "short": "Mattress",
+ "last_verified": "2026-10-24",
+ "title": "Cambridge Mattress Pickup: $45 UTEC Fee, How to Book & Options",
+ "meta_description": "Cambridge mattress pickup now costs $45 per mattress or box spring, booked with UTEC. How to schedule, what's refused, and paid or donation alternatives.",
+ "h1": "Cambridge mattress pickup and recycling: the $45 UTEC fee, booking and other options",
+ "intro": "Mattresses can't go in the trash in Massachusetts, and Cambridge's collection runs through its contractor UTEC, which now charges $45 per mattress or box spring. Here's how to book it, what gets refused, and what to do if the City pickup doesn't fit.",
+ "quick_answers": [
+  {
+   "q": "Does the City of Cambridge pick up mattresses?",
+   "a": "Yes, curbside, through its contractor UTEC. You book online at utecinc.org/mattress-recycling and pay $45 per mattress and $45 per box spring."
+  },
+  {
+   "q": "How much does Cambridge mattress disposal cost?",
+   "a": "$45 per item, so a mattress and box spring together cost $90. UTEC offers a $5 discount for financial hardship; call 978-856-3997."
+  },
+  {
+   "q": "Is Cambridge mattress pickup free?",
+   "a": "Not anymore. The City's mattress page, updated July 20, 2026, lists a $45 fee per mattress and box spring. An older City large-item page still calls it free."
+  },
+  {
+   "q": "Can I put a mattress out with the trash in Cambridge?",
+   "a": "No. Mattresses and box springs have been banned from trash disposal in Massachusetts since November 1, 2022, and Cambridge's trash rules ban them too."
+  },
+  {
+   "q": "Where can I drop off a mattress near Cambridge?",
+   "a": "The City says there are no drop-off locations in Cambridge. It lists Furnishing Hope in Acton (stain-free only), UTEC in Haverhill and HandUp in New Bedford; contact them first."
+  }
+ ],
+ "sections": [
+  {
+   "h": "Step 1: book with UTEC and pay $45 per item",
+   "p": "Schedule online at utecinc.org/mattress-recycling and choose Cambridge. The fee is $45 for each mattress and each box spring, and the City says to book in advance because slots fill up quickly. UTEC says Cambridge pickups happen weekly and limits residential pickups to 8 pieces. If your building has more than 12 units, the City says to ask your property manager first, because your building may have a different procedure."
+  },
+  {
+   "h": "Step 2: put it at the curb by 7 a.m.",
+   "p": "Place the mattress or box spring at the curb in front of your address by 7 a.m. on your collection day, and not before 6 p.m. the night before. You don't need to be home; the crew picks up before 3 p.m. and isn't allowed onto private property. The City suggests attaching a note with \"UTEC\", your order number and the pickup date so the crew takes your item and not a neighbor's."
+  },
+  {
+   "h": "Moving out before your pickup date",
+   "p": "The City says you still have to arrange for the item to go to the curb after 6 p.m. the night before your scheduled pickup, and its reuse page suggests coordinating with your property manager. To cancel, UTEC says to email at least 24 hours before the pickup date for a full refund; if the crew arrives and the mattress is gone, you're still charged."
+  },
+  {
+   "h": "What UTEC won't take",
+   "p": "Excessively torn, punctured, soiled or moldy items, anything infested or previously infested with bed bugs or other pests, futons, mattress pads and toppers, infant sleeping pads, and air or water beds are refused. UTEC also won't pick up couches, bed frames or appliances. For these, the City says to email DPW at recycle@cambridgema.gov."
+  },
+  {
+   "h": "Paid haulers that take more",
+   "p": "Mattress Pro Recycling lists $125 per mattress, $100 per box spring and $50 per topper, and says it serves Cambridge and takes futons. Marvin Junk Removal's Cambridge page lists mattress disposal from $180 and says it carries items out from any floor. LoadUp lists mattress removal from $85. All three are paid services; confirm the final price when you book."
+  },
+  {
+   "h": "Drop-off and donation",
+   "p": "The City says there are no drop-off locations in Cambridge. HandUp in New Bedford takes drop-offs for $35 or $40 per piece depending on the location, and UTEC's FAQ lists a $30-per-unit drop-off by emailed appointment. The City lists UTEC's drop-off in Haverhill, while UTEC's FAQ mentions its facility in Lawrence, so confirm the address when you email. Furnishing Hope (Acton drop-off) and Household Goods (Acton) only take clean mattresses with no stains or rips, and UTEC itself isn't accepting donated mattresses right now. ReSupply runs paid in-home pickups that include mattresses."
+  },
+  {
+   "h": "Selling or giving it away",
+   "p": "The City suggests Facebook Marketplace, the Buy Nothing Cambridge group on Facebook, and Craigslist for a mattress someone else can still use."
+  }
+ ],
+ "listing_ids": [
+  "cambridge-utec-mattress",
+  "mattress-mattress-pro",
+  "mattress-marvin",
+  "loadup",
+  "mattress-handup",
+  "furnishing-hope",
+  "household-goods-acton",
+  "resupply-boston"
+ ]
+}
