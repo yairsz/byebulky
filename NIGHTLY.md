@@ -82,3 +82,6 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. One 
 
 ## Intent-matched headings (added 2026-10-26, run #22)
 - The listing section on item guides is headed by `options_heading()` ("Every option we list: N ways to get rid of <item> in <City>"), not a generic "Options". For a new item, add its phrase to `ITEM_PHRASE` in build.py (or set `options_h` on the guide). Section `h` values should name what the section answers (e.g. "Who gets it free, and who pays $60"), never "Introduction"/"Details"/"More info".
+
+## At-a-glance table on item guides (added 2026-10-26, run #24)
+- Every item guide shows `guide_glance()` right after the Quick answers: one row per listing (name linked to its card, type, cost, inside/stairs pickup, lead time). Cells are verbatim leading sentences of the listing fields via `_cell()` (never split inside a.m./p.m.; "…" when cut). Don't hand-write table text; fix the listing field instead.

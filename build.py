@@ -327,6 +327,35 @@ def options_heading(g, city, n):
     item = ITEM_PHRASE.get(g["short"], g["short"].lower())
     return f"Every option we list: {n} ways to get rid of {item} in {city['name']}"
 
+_SENT = re.compile(r"(?<![ap]\.m)(?<!\b[A-Z])\.\s+(?=[A-Z$(])")
+
+def _cell(s, n=170):
+    """Verbatim leading sentences of a field for table cells: keeps adding sentences while short (so "No." or
+    "Paid service." aren't left alone) and never splits inside "a.m."/"p.m.". Adds "…" when cut."""
+    s = (s or "").strip()
+    parts = _SENT.split(s)
+    out = parts[0]
+    for x in parts[1:]:
+        if len(out) >= 40 and len(out) + len(x) > n:
+            return out + ". …" if not out.endswith(".") else out + " …"
+        out = out + ". " + x
+    return out
+
+def guide_glance(ls, g, city):
+    """Answer-first comparison table on each item guide (run #24, Surfer "3-Step SEO Playbook": consistent per-option
+    framework + skimmable TL;DR). Every cell is the first sentence of a listing field, verbatim; no new claims."""
+    if len(ls) < 2:
+        return ""
+    item = ITEM_PHRASE.get(g["short"], g["short"].lower())
+    rows = "".join(
+        f'<tr><th scope="row"><a href="#{e(l["id"])}">{e(l["name"])}</a></th><td>{e(l["type"])}</td>'
+        f'<td>{e(_cell(l.get("cost")))}</td><td>{e(_cell(l.get("stairs_inside")))}</td><td>{e(_cell(l.get("lead_time")))}</td></tr>'
+        for l in ls)
+    return (f'<h2 id="at-a-glance">At a glance: cost, inside pickup and timing for {len(ls)} ways to get rid of {e(item)} in {e(city["name"])}</h2>'
+            '<p>Each row is copied from the listing below and links to it, with its sources and the date we last checked.</p>'
+            '<div class="tablewrap"><table class="cmp"><thead><tr><th scope="col">Option</th><th scope="col">Type</th><th scope="col">Cost</th>'
+            '<th scope="col">Inside / stairs pickup</th><th scope="col">Lead time / hours</th></tr></thead><tbody>' + rows + '</tbody></table></div>')
+
 def guide_page(g, city):
     set_page(f"/{g['path']}/")
     ids = g.get("listing_ids", [])
@@ -337,7 +366,7 @@ def guide_page(g, city):
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › <a href="{U('/' + city['slug'] + '/')}">{e(city['name'])}</a> › {e(g['short'])}</p>
 <h1>{e(g['h1'])}</h1><p class="lead">{e(g['intro'])}</p><p class="meta">Last verified {e(g['last_verified'])}{(" · page updated " + e(MODIFIED[f"/{g['path']}/"])) if MODIFIED.get(f"/{g['path']}/", g['last_verified']) != g['last_verified'] else ""}</p>
 {city_hub_line(g, city)}
-{qa_block(g.get("quick_answers"))}{secs}{yt_embed('/' + g['path'] + '/', YT_CHANNEL, 'ByeBulky')}{loadup_slot()}<h2 id="all-options">{e(options_heading(g, city, len(ls)))}</h2>{''.join(listing_card(l) for l in ls)}
+{qa_block(g.get("quick_answers"))}{guide_glance(ls, g, city)}{secs}{yt_embed('/' + g['path'] + '/', YT_CHANNEL, 'ByeBulky')}{loadup_slot()}<h2 id="all-options">{e(options_heading(g, city, len(ls)))}</h2>{''.join(listing_card(l) for l in ls)}
 <p><a href="{U('/' + city['slug'] + '/')}">See all {e(city['name'])} options →</a></p>{sibling_guides(g, city)}{same_item_other_cities(g)}"""
     for x in g.get("quick_answers", []):
         assert x.get("q") and x.get("a"), f"guide {g['path']} has an empty quick answer"
