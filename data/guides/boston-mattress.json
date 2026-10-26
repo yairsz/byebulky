@@ -2,9 +2,9 @@
   "path": "boston/mattress",
   "city": "boston",
   "short": "Mattress",
-  "last_verified": "2026-10-21",
-  "title": "How to Get Rid of a Mattress in Boston: City Pickup, Donation & Junk Removal",
-  "meta_description": "Mattresses are banned from Massachusetts trash. Here's how to book Boston's curbside mattress pickup, the rules for 7+ unit buildings, and donation and hauler options, with sources.",
+  "last_verified": "2026-10-26",
+  "title": "City of Boston Mattress Pickup & Removal: How to Book, Rules, Hauler Prices",
+  "meta_description": "Mattresses are banned from Massachusetts trash. How to book the City of Boston's curbside mattress pickup, the rule for 7+ unit buildings, and the hauler prices the City lists, with sources.",
   "h1": "How to get rid of a mattress in Boston",
   "intro": "Mattresses and box springs can't go out with regular trash in Boston, because Massachusetts bans them from disposal. Which option you use mostly depends on how many units your building has.",
   "quick_answers": [
@@ -13,12 +13,12 @@
       "a": "No. Massachusetts bans mattresses and box springs from disposal, so they can't go out with regular trash in Boston."
     },
     {
-      "q": "Does the City of Boston pick up mattresses?",
-      "a": "Yes, curbside by appointment only, for buildings with 6 units or fewer. Put it at the curb by 6 a.m. on your appointment day (or after 5 p.m. the night before). Each address can have up to 10 items a calendar year."
+      "q": "How do I schedule City of Boston mattress removal?",
+      "a": "Book a curbside pickup online on the City's Mattress Recycling page, or call 311 (617-635-4500). It's for buildings with 6 units or fewer, by appointment only. Put it at the curb by 6 a.m. on your appointment day (or after 5 p.m. the night before). To cancel, use the link in your confirmation email or call 311 before 12 p.m. the day before."
     },
     {
-      "q": "What if my building has 7 or more units?",
-      "a": "The City does not collect mattresses from buildings with more than six units. Ask your property manager, or use one of the private mattress haulers the City lists below."
+      "q": "What if my building has 7 or more units, and what do mattress haulers charge?",
+      "a": "The City does not collect mattresses from buildings with more than six units. Ask your property manager or use a private hauler the City lists. Prices on the City's list include Tough Stuff Recycling $75 per pickup, Burns Cleanout $100, Lug Away $124 curbside or $174 from inside the home, and CC Junk Removal $125 with indoor removal included. The others quote on request."
     },
     {
       "q": "What if the mattress is soiled or has bed bugs?",
@@ -32,11 +32,11 @@
   "sections": [
     {
       "h": "Building with 6 units or fewer: book the City pickup",
-      "p": "The City of Boston collects mattresses and box springs curbside by appointment only, for buildings with 6 units or fewer. Put it at the curb by 6 a.m. on your appointment day (or after 5 p.m. the night before). If it's soiled or has bed bugs, bag and seal it completely. Don't cut or crush it. Each address can have up to 10 items a calendar year."
+      "p": "The City of Boston collects mattresses and box springs curbside by appointment only, for buildings with 6 units or fewer. Put it at the curb by 6 a.m. on your appointment day (or after 5 p.m. the night before). If it's soiled or has bed bugs, bag and seal it completely. Don't cut or crush it. Each address can have up to 10 items a calendar year. Book the pickup online on the City's Mattress Recycling page, or call 311 (617-635-4500). To cancel, use the link in your confirmation or reminder email, or call 311, before 12 p.m. the day before. If it isn't collected on your date, call 311 within 24 hours or you'll have to reschedule."
     },
     {
       "h": "Building with 7 or more units",
-      "p": "The City does not collect mattresses from buildings with more than six units. Ask your property manager, or use one of the private mattress haulers the City lists (below)."
+      "p": "The City does not collect mattresses from buildings with more than six units. Ask your property manager, or use one of the private mattress haulers the City lists (below). The City's list gives prices for some of them: Tough Stuff Recycling $75 per mattress or box spring for pickup ($25 to drop off, with proof of Boston residency or business), Burns Cleanout & Junk Removal $100 per mattress, Lug Away Junk Removal $124 curbside or $174 from inside the home ($245 for a king), CC Junk Removal & Hauling $125 per mattress or box spring with indoor removal included, and HandUp Mattress Recycling $35 to drop off. The others quote on request."
     },
     {
       "h": "Donating a mattress",
