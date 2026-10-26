@@ -393,6 +393,7 @@ def home(cities):
 <p class="lead">{e(CFG['tagline'])} For each city we list every real option: City bulk and mattress pickup, charities that pick up, drop-off spots, furniture banks, and paid haulers. You see what each one takes, its condition rules, whether it will come inside or up stairs, and its cost. A cost is only shown when the organization publishes it.</p>
 <h2>Cities</h2><div class="cities">{cl}</div>
 {cmp_html}
+{yt_embed('/', YT_CHANNEL, 'ByeBulky')}
 {home_guides(cities)}
 <h2>Why this exists</h2>
 <p>Charities change what they accept, some stop picking up furniture altogether, and city rules differ from one place to the next. People end up calling three places and still having a couch on the curb. We collect the rules from official sources, link every listing to its source, and date when we last checked it.</p>
