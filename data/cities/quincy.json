@@ -1,0 +1,426 @@
+{
+ "slug": "quincy",
+ "name": "Quincy",
+ "state": "MA",
+ "last_verified": "2026-10-25",
+ "title": "Quincy MA Bulky Item & Mattress Pickup: 2026 Rules & Options",
+ "meta_description": "Quincy takes 2 furniture items a week free at the curb. Mattresses: free South Shore Recycle pickup (8 units or fewer). Appliances: call ahead. All sourced.",
+ "intro": "Quincy picks up two pieces of furniture a week at the curb without a call, schedules mattresses separately through South Shore Recycle (free for most homes), and collects appliances and TVs if you call its hauler ahead. Here's what each option takes, what it costs, and where we got it.",
+ "quick_answers": [
+  {
+   "q": "Does Quincy have bulky item pickup?",
+   "a": "Yes. Two bulky items per week, such as sofas, chairs, recliners and lawn furniture, can go out curbside on your regular trash day without calling. It covers one- to eight-family homes and condos."
+  },
+  {
+   "q": "How do I schedule mattress pickup in Quincy, MA?",
+   "a": "Call South Shore Recycle at (617) 837-1299 or book online. It's free for Quincy residents in homes, condos or buildings with 8 units or fewer, and it's no longer collected on trash day."
+  },
+  {
+   "q": "How do I get rid of a refrigerator, washer or TV in Quincy?",
+   "a": "Call Capitol Waste at (855) 533-3400 by 3 p.m. before your trash day: at least one full business day ahead for most appliances, two for refrigerators, TVs and monitors."
+  },
+  {
+   "q": "What can I drop off at the Quincy DPW Yard?",
+   "a": "Appliances (no refrigerators or dishwashers), scrap metal such as desks, bed frames and exercise equipment, electronics, recycling, textiles and books at 55 Sea St. It's for Quincy residents with a MA driver's license."
+  },
+  {
+   "q": "What large items won't Quincy pick up at the curb?",
+   "a": "Toilets and construction or demolition debris, move-out and clean-out loads, oil-based paint and tires. Apartment buildings with more than eight units must hire a private hauler."
+  }
+ ],
+ "resources": [
+  {
+   "label": "Quincy Waste and Recycling Division",
+   "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/index.php"
+  },
+  {
+   "label": "How Can I Get Rid Of? (Quincy A-to-Z item list)",
+   "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"
+  },
+  {
+   "label": "Quincy curbside trash rules (Waste page)",
+   "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/trash.php"
+  },
+  {
+   "label": "The DPW Yard (residents only)",
+   "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/the_dpw_yard.php"
+  },
+  {
+   "label": "Book a South Shore Recycle mattress pickup online",
+   "url": "https://clienthub.getjobber.com/client_hubs/624295ad-a905-4edc-922f-d70c76b02225/public/work_request/new?source=social_media"
+  }
+ ],
+ "listings": [
+  {
+   "id": "quincy-curbside-furniture",
+   "name": "City of Quincy curbside furniture & bulky item collection",
+   "type": "city bulk pickup",
+   "items_accepted": [
+    "Furniture: sofas, chairs, recliners and lawn furniture (two bulky items per week)",
+    "Carpet, cut into 3-foot lengths, rolled and tied (no more than 5 rolls at a time)",
+    "Microwave ovens (with regular trash)",
+    "Small amounts of wood, bundled and tied, 1 to 3 inches thick and under 3 feet long, in a barrel under 50 lbs"
+   ],
+   "items_not_accepted": [
+    "Mattresses (separate scheduled pickup through South Shore Recycle, see below)",
+    "Appliances, TVs, computer monitors, grills, lawn mowers and snow blowers (separate call-ahead pickup, see below)",
+    "Toilets and construction or demolition debris (do not place curbside)",
+    "Trash or debris from move-outs or clean-outs of rooms, apartments, basements or garages",
+    "Oil-based paint, tires and other hazardous items"
+   ],
+   "condition_rules": "Furniture is collected curbside without calling. Have it out by 7:00 a.m. on your pick-up day, and no rubbish may go out more than one day before collection (state sanitary code). The City notes that curbside collectors are not required to lift anything over 50 lbs.",
+   "stairs_inside": "No. Curbside collection only.",
+   "lead_time": "No call needed for furniture; it goes out on your regular weekly trash day (check the City's Interactive Curbside Collection Map for your day). Holidays push that day and the rest of the week back one day.",
+   "cost": "No fee stated for furniture on the City's pages, check with them.",
+   "service_area": "Quincy residents of one- to eight-family dwellings and condominiums. Businesses and apartment buildings with more than eight units must hire a private hauler; the City says it's illegal for them to use City curbside collection.",
+   "address": null,
+   "book_url": "https://www.quincyma.gov/departments/public_works/waste___recycle/index.php",
+   "phone": "(855) 533-3400 (Capitol Waste Services, the City's hauler: missed pickups and questions)",
+   "email": null,
+   "source_urls": [
+    "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php",
+    "https://www.quincyma.gov/departments/public_works/waste___recycle/trash.php",
+    "https://www.quincyma.gov/departments/public_works/waste___recycle/index.php"
+   ],
+   "last_verified": "2026-10-25",
+   "notes": "Capitol Waste Services, Inc. performs Quincy's curbside collection Monday through Friday, per the City."
+  },
+  {
+   "id": "quincy-mattress-south-shore-recycle",
+   "name": "City of Quincy mattress pickup (South Shore Recycle, free for eligible residents)",
+   "type": "city bulk pickup",
+   "items_accepted": [
+    "Mattresses (all common sizes, including memory foam, hybrid, latex and drained waterbed mattresses, per South Shore Recycle)",
+    "Box springs and bed foundations, including platform bases and adjustable base frames (per South Shore Recycle)"
+   ],
+   "items_not_accepted": [
+    "Anything not placed outside: South Shore Recycle says it does not collect from inside units, hallways or common areas"
+   ],
+   "condition_rules": "Schedule first; the City says mattresses are no longer picked up on your regular trash day. Place the mattress at the curb or a designated outdoor spot before the scheduled pickup.",
+   "stairs_inside": "No. South Shore Recycle says all pickups are curbside only and it does not enter homes or buildings.",
+   "lead_time": "Scheduled \"dependent on vehicle and staff availability\" (City). South Shore Recycle advertises next-day pickup in many areas; exact wait not stated.",
+   "cost": "Free for Quincy residents in homes, condos or buildings with 8 units or fewer. South Shore Recycle charges $60 per unit for larger Quincy buildings (8+ units) and non-Quincy residents.",
+   "service_area": "Quincy residents in homes, condos or buildings with 8 units or fewer (free pickup, per South Shore Recycle).",
+   "address": null,
+   "book_url": "https://clienthub.getjobber.com/client_hubs/624295ad-a905-4edc-922f-d70c76b02225/public/work_request/new?source=social_media",
+   "phone": "(617) 837-1299 (number the City lists); South Shore Recycle's own site lists (617) 842-2434, Mon-Sat 7 a.m. to 5 p.m.",
+   "email": "Info@SouthshoreRecycle.com",
+   "source_urls": [
+    "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php",
+    "https://www.quincyma.gov/departments/public_works/waste___recycle/index.php",
+    "https://www.southshorerecycle.com/contact-us",
+    "https://www.southshorerecycle.com/residential",
+    "https://www.southshorerecycle.com/what-we-take"
+   ],
+   "last_verified": "2026-10-25",
+   "notes": "The City's pages and South Shore Recycle's site list different phone numbers, so try the other if one doesn't answer. Massachusetts has banned mattresses from the trash since November 1, 2022."
+  },
+  {
+   "id": "quincy-appliance-tv-pickup",
+   "name": "City of Quincy appliance, TV & monitor curbside pickup (call Capitol Waste)",
+   "type": "city bulk pickup",
+   "items_accepted": [
+    "Stoves, refrigerators, washing machines, dryers, dehumidifiers and water heaters",
+    "TVs (including CRT TVs) and computer monitors, computers, keyboards and printers",
+    "Barbecue grills and wood stoves",
+    "Lawn mowers and snow blowers (gas tank disconnected or removed)"
+   ],
+   "items_not_accepted": [
+    "Oil and gasoline (remove gas tanks)"
+   ],
+   "condition_rules": "Call (855) 533-3400 to schedule, then put the item out on your regular trash day.",
+   "stairs_inside": "No. Curbside collection only.",
+   "lead_time": "Call by 3 p.m. at least one full business day before your regular trash day (Monday pickups call the Friday before). Refrigerators, TVs and monitors need at least two full business days. The City's Waste page says two full business days for appliances, TVs and monitors, so calling two days ahead covers both.",
+   "cost": "Not stated on the City's pages, ask when you call.",
+   "service_area": "Quincy residents on City curbside collection (one- to eight-family dwellings and condominiums).",
+   "address": null,
+   "book_url": "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php",
+   "phone": "(855) 533-3400",
+   "email": null,
+   "source_urls": [
+    "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php",
+    "https://www.quincyma.gov/departments/public_works/waste___recycle/trash.php",
+    "https://www.quincyma.gov/departments/public_works/waste___recycle/index.php"
+   ],
+   "last_verified": "2026-10-25",
+   "notes": "The City's pages disagree on the lead time for appliances (one vs two full business days); we show both."
+  },
+  {
+   "id": "quincy-dpw-yard",
+   "name": "Quincy DPW Yard drop-off, 55 Sea St. (residents only)",
+   "type": "drop-off",
+   "items_accepted": [
+    "Appliances: washers, dryers, water heaters, stoves, air conditioners",
+    "All scrap metal, including metal desks, file cabinets, wood stoves, exercise equipment, bed frames and rims",
+    "Electronics",
+    "Single-stream recycling",
+    "Textiles (clothing, shoes, drapery, bedding, small rugs) in the bins in the upper parking lot",
+    "Books, CDs and DVDs; yard waste; mercury items and rechargeable batteries"
+   ],
+   "items_not_accepted": [
+    "Refrigerators and dishwashers",
+    "Household trash",
+    "Construction debris and wood",
+    "Tires",
+    "Latex or oil paints, oil, gasoline and any chemicals"
+   ],
+   "condition_rules": "Quincy residents only; a valid Massachusetts driver's license is required. Vehicles with commercial plates need prior written approval from the Commissioner's Office.",
+   "stairs_inside": "No. You bring the items.",
+   "lead_time": "Monday through Friday 7:30 a.m. to 3:00 p.m.; Saturday 7:30 a.m. to 2:30 p.m. from April 4 through December 5, 2026.",
+   "cost": "Not stated on the City's pages, check with them.",
+   "service_area": "Quincy residents only.",
+   "address": "55 Sea St., Quincy, MA (behind the administrative offices; enter from the Sea St. parking lot next to the Police Station)",
+   "book_url": "https://www.quincyma.gov/departments/public_works/waste___recycle/the_dpw_yard.php",
+   "phone": "(617) 376-1957",
+   "email": null,
+   "source_urls": [
+    "https://www.quincyma.gov/departments/public_works/waste___recycle/the_dpw_yard.php",
+    "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"
+   ],
+   "last_verified": "2026-10-25",
+   "notes": null
+  },
+  {
+   "items_not_accepted": [
+    "Mattresses & box springs",
+    "Sofa beds",
+    "Sofas with slip covers",
+    "Futons",
+    "Platform & trundle beds",
+    "Hutches, sideboards, buffets, china cabinets",
+    "TV armoires & entertainment centers",
+    "Fitness equipment",
+    "In-wall stoves"
+   ],
+   "address": "1580 VFW Parkway, West Roxbury, MA",
+   "notes": null,
+   "book_url": "https://resupply.app.link/habitatbostonrestore",
+   "phone": null,
+   "email": "restore@habitatboston.org",
+   "condition_rules": "All donations must be in working order. Staff can refuse any item based on condition and store need. Email the ReStore for the current list.",
+   "stairs_inside": "Drop-off: staff help unload at the store. In-home pickup is arranged through ReSupply, Habitat's scheduling partner (Habitat says ReSupply works with local movers at a lower cost to you; it's a paid service).",
+   "lead_time": "Donation drop-off Tuesday to Saturday, 9:30 a.m. to 4:00 p.m. (as posted).",
+   "cost": "Drop-off fee: not stated. Pickup is through ReSupply, a paid service.",
+   "service_area": "Drop-off at the West Roxbury store. Habitat says a second ReStore is set to open in Watertown in fall 2026. In-home pickup is booked through ReSupply, whose Boston page lists Quincy among the communities it serves.",
+   "last_verified": "2026-10-25",
+   "id": "habitat-greater-boston-restore",
+   "name": "Habitat for Humanity Greater Boston ReStore (West Roxbury)",
+   "type": "drop-off",
+   "items_accepted": [
+    "Bed frames, headboards & footboards",
+    "Dressers, bureaus & armoires",
+    "Coffee & end tables",
+    "Desks (3' x 5' or smaller)",
+    "Tables & chairs (not conference tables or dated)",
+    "Upholstered furniture (not ripped, worn, broken, dated or faded)",
+    "Outdoor furniture",
+    "Appliances less than eight years old (fridges, washers, dryers, free-standing stoves, cooktops, microwaves, never-installed dishwashers)",
+    "Cabinets, doors, lighting, building materials"
+   ],
+   "source_urls": [
+    "https://habitatboston.org/restore/",
+    "https://resupply.com/boston/"
+   ]
+  },
+  {
+   "items_not_accepted": [],
+   "address": null,
+   "notes": "Habitat Greater Boston ReStore and Household Goods both point donors to ReSupply for in-home pickup.",
+   "book_url": "https://resupply.com/boston/",
+   "phone": null,
+   "email": null,
+   "condition_rules": "Pieces should be sturdy and complete. Tell ReSupply about bed frames or other items that need disassembly when you book; disassembly is available and additional fees may apply.",
+   "stairs_inside": "Yes. Furniture teams collect from inside your home, including upper floors of walk-ups and triple-deckers. Disassembly is available; additional fees may apply.",
+   "lead_time": "Donation pickups available within 24 hours (per ReSupply's Boston page).",
+   "cost": "Paid service. Starting at $19, $49 and $99 depending on the pickup (bags and boxes up to bulky furniture), plus a separate booking fee that is non-refundable unless ReSupply can't complete the pickup. Pricing varies by location, items, availability and handling needs; you can decline the furniture quote with your team before paying.",
+   "service_area": "ReSupply's Boston page lists Quincy among the communities it serves.",
+   "last_verified": "2026-10-25",
+   "id": "resupply-boston",
+   "name": "ReSupply donation pickup (Boston area)",
+   "type": "paid hauler",
+   "items_accepted": [
+    "Furniture (tables, dressers, bed frames, bookcases, etc.)",
+    "Couches, sectionals, recliners, futons",
+    "Mattresses",
+    "Appliances",
+    "Clothing, boxes & bags",
+    "Office furniture"
+   ],
+   "source_urls": [
+    "https://resupply.com/boston/"
+   ]
+  },
+  {
+   "items_not_accepted": [
+    "Mattresses with any stains or rips",
+    "Office furniture, desks, file cabinets",
+    "Glass-top items",
+    "Outdoor furniture",
+    "Oversized or wall-mounted items"
+   ],
+   "address": "530 Main Street, Acton, MA",
+   "notes": "The City of Quincy lists \"Household Goods Recycling Ministry\" among charities that take donated furniture.",
+   "book_url": "https://www.householdgoods.org/donate/donate-goods/pickup/",
+   "phone": "978-635-1710",
+   "email": null,
+   "condition_rules": "Clean, complete, and in good working condition; nothing broken, chipped, torn, stained, or recalled.",
+   "stairs_inside": "Volunteer pickup asks that items be in a garage or on the first floor if possible.",
+   "lead_time": "Drop-off Tuesdays, Thursdays, and Saturdays, 9 a.m. to noon. Volunteer pickups typically scheduled 4+ weeks ahead. Paid pickups through ReSupply or ReMARKable Donations in as soon as 2 business days.",
+   "cost": "Drop-off: not stated. Volunteer pickup: minimum $35 donation requested. Paid pickups (ReSupply / ReMARKable Donations): for a fee.",
+   "service_area": "Volunteer pickup only in Acton, Boxborough, Carlisle, Concord, Littleton, Maynard, Stow, Sudbury and Westford, so not Quincy. Quincy donors can drop off in Acton or use the paid pickup partners (ReSupply or Mark's Moving/ReMARKable Donations).",
+   "last_verified": "2026-10-25",
+   "id": "household-goods-acton",
+   "name": "Household Goods (Acton)",
+   "type": "furniture bank",
+   "items_accepted": [
+    "Standard-size mattresses & box springs",
+    "Bed frames (all parts) & bunk beds",
+    "Dressers & armoires",
+    "Couches, sofa beds & futons",
+    "Chairs (no office chairs)",
+    "Kitchen, dining, end & coffee tables",
+    "Refrigerators, washers, electric dryers (newer than 10 years)",
+    "Air conditioners up to 18\" x 30\" x 24\" (newer than 10 years)",
+    "Flat-screen TVs under 55\" (less than 10 years old)"
+   ],
+   "source_urls": [
+    "https://www.householdgoods.org/donate/donate-goods/donation-guidelines/",
+    "https://www.householdgoods.org/donate/donate-goods/pickup/",
+    "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"
+   ]
+  },
+  {
+   "items_not_accepted": [],
+   "address": null,
+   "notes": "The City of Quincy lists the Salvation Army, (617) 542-5420, among charities that take donated furniture.",
+   "book_url": "https://satruck.org/",
+   "phone": "1-800-728-7825",
+   "email": null,
+   "condition_rules": "Gently used. Accepted items vary by location, so check when you enter your ZIP or call 1-800-SA-TRUCK. Mattress acceptance is not stated on the satruck.org home page, check with them.",
+   "stairs_inside": "Not stated, check with them",
+   "lead_time": "Not stated, check with them",
+   "cost": "Advertised as a free donation pickup on satruck.org. Local terms: check with them.",
+   "service_area": "Enter your Quincy ZIP on satruck.org to see whether pickup is offered at your address. I could not confirm Quincy coverage (the ZIP check is a script form).",
+   "last_verified": "2026-10-25",
+   "id": "salvation-army-satruck",
+   "name": "The Salvation Army donation pickup (1-800-SA-TRUCK)",
+   "type": "charity pickup",
+   "items_accepted": [
+    "Furniture (as listed on satruck.org)",
+    "Appliances (as listed on satruck.org)",
+    "Clothing and household goods"
+   ],
+   "source_urls": [
+    "https://satruck.org/",
+    "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"
+   ]
+  },
+  {
+   "items_not_accepted": [
+    "E-bikes",
+    "Trail-a-bikes"
+   ],
+   "address": "284 Amory Street, Jamaica Plain, MA",
+   "notes": "The City of Quincy lists Bikes Not Bombs for bicycles; bikes are also accepted as scrap metal at the Quincy DPW Yard.",
+   "book_url": "https://bikesnotbombs.org/bike-recycling/",
+   "phone": null,
+   "email": "bikedonations@bikesnotbombs.org",
+   "last_verified": "2026-10-25",
+   "id": "bikes-not-bombs",
+   "name": "Bikes Not Bombs bike donation (Jamaica Plain)",
+   "type": "drop-off",
+   "items_accepted": [
+    "All types of bikes (road, hybrid, mountain, BMX, tandem, etc.)"
+   ],
+   "condition_rules": "Bring bikes inside during regular business hours and fill out a donation form; don't leave bikes outside the building. Or find a bike drive on their events calendar.",
+   "stairs_inside": "No. You bring the bike.",
+   "lead_time": "Regular business hours (hours not captured from the page, check with them).",
+   "cost": "Free to donate; they encourage a $20 to $40 donation per bike to cover recycling, processing and shipping.",
+   "service_area": "Drop-off in Jamaica Plain; bike drives around Greater Boston.",
+   "source_urls": [
+    "https://bikesnotbombs.org/bike-recycling/",
+    "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"
+   ]
+  },
+  {
+   "items_not_accepted": [
+    "Hazardous materials such as certain paints, chemicals, asbestos and medical waste"
+   ],
+   "address": null,
+   "notes": "We do not currently have an affiliate relationship with LoadUp. If that changes, this listing will be labeled.",
+   "book_url": "https://goloadup.com/junk-removal/",
+   "phone": null,
+   "email": null,
+   "condition_rules": "No donation-quality requirement stated; this is junk removal.",
+   "stairs_inside": "Yes. LoadUp says its loaders carry items out from any room (bedroom, basement, attic, upstairs); curbside option also offered.",
+   "lead_time": "Same-day and next-day service when available (per LoadUp's Quincy page).",
+   "cost": "LoadUp's Quincy page says junk removal starts at $80 for a single bulky item (labor, transportation and disposal included). Its national pages list full-service from $75, curbside from $70, priority from $85 and mattress removal from $85. The final price is shown by ZIP and item before booking.",
+   "service_area": "LoadUp has a Quincy, MA page that mentions North Quincy, Wollaston and Adams Shore. Enter your ZIP to confirm.",
+   "last_verified": "2026-10-25",
+   "id": "loadup",
+   "name": "LoadUp junk removal",
+   "type": "paid hauler",
+   "items_accepted": [
+    "Furniture",
+    "Mattresses",
+    "Appliances",
+    "Electronics",
+    "Exercise equipment",
+    "Yard debris and construction waste"
+   ],
+   "source_urls": [
+    "https://goloadup.com/junk-removal/ma/quincy/",
+    "https://goloadup.com/junk-removal/",
+    "https://goloadup.com/mattress-removal/"
+   ]
+  },
+  {
+   "id": "champion-city-recovery",
+   "name": "Champion City Recovery (Brockton): construction debris drop-off",
+   "type": "drop-off",
+   "items_accepted": [
+    "Construction and demolition debris, including wood (as listed by the City)",
+    "Toilets, fencing and building materials (the City points residents here for these)"
+   ],
+   "items_not_accepted": [],
+   "condition_rules": "As listed by the City: call for pricing and scheduling before you go.",
+   "stairs_inside": "No. You bring the items.",
+   "lead_time": "Not stated, check with them",
+   "cost": "Not stated, call for pricing (as listed by the City).",
+   "service_area": "Not stated, check with them",
+   "address": "138 Wilder St., Brockton, MA",
+   "book_url": "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php",
+   "phone": "(508) 941-6700",
+   "email": null,
+   "source_urls": [
+    "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"
+   ],
+   "last_verified": "2026-10-25",
+   "notes": "As listed by the City of Quincy, which says the Braintree Transfer Station doesn't accept construction and demolition debris from residents. We have not checked this company's own website."
+  },
+  {
+   "id": "stoughton-recycling-technologies",
+   "name": "Stoughton Recycling Technologies: construction debris drop-off",
+   "type": "drop-off",
+   "items_accepted": [
+    "Construction and demolition debris, including wood (as listed by the City)",
+    "Toilets, fencing and building materials (the City points residents here for these)"
+   ],
+   "items_not_accepted": [],
+   "condition_rules": "As listed by the City: call for pricing and scheduling before you go.",
+   "stairs_inside": "No. You bring the items.",
+   "lead_time": "Not stated, check with them",
+   "cost": "Not stated, call for pricing (as listed by the City).",
+   "service_area": "Not stated, check with them",
+   "address": "100 Page Blvd., Stoughton, MA",
+   "book_url": "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php",
+   "phone": "(781) 341-9920",
+   "email": null,
+   "source_urls": [
+    "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"
+   ],
+   "last_verified": "2026-10-25",
+   "notes": "As listed by the City of Quincy, which says the Braintree Transfer Station doesn't accept construction and demolition debris from residents. We have not checked this company's own website."
+  }
+ ]
+}

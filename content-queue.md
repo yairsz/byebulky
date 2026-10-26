@@ -7,7 +7,7 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [x] How to get rid of a refrigerator / AC / TV in Boston (/boston/appliances/), done 2026-10-22: City special collection + Habitat (<8 yrs) + Household Goods (<10 yrs)
 - [ ] Boston: verify and add The Furniture Trust, St. Vincent de Paul Boston, Goodwill Mass furniture policy, Boomerangs (sites failed to load 2026-10-21)
 - [x] Cambridge, MA city page (/cambridge/) + mattress guide (/cambridge/mattress/), done 2026-10-24 (keyword-targets ByeBulky row 2)
-- [ ] Quincy, MA city page (bulky item / mattress rules; metro cluster next to Boston, per Oct 24 learning)
+- [x] Quincy, MA city page (PUBLISHED 2026-10-25 → /quincy/ + /quincy/mattress/)
 - [ ] Newton, MA city page (bulky item / mattress rules; metro cluster next to Boston)
 - [x] Somerville, MA city page (/somerville/) + mattress guide (/somerville/mattress/), done 2026-10-23 (keyword-targets ByeBulky row 1)
 - [ ] Dallas, TX city page (Dallas Sanitation bulk & brush; Dallas Area Habitat ReStore pickup page)
@@ -41,3 +41,5 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [ ] Cambridge: get a saved snapshot of the City permit portal fee text (JS page) and re-confirm whether the City's large-item page drops the 'mattresses are free' note
 - [ ] Somerville: appliances guide (/somerville/appliances/): $25 white goods sticker, free TV/monitor 311 pickup, DPW e-waste drop-off (data already in somerville.json)
 - [ ] Somerville: check whether ReSupply or Furnishing Hope pick up in Somerville (not stated on 2026-10-23); find Waste Wizard rules for couches with bed bugs
+- [ ] Quincy appliances guide (/quincy/appliances/): Capitol Waste call-ahead rules + DPW Yard (no fridges/dishwashers); ask Capitol Waste/City whether there is an appliance fee (not stated on City pages 2026-10-25)
+- [ ] Re-verify Household Goods phone in boston/cambridge/somerville listings (978-763-1198 there; householdgoods.org showed 978-635-1710 on 2026-10-25)
