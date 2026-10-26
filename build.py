@@ -319,6 +319,14 @@ def sibling_guides(g, city):
     return f"<h2>More {e(city['name'])} item guides</h2><ul>" + "".join(
         f'<li><a href="{U("/" + x["path"] + "/")}">{e(x["title"])}</a></li>' for x in sib) + "</ul>"
 
+ITEM_PHRASE = {"Mattress": "a mattress", "Couch": "a couch or sofa", "Appliances": "a fridge, AC, TV or other appliance"}
+
+def options_heading(g, city, n):
+    """Intent-matched heading for the listing section (added 2026-10-26, run #22): replaces generic "Options"."""
+    if g.get("options_h"): return g["options_h"]
+    item = ITEM_PHRASE.get(g["short"], g["short"].lower())
+    return f"Every option we list: {n} ways to get rid of {item} in {city['name']}"
+
 def guide_page(g, city):
     set_page(f"/{g['path']}/")
     ids = g.get("listing_ids", [])
@@ -329,7 +337,7 @@ def guide_page(g, city):
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › <a href="{U('/' + city['slug'] + '/')}">{e(city['name'])}</a> › {e(g['short'])}</p>
 <h1>{e(g['h1'])}</h1><p class="lead">{e(g['intro'])}</p><p class="meta">Last verified {e(g['last_verified'])}{(" · page updated " + e(MODIFIED[f"/{g['path']}/"])) if MODIFIED.get(f"/{g['path']}/", g['last_verified']) != g['last_verified'] else ""}</p>
 {city_hub_line(g, city)}
-{qa_block(g.get("quick_answers"))}{secs}{yt_embed('/' + g['path'] + '/', YT_CHANNEL, 'ByeBulky')}{loadup_slot()}<h2>Options</h2>{''.join(listing_card(l) for l in ls)}
+{qa_block(g.get("quick_answers"))}{secs}{yt_embed('/' + g['path'] + '/', YT_CHANNEL, 'ByeBulky')}{loadup_slot()}<h2 id="all-options">{e(options_heading(g, city, len(ls)))}</h2>{''.join(listing_card(l) for l in ls)}
 <p><a href="{U('/' + city['slug'] + '/')}">See all {e(city['name'])} options →</a></p>{sibling_guides(g, city)}{same_item_other_cities(g)}"""
     for x in g.get("quick_answers", []):
         assert x.get("q") and x.get("a"), f"guide {g['path']} has an empty quick answer"
