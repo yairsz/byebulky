@@ -41,3 +41,8 @@ footer .wrap{padding:18px 16px}
 .ytplay{position:absolute;left:50%;top:50%;width:68px;height:48px;margin:-24px 0 0 -34px;background:#f00;border-radius:12px;opacity:.9}
 .ytplay::after{content:"";position:absolute;left:27px;top:14px;border-style:solid;border-width:10px 0 10px 17px;border-color:transparent transparent transparent #fff}
 .yt button:focus-visible{outline:3px solid #fff;outline-offset:-3px}
+.tablewrap{overflow-x:auto;margin:12px 0}
+table.cmp{border-collapse:collapse;width:100%;font-size:.92em;background:#fff}
+table.cmp th,table.cmp td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+table.cmp thead th{background:#f3f4f6}
+table.cmp{min-width:680px}

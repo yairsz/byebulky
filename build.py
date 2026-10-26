@@ -347,19 +347,59 @@ def home_guides(cities):
                 f'<li><a href="{U("/" + g["path"] + "/")}">{e(g["title"])}</a></li>' for g in gs) + "</ul>"
     return ("<h2>Item guides</h2>" + out) if out else ""
 
+def _first(s):
+    """First sentence of a data field, verbatim (no new claims)."""
+    s = (s or "").strip()
+    i = s.find(". ")
+    return s if i < 0 else s[:i + 1]
+
+def home_mattress_compare(cities):
+    """Home-page cross-city table of each City's own mattress program, built only from listing fields
+    (cost, service_area, stairs_inside, book_url, phone, source_urls, last_verified). Added run #18 (data-gap tactic)."""
+    rows, qa = [], []
+    for c in cities:
+        l = next((x for x in c["listings"] if x.get("type") == "city bulk pickup" and "mattress" in x["id"]), None)
+        if not l:
+            continue
+        g = next((x for x in GUIDES if x["city"] == c["slug"] and x["short"] == "Mattress"), None)
+        city = f"{c['name']}, {c['state']}"
+        si = (l.get("stairs_inside") or "").strip()
+        where = _first(si[4:] if si.startswith("No. ") else si)
+        guide = f'<br><a href="{U("/" + g["path"] + "/")}">Full {e(c["name"])} mattress guide</a>' if g else ""
+        src = " ".join(f'<a href="{e(u)}" rel="noopener" target="_blank">source {i + 1}</a>' for i, u in enumerate(l.get("source_urls", [])))
+        rows.append(f"<tr><th scope=\"row\">{e(city)}{guide}</th><td>{e(_first(l.get('cost')))}</td>"
+                    f"<td>{e(l.get('service_area') or '')}</td><td>{e(where)}</td>"
+                    f'<td><a href="{e(l["book_url"])}" rel="noopener" target="_blank">Book</a>' + (f" or call {e(l['phone'])}" if l.get("phone") else "") + "</td>"
+                    f"<td>{src}<br><span class=\"meta\">checked {e(l.get('last_verified', ''))}</span></td></tr>")
+        qa.append(f"{c['name']}: {_first(l.get('cost'))}")
+    if len(rows) < 2:
+        return "", None
+    names = [c["name"] for c in cities]
+    q = {"q": f"How much does it cost to get rid of a mattress in {', '.join(names[:-1])} or {names[-1]}?",
+         "a": "Through each City's own mattress pickup, per the official pages: " + " ".join(qa) +
+              " Massachusetts bans mattresses and box springs from the trash, so they need one of these programs, a donation outlet or a hauler."}
+    html = (f"<h2>City mattress pickup compared: {e(', '.join(names))}</h2>"
+            "<p>Each City runs its own mattress and box spring program, and the fees and rules differ. This table is built from the official City pages linked in each row.</p>"
+            '<div class="tablewrap"><table class="cmp"><thead><tr><th scope="col">City</th><th scope="col">Fee</th><th scope="col">Who qualifies</th>'
+            '<th scope="col">Pickup location</th><th scope="col">How to book</th><th scope="col">Source</th></tr></thead><tbody>'
+            + "".join(rows) + "</tbody></table></div>" + qa_block([q]))
+    return html, q
+
 def home(cities):
     set_page("/")
+    cmp_html, cmp_q = home_mattress_compare(cities)
     cl = "".join(f'<a href="{U("/" + c["slug"] + "/")}">{e(c["name"])}, {e(c["state"])}<br><span class="meta">{len(c["listings"])} verified options</span></a>' for c in cities)
     body = f"""<h1>Get rid of a couch, mattress or old fridge without the runaround</h1>
 <p class="lead">{e(CFG['tagline'])} For each city we list every real option: City bulk and mattress pickup, charities that pick up, drop-off spots, furniture banks, and paid haulers. You see what each one takes, its condition rules, whether it will come inside or up stairs, and its cost. A cost is only shown when the organization publishes it.</p>
 <h2>Cities</h2><div class="cities">{cl}</div>
+{cmp_html}
 {home_guides(cities)}
 <h2>Why this exists</h2>
 <p>Charities change what they accept, some stop picking up furniture altogether, and city rules differ from one place to the next. People end up calling three places and still having a couch on the curb. We collect the rules from official sources, link every listing to its source, and date when we last checked it.</p>
 <p class="meta">Listings last verified {e(MODIFIED.get('/', ''))}.</p>
 <p><a href="{U('/about/')}">How we verify listings &amp; how this site makes money →</a></p>"""
     return page(f"{CFG['site_name']}: How to get rid of furniture, mattresses & appliances in your city",
-                "Verified, city-by-city options for getting rid of couches, mattresses, furniture and appliances: city pickup, donation pickup, drop-off, furniture banks and haulers.", "/", body)
+                "Verified, city-by-city options for getting rid of couches, mattresses, furniture and appliances: city pickup, donation pickup, drop-off, furniture banks and haulers.", "/", body, faq_ld([cmp_q]) if cmp_q else None)
 
 def about(cities):
     set_page("/about/")
