@@ -1,0 +1,66 @@
+{
+ "path": "newton/mattress",
+ "city": "newton",
+ "short": "Mattress",
+ "last_verified": "2026-10-26",
+ "title": "Newton MA Mattress Disposal: $60 Pickup or $35 Drop-Off",
+ "meta_description": "Newton mattress disposal: $60 per item curbside pickup or $35 drop-off at the Rumford Ave Resource Recovery Center. How to pay, schedule and set out.",
+ "h1": "Newton mattress disposal and pickup: the $60 curbside and $35 drop-off options",
+ "intro": "Newton won't take a mattress or box spring as trash or regular bulky waste. You pay the City online, then either set it out for a $60 curbside pickup or bring it to the Resource Recovery Center for $35. Here's how each works, and what to do if you need someone to carry it out of the house.",
+ "quick_answers": [
+  {
+   "q": "Does Newton pick up mattresses?",
+   "a": "Yes, for $60 per mattress or box spring. Pay online, and for payments received by 10 p.m. Sunday the curbside collection should be arranged for Thursday of the following week."
+  },
+  {
+   "q": "Where can I drop off a mattress in Newton?",
+   "a": "At the Resource Recovery Center, 115 Rumford Ave., Auburndale, for $35 per item. Pay online first, bring proof of payment, and unload it into the storage container yourself."
+  },
+  {
+   "q": "Does a box spring count as a separate item in Newton?",
+   "a": "Yes. Each mattress and each box spring counts as one item, and a split box spring counts as two."
+  },
+  {
+   "q": "Can I put a mattress out with bulky trash in Newton?",
+   "a": "No. Newton stopped accepting mattresses and box springs as bulky waste on November 1, 2022, because of the statewide disposal ban. Futon mattresses and sleeper sofas are the exception and go out as $20 bulky items."
+  },
+  {
+   "q": "Will someone take a mattress from inside my home in Newton?",
+   "a": "Not the City, which collects at the curb only. Paid services such as ReSupply and LoadUp say their teams carry items out from inside your home."
+  }
+ ],
+ "sections": [
+  {
+   "h": "Option 1: $60 curbside pickup",
+   "p": "Pay $60 per item on the City's online payment page; after payment you'll hear from Newton's 311 system. For payments received by 10 p.m. Sunday, collection should be arranged for Thursday of the following week unless there's a trash delay on Thursday. The City says to expect an email from Newton Customer Service within 1 to 2 business days and a reminder email the business day before pickup. Set the mattress out by 7 a.m. on collection day."
+  },
+  {
+   "h": "Option 2: $35 drop-off on Rumford Avenue",
+   "p": "Pay $35 per item online, then bring the mattress or box spring to the Newton Resource Recovery Center at 115 Rumford Ave. in Auburndale and check in with the attendant. Proof of payment is required, the number of items must match your receipt, and you unload the items into the storage container yourself. It's open to Newton residents only. Fall hours through October 31 are Monday to Saturday, 7 a.m. to 2:30 p.m.; call 617-796-1000 for later hours or after heavy rain."
+  },
+  {
+   "h": "What counts as one item, and what's excluded",
+   "p": "Newton accepts traditional, inner spring, latex, memory foam and \"mattress in a box\" mattresses and box springs of all sizes. Each mattress counts as one item and each box spring as one item; a split box spring counts as two. Futon mattresses and sleeper sofas are excluded from mattress recycling and go out as $20 bulky items instead."
+  },
+  {
+   "h": "Cancellations and refunds",
+   "p": "The City only refunds a pickup if you cancel and receive a cancellation email by 10 a.m. on the business day before collection. There's no refund if the item is scavenged from the curb after that deadline or isn't set out on time, and an item that missed its set-out time needs a new request and fee."
+  },
+  {
+   "h": "Need it carried out of the house?",
+   "p": "ReSupply runs paid in-home pickups that include mattresses, with starting prices of $19, $49 and $99 plus a separate booking fee, and its Boston page lists Newton among the communities it serves. LoadUp's Newton page says junk removal starts at $80 for a single bulky item, and its mattress page lists removal from $85 with loaders carrying items out from any room. Confirm the final price when you book."
+  },
+  {
+   "h": "Donating a mattress in good condition",
+   "p": "Newton encourages residents to sell or give away mattresses in good condition, or to ask the seller of a new mattress about recycling the old one. Household Goods in Acton accepts standard-size mattresses and box springs but refuses any with stains or rips, and its volunteer pickup doesn't reach Newton. The Habitat for Humanity Greater Boston ReStore does not accept mattresses or box springs."
+  }
+ ],
+ "listing_ids": [
+  "newton-mattress-curbside",
+  "newton-resource-recovery-center",
+  "resupply-boston",
+  "loadup",
+  "household-goods-acton",
+  "habitat-greater-boston-restore"
+ ]
+}

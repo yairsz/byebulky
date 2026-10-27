@@ -8,7 +8,7 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [ ] Boston: verify and add The Furniture Trust, St. Vincent de Paul Boston, Goodwill Mass furniture policy, Boomerangs (sites failed to load 2026-10-21)
 - [x] Cambridge, MA city page (/cambridge/) + mattress guide (/cambridge/mattress/), done 2026-10-24 (keyword-targets ByeBulky row 2)
 - [x] Quincy, MA city page (PUBLISHED 2026-10-25 → /quincy/ + /quincy/mattress/)
-- [ ] Newton, MA city page (bulky item / mattress rules; metro cluster next to Boston)
+- [x] Newton, MA city page (PUBLISHED 2026-10-26 → /newton/ + /newton/mattress/)
 - [x] Somerville, MA city page (/somerville/) + mattress guide (/somerville/mattress/), done 2026-10-23 (keyword-targets ByeBulky row 1)
 - [ ] Dallas, TX city page (Dallas Sanitation bulk & brush; Dallas Area Habitat ReStore pickup page)
 - [ ] Plano, TX city page (Plano bulk trash; Habitat Collin County free pickup; Salvation Army)
@@ -43,3 +43,5 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [ ] Somerville: check whether ReSupply or Furnishing Hope pick up in Somerville (not stated on 2026-10-23); find Waste Wizard rules for couches with bed bugs
 - [ ] Quincy appliances guide (/quincy/appliances/): Capitol Waste call-ahead rules + DPW Yard (no fridges/dishwashers); ask Capitol Waste/City whether there is an appliance fee (not stated on City pages 2026-10-25)
 - [ ] Re-verify Household Goods phone in boston/cambridge/somerville listings (978-763-1198 there; householdgoods.org showed 978-635-1710 on 2026-10-25)
+- [ ] Newton, MA: appliances guide (/newton/appliances/): $25 whitegoods curbside, free RRC drop-off, $25 TV/monitor drop-off (data already in newton.json)
+- [ ] Newton: re-check Resource Recovery Center winter hours after Oct 31, 2026

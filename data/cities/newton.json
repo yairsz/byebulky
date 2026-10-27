@@ -1,0 +1,349 @@
+{
+ "slug": "newton",
+ "name": "Newton",
+ "state": "MA",
+ "last_verified": "2026-10-26",
+ "title": "Newton MA Bulky Item Pickup: $20 Fee, Mattress & Dump Rules",
+ "meta_description": "Newton bulky item pickup is $20 per item, mattresses $60 curbside or $35 drop-off, appliances $25 or free at the Rumford Ave center. All sourced.",
+ "intro": "Newton doesn't take big items with the regular trash. You pay online for a curbside pickup, usually on Thursday of the following week: $20 for furniture, $60 for a mattress or box spring, $25 for an appliance or TV. Or bring it to the Resource Recovery Center on Rumford Avenue. Here's what each option takes, what it costs, and where we got it.",
+ "quick_answers": [
+  {
+   "q": "Does Newton have bulky item pickup?",
+   "a": "Yes. Pay $20 per item online and the City arranges curbside collection, usually on Thursday of the following week if you pay by 10 p.m. Sunday. Set it out by 7 a.m. on collection day."
+  },
+  {
+   "q": "How much is mattress pickup in Newton, MA?",
+   "a": "$60 per mattress or box spring for curbside collection, or $35 per item to drop it off yourself at the Resource Recovery Center, 115 Rumford Ave. Pay online first either way."
+  },
+  {
+   "q": "How do I get rid of a refrigerator, washer or TV in Newton?",
+   "a": "Book a whitegoods curbside pickup for $25 per item, or drop appliances and metal off free at the Resource Recovery Center. TVs and monitors cost $25 each to drop off."
+  },
+  {
+   "q": "What are the Newton dump (Resource Recovery Center) hours?",
+   "a": "Fall hours through October 31 are Monday to Saturday, 7 a.m. to 2:30 p.m., closed Sundays and holidays. It's at 115 Rumford Ave., Auburndale, for Newton residents only."
+  },
+  {
+   "q": "What won't Newton take as bulky waste?",
+   "a": "Mattresses, box springs, appliances, metal, electronics, items over 150 lbs, cardboard, construction materials, and move-out or clean-out loads, which need a private hauler."
+  }
+ ],
+ "resources": [
+  {
+   "label": "Newton: Managing Household Trash (bulky items)",
+   "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/managing-solid-waste"
+  },
+  {
+   "label": "Newton large-item flyer (fees, schedule, what counts as one item, updated 8/17/2026)",
+   "url": "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000"
+  },
+  {
+   "label": "Newton: Recycle at the Curb (mattresses, whitegoods)",
+   "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-curb"
+  },
+  {
+   "label": "Newton Resource Recovery Center",
+   "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-resource-recovery-center"
+  },
+  {
+   "label": "Pay for a Newton bulky item pickup",
+   "url": "https://epay.cityhallsystems.com/?key=newton.ma.us&type=w3"
+  }
+ ],
+ "listings": [
+  {
+   "id": "newton-bulky-item-pickup",
+   "name": "City of Newton bulky item curbside pickup ($20 per item)",
+   "type": "city bulk pickup",
+   "items_accepted": [
+    "Any single non-recyclable item too large to fit in the blue trash cart, such as a couch (all sections of a sectional and its loose cushions count as one item, sleeper sofas included)",
+    "Wooden bed frames (headboard, footboard and rails count as one item)",
+    "Dismantled wooden furniture such as a bookshelf or desk (all pieces count as one item)",
+    "Wooden futon frames and futon mattresses (one item each)",
+    "Carpet and loose scrap wood tied in rolls or bundles no more than 4 feet long and 50 lbs (each counts as one item)",
+    "Vacuum cleaners and other mixed-material items not mostly metal; a pair of skis"
+   ],
+   "items_not_accepted": [
+    "Mattresses and box springs (separate $60 pickup, see below; banned from disposal since 11/1/2022)",
+    "Appliances, metal items, electronics and rigid plastic items (separate whitegoods pickup or free drop-off, see below)",
+    "Items over 150 lbs (need a private hauler)",
+    "Cardboard, overflow trash and construction materials",
+    "Move-outs and clean-outs (the City says these need a private hauler)"
+   ],
+   "condition_rules": "Pay online first ($20 per item). Set the item out by 7 a.m. on the collection day. Refunds only if you cancel and get a cancellation email by 10 a.m. the business day before collection; no refund if the item is scavenged from the curb after that deadline or isn't set out on time, and a new request and fee are needed if it wasn't out on time.",
+   "stairs_inside": "No. Curbside collection only.",
+   "lead_time": "For payments received by 10 p.m. Sunday, collection should be arranged for Thursday of the following week (unless there's a trash delay on Thursday). You should get an email from Newton Customer Service within 1 to 2 business days and a reminder the business day before pickup.",
+   "cost": "$20 per item (City of Newton flyer, updated 8/17/2026).",
+   "service_area": "Newton households on City trash collection. The City says businesses, institutions and many multi-family properties aren't entitled to City collection and must make private arrangements.",
+   "address": null,
+   "book_url": "https://epay.cityhallsystems.com/?key=newton.ma.us&type=w3",
+   "phone": "617-796-1000",
+   "email": null,
+   "source_urls": [
+    "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000",
+    "https://www.newtonma.gov/government/public-works/sustainable-materials-management/managing-solid-waste",
+    "https://www.newtonma.gov/government/public-works/sustainable-materials-management/reuse"
+   ],
+   "last_verified": "2026-10-26",
+   "notes": "Fee, schedule and item-counting rules are from the City's \"I have a large item I no longer want\" flyer (updated 8.17.26) linked from the Managing Household Trash page."
+  },
+  {
+   "id": "newton-mattress-curbside",
+   "name": "City of Newton mattress & box spring curbside recycling ($60 per item)",
+   "type": "city bulk pickup",
+   "items_accepted": [
+    "Mattresses of all sizes (traditional, inner spring, latex, memory foam and \"mattress in a box\")",
+    "Box springs of all sizes (a split box spring counts as two items)"
+   ],
+   "items_not_accepted": [
+    "Futon mattresses and sleeper sofas (put these out as bulky items instead)"
+   ],
+   "condition_rules": "Pay online first ($60 per item); after payment you'll hear from Newton's 311 system. Set the item out by 7 a.m. on the collection day. Each mattress or box spring counts as one item. Same refund rules as bulky items: cancel by 10 a.m. the business day before.",
+   "stairs_inside": "No. Curbside collection only.",
+   "lead_time": "For payments received by 10 p.m. Sunday, collection should be arranged for Thursday of the following week (unless there's a trash delay on Thursday).",
+   "cost": "$60 per item.",
+   "service_area": "Newton households on City trash collection.",
+   "address": null,
+   "book_url": "https://epay.cityhallsystems.com?key=newton.ma.us&type=w2",
+   "phone": "617-796-1000",
+   "email": null,
+   "source_urls": [
+    "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-curb",
+    "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000",
+    "https://www.newtonma.gov/government/public-works/sustainable-materials-management/managing-solid-waste"
+   ],
+   "last_verified": "2026-10-26",
+   "notes": "The City encourages selling or giving away mattresses in good condition, or asking the seller of a new mattress about recycling the old one."
+  },
+  {
+   "id": "newton-whitegoods-curbside",
+   "name": "City of Newton appliance, metal & electronics (whitegoods) curbside pickup ($25 per item)",
+   "type": "city bulk pickup",
+   "items_accepted": [
+    "Large appliances: stoves, refrigerators, freezers, dishwashers, washers, dryers, dehumidifiers, air conditioners, microwaves, water coolers, water heaters",
+    "Metal items: filing cabinets, shelves, outdoor furniture, lamps, patio umbrellas, broken bicycles, exercise equipment (treadmill, elliptical, stationary bike, weight bench)",
+    "Lawn mowers and snow blowers (remove fluids)",
+    "E-waste: TVs, computers, monitors, laptops, printers, small kitchen appliances, game consoles, cords",
+    "Large rigid plastic items (kids' playhouse or play kitchen), tires"
+   ],
+   "items_not_accepted": [],
+   "condition_rules": "Pay online first ($25 per item). Remove all refrigerator and freezer doors and secure drawers before setting out. Basketball hoops must be in two pieces, and the metal frames of soccer, hockey or lacrosse goals must be taken apart into flat pieces.",
+   "stairs_inside": "No. Curbside collection only.",
+   "lead_time": "For payments received by 10 p.m. Sunday, collection should be arranged for Thursday of the following week (unless there's a trash delay on Thursday).",
+   "cost": "$25 per item. Dropping the same items at the Resource Recovery Center is free, except TVs and monitors ($25 each).",
+   "service_area": "Newton households on City trash collection.",
+   "address": null,
+   "book_url": "https://epay.cityhallsystems.com?key=newton.ma.us&type=wg",
+   "phone": "617-796-1000",
+   "email": null,
+   "source_urls": [
+    "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000",
+    "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-curb"
+   ],
+   "last_verified": "2026-10-26",
+   "notes": "For refrigerators and freezers, the City also points to Mass Save's no-cost pickup with a $75 rebate for residential electric customers (we couldn't load Mass Save's page tonight to confirm)."
+  },
+  {
+   "id": "newton-resource-recovery-center",
+   "name": "Newton Resource Recovery Center drop-off, 115 Rumford Ave. (residents only)",
+   "type": "drop-off",
+   "items_accepted": [
+    "Mattresses and box springs ($35 per item, prepaid)",
+    "Appliances, scrap metal and other metal items (no cost)",
+    "Electronics (no cost, except TVs and monitors at $25 each, prepaid)",
+    "Large rigid plastic items such as outdoor chairs and play structures",
+    "Textiles and clothing in donation bins; books at the Book Shed; white block Styrofoam, light bulbs, extra recycling"
+   ],
+   "items_not_accepted": [
+    "Bulky non-recyclable items such as couches (use the $20 bulky pickup)",
+    "Oil-based paints and stains (household hazardous waste events only)",
+    "Anything from businesses or commercial vehicles except cardboard and single-stream recycling"
+   ],
+   "condition_rules": "Newton residents only; proof of residency on request. For mattresses, box springs, TVs and monitors, pay online first and show proof of payment to the attendant; the number of items must match the receipt, and you unload mattresses yourself into the storage container.",
+   "stairs_inside": "No. You bring the items.",
+   "lead_time": "Fall hours (September 28 to October 31): Monday to Saturday 7 a.m. to 2:30 p.m.; closed Sundays, holidays and sometimes after heavy rain. Hours after October 31 not stated yet, call 617-796-1000 before going.",
+   "cost": "Free for appliances, metal and most electronics. $35 per mattress or box spring; $25 per TV or monitor.",
+   "service_area": "Newton residents only.",
+   "address": "115 Rumford Ave., Auburndale, MA 02466",
+   "book_url": "https://epay.cityhallsystems.com?key=newton.ma.us&type=w2",
+   "phone": "617-796-1000",
+   "email": null,
+   "source_urls": [
+    "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-resource-recovery-center",
+    "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-curb",
+    "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000"
+   ],
+   "last_verified": "2026-10-26",
+   "notes": "The Swap Shop here (clean, usable items; no large or stuffed furniture, large appliances or TVs) had its last 2026 day on October 24."
+  },
+  {
+   "items_not_accepted": [
+    "Mattresses & box springs",
+    "Sofa beds",
+    "Sofas with slip covers",
+    "Futons",
+    "Platform & trundle beds",
+    "Hutches, sideboards, buffets, china cabinets",
+    "TV armoires & entertainment centers",
+    "Fitness equipment",
+    "In-wall stoves"
+   ],
+   "address": "1580 VFW Parkway, West Roxbury, MA",
+   "notes": "The City of Newton's Reuse page lists the Habitat for Humanity ReStore for new and gently used household items.",
+   "book_url": "https://resupply.app.link/habitatbostonrestore",
+   "phone": null,
+   "email": "restore@habitatboston.org",
+   "condition_rules": "All donations must be in working order. Staff can refuse any item based on condition and store need. Email the ReStore for the current list.",
+   "stairs_inside": "Drop-off: staff help unload at the store. In-home pickup is arranged through ReSupply, Habitat's scheduling partner (Habitat says ReSupply works with local movers at a lower cost to you; it's a paid service).",
+   "lead_time": "Donation drop-off Tuesday to Saturday, 9:30 a.m. to 4:00 p.m. (as posted).",
+   "cost": "Drop-off fee: not stated. Pickup is through ReSupply, a paid service.",
+   "service_area": "Drop-off at the West Roxbury store. In-home pickup is booked through ReSupply, whose Boston page lists Newton among the communities it serves.",
+   "last_verified": "2026-10-26",
+   "id": "habitat-greater-boston-restore",
+   "name": "Habitat for Humanity Greater Boston ReStore (West Roxbury)",
+   "type": "drop-off",
+   "items_accepted": [
+    "Bed frames, headboards & footboards",
+    "Dressers, bureaus & armoires",
+    "Coffee & end tables",
+    "Desks (3' x 5' or smaller)",
+    "Tables & chairs (not conference tables or dated)",
+    "Upholstered furniture (not ripped, worn, broken, dated or faded)",
+    "Outdoor furniture",
+    "Appliances less than eight years old (fridges, washers, dryers, free-standing stoves, cooktops, microwaves, never-installed dishwashers)",
+    "Cabinets, doors, lighting, building materials"
+   ],
+   "source_urls": [
+    "https://habitatboston.org/restore/",
+    "https://resupply.com/boston/",
+    "https://www.newtonma.gov/government/public-works/sustainable-materials-management/reuse"
+   ]
+  },
+  {
+   "items_not_accepted": [],
+   "address": null,
+   "notes": "Habitat Greater Boston ReStore and Household Goods both point donors to ReSupply for in-home pickup.",
+   "book_url": "https://resupply.com/boston/",
+   "phone": null,
+   "email": null,
+   "condition_rules": "Pieces should be sturdy and complete. Tell ReSupply about bed frames or other items that need disassembly when you book; disassembly is available and additional fees may apply.",
+   "stairs_inside": "Yes. Furniture teams collect from inside your home, including upper floors of walk-ups and triple-deckers. Disassembly is available; additional fees may apply.",
+   "lead_time": "Donation pickups available within 24 hours (per ReSupply's Boston page).",
+   "cost": "Paid service. Starting at $19, $49 and $99 depending on the pickup (bags and boxes up to bulky furniture), plus a separate booking fee that is non-refundable unless ReSupply can't complete the pickup. Pricing varies by location, items, availability and handling needs; you can decline the furniture quote with your team before paying.",
+   "service_area": "ReSupply's Boston page lists Newton among the communities it serves.",
+   "last_verified": "2026-10-26",
+   "id": "resupply-boston",
+   "name": "ReSupply donation pickup (Boston area)",
+   "type": "paid hauler",
+   "items_accepted": [
+    "Furniture (tables, dressers, bed frames, bookcases, etc.)",
+    "Couches, sectionals, recliners, futons",
+    "Mattresses",
+    "Appliances",
+    "Clothing, boxes & bags",
+    "Office furniture"
+   ],
+   "source_urls": [
+    "https://resupply.com/boston/"
+   ]
+  },
+  {
+   "items_not_accepted": [
+    "Mattresses with any stains or rips",
+    "Office furniture, desks, file cabinets",
+    "Glass-top items",
+    "Outdoor furniture",
+    "Oversized or wall-mounted items"
+   ],
+   "address": "530 Main Street, Acton, MA",
+   "notes": null,
+   "book_url": "https://www.householdgoods.org/donate/donate-goods/pickup/",
+   "phone": "978-635-1710",
+   "email": null,
+   "condition_rules": "Clean, complete, and in good working condition; nothing broken, chipped, torn, stained, or recalled.",
+   "stairs_inside": "Volunteer pickup asks that items be in a garage or on the first floor if possible.",
+   "lead_time": "Drop-off Tuesdays, Thursdays, and Saturdays, 9 a.m. to noon. Volunteer pickups typically scheduled 4+ weeks ahead. Paid pickups through ReSupply or ReMARKable Donations in as soon as 2 business days.",
+   "cost": "Drop-off: not stated. Volunteer pickup: minimum $35 donation requested. Paid pickups (ReSupply / ReMARKable Donations): for a fee.",
+   "service_area": "Volunteer pickup only in Acton, Boxborough, Carlisle, Concord, Littleton, Maynard, Stow, Sudbury and Westford, so not Newton. Newton donors can drop off in Acton or use the paid pickup partners (ReSupply or Mark's Moving/ReMARKable Donations).",
+   "last_verified": "2026-10-26",
+   "id": "household-goods-acton",
+   "name": "Household Goods (Acton)",
+   "type": "furniture bank",
+   "items_accepted": [
+    "Standard-size mattresses & box springs",
+    "Bed frames (all parts) & bunk beds",
+    "Dressers & armoires",
+    "Couches, sofa beds & futons",
+    "Chairs (no office chairs)",
+    "Kitchen, dining, end & coffee tables",
+    "Refrigerators, washers, electric dryers (newer than 10 years)",
+    "Air conditioners up to 18\" x 30\" x 24\" (newer than 10 years)",
+    "Flat-screen TVs under 55\" (less than 10 years old)"
+   ],
+   "source_urls": [
+    "https://www.householdgoods.org/donate/donate-goods/donation-guidelines/",
+    "https://www.householdgoods.org/donate/donate-goods/pickup/"
+   ]
+  },
+  {
+   "items_not_accepted": [
+    "Hazardous materials such as certain paints, chemicals, asbestos and medical waste"
+   ],
+   "address": null,
+   "notes": "We do not currently have an affiliate relationship with LoadUp. If that changes, this listing will be labeled.",
+   "book_url": "https://goloadup.com/junk-removal/",
+   "phone": null,
+   "email": null,
+   "condition_rules": "No donation-quality requirement stated; this is junk removal.",
+   "stairs_inside": "Yes. LoadUp says its loaders carry items out from any room (bedroom, basement, attic, upstairs); curbside option also offered.",
+   "lead_time": "Same-day and next-day service when available (per LoadUp).",
+   "cost": "LoadUp's Newton page says junk removal starts at $80 for a single bulky item (labor, transportation and disposal included). Its mattress page lists mattress removal from $85. The final price is shown by ZIP and item before booking.",
+   "service_area": "LoadUp has Newton, MA junk removal and bulky item pickup pages. Enter your ZIP to confirm.",
+   "last_verified": "2026-10-26",
+   "id": "loadup",
+   "name": "LoadUp junk removal",
+   "type": "paid hauler",
+   "items_accepted": [
+    "Furniture",
+    "Mattresses",
+    "Appliances",
+    "Electronics",
+    "Exercise equipment",
+    "Yard debris and construction waste"
+   ],
+   "source_urls": [
+    "https://goloadup.com/junk-removal/ma/newton/",
+    "https://goloadup.com/junk-removal/",
+    "https://goloadup.com/newton-ma/bulk-item-pickup/",
+    "https://goloadup.com/mattress-removal/"
+   ]
+  },
+  {
+   "items_not_accepted": [
+    "E-bikes",
+    "Trail-a-bikes"
+   ],
+   "address": "284 Amory Street, Jamaica Plain, MA",
+   "notes": "The City of Newton's Reuse page lists Bikes Not Bombs for bicycles; broken bikes can also go to the Resource Recovery Center as metal.",
+   "book_url": "https://bikesnotbombs.org/bike-recycling/",
+   "phone": null,
+   "email": "bikedonations@bikesnotbombs.org",
+   "last_verified": "2026-10-25",
+   "id": "bikes-not-bombs",
+   "name": "Bikes Not Bombs bike donation (Jamaica Plain)",
+   "type": "drop-off",
+   "items_accepted": [
+    "All types of bikes (road, hybrid, mountain, BMX, tandem, etc.)"
+   ],
+   "condition_rules": "Bring bikes inside during regular business hours and fill out a donation form; don't leave bikes outside the building. Or find a bike drive on their events calendar.",
+   "stairs_inside": "No. You bring the bike.",
+   "lead_time": "Regular business hours (hours not captured from the page, check with them).",
+   "cost": "Free to donate; they encourage a $20 to $40 donation per bike to cover recycling, processing and shipping.",
+   "service_area": "Drop-off in Jamaica Plain; bike drives around Greater Boston.",
+   "source_urls": [
+    "https://bikesnotbombs.org/bike-recycling/",
+    "https://www.newtonma.gov/government/public-works/sustainable-materials-management/reuse"
+   ]
+  }
+ ]
+}
