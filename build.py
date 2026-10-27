@@ -477,7 +477,7 @@ def mattress_cost_page():
         f'<li><a href="{U("/" + g["path"] + "/")}">{e(g["title"])}</a> ({len(g.get("listing_ids", []))} options)</li>'
         for g in GUIDES if g["short"] == "Mattress") + "</ul>"
     lds = [faq_ld([cmp_q]) if cmp_q else None, crumbs_ld([("Home", "/"), ("Mattress disposal cost", COST_PATH)])]
-    return page("Mattress disposal cost around Boston: City fees and hauler prices",
+    return page("Boston Mattress Disposal Cost: City Fees & Hauler Prices",
                 f"City mattress pickup fees and published hauler prices for {', '.join(names[:-1])} and {names[-1]}, with official sources.",
                 COST_PATH, body, [x for x in lds if x])
 
@@ -496,7 +496,7 @@ def home(cities):
 <p>Charities change what they accept, some stop picking up furniture altogether, and city rules differ from one place to the next. People end up calling three places and still having a couch on the curb. We collect the rules from official sources, link every listing to its source, and date when we last checked it.</p>
 <p class="meta">Listings last verified {e(MODIFIED.get('/', ''))}.</p>
 <p><a href="{U('/about/')}">How we verify listings &amp; how this site makes money →</a></p>"""
-    return page(f"{CFG['site_name']}: How to get rid of furniture, mattresses & appliances in your city",
+    return page(f"{CFG['site_name']}: Get Rid of Furniture, Mattresses & Appliances",
                 "Verified, city-by-city options for getting rid of couches, mattresses, furniture and appliances: city pickup, donation pickup, drop-off, furniture banks and haulers.", "/", body, faq_ld([cmp_q]) if cmp_q else None)
 
 def about(cities):
