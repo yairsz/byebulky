@@ -117,6 +117,13 @@ def page(title, desc, path, body, jsonld=None):
 <footer><div class="wrap">© {year} {e(CFG['site_name'])}. Information is gathered from official sources and can change. Always confirm with the organization before you haul anything. <a href="{U('/about/')}">Affiliate disclosure &amp; how we verify</a>. <a href="{U('/privacy/')}">Privacy policy</a>. <a href="{YT_CHANNEL}" rel="noopener" target="_blank">ByeBulky on YouTube</a>.</div></footer>
 </body></html>"""
 
+
+from urllib.parse import quote as _q
+def report_link(name):
+    """Public 'Report a change' mailto on every listing card (added 2026-10-26; address = privacy.CONTACT)."""
+    subj = _q(f"Report a change: {name}")
+    return f'<p class="meta report"><a href="mailto:{privacy.CONTACT}?subject={subj}">Report a change</a></p>'
+
 def listing_card(l):
     for k in REQUIRED:
         assert k in l, f"listing {l.get('id')} missing {k}"
@@ -144,7 +151,7 @@ def listing_card(l):
 <dt>Cost</dt><dd>{val(l['cost'])}</dd>
 <dt>Service area</dt><dd>{val(l['service_area'])}</dd>{addr}
 <dt>How to book</dt><dd>{book}</dd>{notes}
-<dt>Sources</dt><dd>{srcs} · last verified {e(l['last_verified'])}</dd></dl></article>"""
+<dt>Sources</dt><dd>{srcs} · last verified {e(l['last_verified'])}</dd></dl>{report_link(l['name'])}</article>"""
 
 FILTER_JS = """<script>
 (function(){var t=document.getElementById('ft'),q=document.getElementById('fq');if(!t)return;
