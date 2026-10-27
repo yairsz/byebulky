@@ -306,8 +306,10 @@ def city_hub_line(g, city):
 def same_item_other_cities(g):
     cmap = {c["slug"]: c for c in CITIES}
     oth = [x for x in GUIDES if x["short"] == g["short"] and x["city"] != g["city"] and x["city"] in cmap]
-    if not oth: return ""
-    return (f"<h2>{e(g['short'])} guides for other cities</h2><ul>" + "".join(
+    cost = (f'<p><a href="{U(COST_PATH)}">Compare mattress disposal costs around Boston (City fees and published hauler prices) →</a></p>'
+            if g["short"] == "Mattress" else "")
+    if not oth: return cost
+    return cost + (f"<h2>{e(g['short'])} guides for other cities</h2><ul>" + "".join(
         f'<li><a href="{U("/" + x["path"] + "/")}">{e(cmap[x["city"]]["name"])}: {e(x["title"])}</a> '
         f'({len(x.get("listing_ids", []))} options)</li>' for x in oth) + "</ul>")
 
@@ -429,6 +431,55 @@ def home_mattress_compare(cities):
             + "".join(rows) + "</tbody></table></div>" + qa_block([q]))
     return html, q
 
+COST_PATH = "/boston-area-mattress-disposal-cost/"
+def mattress_cost_rows():
+    """Every listing on a Mattress guide whose cost field publishes a dollar amount (not the City programs, which have
+    their own table). Same listing id + same cost text across cities = one row. Cells are verbatim fields."""
+    cmap = {c["slug"]: c for c in CITIES}
+    rows = {}
+    for g in GUIDES:
+        if g["short"] != "Mattress" or g["city"] not in cmap: continue
+        c = cmap[g["city"]]
+        for l in c["listings"]:
+            if l["id"] not in g.get("listing_ids", []) or l["type"] == "city bulk pickup" or "$" not in (l.get("cost") or ""):
+                continue
+            k = (l["id"], l["cost"].strip())
+            r = rows.setdefault(k, {"l": l, "guides": []})
+            r["guides"].append((c, g))
+    return list(rows.values())
+
+def mattress_cost_page():
+    """Linkable data asset (run #26; Sturm "linkable data assets" + Skipblast "give visitors a reason to stay"):
+    what mattress disposal costs around Boston, built only from listing fields already on the mattress guides."""
+    set_page(COST_PATH)
+    cmp_html, cmp_q = home_mattress_compare(CITIES)
+    rows = mattress_cost_rows()
+    tr = ""
+    for r in rows:
+        l = r["l"]
+        where = ", ".join(f'<a href="{U("/" + g["path"] + "/")}#{e(l["id"])}">{e(c["name"])}</a>' for c, g in r["guides"])
+        src = " ".join(f'<a href="{e(u)}" rel="noopener" target="_blank">source {i + 1}</a>' for i, u in enumerate(l.get("source_urls", [])[:2]))
+        tr += (f'<tr><th scope="row">{e(l["name"])}</th><td>{e(l["type"])}</td><td>{e(_cell(l.get("cost"), 260))}</td>'
+               f'<td>{e(_cell(l.get("stairs_inside")))}</td><td>{where}</td><td>{src}<br><span class="meta">checked {e(l.get("last_verified", ""))}</span></td></tr>')
+    names = [c["name"] for c in CITIES]
+    n_guides = len([g for g in GUIDES if g["short"] == "Mattress"])
+    body = f"""<p class="meta"><a href="{U('/')}">Home</a> › Mattress disposal cost</p>
+<h1>What mattress disposal costs around Boston: City programs and published hauler prices</h1>
+<p class="lead">Mattresses and box springs can't go in the trash in Massachusetts, so you need a City program, a hauler, or (if it's clean and the charity accepts mattresses) a donation outlet. This page puts every price we've verified for {e(', '.join(names))} in one place. Each row comes from the official City page or the company's own page, linked in the row, and shows when we last checked it. A price is only shown when the source publishes one.</p>
+<p class="meta">Page updated {e(MODIFIED.get(COST_PATH, ''))}.</p>
+{cmp_html}
+<h2 id="haulers">Haulers and donation pickups that publish a mattress or pickup price ({len(rows)})</h2>
+<p>These are the options on our {n_guides} city mattress guides whose own page (or the City's list) states a dollar amount. Many other haulers on those guides quote only by phone or photo, so they aren't in this table. Prices are what the source said on the date shown; confirm before you book.</p>
+<div class="tablewrap"><table class="cmp"><thead><tr><th scope="col">Option</th><th scope="col">Type</th><th scope="col">Published price</th><th scope="col">Inside / stairs pickup</th><th scope="col">Listed on our guide for</th><th scope="col">Source</th></tr></thead><tbody>{tr}</tbody></table></div>
+{yt_embed(COST_PATH, YT_CHANNEL, 'ByeBulky')}
+<h2>Every mattress option, city by city</h2><ul>""" + "".join(
+        f'<li><a href="{U("/" + g["path"] + "/")}">{e(g["title"])}</a> ({len(g.get("listing_ids", []))} options)</li>'
+        for g in GUIDES if g["short"] == "Mattress") + "</ul>"
+    lds = [faq_ld([cmp_q]) if cmp_q else None, crumbs_ld([("Home", "/"), ("Mattress disposal cost", COST_PATH)])]
+    return page("Mattress disposal cost around Boston: City fees and hauler prices",
+                f"City mattress pickup fees and published hauler prices for {', '.join(names[:-1])} and {names[-1]}, with official sources.",
+                COST_PATH, body, [x for x in lds if x])
+
 def home(cities):
     set_page("/")
     cmp_html, cmp_q = home_mattress_compare(cities)
@@ -437,6 +488,7 @@ def home(cities):
 <p class="lead">{e(CFG['tagline'])} For each city we list every real option: City bulk and mattress pickup, charities that pick up, drop-off spots, furniture banks, and paid haulers. You see what each one takes, its condition rules, whether it will come inside or up stairs, and its cost. A cost is only shown when the organization publishes it.</p>
 <h2>Cities</h2><div class="cities">{cl}</div>
 {cmp_html}
+<p><a href="{U(COST_PATH)}">Mattress disposal cost around Boston, including published hauler prices →</a></p>
 {yt_embed('/', YT_CHANNEL, 'ByeBulky')}
 {home_guides(cities)}
 <h2>Why this exists</h2>
@@ -525,7 +577,8 @@ LLMS_SUMMARY = (CFG["tagline"] + " A directory of real options for getting rid o
 LLMS_NOTES = ["Every listing comes from the organization's own website or an official government page, links to its sources, "
               "and shows the date it was last verified. When a source doesn't state something, the listing says "
               f'"{NS}". ByeBulky publishes no reviews or ratings.']
-LLMS_SECTIONS = [("Cities", lambda p: p.count("/") == 2 and p not in ("/", "/about/", "/privacy/")),
+LLMS_SECTIONS = [("Cities", lambda p: p.count("/") == 2 and p not in ("/", "/about/", "/privacy/", COST_PATH)),
+                 ("Cost comparisons", lambda p: p == COST_PATH),
                  ("Item guides", lambda p: p.count("/") == 3),
                  ("Home, about and privacy", lambda p: p in ("/", "/about/", "/privacy/"))]
 
@@ -574,9 +627,12 @@ def main():
     MODIFIED["/"] = max(city_mod(c) for c in cities)
     MODIFIED["/about/"] = ABOUT_UPDATED
     MODIFIED["/privacy/"] = PRIVACY_UPDATED
+    mg = [g for g in GUIDES if g["short"] == "Mattress"]
+    MODIFIED[COST_PATH] = max(MODIFIED[f"/{g['path']}/"] for g in mg)
     pages = {"/": home(cities), "/about/": about(cities), "/privacy/": privacy_page()}
     for c in cities: pages[f"/{c['slug']}/"] = city_page(c)
     for g in GUIDES: pages[f"/{g['path']}/"] = guide_page(g, bycity[g["city"]])
+    pages[COST_PATH] = mattress_cost_page()
     for path, h in pages.items():
         d = OUT / path.strip("/"); d.mkdir(parents=True, exist_ok=True); (d / "index.html").write_text(h)
     global PREFIX
