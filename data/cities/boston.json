@@ -110,7 +110,7 @@
       "lead_time": "Not stated, check with them",
       "cost": "No fee is mentioned on the City page. Check with 311 if unsure.",
       "service_area": "City of Boston residents.",
-      "last_verified": "2026-10-22",
+      "last_verified": "2026-10-27",
       "id": "boston-special-items",
       "name": "City of Boston special item collection (fridges, ACs, TVs, monitors)",
       "type": "city bulk pickup",
@@ -753,6 +753,35 @@
         "https://www.boston.gov/departments/public-works/large-residential-buildings",
         "https://trucktaxiinc.com/"
       ]
+    },
+    {
+      "id": "mass-save-fridge-recycling",
+      "name": "Mass Save refrigerator and freezer recycling ($75 rebate)",
+      "type": "utility recycling program",
+      "items_accepted": [
+        "Working refrigerators (inside size 10 to 30 cubic feet)",
+        "Working freezers (inside size 10 to 30 cubic feet)",
+        "Working dehumidifiers ($30 rebate, only with a fridge or freezer pickup)"
+      ],
+      "items_not_accepted": [
+        "Refrigerators or freezers that don't work (must be plugged in and cooling at pickup)",
+        "Units smaller than 10 or larger than 30 cubic feet inside"
+      ],
+      "condition_rules": "Must be an inefficient, working unit that is plugged in, cooling, and empty at pickup; disconnect any water line first. You must own it and it must be at your residence or business. All doors must be removed before placing it outside. Maximum two units per equipment type per electric account per calendar year. Only for Massachusetts electric customers whose Mass Save Sponsor is Cape Light Compact, Eversource, National Grid or Unitil.",
+      "stairs_inside": "Inside pickup only where there is one flight of stairs or fewer (per Mass Save); with more stairs you must make the item accessible for outside pickup.",
+      "lead_time": "Not stated, check with them. Rebate processing takes 6 to 8 weeks after pickup.",
+      "cost": "No-cost pickup plus a $75 rebate (pickup must happen between January 1 and December 31, 2026).",
+      "service_area": "Massachusetts electric customers whose Mass Save Sponsor is Cape Light Compact, Eversource, National Grid or Unitil. Check that your electric utility is one of these.",
+      "address": null,
+      "book_url": "https://www.masssave.com/residential/rebates-and-incentives/appliance-recycling/refrigerator-and-freezer-recycling",
+      "phone": "866-527-SAVE (7283)",
+      "email": null,
+      "source_urls": [
+        "https://www.masssave.com/residential/rebates-and-incentives/appliance-recycling/refrigerator-and-freezer-recycling",
+        "https://www.masssave.com/residential/rebates-and-incentives/appliance-recycling"
+      ],
+      "last_verified": "2026-10-27",
+      "notes": "Have your electric account number handy when scheduling, per Mass Save."
     }
   ]
 }

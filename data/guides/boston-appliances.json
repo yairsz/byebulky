@@ -2,9 +2,9 @@
   "path": "boston/appliances",
   "city": "boston",
   "short": "Appliances",
-  "last_verified": "2026-10-22",
+  "last_verified": "2026-10-27",
   "title": "Get Rid of a Fridge, AC, or TV in Boston (Free Pickup + Donation)",
-  "meta_description": "Boston picks up fridges, ACs, and TVs free by appointment, but not in the trash. Here are the City's rules, who takes working appliances, and paid haulers.",
+  "meta_description": "Boston picks up fridges, ACs, and TVs free by appointment. Mass Save also gives a no-cost pickup and $75 for a working fridge. Rules, donations, haulers.",
   "h1": "How to get rid of a refrigerator, air conditioner, or TV in Boston",
   "intro": "Fridges, freezers, air conditioners, dehumidifiers, and old TVs and monitors can't just go out with the trash in Boston. The City says Massachusetts law bans items containing Freon or cathode ray tubes (CRTs) from the trash, so Boston runs a separate special item collection by appointment. If your appliance still works, a few local charities will take it instead.",
   "quick_answers": [
@@ -15,6 +15,10 @@
     {
       "q": "Will the City of Boston pick up an old fridge, AC, or TV?",
       "a": "Yes, by appointment through its special item collection; the City page doesn't mention a fee. Schedule online or call 311 (617-635-4500), and put the item where your trash normally goes by 6 a.m. on your appointment day, or after 5 p.m. the night before. Limits: 5 items per appointment and 10 per calendar year. The City collects from the curb only."
+    },
+    {
+      "q": "How do I get rid of a fridge for free in Boston?",
+      "a": "Two ways. The City of Boston's special item collection picks it up from the curb by appointment (311 or 617-635-4500); the City page doesn't mention a fee. If the fridge still works and your electric utility is a Mass Save Sponsor (Cape Light Compact, Eversource, National Grid or Unitil), Mass Save offers a no-cost pickup plus a $75 rebate in 2026 for units 10 to 30 cubic feet inside, and will pick up inside if there is one flight of stairs or fewer."
     },
     {
       "q": "Do I have to remove the fridge doors?",
@@ -43,6 +47,10 @@
       "p": "Remove all doors from fridges and freezers, including mini fridges, and set the doors next to your trash bin for regular collection. Take out all food. Fridges or freezers with doors attached or food inside will not be collected. Don't smash appliances or electronics. TVs and computers must be freestanding, not boxed, and wipe your data from computers first."
     },
     {
+      "h": "Recycle a working fridge or freezer and get $75 (Mass Save)",
+      "p": "Mass Save offers a no-cost pickup and a $75 rebate for an inefficient, working refrigerator or freezer, for Massachusetts electric customers whose Mass Save Sponsor is Cape Light Compact, Eversource, National Grid or Unitil. The unit must be plugged in, cooling, and empty at pickup, measure 10 to 30 cubic feet inside, be owned by you, and be at your home or business; disconnect any water line, and remove all doors before putting it outside. Inside pickup is only available with one flight of stairs or fewer. The limit is two units per equipment type per electric account per year, and pickup must happen in 2026 for the $75. A working dehumidifier picked up with the fridge earns $30. Schedule online or call 866-527-SAVE (7283); the rebate takes 6 to 8 weeks."
+    },
+    {
       "h": "Donating a working appliance",
       "p": "The Habitat for Humanity Greater Boston ReStore in West Roxbury accepts appliances less than eight years old, including refrigerators, washers, dryers, free-standing stoves, cooktops, and microwaves, and dishwashers only if never installed; it doesn't take in-wall stoves, and everything must work. Household Goods in Acton takes refrigerators, washers, electric dryers, and air conditioners up to 18\" x 30\" x 24\" if newer than 10 years, plus flat-screen TVs under 55\" and under 10 years old with an attached base and power cord. The Thrift Shop of Boston takes smart flat-screen TVs and small appliances but not older, CRT, or rear-projection TVs. The Salvation Army's national FAQ says it generally takes working, non-built-in appliances such as ACs, microwaves, TVs, and washers and dryers, but not gas appliances or TVs older than 5 years; rules vary by location, so call 800-SA-TRUCK."
     },
@@ -53,6 +61,7 @@
   ],
   "listing_ids": [
     "boston-special-items",
+    "mass-save-fridge-recycling",
     "habitat-greater-boston-restore",
     "household-goods-acton",
     "thrift-shop-of-boston",

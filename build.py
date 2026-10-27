@@ -14,7 +14,7 @@ ROOT = Path(__file__).parent
 OUT = ROOT / "site"
 CFG = json.loads((ROOT / "site.json").read_text())
 NS = "Not stated, check with them"
-TYPES = ["city bulk pickup", "charity pickup", "drop-off", "furniture bank", "paid hauler", "retailer haul-away"]
+TYPES = ["city bulk pickup", "charity pickup", "drop-off", "furniture bank", "paid hauler", "retailer haul-away", "utility recycling program"]
 REQUIRED = ["id", "name", "type", "items_accepted", "condition_rules", "stairs_inside", "lead_time", "cost",
             "service_area", "source_urls", "last_verified"]
 
@@ -254,7 +254,8 @@ TYPE_HEADINGS = {"city bulk pickup": "City bulk item pickup for {city} residents
                  "drop-off": "Drop-off locations for {city} residents",
                  "furniture bank": "Furniture banks for {city} residents",
                  "paid hauler": "Paid junk removal and hauling for {city} residents",
-                 "retailer haul-away": "Retailer haul-away for {city} residents"}
+                 "retailer haul-away": "Retailer haul-away for {city} residents",
+                 "utility recycling program": "Utility appliance recycling programs for {city} residents"}
 
 def type_heading(t, city):
     return TYPE_HEADINGS.get(t, t.title()).format(city=city)
