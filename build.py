@@ -530,7 +530,7 @@ def about(cities):
 <p>ByeBulky uses Google Analytics to collect aggregate traffic statistics, such as which pages are visited, so we can see what's useful. It doesn't collect your name or email, though Google may set cookies to tell visits apart. Details are in our <a href="../privacy/">privacy policy</a>.</p>
 <h2>Corrections</h2>
 <p>Rules change often. If a listing is wrong or out of date, let us know and we'll re-check it against the source and update the date.</p>""" + nums
-    return page("About ByeBulky: how we verify listings & affiliate disclosure",
+    return page("About ByeBulky: How We Verify Listings & Disclosure",
                 "How ByeBulky verifies every listing against official sources, and how the site makes money (affiliate disclosure).", "/about/", body)
 
 def privacy_page():
@@ -639,7 +639,13 @@ def main():
     global PREFIX
     from urllib.parse import urlparse
     PREFIX = urlparse(base_url()).path.rstrip("/") + "/"   # 404 can be served at any depth
-    (OUT / "404.html").write_text(page("Page not found | ByeBulky", "Page not found.", "/404.html", f'<h1>Page not found</h1><p><a href="{U("/")}">Go to the home page</a></p>'))
+    # Smarter 404 (2026-10-27 run #34, from Ahrefs AEO course: AI assistants send visitors to made-up or stale URLs).
+    # Lists every real page; old /byebulky/... project-site paths jump to the same page at the root.
+    nf_links = "".join(f'<li><a href="{U(p)}">{e(META.get(p, (p, ""))[0].replace(" | ByeBulky", ""))}</a></li>' for p in pages)
+    nf_js = ("<script>(function(){var p=location.pathname;if(p.indexOf('/byebulky/')===0){"
+             "location.replace(p.slice(9)+location.search+location.hash);}})();</script>")
+    (OUT / "404.html").write_text(page("Page not found | ByeBulky", "Page not found.", "/404.html",
+        f'<h1>Page not found</h1><p>That page doesn\'t exist (the link may be old or mistyped). Try one of these:</p><ul>{nf_links}</ul>{nf_js}'))
     base = base_url()
     today = datetime.date.today().isoformat()
     def lastmod(path):
