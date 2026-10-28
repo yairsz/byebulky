@@ -1,0 +1,335 @@
+{
+ "slug": "brookline",
+ "name": "Brookline",
+ "state": "MA",
+ "last_verified": "2026-10-27",
+ "title": "Brookline MA Bulky Item Pickup: $20 Items, $65 Mattresses",
+ "meta_description": "Brookline bulky item pickup: $20 furniture, $30 appliances and electronics, $65 per mattress. Book a week ahead online. Rules, Tuesday pickups, sources.",
+ "intro": "Brookline collects big items at the curb for a fee if you're on Town trash service. Book and pay a week ahead online or at Town Hall: $20 for furniture or a rug, $30 for an appliance or electronics, $65 for each mattress or box spring. Here's what each option takes, what it costs, and where we got it.",
+ "quick_answers": [
+  {
+   "q": "How do I schedule a bulky item pickup in Brookline?",
+   "a": "Register on the Town's Accela permit portal and request a pickup, or pay in person at Town Hall. Book and pay at least one week before collection; up to four items per week."
+  },
+  {
+   "q": "How much is bulky item pickup in Brookline, MA?",
+   "a": "$20 per special item such as wood or upholstered furniture or a rug, $30 per electronic or white good, and $65 per mattress or box spring. Online card payments carry a service fee."
+  },
+  {
+   "q": "What day is bulk trash pickup in Brookline?",
+   "a": "Furniture put out as trash, like desks and chairs, goes on your regular trash day. Mattresses, electronics, metal and white goods are collected on Tuesdays. Your confirmation email gives each item's date."
+  },
+  {
+   "q": "What won't Brookline pick up?",
+   "a": "Construction or remodel material, car parts, gym equipment and pianos, plus apartment, attic or basement clean-outs. The Town says to use a private permitted waste hauler for those."
+  }
+ ],
+ "resources": [
+  {
+   "label": "Brookline: Bulky Items & Overflow Waste (fees, scheduling)",
+   "url": "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"
+  },
+  {
+   "label": "Request a Brookline bulky item pickup (Accela portal)",
+   "url": "https://aca-prod.accela.com/Brookline/Cap/CapApplyDisclaimer.aspx?CAPType=PublicWorks/Bulky%20Item/NA/NA&Module=PublicWorks"
+  },
+  {
+   "label": "Brookline: Hazardous Waste Drop-Off Programs",
+   "url": "https://www.brooklinema.gov/3764/Hazardous-Waste-Drop-Off-Programs"
+  },
+  {
+   "label": "Brookline: Private Waste Haulers",
+   "url": "https://www.brooklinema.gov/3762/Private-Waste-Haulers"
+  }
+ ],
+ "listings": [
+  {
+   "id": "brookline-bulky-item-pickup",
+   "name": "Town of Brookline bulky item pickup ($20 per special item)",
+   "type": "city bulk pickup",
+   "items_accepted": [
+    "Wood or upholstered furniture, such as a couch",
+    "Rugs and carpet",
+    "Desks and chairs (collected on your regular trash day)"
+   ],
+   "items_not_accepted": [
+    "Construction or remodel material",
+    "Car parts",
+    "Gym equipment",
+    "Pianos",
+    "Mattresses and box springs ($65 each, see the mattress listing)",
+    "Electronics and white goods ($30 each, see that listing)",
+    "Apartment, attic or basement clean-outs (Town says use a private permitted hauler)"
+   ],
+   "condition_rules": "Book and pay at least one week before pickup, online through the Town's Accela permit portal or in person at Town Hall (333 Washington St., 4th floor). Up to four bulky, metal, white goods and/or mattress items per week. Refund requests must be made 48 hours in advance; service fees aren't refunded and refunds come as a mailed check. Your confirmation email gives the collection day for each item.",
+   "stairs_inside": "No. Curbside collection only.",
+   "lead_time": "Schedule one week in advance. Items disposed of as trash, such as desks and chairs, are collected on your regular trash day.",
+   "cost": "$20 per special item (wood or upholstered furniture, rugs/carpet, etc.). Pay before pickup; online card payments carry a service fee that isn't refunded.",
+   "service_area": "Brookline residents on Town Waste Collection Service.",
+   "address": null,
+   "book_url": "https://aca-prod.accela.com/Brookline/Cap/CapApplyDisclaimer.aspx?CAPType=PublicWorks/Bulky%20Item/NA/NA&Module=PublicWorks",
+   "phone": "617-730-2156",
+   "email": "dpwinfo@brooklinema.gov",
+   "source_urls": [
+    "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste",
+    "https://www.brooklinema.gov/3762/Private-Waste-Haulers"
+   ],
+   "last_verified": "2026-10-27",
+   "notes": "The Town encourages donating or selling furniture and appliances in good condition first."
+  },
+  {
+   "id": "brookline-mattress-pickup",
+   "name": "Town of Brookline mattress & box spring pickup ($65 per item)",
+   "type": "city bulk pickup",
+   "items_accepted": [
+    "Mattresses",
+    "Box springs (each one is a separate $65 item)"
+   ],
+   "items_not_accepted": [],
+   "condition_rules": "Book and pay at least one week before pickup, online through the Town's Accela permit portal or in person at Town Hall (333 Washington St., 4th floor). Up to four bulky, metal, white goods and/or mattress items per week. Refund requests must be made 48 hours in advance; service fees aren't refunded and refunds come as a mailed check. Mattresses and box springs must be recycled to comply with MassDEP regulations.",
+   "stairs_inside": "No. Curbside collection only.",
+   "lead_time": "Schedule one week in advance. Mattresses are collected on Tuesdays each week; your confirmation email gives the date.",
+   "cost": "$65 per mattress or box spring. Pay before pickup, online or at Town Hall.",
+   "service_area": "Brookline residents on Town Waste Collection Service.",
+   "address": null,
+   "book_url": "https://aca-prod.accela.com/Brookline/Cap/CapApplyDisclaimer.aspx?CAPType=PublicWorks/Bulky%20Item/NA/NA&Module=PublicWorks",
+   "phone": "617-730-2156",
+   "email": "dpwinfo@brooklinema.gov",
+   "source_urls": [
+    "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"
+   ],
+   "last_verified": "2026-10-27",
+   "notes": null
+  },
+  {
+   "id": "brookline-electronics-whitegoods-pickup",
+   "name": "Town of Brookline electronics, metal & white goods pickup ($30 per item)",
+   "type": "city bulk pickup",
+   "items_accepted": [
+    "White goods: stoves, refrigerators, air conditioners",
+    "TVs and CRTs",
+    "Other electronics and metal items"
+   ],
+   "items_not_accepted": [
+    "Gym equipment",
+    "Car parts",
+    "Construction or remodel material"
+   ],
+   "condition_rules": "Book and pay at least one week before pickup, online through the Town's Accela permit portal or in person at Town Hall (333 Washington St., 4th floor). Up to four bulky, metal, white goods and/or mattress items per week. Refund requests must be made 48 hours in advance; service fees aren't refunded and refunds come as a mailed check.",
+   "stairs_inside": "No. Curbside collection only.",
+   "lead_time": "Schedule one week in advance. Electronics, metals and white goods are collected on Tuesdays each week; your confirmation email gives the date.",
+   "cost": "$30 per item for electronics and white goods. Electronics can instead go free to the Town's Household Hazardous Waste drop-off in season.",
+   "service_area": "Brookline residents on Town Waste Collection Service.",
+   "address": null,
+   "book_url": "https://aca-prod.accela.com/Brookline/Cap/CapApplyDisclaimer.aspx?CAPType=PublicWorks/Bulky%20Item/NA/NA&Module=PublicWorks",
+   "phone": "617-730-2156",
+   "email": "dpwinfo@brooklinema.gov",
+   "source_urls": [
+    "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"
+   ],
+   "last_verified": "2026-10-27",
+   "notes": null
+  },
+  {
+   "id": "brookline-hhw-transfer-station",
+   "name": "Brookline Household Hazardous Waste drop-off, Transfer Station (815 Newton St.)",
+   "type": "drop-off",
+   "items_accepted": [
+    "Tires",
+    "TVs, CRTs and other electronics",
+    "Small appliances such as microwaves",
+    "Air conditioners",
+    "Household hazardous waste in original labeled containers (oil-based paint, solvents, pesticides, propane tanks, car batteries, motor oil and more)"
+   ],
+   "items_not_accepted": [
+    "Commercial or workplace waste",
+    "Hazardous waste in non-original or unlabeled containers",
+    "Furniture and mattresses (not listed by the Town for this site)"
+   ],
+   "condition_rules": "Brookline residents only: bring ID and proof of residency (utility bill, lease or government ID). Come by car. One trunkload per resident per week; for more, email zerowaste@brooklinema.gov for an appointment.",
+   "stairs_inside": "No. You bring the items.",
+   "lead_time": "Open May through October, 7:30 a.m. to 12:30 p.m. The Bulky Items page says every Tuesday; the hazardous waste pages say every other Tuesday, so check before you go.",
+   "cost": "Free for tires, electronics and small appliances, per the Town's Bulky Items page.",
+   "service_area": "Brookline residents only.",
+   "address": "815 Newton Street, Brookline (Chestnut Hill), MA",
+   "book_url": "https://www.brooklinema.gov/3764/Hazardous-Waste-Drop-Off-Programs",
+   "phone": "617-730-2156",
+   "email": "zerowaste@brooklinema.gov",
+   "source_urls": [
+    "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste",
+    "https://www.brooklinema.gov/3764/Hazardous-Waste-Drop-Off-Programs",
+    "https://www.brooklinema.gov/3763/Household-Hazardous-Waste"
+   ],
+   "last_verified": "2026-10-27",
+   "notes": "Seasonal: the Town lists it as open May through October only."
+  },
+  {
+   "id": "brookline-private-waste-haulers",
+   "name": "Brookline-permitted private waste haulers (Town list)",
+   "type": "paid hauler",
+   "items_accepted": [
+    "Apartment, attic and basement clean-outs",
+    "Construction, demolition and renovation waste",
+    "Items the Town won't take, such as pianos and gym equipment (Town says to contact a private hauler)"
+   ],
+   "items_not_accepted": [],
+   "condition_rules": "A dumpster placed on the street needs an Occupancy Permit; email dpwpermits@brooklinema.gov about the permit process.",
+   "stairs_inside": "Not stated, check with them.",
+   "lead_time": "Not stated, check with them.",
+   "cost": "Not stated, check with them. Each hauler sets its own price.",
+   "service_area": "Haulers permitted by the Town of Brookline. The linked list is dated August 2023; the Town says to email dpwpermits@brooklinema.gov for the most up-to-date list.",
+   "address": null,
+   "book_url": "https://www.brooklinema.gov/DocumentCenter/View/44360/Waste-Hauler-List-August-2023",
+   "phone": null,
+   "email": "dpwpermits@brooklinema.gov",
+   "source_urls": [
+    "https://www.brooklinema.gov/3762/Private-Waste-Haulers",
+    "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"
+   ],
+   "last_verified": "2026-10-27",
+   "notes": "As listed by the Town: Brookline's Private Waste Haulers page links this list."
+  },
+  {
+   "items_not_accepted": [
+    "Mattresses & box springs",
+    "Sofa beds",
+    "Sofas with slip covers",
+    "Futons",
+    "Platform & trundle beds",
+    "Hutches, sideboards, buffets, china cabinets",
+    "TV armoires & entertainment centers",
+    "Fitness equipment",
+    "In-wall stoves"
+   ],
+   "address": "1580 VFW Parkway, West Roxbury, MA",
+   "notes": "Brookline's Town page encourages donating furniture and appliances in good condition.",
+   "book_url": "https://resupply.app.link/habitatbostonrestore",
+   "phone": "617-327-1170",
+   "email": "restore@habitatboston.org",
+   "condition_rules": "All donations must be in working order. Staff can refuse any item based on condition and store need. Email the ReStore for the current list.",
+   "stairs_inside": "Drop-off: staff help unload at the store. Habitat points in-home pickups to ReSupply, but ReSupply's Boston page doesn't list Brookline among the communities shown, so check with ReSupply.",
+   "lead_time": "Drop-off Tuesday to Saturday, 9:30 a.m. to 4:00 p.m. (as posted).",
+   "cost": "Drop-off fee: not stated. Pickup is through ReSupply, a paid service.",
+   "service_area": "Drop-off at the West Roxbury store. Habitat says a second ReStore is set to open in Watertown in fall 2026.",
+   "last_verified": "2026-10-27",
+   "id": "habitat-greater-boston-restore",
+   "name": "Habitat for Humanity Greater Boston ReStore (West Roxbury)",
+   "type": "drop-off",
+   "items_accepted": [
+    "Bed frames, headboards & footboards",
+    "Dressers, bureaus & armoires",
+    "Coffee & end tables",
+    "Desks (3' x 5' or smaller)",
+    "Tables & chairs (not conference tables or dated)",
+    "Upholstered furniture (not ripped, worn, broken, dated or faded)",
+    "Outdoor furniture",
+    "Appliances less than eight years old (fridges, washers, dryers, free-standing stoves, cooktops, microwaves, never-installed dishwashers)",
+    "Cabinets, doors, lighting, building materials"
+   ],
+   "source_urls": [
+    "https://habitatboston.org/restore/",
+    "https://resupply.com/boston/"
+   ]
+  },
+  {
+   "items_not_accepted": [
+    "Mattresses with any stains or rips",
+    "Office furniture, desks, file cabinets",
+    "Glass-top items",
+    "Outdoor furniture",
+    "Oversized or wall-mounted items"
+   ],
+   "address": "530 Main Street, Acton, MA",
+   "notes": null,
+   "book_url": "https://www.householdgoods.org/donate/donate-goods/pickup/",
+   "phone": "978-635-1710",
+   "email": null,
+   "condition_rules": "Clean, complete, and in good working condition; nothing broken, chipped, torn, stained, or recalled.",
+   "stairs_inside": "Volunteer pickup asks that items be in a garage or on the first floor if possible.",
+   "lead_time": "Drop-off Tuesdays, Thursdays, and Saturdays, 9 a.m. to noon. Volunteer pickups typically scheduled 4+ weeks ahead. Paid pickups through ReSupply or ReMARKable Donations in as soon as 2 business days.",
+   "cost": "Drop-off: not stated. Volunteer pickup: minimum $35 donation requested. Paid pickups (ReSupply / ReMARKable Donations): for a fee.",
+   "service_area": "Volunteer pickup only in Acton, Boxborough, Carlisle, Concord, Littleton, Maynard, Stow, Sudbury and Westford, so not Brookline. Brookline donors can drop off in Acton or use the paid pickup partners (ReSupply or Mark's Moving/ReMARKable Donations).",
+   "last_verified": "2026-10-27",
+   "id": "household-goods-acton",
+   "name": "Household Goods (Acton)",
+   "type": "furniture bank",
+   "items_accepted": [
+    "Standard-size mattresses & box springs",
+    "Bed frames (all parts) & bunk beds",
+    "Dressers & armoires",
+    "Couches, sofa beds & futons",
+    "Chairs (no office chairs)",
+    "Kitchen, dining, end & coffee tables",
+    "Refrigerators, washers, electric dryers (newer than 10 years)",
+    "Air conditioners up to 18\" x 30\" x 24\" (newer than 10 years)",
+    "Flat-screen TVs under 55\" (less than 10 years old)"
+   ],
+   "source_urls": [
+    "https://www.householdgoods.org/donate/donate-goods/donation-guidelines/",
+    "https://www.householdgoods.org/donate/donate-goods/pickup/"
+   ]
+  },
+  {
+   "id": "mass-save-fridge-recycling",
+   "name": "Mass Save refrigerator and freezer recycling ($75 rebate)",
+   "type": "utility recycling program",
+   "items_accepted": [
+    "Working refrigerators (inside size 10 to 30 cubic feet)",
+    "Working freezers (inside size 10 to 30 cubic feet)",
+    "Working dehumidifiers ($30 rebate, only with a fridge or freezer pickup)"
+   ],
+   "items_not_accepted": [
+    "Refrigerators or freezers that don't work (must be plugged in and cooling at pickup)",
+    "Units smaller than 10 or larger than 30 cubic feet inside"
+   ],
+   "condition_rules": "Must be an inefficient, working unit that is plugged in, cooling, and empty at pickup; disconnect any water line first. You must own it and it must be at your residence or business. All doors must be removed before placing it outside. Maximum two units per equipment type per electric account per calendar year. Only for Massachusetts electric customers whose Mass Save Sponsor is Cape Light Compact, Eversource, National Grid or Unitil.",
+   "stairs_inside": "Inside pickup only where there is one flight of stairs or fewer (per Mass Save); with more stairs you must make the item accessible for outside pickup.",
+   "lead_time": "Not stated, check with them. Rebate processing takes 6 to 8 weeks after pickup.",
+   "cost": "No-cost pickup plus a $75 rebate (pickup must happen between January 1 and December 31, 2026).",
+   "service_area": "Massachusetts electric customers whose Mass Save Sponsor is Cape Light Compact, Eversource, National Grid or Unitil. Check that your electric utility is one of these.",
+   "address": null,
+   "book_url": "https://www.masssave.com/residential/rebates-and-incentives/appliance-recycling/refrigerator-and-freezer-recycling",
+   "phone": "866-527-SAVE (7283)",
+   "email": null,
+   "source_urls": [
+    "https://www.masssave.com/residential/rebates-and-incentives/appliance-recycling/refrigerator-and-freezer-recycling",
+    "https://www.masssave.com/residential/rebates-and-incentives/appliance-recycling"
+   ],
+   "last_verified": "2026-10-27",
+   "notes": "Have your electric account number handy when scheduling, per Mass Save."
+  },
+  {
+   "items_not_accepted": [
+    "Hazardous materials such as certain paints, chemicals, asbestos and medical waste"
+   ],
+   "address": null,
+   "notes": "We do not currently have an affiliate relationship with LoadUp. If that changes, this listing will be labeled.",
+   "book_url": "https://goloadup.com/junk-removal/",
+   "phone": null,
+   "email": null,
+   "condition_rules": "No donation-quality requirement stated; this is junk removal.",
+   "stairs_inside": "Yes. LoadUp says its loaders carry items out from any room (bedroom, basement, attic, upstairs); curbside option also offered.",
+   "lead_time": "Same-day and next-day service when available (per LoadUp).",
+   "cost": "LoadUp's Brookline page says junk removal starts at $80 for a single bulky item (labor, transportation and disposal included). Its mattress page lists mattress removal from $85. The final price is shown by ZIP and item before booking.",
+   "service_area": "LoadUp has Brookline, MA junk removal and bulky item pickup pages. Enter your ZIP to confirm.",
+   "last_verified": "2026-10-27",
+   "id": "loadup",
+   "name": "LoadUp junk removal",
+   "type": "paid hauler",
+   "items_accepted": [
+    "Furniture",
+    "Mattresses",
+    "Appliances",
+    "Electronics",
+    "Exercise equipment",
+    "Yard debris and construction waste"
+   ],
+   "source_urls": [
+    "https://goloadup.com/junk-removal/ma/brookline/",
+    "https://goloadup.com/brookline-ma/bulk-item-pickup/",
+    "https://goloadup.com/junk-removal/",
+    "https://goloadup.com/mattress-removal/"
+   ]
+  }
+ ]
+}

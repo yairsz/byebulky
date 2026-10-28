@@ -1,0 +1,65 @@
+{
+ "path": "brookline/mattress",
+ "city": "brookline",
+ "short": "Mattress",
+ "last_verified": "2026-10-27",
+ "title": "Brookline Mattress Disposal & Pickup: $65 Town Recycling",
+ "meta_description": "Brookline mattress disposal: $65 per mattress or box spring through the Town's bulky pickup, collected Tuesdays. How to book, who qualifies, other options.",
+ "h1": "Brookline mattress disposal and pickup: the $65 Town recycling option",
+ "intro": "Mattresses and box springs can't go out with Brookline trash; they must be recycled. If you're on Town trash service, book a $65-per-item bulky pickup a week ahead and the Town collects it on a Tuesday. Here's how that works, and what to do if you're on private service or need it carried out.",
+ "quick_answers": [
+  {
+   "q": "Does Brookline pick up mattresses?",
+   "a": "Yes, for $65 per mattress or box spring, if you're on Town Waste Collection Service. Book and pay at least one week ahead; mattresses are collected on Tuesdays."
+  },
+  {
+   "q": "How do I schedule mattress pickup in Brookline?",
+   "a": "Request a bulky item pickup on the Town's Accela permit portal (create an account first) or pay in person at Town Hall, 333 Washington St., 4th floor. Your confirmation email gives the collection date."
+  },
+  {
+   "q": "Is a box spring a separate charge in Brookline?",
+   "a": "Yes. The Town charges $65 for each mattress and $65 for each box spring."
+  },
+  {
+   "q": "Can I put a mattress in the trash in Brookline?",
+   "a": "No. Brookline says mattresses and box springs must be recycled to comply with MassDEP regulations, so they go through the paid bulky pickup."
+  },
+  {
+   "q": "Will someone take a mattress from inside my home in Brookline?",
+   "a": "Not the Town, which collects at the curb. LoadUp says its loaders carry a mattress out from wherever it is, including upstairs bedrooms; its mattress page lists removal from $85."
+  }
+ ],
+ "sections": [
+  {
+   "h": "Who gets Town mattress pickup, and what it costs",
+   "p": "The Town's Department of Public Works collects up to four bulky, metal, white goods and/or mattress items per week for residents on Town Waste Collection Service. Each mattress or box spring costs $65, and Brookline says they must be recycled to comply with MassDEP regulations."
+  },
+  {
+   "h": "How to book a $65 mattress pickup",
+   "p": "Register an account on the Town's Accela permit portal, then request a bulky item pickup, or schedule and pay in person at Town Hall. Pickups must be scheduled one week in advance and paid before pickup. Mattresses are collected on Tuesdays each week, and your confirmation email gives the collection day. For help, email dpwinfo@brooklinema.gov or call DPW at 617-730-2156."
+  },
+  {
+   "h": "Refunds if your plans change",
+   "p": "Refund requests must be made 48 hours in advance, for in-person and online payments alike. Service fees aren't included in the refund, and refunds are sent as a check in the mail."
+  },
+  {
+   "h": "Apartment buildings and move-out clean-outs",
+   "p": "The Town's trash fee covers domestic household waste from a one-week period, and it won't collect apartment, attic or basement clean-outs. For those, Brookline points residents to private permitted waste haulers; its linked list is dated August 2023, and the Town says to email dpwpermits@brooklinema.gov for the most up-to-date list."
+  },
+  {
+   "h": "Need it carried out of the house?",
+   "p": "LoadUp's Brookline page says junk removal starts at $80 for a single bulky item, and its mattress page lists removal from $85, and says its loaders carry a mattress out from wherever it is, including upstairs bedrooms and apartment units. Confirm the final price for your ZIP when you book."
+  },
+  {
+   "h": "Donating a mattress in good condition",
+   "p": "Household Goods in Acton accepts standard-size mattresses and box springs but refuses any with stains or rips, and its volunteer pickup doesn't reach Brookline, so you'd drop off in Acton or use its paid pickup partners. The Habitat for Humanity Greater Boston ReStore does not accept mattresses or box springs."
+  }
+ ],
+ "listing_ids": [
+  "brookline-mattress-pickup",
+  "loadup",
+  "brookline-private-waste-haulers",
+  "household-goods-acton",
+  "habitat-greater-boston-restore"
+ ]
+}

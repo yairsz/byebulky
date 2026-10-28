@@ -5,6 +5,8 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [x] How to get rid of a mattress in Boston (/boston/mattress/), done 2026-10-21
 - [x] How to get rid of a couch/sofa in Boston (/boston/couch/), done 2026-10-21: reuse curbside furniture, ReSupply, Furnishing Hope, Household Goods; add a note on who refuses sofas (Habitat: slip-covered sofas/sofa beds; Thrift Shop of Boston)
 - [x] How to get rid of a refrigerator / AC / TV in Boston (/boston/appliances/), done 2026-10-22: City special collection + Habitat (<8 yrs) + Household Goods (<10 yrs)
+- [x] Brookline, MA city page + mattress guide (published 2026-10-27; keyword-targets row 4)
+- [ ] Brookline: couch guide (Town $20 special item; reuse Habitat/Household Goods/LoadUp) and appliances guide ($30 white goods, Mass Save, HHW drop-off)
 - [ ] Boston: verify and add The Furniture Trust, St. Vincent de Paul Boston, Goodwill Mass furniture policy, Boomerangs (sites failed to load 2026-10-21)
 - [x] Cambridge, MA city page (/cambridge/) + mattress guide (/cambridge/mattress/), done 2026-10-24 (keyword-targets ByeBulky row 2)
 - [x] Quincy, MA city page (PUBLISHED 2026-10-25 → /quincy/ + /quincy/mattress/)
