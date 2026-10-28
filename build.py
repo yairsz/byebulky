@@ -571,6 +571,7 @@ def rules_page():
 <div class="tablewrap"><table class="cmp"><thead><tr><th scope="col">City</th>""" + "".join(f'<th scope="col">{e(k)}</th>' for k, _ in RULE_KINDS) + f"""</tr></thead><tbody>{tr}</tbody></table></div>
 <p>City programs only cover residents the City collects trash for; many larger apartment buildings use private trash service. Check the "details" link for who qualifies. If the City option doesn't fit, each city page also lists charity pickups, drop-off spots, furniture banks and paid haulers.</p>
 <h2>Quick answers</h2>{qa_block(qas)}
+{yt_embed(RULES_PATH, YT_CHANNEL, 'ByeBulky')}
 <p><a href="{U(COST_PATH)}">Mattress disposal cost around Boston, including published hauler prices →</a></p>
 <p><a href="{U(NOCAR_PATH)}">No car, upstairs apartment or big building? Pickups that come to you →</a></p>
 <h2>City pages</h2><ul>""" + "".join(f'<li><a href="{U("/" + c["slug"] + "/")}">{e(c["title"])}</a></li>' for c in CITIES) + "</ul>"
