@@ -321,11 +321,21 @@ def rules_link(name):
     return (f'<p>How does {e(name)} compare? See the <a href="{U(RULES_PATH)}">furniture, mattress and appliance pickup rules '
             f'for {e(name)} and {n} other Boston-area cities side by side</a>, with official sources.</p>')
 
+def nocar_link(c):
+    """City hub -> no-car/big-building audience page (run #40). Count is computed from this city's own listings:
+    pickups (not City programs) whose stairs_inside text starts with "Yes"."""
+    k = sum(1 for l in c["listings"] if l["type"] != "city bulk pickup" and _comes_to_you(l)
+            and (l.get("stairs_inside") or "").startswith("Yes"))
+    lead = (f'{k} pickup option{"s" if k != 1 else ""} listed for {e(c["name"])} {"say they come inside or handle stairs" if k != 1 else "says it comes inside or handles stairs"}. '
+            if k else "")
+    return (f'<p>No car, upstairs apartment or big building? {lead}See <a href="{U(NOCAR_PATH)}">pickups that come to you around Boston, '
+            f'with each option\'s inside/stairs wording and each City\'s building-size rules</a>.</p>')
+
 def other_city_hubs(c):
     oth = [o for o in CITIES if o["slug"] != c["slug"]]
-    if not oth: return rules_link(c["name"])
+    if not oth: return rules_link(c["name"]) + nocar_link(c)
     def gcount(o): return len([x for x in GUIDES if x["city"] == o["slug"]])
-    return rules_link(c["name"]) + ("<h2>Other Boston-area cities we cover</h2><ul>" + "".join(
+    return rules_link(c["name"]) + nocar_link(c) + ("<h2>Other Boston-area cities we cover</h2><ul>" + "".join(
         f'<li><a href="{U("/" + o["slug"] + "/")}">{e(o["name"])}, {e(o["state"])}</a> ({len(o["listings"])} options'
         + (f', {gcount(o)} item guide{"s" if gcount(o) != 1 else ""}' if gcount(o) else '') + ')</li>' for o in oth) + "</ul>")
 
