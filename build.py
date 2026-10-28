@@ -481,6 +481,86 @@ def mattress_cost_page():
                 f"City mattress pickup fees and published hauler prices for {', '.join(names[:-1])} and {names[-1]}, with official sources.",
                 COST_PATH, body, [x for x in lds if x])
 
+RULES_PATH = "/boston-area-bulky-item-pickup-compared/"
+RULE_KINDS = [("Furniture & bulky items", re.compile(r"furniture|bulky-item")),
+              ("Mattresses & box springs", re.compile(r"mattress")),
+              ("Fridges & big appliances", re.compile(r"appliance|white|special-items"))]
+_ABBR = re.compile(r"(?:\b[ap]\.m|\betc|\bSt|\bAve|\bNo|\bDr)\.$")
+def _sent(s):
+    """First sentence, verbatim, without cutting at abbreviations like 'p.m.' or 'etc.'."""
+    s = (s or "").strip()
+    for m in re.finditer(r"\. ", s):
+        if not _ABBR.search(s[:m.start() + 1]):
+            return s[:m.start() + 1]
+    return s
+
+def _fee_class(cost):
+    c = (cost or "").strip()
+    if c.lower().startswith("free"): return "free"
+    if "$" in _sent(c): return "paid"
+    return "unstated"
+
+def rules_rows():
+    """Per city, the City's own pickup program for each item kind (city bulk pickup listings only). Cells are verbatim
+    first sentences of listing fields; nothing new is claimed. Added run #37 (first-party data table, WordsAtScale/Gotch)."""
+    out = []
+    for c in CITIES:
+        cells = []
+        for label, rx in RULE_KINDS:
+            l = next((x for x in c["listings"] if x["type"] == "city bulk pickup" and rx.search(x["id"])), None)
+            cells.append(l)
+        out.append((c, cells))
+    return out
+
+def rules_cell(c, l):
+    if not l:
+        return '<td><span class="ns">No separate City program on our page</span></td>'
+    gp = next((g for g in GUIDES if g["city"] == c["slug"] and l["id"] in g.get("listing_ids", [])), None)
+    href = U(f"/{gp['path']}/" if gp else f"/{c['slug']}/") + "#" + l["id"]
+    src = " ".join(f'<a href="{e(u)}" rel="noopener" target="_blank">source {i + 1}</a>' for i, u in enumerate(l.get("source_urls", [])[:2]))
+    lt = _sent(l.get("lead_time"))
+    return (f'<td><strong>{val(_sent(l.get("cost")))}</strong>'
+            + (f'<br>When: {val(lt)}' if lt else "")
+            + f'<br><a href="{href}">details</a> · {src}<br><span class="meta">checked {e(l.get("last_verified", ""))}</span></td>')
+
+def rules_faq(rows):
+    qas = []
+    for k, (label, _) in enumerate(RULE_KINDS):
+        groups = {"free": [], "paid": [], "unstated": []}
+        for c, cells in rows:
+            l = cells[k]
+            if l: groups[_fee_class(l.get("cost"))].append((c, l))
+        noun = label.lower()
+        parts = []
+        if groups["free"]: parts.append("Free per the official pages: " + " ".join(f'{c["name"]}: {_sent(l["cost"])}' for c, l in groups["free"]))
+        if groups["paid"]: parts.append("Fee charged: " + " ".join(f'{c["name"]}: {_sent(l["cost"])}' for c, l in groups["paid"]))
+        if groups["unstated"]: parts.append("No fee stated on the official page (ask the City): " + ", ".join(c["name"] for c, _ in groups["unstated"]) + ".")
+        qas.append({"q": f"Which Boston-area cities pick up {noun} for free, and what do the others charge?",
+                    "a": " ".join(parts)})
+    return qas
+
+def rules_page():
+    """Linkable first-party data table: every City's own furniture, mattress and appliance pickup side by side."""
+    set_page(RULES_PATH)
+    rows = rules_rows()
+    names = [c["name"] for c in CITIES]
+    tr = "".join(f'<tr><th scope="row"><a href="{U("/" + c["slug"] + "/")}">{e(c["name"])}, {e(c["state"])}</a></th>'
+                 + "".join(rules_cell(c, l) for l in cells) + "</tr>" for c, cells in rows)
+    qas = rules_faq(rows)
+    body = f"""<p class="meta"><a href="{U('/')}">Home</a> › Bulky item pickup compared</p>
+<h1>Bulky item pickup around Boston compared: furniture, mattresses and appliances by city</h1>
+<p class="lead">Every city around Boston runs its own bulky item rules: some pick up furniture free with the trash, others charge per item, and mattresses and fridges usually have their own fee and booking step. This table puts the official City or Town program for {e(', '.join(names[:-1]))} and {e(names[-1])} side by side. Each cell comes from the official page linked in it and shows when we last checked it. Where the official page doesn't state a fee, we say so instead of guessing.</p>
+<p class="meta">Page updated {e(MODIFIED.get(RULES_PATH, ''))}.</p>
+<div class="tablewrap"><table class="cmp"><thead><tr><th scope="col">City</th>""" + "".join(f'<th scope="col">{e(k)}</th>' for k, _ in RULE_KINDS) + f"""</tr></thead><tbody>{tr}</tbody></table></div>
+<p>City programs only cover residents the City collects trash for; many larger apartment buildings use private trash service. Check the "details" link for who qualifies. If the City option doesn't fit, each city page also lists charity pickups, drop-off spots, furniture banks and paid haulers.</p>
+<h2>Quick answers</h2>{qa_block(qas)}
+<p><a href="{U(COST_PATH)}">Mattress disposal cost around Boston, including published hauler prices →</a></p>
+<h2>City pages</h2><ul>""" + "".join(f'<li><a href="{U("/" + c["slug"] + "/")}">{e(c["title"])}</a></li>' for c in CITIES) + "</ul>"
+    lds = [faq_ld(qas), crumbs_ld([("Home", "/"), ("Bulky item pickup compared", RULES_PATH)])]
+    return page("Boston-Area Bulky Item Pickup Rules Compared by City",
+                f"Furniture, mattress and appliance pickup fees and booking rules for {', '.join(names[:-1])} and {names[-1]}, side by side with official sources.",
+                RULES_PATH, body, lds)
+
 def home(cities):
     set_page("/")
     cmp_html, cmp_q = home_mattress_compare(cities)
@@ -490,6 +570,7 @@ def home(cities):
 <h2>Cities</h2><div class="cities">{cl}</div>
 {cmp_html}
 <p><a href="{U(COST_PATH)}">Mattress disposal cost around Boston, including published hauler prices →</a></p>
+<p><a href="{U(RULES_PATH)}">Furniture, mattress and appliance pickup rules compared by city →</a></p>
 {yt_embed('/', YT_CHANNEL, 'ByeBulky')}
 {home_guides(cities)}
 <h2>Why this exists</h2>
@@ -630,10 +711,12 @@ def main():
     MODIFIED["/privacy/"] = PRIVACY_UPDATED
     mg = [g for g in GUIDES if g["short"] == "Mattress"]
     MODIFIED[COST_PATH] = max(MODIFIED[f"/{g['path']}/"] for g in mg)
+    MODIFIED[RULES_PATH] = max(l["last_verified"] for c in cities for l in c["listings"] if l["type"] == "city bulk pickup")
     pages = {"/": home(cities), "/about/": about(cities), "/privacy/": privacy_page()}
     for c in cities: pages[f"/{c['slug']}/"] = city_page(c)
     for g in GUIDES: pages[f"/{g['path']}/"] = guide_page(g, bycity[g["city"]])
     pages[COST_PATH] = mattress_cost_page()
+    pages[RULES_PATH] = rules_page()
     for path, h in pages.items():
         d = OUT / path.strip("/"); d.mkdir(parents=True, exist_ok=True); (d / "index.html").write_text(h)
     global PREFIX
