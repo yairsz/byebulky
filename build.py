@@ -309,16 +309,23 @@ def same_item_other_cities(g):
     oth = [x for x in GUIDES if x["short"] == g["short"] and x["city"] != g["city"] and x["city"] in cmap]
     cost = (f'<p><a href="{U(COST_PATH)}">Compare mattress disposal costs around Boston (City fees and published hauler prices) →</a></p>'
             if g["short"] == "Mattress" else "")
+    cost += rules_link(next((c["name"] for c in CITIES if c["slug"] == g["city"]), "your city"))
     if not oth: return cost
     return cost + (f"<h2>{e(g['short'])} guides for other cities</h2><ul>" + "".join(
         f'<li><a href="{U("/" + x["path"] + "/")}">{e(cmap[x["city"]]["name"])}: {e(x["title"])}</a> '
         f'({len(x.get("listing_ids", []))} options)</li>' for x in oth) + "</ul>")
 
+def rules_link(name):
+    """Contextual link to the cross-city rules table (run #38): each city/guide page points to the comparison."""
+    n = len(CITIES) - 1
+    return (f'<p>How does {e(name)} compare? See the <a href="{U(RULES_PATH)}">furniture, mattress and appliance pickup rules '
+            f'for {e(name)} and {n} other Boston-area cities side by side</a>, with official sources.</p>')
+
 def other_city_hubs(c):
     oth = [o for o in CITIES if o["slug"] != c["slug"]]
-    if not oth: return ""
+    if not oth: return rules_link(c["name"])
     def gcount(o): return len([x for x in GUIDES if x["city"] == o["slug"]])
-    return ("<h2>Other Boston-area cities we cover</h2><ul>" + "".join(
+    return rules_link(c["name"]) + ("<h2>Other Boston-area cities we cover</h2><ul>" + "".join(
         f'<li><a href="{U("/" + o["slug"] + "/")}">{e(o["name"])}, {e(o["state"])}</a> ({len(o["listings"])} options'
         + (f', {gcount(o)} item guide{"s" if gcount(o) != 1 else ""}' if gcount(o) else '') + ')</li>' for o in oth) + "</ul>")
 
