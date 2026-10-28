@@ -562,11 +562,105 @@ def rules_page():
 <p>City programs only cover residents the City collects trash for; many larger apartment buildings use private trash service. Check the "details" link for who qualifies. If the City option doesn't fit, each city page also lists charity pickups, drop-off spots, furniture banks and paid haulers.</p>
 <h2>Quick answers</h2>{qa_block(qas)}
 <p><a href="{U(COST_PATH)}">Mattress disposal cost around Boston, including published hauler prices →</a></p>
+<p><a href="{U(NOCAR_PATH)}">No car, upstairs apartment or big building? Pickups that come to you →</a></p>
 <h2>City pages</h2><ul>""" + "".join(f'<li><a href="{U("/" + c["slug"] + "/")}">{e(c["title"])}</a></li>' for c in CITIES) + "</ul>"
     lds = [faq_ld(qas), crumbs_ld([("Home", "/"), ("Bulky item pickup compared", RULES_PATH)])]
     return page("Boston-Area Bulky Item Pickup Rules Compared by City",
                 f"Furniture, mattress and appliance pickup fees and booking rules for {', '.join(names[:-1])} and {names[-1]}, side by side with official sources.",
                 RULES_PATH, body, lds)
+
+NOCAR_PATH = "/no-car-apartment-bulky-item-pickup-boston/"
+def _all_listings():
+    """Unique listings across cities (same id = same listing), with the cities whose page lists it."""
+    out = {}
+    for c in CITIES:
+        for l in c["listings"]:
+            out.setdefault(l["id"], {"l": l, "cities": []})["cities"].append(c)
+    return list(out.values())
+
+def _comes_to_you(l):
+    """Pickup options (not drop-off), judged only from the listing's own type and stairs_inside text."""
+    si = (l.get("stairs_inside") or "").strip()
+    return l["type"] != "drop-off" and not re.match(r"No\. (Drop-off|You bring)", si)
+
+def _nocar_groups():
+    inside, cond = [], []
+    for r in _all_listings():
+        l = r["l"]
+        if l["type"] == "city bulk pickup" or not _comes_to_you(l):
+            continue
+        (inside if (l.get("stairs_inside") or "").startswith("Yes") else cond).append(r)
+    return inside, cond
+
+def _where(r):
+    return ", ".join(f'<a href="{U("/" + c["slug"] + "/")}#{e(r["l"]["id"])}">{e(c["name"])}</a>' for c in r["cities"])
+
+def _src(l):
+    return (" ".join(f'<a href="{e(u)}" rel="noopener" target="_blank">source {i + 1}</a>' for i, u in enumerate(l.get("source_urls", [])[:2]))
+            + f'<br><span class="meta">checked {e(l.get("last_verified", ""))}</span>')
+
+def _nocar_table(rs):
+    tr = "".join(f'<tr><th scope="row">{e(r["l"]["name"])}</th><td>{e(r["l"]["type"])}</td><td>{val(_cell(r["l"].get("stairs_inside"), 220))}</td>'
+                 f'<td>{val(_cell(r["l"].get("cost"), 220))}</td><td>{_where(r)}</td><td>{_src(r["l"])}</td></tr>' for r in rs)
+    return ('<div class="tablewrap"><table class="cmp"><thead><tr><th scope="col">Option</th><th scope="col">Type</th>'
+            '<th scope="col">Inside / stairs (their words)</th><th scope="col">Cost</th><th scope="col">Listed for</th>'
+            f'<th scope="col">Source</th></tr></thead><tbody>{tr}</tbody></table></div>')
+
+def nocar_page():
+    """Audience-specific comparison (run #39; Ahrefs GEO experts video, run #35): renters with no car, upstairs units or
+    big buildings. Every cell is a verbatim listing field; groups are computed from listing type + stairs_inside text."""
+    set_page(NOCAR_PATH)
+    inside, cond = _nocar_groups()
+    city_rows, other, curb_n = "", [], 0
+    for c in CITIES:
+        for l in c["listings"]:
+            if l["type"] != "city bulk pickup": continue
+            si = (l.get("stairs_inside") or "").strip()
+            if si.startswith("No."): curb_n += 1
+            else: other.append(l["name"])
+            city_rows += (f'<tr><th scope="row"><a href="{U("/" + c["slug"] + "/")}#{e(l["id"])}">{e(l["name"])}</a></th>'
+                          f'<td>{val(_cell(l.get("service_area"), 260))}</td><td>{val(_cell(si))}</td><td>{val(_cell(l.get("cost")))}</td><td>{_src(l)}</td></tr>')
+    n_city = sum(1 for c in CITIES for l in c["listings"] if l["type"] == "city bulk pickup")
+    names = [c["name"] for c in CITIES]
+    big = [(c, l) for c in CITIES for l in c["listings"] if l["type"] == "city bulk pickup"
+           and re.search(r"\d+\s*(?:\+\s*)?units|more than (?:\w+ )?units|\d+-family|multi-family", (l.get("service_area") or ""))]
+    qas = [
+        {"q": "Who will carry a couch or mattress out of my apartment or down the stairs around Boston?",
+         "a": "Of the pickup options we list, these say on their own page (or the City's list) that they come inside or handle stairs: "
+              + " ".join(f'{r["l"]["name"]}: {_cell(r["l"]["stairs_inside"], 200)}' for r in inside)
+              + " Confirm the price and access details with them before you book."},
+        {"q": "Will the City come inside to pick up furniture, a mattress or an appliance?",
+         "a": f"No, not per the official pages we cite: {curb_n} of the {n_city} City or Town pickup programs we list for {', '.join(names[:-1])} and {names[-1]} "
+              "say curbside only, so the item has to be at the curb (or where trash is collected) on pickup day."
+              + ("" if not other else f" The page for {_names([{'name': x} for x in other])} doesn't say either way; check with the City.")},
+        {"q": "I live in a big apartment building. Can I use City bulky item or mattress pickup?",
+         "a": "It depends on the building size and who collects your trash. The official pages say: "
+              + " ".join(f'{c["name"]} ({l["name"]}): {l["service_area"]}' for c, l in big)},
+        {"q": "Can I get rid of a bulky item without a car?",
+         "a": f"Yes. Besides City curbside pickup, we list {len(inside) + len(cond)} charity pickups, furniture banks, haulers and other programs that come to you. "
+              f"{len(inside)} of them say they will come inside or handle stairs; for the others, access is limited or not stated, so ask when you book."},
+    ]
+    body = f"""<p class="meta"><a href="{U('/')}">Home</a> › No car or big building</p>
+<h1>No car, upstairs apartment or big building? Bulky item pickup options around Boston</h1>
+<p class="lead">If you rent, don't have a car, live up a few flights, or live in a building too big for City pickup, most of the usual advice doesn't fit. This page pulls together every option on our {e(', '.join(names[:-1]))} and {e(names[-1])} pages that comes to you, and shows in each source's own words whether they come inside or carry things down stairs, what they charge, and which buildings the City programs cover. Every cell comes from the official page or the company's own page linked in its row, with the date we last checked it.</p>
+<p class="meta">Page updated {e(MODIFIED.get(NOCAR_PATH, ''))}.</p>
+<h2 id="inside">They say they'll come inside or handle stairs ({len(inside)})</h2>
+<p>These options state that they remove items from inside or up and down stairs. Extra fees can apply; the cost column shows only what the source publishes.</p>
+{_nocar_table(inside)}
+<h2 id="other-pickups">Other pickups that come to you ({len(cond)})</h2>
+<p>These charities, furniture banks, programs and haulers pick up, but inside or stairs pickup is limited or not stated on their page. Ask before you book.</p>
+{_nocar_table(cond)}
+<h2 id="city-programs">City and Town pickup: curbside only, and who qualifies ({n_city} programs)</h2>
+<p>Per the official pages, City and Town programs collect at the curb, and several exclude larger apartment buildings. The "Who qualifies" column is the City's own wording.</p>
+<div class="tablewrap"><table class="cmp"><thead><tr><th scope="col">City program</th><th scope="col">Who qualifies</th><th scope="col">Inside / stairs</th><th scope="col">Cost</th><th scope="col">Source</th></tr></thead><tbody>{city_rows}</tbody></table></div>
+<h2>Quick answers</h2>{qa_block(qas)}
+<p><a href="{U(RULES_PATH)}">Furniture, mattress and appliance pickup rules compared by city →</a></p>
+<p><a href="{U(COST_PATH)}">Mattress disposal cost around Boston, including published hauler prices →</a></p>
+<h2>City pages</h2><ul>""" + "".join(f'<li><a href="{U("/" + c["slug"] + "/")}">{e(c["title"])}</a></li>' for c in CITIES) + "</ul>"
+    lds = [faq_ld(qas), crumbs_ld([("Home", "/"), ("No car or big building", NOCAR_PATH)])]
+    return page("No Car or Big Building? Bulky Item Pickup Around Boston",
+                f"Pickups that come to you in {', '.join(names[:-1])} and {names[-1]}: who comes inside or handles stairs, what they charge, and which buildings City pickup covers.",
+                NOCAR_PATH, body, lds)
 
 def home(cities):
     set_page("/")
@@ -578,6 +672,7 @@ def home(cities):
 {cmp_html}
 <p><a href="{U(COST_PATH)}">Mattress disposal cost around Boston, including published hauler prices →</a></p>
 <p><a href="{U(RULES_PATH)}">Furniture, mattress and appliance pickup rules compared by city →</a></p>
+<p><a href="{U(NOCAR_PATH)}">No car, upstairs apartment or big building? Pickups that come to you →</a></p>
 {yt_embed('/', YT_CHANNEL, 'ByeBulky')}
 {home_guides(cities)}
 <h2>Why this exists</h2>
@@ -666,8 +761,8 @@ LLMS_SUMMARY = (CFG["tagline"] + " A directory of real options for getting rid o
 LLMS_NOTES = ["Every listing comes from the organization's own website or an official government page, links to its sources, "
               "and shows the date it was last verified. When a source doesn't state something, the listing says "
               f'"{NS}". ByeBulky publishes no reviews or ratings.']
-LLMS_SECTIONS = [("Cities", lambda p: p.count("/") == 2 and p not in ("/", "/about/", "/privacy/", COST_PATH)),
-                 ("Cost comparisons", lambda p: p == COST_PATH),
+LLMS_SECTIONS = [("Cities", lambda p: p.count("/") == 2 and p not in ("/", "/about/", "/privacy/", COST_PATH, RULES_PATH, NOCAR_PATH)),
+                 ("Comparisons", lambda p: p in (COST_PATH, RULES_PATH, NOCAR_PATH)),
                  ("Item guides", lambda p: p.count("/") == 3),
                  ("Home, about and privacy", lambda p: p in ("/", "/about/", "/privacy/"))]
 
@@ -724,6 +819,8 @@ def main():
     for g in GUIDES: pages[f"/{g['path']}/"] = guide_page(g, bycity[g["city"]])
     pages[COST_PATH] = mattress_cost_page()
     pages[RULES_PATH] = rules_page()
+    MODIFIED[NOCAR_PATH] = max(l["last_verified"] for c in cities for l in c["listings"] if l["type"] != "drop-off")
+    pages[NOCAR_PATH] = nocar_page()
     for path, h in pages.items():
         d = OUT / path.strip("/"); d.mkdir(parents=True, exist_ok=True); (d / "index.html").write_text(h)
     global PREFIX
