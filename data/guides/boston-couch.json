@@ -31,6 +31,10 @@
     {
       "q": "Does the Habitat ReStore in Boston take sofas?",
       "a": "The Habitat for Humanity Greater Boston ReStore does not accept sofa beds or sofas with slip covers, and other upholstered furniture can't be ripped, worn, broken, dated, or faded. The Thrift Shop of Boston does not accept couches."
+    },
+    {
+      "q": "Will a furniture store take my old couch when it delivers a new one? (Room & Board, IKEA, Bob's, Jordan's)",
+      "a": "Only some do, and only if you arrange it when you buy. Bob's Discount Furniture sells removal with a new-furniture delivery ($150 for the first piece, $50 each additional). IKEA offers sofa removal from $30 with an in-store sofa purchase and in-home delivery in select markets, not with online orders. Jordan's Furniture says its delivery team cannot move or remove existing furniture. Room & Board's delivery and FAQ pages describe assembly, placement and packaging removal and don't mention taking old furniture. Checked Oct 29, 2026."
     }
   ],
   "sections": [
@@ -49,6 +53,32 @@
     {
       "h": "Who won't take a couch",
       "p": "The Habitat for Humanity Greater Boston ReStore accepts some upholstered furniture (not ripped, worn, broken, dated, or faded) but does not accept sofa beds or sofas with slip covers. The Thrift Shop of Boston does not accept couches, futons, or sleep sofas, or chairs with upholstery stains, tears, or sun damage."
+    },
+    {
+      "h": "Will the furniture store take your old couch? Room & Board, IKEA, Bob's and Jordan's",
+      "p": "Only if you set it up when you buy, and not every store offers it. Bob's Discount Furniture sells a furniture removal service only with delivery of new Bob's furniture: $150 for the first piece and $50 for each additional piece (its example: a 3-piece sectional is $250). It has to be added at purchase, can't be added once delivery is scheduled, and Bob's says it may be unavailable in some areas. IKEA offers sofa removal starting at $30 when you buy a sofa or similar product (sectional, loveseat, futon) in-store with in-home delivery in select markets; it isn't available with online purchases, and removal may not happen at the same time as the delivery. Jordan's Furniture says its delivery team cannot move or remove existing furniture; it does offer removal of old bedding for a small fee with mattress deliveries. Room & Board's delivery and FAQ pages describe its $159 full-service delivery as assembly, placement and packaging removal and don't mention taking away old furniture, so ask Room & Board before you order. We checked these store pages on Oct 29, 2026. If your store won't take it, the City's trash-day option above is still free.",
+      "sources": [
+        {
+          "label": "Bob's: furniture removal service",
+          "url": "https://help.mybobs.com/docs/bobs-furniture-removal-service"
+        },
+        {
+          "label": "IKEA US: removal services",
+          "url": "https://www.ikea.com/us/en/customer-service/services/removal/"
+        },
+        {
+          "label": "Jordan's: delivery & pickup",
+          "url": "https://www.jordans.com/customer-service/delivery-pickup"
+        },
+        {
+          "label": "Room & Board: delivery",
+          "url": "https://www.roomandboard.com/customer-service/delivery"
+        },
+        {
+          "label": "Room & Board: FAQ",
+          "url": "https://www.roomandboard.com/customer-service/faq"
+        }
+      ]
     },
     {
       "h": "Need someone to carry it out?",

@@ -454,7 +454,7 @@ def guide_page(g, city):
     ls = [l for l in city["listings"] if l["id"] in ids]
     missing = set(ids) - {l["id"] for l in ls}
     assert not missing, f"guide {g['path']} references unknown listings {missing}"
-    secs = "".join(f"<h2>{e(s['h'])}</h2><p>{e(s['p'])}</p>" for s in g.get("sections", []))
+    secs = "".join(f"<h2>{e(s['h'])}</h2><p>{e(s['p'])}</p>" + (('<p class="meta">Sources: ' + " · ".join(f'<a href="{e(r["url"])}" rel="nofollow noopener" target="_blank">{e(r["label"])}</a>' for r in s["sources"]) + '</p>') if s.get("sources") else "") for s in g.get("sections", []))
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › <a href="{U('/' + city['slug'] + '/')}">{e(city['name'])}</a> › {e(g['short'])}</p>
 <h1>{e(g['h1'])}</h1><p class="lead">{e(g['intro'])}</p><p class="meta">Last verified {e(g['last_verified'])}{(" · page updated " + e(MODIFIED[f"/{g['path']}/"])) if MODIFIED.get(f"/{g['path']}/", g['last_verified']) != g['last_verified'] else ""}</p>
 {city_hub_line(g, city)}
