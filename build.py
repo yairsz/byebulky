@@ -574,6 +574,7 @@ def rules_page():
 {yt_embed(RULES_PATH, YT_CHANNEL, 'ByeBulky')}
 <p><a href="{U(COST_PATH)}">Mattress disposal cost around Boston, including published hauler prices →</a></p>
 <p><a href="{U(NOCAR_PATH)}">No car, upstairs apartment or big building? Pickups that come to you →</a></p>
+<p><a href="{U(TOOL_PATH)}">Check one city and item: bulky item pickup cost checker →</a></p>
 <h2>City pages</h2><ul>""" + "".join(f'<li><a href="{U("/" + c["slug"] + "/")}">{e(c["title"])}</a></li>' for c in CITIES) + "</ul>"
     lds = [faq_ld(qas), crumbs_ld([("Home", "/"), ("Bulky item pickup compared", RULES_PATH)])]
     return page("Boston-Area Bulky Item Pickup Rules Compared by City",
@@ -673,6 +674,124 @@ def nocar_page():
                 f"Pickups that come to you in {', '.join(names[:-1])} and {names[-1]}: who comes inside or handles stairs, what they charge, and which buildings City pickup covers.",
                 NOCAR_PATH, body, lds)
 
+TOOL_PATH = "/bulky-item-pickup-cost-checker/"
+TOOL_ITEMS = [("couch", "Couch, sofa or other furniture", 0, "couch"), ("mattress", "Mattress or box spring", 1, "mattress"),
+              ("fridge", "Fridge or other large appliance", 2, "refrigerator or other large appliance")]
+TOOL_NOUN = {"couch": "couch", "mattress": "mattress", "fridge": "fridge or large appliance"}
+_FEE_LABEL = {True: "$ amount listed", False: "No $ amount listed"}
+def _has_amt(l):
+    """Purely textual: does the source's cost wording include a dollar amount? (No free/paid judgement: 'Free quote',
+    suggested donations and 'starts at' prices all read differently, so the tool only reports what is literally listed.)"""
+    return "$" in (l.get("cost") or "")
+
+def tool_options(c, k, item_key):
+    """City program for item kind k (same rule as the rules table) + every other listing on the city page that takes the item
+    (takes_item on items_accepted). Nothing new is claimed: cells are verbatim listing fields."""
+    rx = dict(ITEM_RX)[item_key]
+    prog = next((x for x in c["listings"] if x["type"] == "city bulk pickup" and RULE_KINDS[k][1].search(x["id"])), None)
+    others = [l for l in c["listings"] if (not prog or l["id"] != prog["id"]) and l["type"] != "city bulk pickup" and takes_item(l, rx, item_key)]
+    others.sort(key=lambda l: (not _has_amt(l), l["name"].lower()))
+    return prog, others
+
+def _tool_href(c, l):
+    gp = next((g for g in GUIDES if g["city"] == c["slug"] and l["id"] in g.get("listing_ids", [])), None)
+    return U(f"/{gp['path']}/" if gp else f"/{c['slug']}/") + "#" + l["id"]
+
+def tool_result(c, slug, label, k, item_key):
+    prog, others = tool_options(c, k, item_key)
+    if prog:
+        lt = _sent(prog.get("lead_time"))
+        city = (f'<div class="card"><span class="badge">City program</span><h3><a href="{_tool_href(c, prog)}">{e(prog["name"])}</a></h3><dl>'
+                f'<dt>Cost</dt><dd><strong>{val(_sent(prog.get("cost")))}</strong></dd>'
+                + (f'<dt>When</dt><dd>{val(lt)}</dd>' if lt else "")
+                + f'<dt>Who qualifies</dt><dd>{val(_cell(prog.get("service_area"), 260))}</dd>'
+                f'<dt>Inside / stairs</dt><dd>{val(_cell(prog.get("stairs_inside")))}</dd>'
+                f'<dt>Source</dt><dd>{_src(prog)}</dd></dl></div>')
+    else:
+        city = f'<p><span class="ns">Our {e(c["name"])} page has no separate City program for this item.</span> See the <a href="{U("/" + c["slug"] + "/")}">{e(c["name"])} page</a> for City trash rules.</p>'
+    tr = "".join(f'<tr><th scope="row"><a href="{_tool_href(c, l)}">{e(l["name"])}</a></th><td>{e(l["type"])}</td>'
+                 f'<td><span class="meta">{e(_FEE_LABEL[_has_amt(l)])}</span><br>{val(_cell(l.get("cost"), 220))}</td>'
+                 f'<td>{val(_cell(l.get("stairs_inside"), 160))}</td><td>{_src(l)}</td></tr>' for l in others)
+    tbl = ('<div class="tablewrap"><table class="cmp"><thead><tr><th scope="col">Option</th><th scope="col">Type</th><th scope="col">Cost (their words)</th>'
+           f'<th scope="col">Inside / stairs</th><th scope="col">Source</th></tr></thead><tbody>{tr}</tbody></table></div>') if others else '<p class="ns">No other options on our page list this item.</p>'
+    return (f'<section class="tool-result" id="r-{e(c["slug"])}-{slug}" data-city="{e(c["slug"])}" data-item="{slug}">'
+            f'<h2>{e(label)} in {e(c["name"])}, {e(c["state"])}</h2>'
+            f'<h3>The {e(c["name"])} City program</h3>{city}'
+            f'<h3>Other options in {e(c["name"])} that list this item ({len(others)})</h3>{tbl}'
+            f'<p><a href="{U("/" + c["slug"] + "/")}">All {e(c["name"])} options →</a></p></section>')
+
+TOOL_JS = """<script>
+(function(){var c=document.getElementById('tc'),i=document.getElementById('ti');if(!c)return;
+function show(){var id='r-'+c.value+'-'+i.value;document.querySelectorAll('section.tool-result').forEach(function(s){s.hidden=(s.id!==id);});
+var n=document.getElementById('tall');if(n)n.hidden=false;}
+var h=location.hash.match(/^#r-([a-z-]+)-(couch|mattress|fridge)$/);if(h){c.value=h[1];i.value=h[2];}
+c.addEventListener('change',show);i.addEventListener('change',show);show();
+var a=document.getElementById('tall');if(a)a.addEventListener('click',function(ev){ev.preventDefault();document.querySelectorAll('section.tool-result').forEach(function(s){s.hidden=false;});});})();
+</script>"""
+
+def tool_stats():
+    """Computed counts across all city pages (unique listing ids per item), for the methodology/Quick answers."""
+    out = []
+    for slug, label, k, item_key in TOOL_ITEMS:
+        rx = dict(ITEM_RX)[item_key]; seen = {}
+        for c in CITIES:
+            for l in c["listings"]:
+                if takes_item(l, rx, item_key) or (l["type"] == "city bulk pickup" and RULE_KINDS[k][1].search(l["id"])):
+                    seen[l["id"]] = l
+        amt = sum(1 for l in seen.values() if _has_amt(l))
+        out.append((slug, label, len(seen), amt, len(seen) - amt))
+    return out
+
+def tool_page():
+    """Free interactive checker (run #42; Ahrefs 'free tools dodge AI Overviews', Edward Sturm 'stat with a sample size
+    and a date gets quoted'). All 18 city x item results are rendered server-side (crawlable); JS only hides the others."""
+    set_page(TOOL_PATH)
+    names = [c["name"] for c in CITIES]
+    copt = "".join(f'<option value="{e(c["slug"])}">{e(c["name"])}, {e(c["state"])}</option>' for c in CITIES)
+    iopt = "".join(f'<option value="{s}">{e(l)}</option>' for s, l, _, _ in TOOL_ITEMS)
+    results = "".join(tool_result(c, s, l, k, ik) for c in CITIES for s, l, k, ik in TOOL_ITEMS)
+    st = tool_stats()
+    nlist = len({l["id"] for c in CITIES for l in c["listings"]})
+    stat_li = "".join(f'<li>{e(l)}: {n} options listed across the {len(CITIES)} cities. {a} list a dollar amount in their cost wording; {u} list none (no fee mentioned, free, quote only, or not stated).</li>' for _, l, n, a, u in st)
+    qas = [{"q": f"How do I find out what my city charges to pick up a {w}?",
+            "a": f"Pick your city and item on the ByeBulky bulky item pickup cost checker. It shows the City or Town program's fee in the official page's own words, "
+                 f"when it collects and who qualifies, plus every other option on our {', '.join(names[:-1])} and {names[-1]} pages that lists the item, each with its source and the date we checked it."}
+           for w in ("couch, mattress or fridge",)]
+    for sl, l, n, a, u in st:
+        qas.append({"q": f"How many Boston-area options publish a price for getting rid of a {TOOL_NOUN[sl]}?",
+                    "a": f"Of the {n} options on our {', '.join(names[:-1])} and {names[-1]} pages that list {l.lower()}, {a} include a dollar amount in their published cost wording "
+                         f"and {u} don't (the source says no fee, free, quote only, or doesn't say). Counts are from our data as of {MODIFIED.get(TOOL_PATH, '')}; pick a city above to read each one's own wording."})
+    mod = MODIFIED.get(TOOL_PATH, "")
+    body = f"""<p class="meta"><a href="{U('/')}">Home</a> › Bulky item pickup cost checker</p>
+<h1>Bulky item pickup cost checker: what will my city charge?</h1>
+<p class="lead">Pick your city and what you're getting rid of. You'll see the City or Town pickup program's fee in the official page's own words, when it collects and who qualifies, then every charity, drop-off, furniture bank and hauler on our page for that city that lists the item, with its published cost. Nothing is estimated: if a source doesn't publish a price, we say so.</p>
+<form class="filters" onsubmit="return false"><label>City <select id="tc">{copt}</select></label> <label>Item <select id="ti">{iopt}</select></label> <a href="#" id="tall" hidden>Show all cities and items</a></form>
+<p class="meta">Data checked up to {e(mod)}. Covers {e(', '.join(names[:-1]))} and {e(names[-1])}.</p>
+{results}
+<h2 id="numbers">By the numbers</h2>
+<ul>{stat_li}</ul>
+<h2 id="method">How this checker works (and what it doesn't do)</h2>
+<ul>
+<li>It reads the same listings shown on our city pages ({nlist} unique options). Each one comes from the organization's own site or an official City page, and links to it.</li>
+<li>The City program is the City or Town listing for that item kind, the same one shown in the <a href="{U(RULES_PATH)}">rules compared table</a>. Its fee and collection day are the first sentence of the official wording, unchanged.</li>
+<li>"Other options" are listings whose accepted-items list names the item (for couches, generic "Furniture" counts unless the listing excludes couches).</li>
+<li>Options with a dollar amount in their cost wording are listed first. That amount may be a flat fee, a "starts at" price, a sticker or a suggested donation, so read the wording. The checker doesn't estimate prices, add taxes or fees, or check availability, and it doesn't cover cities we haven't researched yet.</li>
+<li>Rules change. Confirm with the City or the organization before you put anything at the curb.</li>
+</ul>
+<h2>Quick answers</h2>{qa_block(qas)}
+<p><a href="{U(RULES_PATH)}">Furniture, mattress and appliance pickup rules compared by city →</a></p>
+<p><a href="{U(NOCAR_PATH)}">No car, upstairs apartment or big building? Pickups that come to you →</a></p>
+<p><a href="{U(COST_PATH)}">Mattress disposal cost around Boston, including published hauler prices →</a></p>
+{TOOL_JS}"""
+    lds = [faq_ld(qas), crumbs_ld([("Home", "/"), ("Bulky item pickup cost checker", TOOL_PATH)]),
+           {"@context": "https://schema.org", "@type": "WebApplication", "name": "ByeBulky bulky item pickup cost checker",
+            "url": base_url() + TOOL_PATH, "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any",
+            "isAccessibleForFree": True, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+            "description": "Shows the City pickup fee and every listed option for a couch, mattress or fridge in " + ", ".join(names) + ", from official sources."}]
+    return page("Bulky Item Pickup Cost Checker: What Will My City Charge?",
+                f"Pick your city and item to see the City pickup fee in its own words, plus every charity, drop-off and hauler that takes it, for {', '.join(names[:-1])} and {names[-1]}.",
+                TOOL_PATH, body, lds)
+
 def home(cities):
     set_page("/")
     cmp_html, cmp_q = home_mattress_compare(cities)
@@ -684,6 +803,7 @@ def home(cities):
 <p><a href="{U(COST_PATH)}">Mattress disposal cost around Boston, including published hauler prices →</a></p>
 <p><a href="{U(RULES_PATH)}">Furniture, mattress and appliance pickup rules compared by city →</a></p>
 <p><a href="{U(NOCAR_PATH)}">No car, upstairs apartment or big building? Pickups that come to you →</a></p>
+<p><a href="{U(TOOL_PATH)}">Free tool: what will my city charge for a couch, mattress or fridge? →</a></p>
 {yt_embed('/', YT_CHANNEL, 'ByeBulky')}
 {home_guides(cities)}
 <h2>Why this exists</h2>
@@ -772,8 +892,8 @@ LLMS_SUMMARY = (CFG["tagline"] + " A directory of real options for getting rid o
 LLMS_NOTES = ["Every listing comes from the organization's own website or an official government page, links to its sources, "
               "and shows the date it was last verified. When a source doesn't state something, the listing says "
               f'"{NS}". ByeBulky publishes no reviews or ratings.']
-LLMS_SECTIONS = [("Cities", lambda p: p.count("/") == 2 and p not in ("/", "/about/", "/privacy/", COST_PATH, RULES_PATH, NOCAR_PATH)),
-                 ("Comparisons", lambda p: p in (COST_PATH, RULES_PATH, NOCAR_PATH)),
+LLMS_SECTIONS = [("Cities", lambda p: p.count("/") == 2 and p not in ("/", "/about/", "/privacy/", COST_PATH, RULES_PATH, NOCAR_PATH, TOOL_PATH)),
+                 ("Comparisons and tools", lambda p: p in (COST_PATH, RULES_PATH, NOCAR_PATH, TOOL_PATH)),
                  ("Item guides", lambda p: p.count("/") == 3),
                  ("Home, about and privacy", lambda p: p in ("/", "/about/", "/privacy/"))]
 
@@ -832,6 +952,8 @@ def main():
     pages[RULES_PATH] = rules_page()
     MODIFIED[NOCAR_PATH] = max(l["last_verified"] for c in cities for l in c["listings"] if l["type"] != "drop-off")
     pages[NOCAR_PATH] = nocar_page()
+    MODIFIED[TOOL_PATH] = max(l["last_verified"] for c in cities for l in c["listings"])
+    pages[TOOL_PATH] = tool_page()
     for path, h in pages.items():
         d = OUT / path.strip("/"); d.mkdir(parents=True, exist_ok=True); (d / "index.html").write_text(h)
     global PREFIX
