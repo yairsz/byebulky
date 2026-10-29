@@ -139,7 +139,9 @@
         "Hutches, sideboards, buffets, china cabinets",
         "TV armoires & entertainment centers",
         "Fitness equipment",
-        "In-wall stoves"
+        "In-wall stoves",
+        "Paint",
+        "Hazardous materials and chemicals"
       ],
       "address": "1580 VFW Parkway, West Roxbury, MA",
       "notes": null,
@@ -331,7 +333,10 @@
       ]
     },
     {
-      "items_not_accepted": [],
+      "items_not_accepted": [
+        "Paint or chemicals of any kind (per national FAQ)",
+        "Kerosene and gas heaters (per national FAQ)"
+      ],
       "address": null,
       "notes": null,
       "book_url": "https://satruck.org/",
@@ -782,6 +787,120 @@
       ],
       "last_verified": "2026-10-27",
       "notes": "Have your electric account number handy when scheduling, per Mass Save."
+    },
+    {
+      "id": "boston-zero-waste-day",
+      "name": "City of Boston Zero Waste Day (household hazardous waste drop-off)",
+      "type": "drop-off",
+      "items_accepted": [
+        "Oil-based paint",
+        "Propane tanks (empty or full)",
+        "Motor oil, gasoline, pesticides and other household chemicals",
+        "Aerosol cans",
+        "Rechargeable, lithium and car batteries",
+        "Fluorescent bulbs and other intact mercury items",
+        "Car and bike tires (8 maximum per person)",
+        "Fire extinguishers",
+        "Electronics, textiles and paper for shredding"
+      ],
+      "items_not_accepted": [
+        "Latex and acrylic (water-based) paint: the City says to dry it out and put it in the regular trash",
+        "Alkaline batteries (regular trash)",
+        "Asbestos, explosives and radioactive material",
+        "Commercial or industrial waste",
+        "Construction debris",
+        "Medical waste"
+      ],
+      "condition_rules": "Boston residents only: bring a photo ID, utility bill, or lease as proof of residency. No waste from businesses. There is a 20-gallon limit on paint, motor oil, gasoline, and all chemicals, and containers must not exceed 5 gallons. Paints and other hazardous liquids must be in containers with labels the City can read. The City may reject materials that don't meet its regulations.",
+      "stairs_inside": "No. Drop-off only: you bring the items to the event.",
+      "lead_time": "2026 Zero Waste Days were May 16, June 27, and August 15; the September 26 event was postponed to Saturday, November 21, 2026, 8:30 a.m. to 12 p.m., at 315 Gardner Street, West Roxbury. Don't arrive before 8:30 a.m.; the City stops accepting waste promptly at 12 p.m.",
+      "cost": "Free (the City's event page lists the price as FREE).",
+      "service_area": "City of Boston residents.",
+      "address": "315 Gardner Street (Millennium Park), West Roxbury, MA 02132 (November 21, 2026 event)",
+      "book_url": "https://www.boston.gov/departments/public-works/zero-waste-day",
+      "phone": "311 or 617-635-4500",
+      "email": "zerowaste@boston.gov",
+      "source_urls": [
+        "https://www.boston.gov/departments/public-works/zero-waste-day",
+        "https://www.boston.gov/calendar/zero-waste-day-drop-rescheduled",
+        "https://www.boston.gov/sites/default/files/file/2026/10/English_0.pdf"
+      ],
+      "last_verified": "2026-10-28",
+      "notes": "The City also runs Zero Waste Pop-Ups that take at least 2 types of materials; check each Pop-Up's event page for what it accepts."
+    },
+    {
+      "id": "blue-rhino-tank-recycling",
+      "name": "Blue Rhino propane tank recycling and exchange",
+      "type": "drop-off",
+      "items_accepted": [
+        "20 lb. gas grill propane tanks you no longer need (recycling)",
+        "Any brand of standard empty grill tank in acceptable condition (exchange for a full tank)"
+      ],
+      "items_not_accepted": [],
+      "condition_rules": "To recycle: write \"R\" or \"RECYCLE\" on the tank and take it to a non-vending Blue Rhino location. If the display has an empty spot, tell a store employee you have a tank to recycle; if not, go to another Blue Rhino location. Blue Rhino refurbishes the tank if possible and recycles it if it doesn't meet its safety and quality standards.",
+      "stairs_inside": "No. Drop-off at a store that carries Blue Rhino tanks.",
+      "lead_time": "Not stated, check with them",
+      "cost": "Blue Rhino says some propane exchange companies, including Blue Rhino, accept tanks for recycling at no cost to you.",
+      "service_area": "Stores with a non-vending Blue Rhino display. We did not check which Boston-area stores have one.",
+      "address": null,
+      "book_url": "https://bluerhino.com/about/rhino-feed/recycling-tips",
+      "phone": "1-800-BLU-RINO",
+      "email": null,
+      "source_urls": [
+        "https://bluerhino.com/about/rhino-feed/recycling-tips",
+        "https://bluerhino.com/propane-info/faqs/tank-use-faqs/how-do-i-recycle-my-tank",
+        "https://bluerhino.com/propane-info/faqs/buying-blue-rhino-faqs/is-my-tank-acceptable-for-exchange",
+        "https://bluerhino.com/propane-info/faqs/vending-use-faqs/do-you-accept-only-blue-rhino-tanks-for-exchange"
+      ],
+      "last_verified": "2026-10-28",
+      "notes": null
+    },
+    {
+      "id": "amerigas-tank-exchange",
+      "name": "AmeriGas propane tank exchange and drop-off",
+      "type": "drop-off",
+      "items_accepted": [
+        "Propane grill tanks and cylinders of any brand (exchange)",
+        "Unwanted or expired propane tanks (drop-off at most refill or exchange locations)"
+      ],
+      "items_not_accepted": [],
+      "condition_rules": "AmeriGas says exchanging your old tank for a refilled one is the easiest way to dispose of it, and that you can also drop an unwanted tank off at most propane refill or exchange locations. It says never to throw a propane cylinder in the trash. Transport tanks upright and secured, with the valve closed, and don't leave a filled cylinder in a hot vehicle.",
+      "stairs_inside": "No. Drop-off at an AmeriGas retail partner or exchange location.",
+      "lead_time": "Not stated, check with them",
+      "cost": "Disposal-only drop-off cost: not stated, check with the location.",
+      "service_area": "AmeriGas retail partners (gas stations, hardware and convenience stores) and local offices; use its location finder. We did not check specific Boston-area locations.",
+      "address": null,
+      "book_url": "https://www.amerigas.com/locations/find-propane",
+      "phone": null,
+      "email": null,
+      "source_urls": [
+        "https://www.amerigas.com/propane-grill-tanks/buy-exchange-grill-tanks"
+      ],
+      "last_verified": "2026-10-28",
+      "notes": null
+    },
+    {
+      "id": "clean-harbors-braintree-hhw",
+      "name": "Clean Harbors household hazardous waste facility (Braintree)",
+      "type": "drop-off",
+      "items_accepted": [
+        "Household hazardous products (call for the full list of what it takes)"
+      ],
+      "items_not_accepted": [],
+      "condition_rules": "As listed by MassDEP: a private facility open to residents of all municipalities. MassDEP says to call facilities or check their websites for the complete list of items accepted, fees, and days and hours.",
+      "stairs_inside": "No. Drop-off only.",
+      "lead_time": "As listed by MassDEP: Saturdays, 8 a.m. to 12 noon, March through November, and by appointment. MassDEP's entry also still says it was closed for COVID-19 and would resume in May 2021, so the schedule may be out of date; call before you go.",
+      "cost": "Not stated, check with them",
+      "service_area": "Residents of all Massachusetts municipalities (as listed by MassDEP).",
+      "address": "Braintree, MA (street address not stated by MassDEP)",
+      "book_url": null,
+      "phone": "781-380-7177",
+      "email": null,
+      "source_urls": [
+        "https://www.mass.gov/info-details/safely-manage-household-hazardous-products"
+      ],
+      "last_verified": "2026-10-28",
+      "notes": "Listed on MassDEP's Safely Manage Household Hazardous Products page; we did not check Clean Harbors' own site."
     }
   ]
 }

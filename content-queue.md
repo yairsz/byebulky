@@ -37,6 +37,9 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [ ] Nationwide guide: "Which charities still pick up furniture?" (Salvation Army, Habitat ReStores, ReSupply; sources only)
 - [ ] Nationwide guide: "Mattress disposal rules by state" (start with states with laws: MA ban, CA/CT/RI/OR mattress stewardship programs, each sourced)
 - [ ] Boston: "Moving out of a Boston apartment on Sept 1: getting rid of furniture" (curbside rules only; no invented dates)
+- [x] Boston: how to get rid of paint (/boston/paint/) and propane tanks (/boston/propane-tank/), done 2026-10-28 (keyword-targets row 7)
+- [ ] Other cities: paint + propane guides (Cambridge, Somerville, Newton, Brookline, Quincy HHW days; Brookline Recycling Center and Newton RRC are MassDEP-listed host facilities)
+- [ ] Boston: re-check Zero Waste Day page for the 2027 schedule once posted (update /boston/paint/ and /boston/propane-tank/ after Nov 21, 2026)
 - [ ] Boston: how to get rid of a bed frame or dresser (/boston/bed-frame/): curbside furniture + Habitat/Household Goods/Furnishing Hope rules
 - [ ] Boston: how to get rid of a washer, dryer, or dishwasher (not in City special collection; donation + haulers only)
 - [ ] Cambridge, MA: appliances guide (/cambridge/appliances/): $25 permit ($20 age 62+), free-permit items, Wed/Thu scheduling (data already in cambridge.json)

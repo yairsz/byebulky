@@ -309,8 +309,9 @@ def same_item_other_cities(g):
     oth = [x for x in GUIDES if x["short"] == g["short"] and x["city"] != g["city"] and x["city"] in cmap]
     cost = (f'<p><a href="{U(COST_PATH)}">Compare mattress disposal costs around Boston (City fees and published hauler prices) →</a></p>'
             if g["short"] == "Mattress" else "")
-    cost += rules_link(next((c["name"] for c in CITIES if c["slug"] == g["city"]), "your city"),
-                       {"mattress": "mattress", "appliances": "fridge"}.get(g.get("short", "").lower(), "couch"))
+    if g.get("short") in ("Mattress", "Couch", "Appliances"):  # rules table + cost checker only cover these items
+        cost += rules_link(next((c["name"] for c in CITIES if c["slug"] == g["city"]), "your city"),
+                           {"mattress": "mattress", "appliances": "fridge"}.get(g.get("short", "").lower(), "couch"))
     if not oth: return cost
     return cost + (f"<h2>{e(g['short'])} guides for other cities</h2><ul>" + "".join(
         f'<li><a href="{U("/" + x["path"] + "/")}">{e(cmap[x["city"]]["name"])}: {e(x["title"])}</a> '

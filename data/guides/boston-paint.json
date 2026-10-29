@@ -1,0 +1,62 @@
+{
+  "path": "boston/paint",
+  "city": "boston",
+  "short": "Paint",
+  "last_verified": "2026-10-28",
+  "title": "How to Get Rid of Paint in Boston: Latex, Oil-Based, Drop-Off",
+  "meta_description": "Boston rules for old paint: dry latex paint and trash it; take oil-based paint to a free Zero Waste Day (next: Nov 21, 2026). Limits, ID, other options.",
+  "h1": "How to get rid of paint in Boston",
+  "intro": "In Boston, what you do with old paint depends on the kind. The City says latex and acrylic (water-based) paint is not hazardous: dry it out and put it in your regular trash. Oil-based paint has to go to one of the City's free Zero Waste Day drop-offs for Boston residents. The next one is Saturday, November 21, 2026, in West Roxbury.",
+  "quick_answers": [
+    {
+      "q": "How do I get rid of latex paint in Boston?",
+      "a": "Dry it out and put it in the regular trash. The City says to mix an equal amount of cat litter into the paint in the can (or use a commercial paint hardener or shredded newspaper), stir until it thickens and won't spill, and let it sit for an hour. Once it's completely dry it can go in the garbage; remove the lid so collectors can see it's dry."
+    },
+    {
+      "q": "Where do I take oil-based paint in Boston?",
+      "a": "To a City of Boston Zero Waste Day drop-off. They're free for Boston residents. The next one is Saturday, November 21, 2026, 8:30 a.m. to 12 p.m. at 315 Gardner Street, West Roxbury."
+    },
+    {
+      "q": "How much paint can I bring to a Boston Zero Waste Day?",
+      "a": "Up to 20 gallons of paint, motor oil, gasoline, and chemicals combined, in containers of 5 gallons or less, with labels the City can read. Bring a photo ID, utility bill, or lease to show you live in Boston; the City doesn't take waste from businesses."
+    },
+    {
+      "q": "How do I get rid of cans of paint in South Boston?",
+      "a": "South Boston is a Boston neighborhood, so the citywide rules apply: dry latex or acrylic paint and put it out with your trash with the lid off, and bring oil-based paint to a City Zero Waste Day drop-off."
+    },
+    {
+      "q": "Can I donate leftover paint in Boston?",
+      "a": "The City suggests donating paint that's too good to trash to someone who can use it, and MassDEP mentions paint swaps and reuse businesses such as Recolor Paints."
+    }
+  ],
+  "sections": [
+    {
+      "h": "Latex or oil-based: which rule applies",
+      "p": "The City of Boston says latex and acrylic (water-based) paint is not hazardous and can be dried out and thrown away in the regular trash. Only oil-based paint must be brought to a drop-off event for safe disposal. MassDEP explains why wet paint can't go in the trash as is: it clogs the equipment that compresses trash and can break collection machinery."
+    },
+    {
+      "h": "How to dry out latex paint for the trash",
+      "p": "The City's steps: mix an equal amount of cat litter into the latex paint in the can (commercial paint hardeners work too; follow the maker's instructions), or add shredded newspaper to help it clump and dry faster. Stir until it thickens and won't spill, then let it sit for one hour. When it's completely dry, put it in the garbage and leave the lid off so collectors can see it's dry. MassDEP adds that a leaking can should be double-bagged and left partly open in a safe spot to dry, and that paint should be dry enough to flip upside down with no leaks before it goes in the trash."
+    },
+    {
+      "h": "Where to take oil-based paint: Boston Zero Waste Day",
+      "p": "Boston's Zero Waste Days are free drop-offs for household hazardous waste, and oil-based paint is on the accepted list along with motor oil, pesticides, propane tanks, rechargeable batteries, and fluorescent bulbs. The 2026 events were May 16, June 27, and August 15, and the September 26 event was postponed to Saturday, November 21, 2026, 8:30 a.m. to 12 p.m., at 315 Gardner Street (Millennium Park), West Roxbury. Don't arrive before 8:30 a.m.; the City stops taking waste promptly at noon. Questions go to 311 (617-635-4500) or zerowaste@boston.gov."
+    },
+    {
+      "h": "Drop-off rules (or your paint may be turned away)",
+      "p": "You must be a Boston resident and show a photo ID, utility bill, or lease. Business waste isn't accepted. There's a 20-gallon limit on paint, motor oil, gasoline, and all chemicals, and no container can be bigger than 5 gallons. All paints and other hazardous liquids must be in containers with labels the City can read, and the City may reject materials that don't meet its regulations."
+    },
+    {
+      "h": "Missed the drop-off? Other options",
+      "p": "MassDEP lists Clean Harbors in Braintree (781-380-7177) as a private household hazardous waste facility open to residents of all Massachusetts municipalities, with Saturday hours from March through November and appointments. That entry still mentions a COVID-19 closure and a May 2021 reopening, so call before you go; fees aren't stated. MassDEP also points to its Beyond the Bin search tool for drop-off spots in Massachusetts that take latex paint, and says to check your city's website for hazardous waste collection days."
+    },
+    {
+      "h": "Donating or storing leftover paint",
+      "p": "For paint that's too good to trash, the City suggests donating it to someone who can use it. To keep it usable, store it somewhere cool and dry, away from sunlight and extreme temperatures; wipe the outside of the can, put plastic wrap over the opening, tap the lid shut firmly with a rubber mallet, and store the can upside down. MassDEP says paint in good condition can be used for small projects, brought to a paint swap, or donated to a reuse business such as Recolor Paints."
+    }
+  ],
+  "listing_ids": [
+    "boston-zero-waste-day",
+    "clean-harbors-braintree-hhw"
+  ]
+}

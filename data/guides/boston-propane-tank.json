@@ -1,0 +1,64 @@
+{
+  "path": "boston/propane-tank",
+  "city": "boston",
+  "short": "Propane tanks",
+  "last_verified": "2026-10-28",
+  "title": "How to Get Rid of a Propane Tank in Boston (Grill and Small)",
+  "meta_description": "Don't trash propane tanks in Boston, even empty. Free options: City Zero Waste Day (empty or full; next Nov 21, 2026), Blue Rhino recycling, AmeriGas exchange.",
+  "h1": "How to get rid of a propane tank in Boston",
+  "intro": "Propane tanks can't go in the trash in Boston, even when they're empty. MassDEP says trash compressors can puncture or damage pressurized tanks, which can leak flammable gas. The City of Boston takes propane tanks, empty or full, at its free Zero Waste Day drop-offs for residents, and the big propane exchange brands take old grill tanks back.",
+  "quick_answers": [
+    {
+      "q": "How do I get rid of a propane tank in Boston?",
+      "a": "Bring it to a City of Boston Zero Waste Day (free for Boston residents; propane tanks are accepted empty or full), or take a grill tank to a Blue Rhino or AmeriGas exchange location. The next Zero Waste Day is Saturday, November 21, 2026, 8:30 a.m. to 12 p.m. at 315 Gardner Street, West Roxbury."
+    },
+    {
+      "q": "Can I throw an empty propane tank in the trash?",
+      "a": "No. MassDEP says trash compressors may puncture or damage pressurized tanks, which may lead to leaking flammable gas, even if the tank is empty. AmeriGas also says never to throw a propane cylinder in the trash."
+    },
+    {
+      "q": "Where can I recycle a grill propane tank for free?",
+      "a": "Blue Rhino says it accepts tanks for recycling at no cost: write \"R\" or \"RECYCLE\" on your 20 lb. tank, take it to a non-vending Blue Rhino location, and tell a store employee if there's an empty spot in the display. Boston residents can also bring tanks to a free City Zero Waste Day."
+    },
+    {
+      "q": "How do I get rid of small 1 lb propane tanks in Boston?",
+      "a": "The City's Zero Waste Day list says \"Propane tanks - empty or full\" and doesn't set a size limit. Blue Rhino's recycling steps are written for 20 lb. grill tanks, and AmeriGas doesn't state whether its exchange locations take small camping cylinders, so ask before you go."
+    },
+    {
+      "q": "Can I swap an old or expired propane tank?",
+      "a": "AmeriGas says it accepts all brands of propane tanks and cylinders for exchange, and that you can drop an unwanted or expired tank at most of its refill or exchange locations. Blue Rhino says it exchanges any standard empty grill tank in acceptable condition."
+    }
+  ],
+  "sections": [
+    {
+      "h": "Why propane tanks can't go in the trash",
+      "p": "MassDEP says propane tanks hold liquefied petroleum gas, and trash compressors may puncture or damage pressurized tanks, which may lead to leaking flammable gas, even if the tank is empty. Its advice is to contact the maker, such as AmeriGas or Blue Rhino, or look for a municipal scrap metal or household hazardous waste collection that takes propane tanks. Blue Rhino adds that many landfills, recycling facilities, and scrap metal dealers won't accept propane tanks because gas may be left inside."
+    },
+    {
+      "h": "Free City drop-off: Boston Zero Waste Day",
+      "p": "The City of Boston lists propane tanks, empty or full, among the car-related materials it accepts at Zero Waste Days, along with car and bike tires (8 per person), car batteries, and fire extinguishers. The events are free for Boston residents with a photo ID, utility bill, or lease as proof of residency, and the City doesn't take business waste. The next one is Saturday, November 21, 2026, 8:30 a.m. to 12 p.m., at 315 Gardner Street (Millennium Park), West Roxbury; the earlier 2026 dates were May 16, June 27, and August 15. Questions go to 311 (617-635-4500) or zerowaste@boston.gov."
+    },
+    {
+      "h": "Recycle a grill tank at Blue Rhino",
+      "p": "Blue Rhino says some propane exchange companies, including Blue Rhino, accept tanks for recycling at no cost. For a 20 lb. tank you no longer need, write \"R\" or \"RECYCLE\" on it and take it to any non-vending Blue Rhino location. If there's an empty spot in the display, tell a store employee you have a tank to recycle; if not, try another Blue Rhino location. Blue Rhino refurbishes the tank if possible and recycles it if it doesn't meet its standards. If you still grill, it exchanges any standard empty grill tank in acceptable condition, of any brand. Customer care: 1-800-BLU-RINO."
+    },
+    {
+      "h": "Exchange or drop off at AmeriGas",
+      "p": "AmeriGas says exchanging your old tank for a refilled one is the easiest way to dispose of it, and that you can also drop an unwanted or expired tank at most propane refill or exchange locations. It accepts all brands of propane tanks and cylinders for exchange. Its retail partners include gas stations, hardware stores, and convenience stores; use its location finder. AmeriGas doesn't state a fee for drop-off without an exchange, so ask the location."
+    },
+    {
+      "h": "Missed the City drop-off?",
+      "p": "MassDEP lists Clean Harbors in Braintree (781-380-7177) as a private household hazardous waste facility open to residents of all Massachusetts municipalities. Its entry doesn't say which items the facility takes, and it still mentions a COVID-19 closure and a May 2021 reopening, so call to ask about propane tanks, fees, and hours before you go. MassDEP also points to its Beyond the Bin search tool, which lists some Massachusetts drop-off spots for propane tanks."
+    },
+    {
+      "h": "Moving a tank safely",
+      "p": "AmeriGas says to always transport a cylinder secured and upright so it can't fall, shift, or roll, with the valve closed (and plugged if required) even when it's empty, in a well-ventilated part of the vehicle. Never leave a filled cylinder in a hot vehicle, and go straight to your destination and take the tank out right away."
+    }
+  ],
+  "listing_ids": [
+    "boston-zero-waste-day",
+    "blue-rhino-tank-recycling",
+    "amerigas-tank-exchange",
+    "clean-harbors-braintree-hhw"
+  ]
+}
