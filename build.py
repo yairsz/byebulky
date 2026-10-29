@@ -309,17 +309,20 @@ def same_item_other_cities(g):
     oth = [x for x in GUIDES if x["short"] == g["short"] and x["city"] != g["city"] and x["city"] in cmap]
     cost = (f'<p><a href="{U(COST_PATH)}">Compare mattress disposal costs around Boston (City fees and published hauler prices) →</a></p>'
             if g["short"] == "Mattress" else "")
-    cost += rules_link(next((c["name"] for c in CITIES if c["slug"] == g["city"]), "your city"))
+    cost += rules_link(next((c["name"] for c in CITIES if c["slug"] == g["city"]), "your city"),
+                       {"mattress": "mattress", "appliances": "fridge"}.get(g.get("short", "").lower(), "couch"))
     if not oth: return cost
     return cost + (f"<h2>{e(g['short'])} guides for other cities</h2><ul>" + "".join(
         f'<li><a href="{U("/" + x["path"] + "/")}">{e(cmap[x["city"]]["name"])}: {e(x["title"])}</a> '
         f'({len(x.get("listing_ids", []))} options)</li>' for x in oth) + "</ul>")
 
-def rules_link(name):
+def rules_link(name, item="couch"):
     """Contextual link to the cross-city rules table (run #38): each city/guide page points to the comparison."""
     n = len(CITIES) - 1
+    c = next((x for x in CITIES if x["name"] == name), None)
+    tool = (f' Or use the <a href="{U(TOOL_PATH)}#r-{e(c["slug"])}-{item}">cost checker</a> to see every {e(name)} option for one item.' if c else "")
     return (f'<p>How does {e(name)} compare? See the <a href="{U(RULES_PATH)}">furniture, mattress and appliance pickup rules '
-            f'for {e(name)} and {n} other Boston-area cities side by side</a>, with official sources.</p>')
+            f'for {e(name)} and {n} other Boston-area cities side by side</a>, with official sources.{tool}</p>')
 
 def nocar_link(c):
     """City hub -> no-car/big-building audience page (run #40). Count is computed from this city's own listings:
