@@ -202,6 +202,39 @@ def takes_item(l, rx, item):
     return (item == "couch" and any(re.match(r"furniture\b", i, re.I) for i in acc)
             and not any(re.search(rx, i, re.I) for i in l.get("items_not_accepted", [])))
 
+_DAYW = re.compile(r"\b(?:day|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|weekly)s?\b", re.I)
+def _day_sent(s):
+    """First verbatim sentence of a lead_time that names a day; falls back to the first sentence."""
+    s = (s or "").strip(); rest = s
+    while rest:
+        one = _sent(rest)
+        if _DAYW.search(one):
+            return one
+        rest = rest[len(one):].strip()
+        if one == s and not rest: break
+    return _sent(s)
+
+def pickup_day_faq(c):
+    """'What day is bulky item pickup in {city}?' (Google autocomplete, run #44). Verbatim day sentences from the City's
+    own furniture, mattress and appliance listings; says so when the official page names no day."""
+    city = c["name"]; parts = []; missing = []
+    for label, rx in RULE_KINDS:
+        l = next((x for x in c["listings"] if x["type"] == "city bulk pickup" and rx.search(x["id"])), None)
+        lt = (l or {}).get("lead_time", "")
+        if not l or lt.startswith("Not stated"):
+            missing.append(label.lower()); continue
+        ds = _day_sent(lt)
+        hit = next((x for x in parts if x[1] == ds), None)
+        if hit: hit[0].append(label.lower())
+        else: parts.append([[label], ds])
+    parts = [f"{(', '.join(ls[:-1]) + ' and ' + ls[-1]) if len(ls) > 1 else ls[0]}: {ds}" for ls, ds in parts]
+    if not parts:
+        return None
+    a = " ".join(parts)
+    if missing:
+        a += f" The City page we checked doesn't give a day for {' or '.join(missing)}; ask the City."
+    return {"q": f"What day is bulky item pickup in {city}?", "a": a}
+
 def city_faq(c):
     """Computed fan-out answers from the listing fields (never hand-written)."""
     ls = c["listings"]; city = c["name"]; n = len(ls)
@@ -243,6 +276,9 @@ def city_faq(c):
         out.append({"q": f"Who will take a {item} out of my apartment or house (not just from the curb) in {city}?", "a": a})
     cnt = [(t, sum(1 for l in ls if l["type"] == t)) for t in TYPES]
     cnt = [(t, k) for t, k in cnt if k]
+    if not any(_DAYW.search(x["q"]) and x["q"].lower().startswith("what day") for x in c.get("quick_answers", [])):
+        d = pickup_day_faq(c)
+        if d: out.insert(0, d)
     out.append({"q": f"What are the ways to get rid of bulky items in {city}?",
                 "a": f"We list {n} options in {city}: " + "; ".join(f"{t} ({k})" for t, k in cnt) + ". Each listing links to the page we checked."})
     return out
@@ -558,6 +594,15 @@ def rules_faq(rows):
         if groups["unstated"]: parts.append("No fee stated on the official page (ask the City): " + ", ".join(c["name"] for c, _ in groups["unstated"]) + ".")
         qas.append({"q": f"Which Boston-area cities pick up {noun} for free, and what do the others charge?",
                     "a": " ".join(parts)})
+    days = []
+    for c, cells in rows:
+        l = cells[0]
+        if l and not l.get("lead_time", "").startswith("Not stated"):
+            days.append(f'{c["name"]}: {_day_sent(l["lead_time"])}')
+    if days:
+        qas.append({"q": "What day is bulky item pickup in Boston-area cities?",
+                    "a": "For furniture and other bulky items, per each City's own page: " + " ".join(days)
+                         + " Mattresses and appliances can have a separate day or booking step; see each city's page."})
     return qas
 
 def rules_page():
