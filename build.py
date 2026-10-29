@@ -853,6 +853,7 @@ def tool_page():
 {results}
 <h2 id="numbers">By the numbers</h2>
 <ul>{stat_li}</ul>
+{yt_embed(TOOL_PATH, YT_CHANNEL, 'ByeBulky')}
 <h2 id="method">How this checker works (and what it doesn't do)</h2>
 <ul>
 <li>It reads the same listings shown on our city pages ({nlist} unique options). Each one comes from the organization's own site or an official City page, and links to it.</li>
