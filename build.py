@@ -235,6 +235,29 @@ def pickup_day_faq(c):
         a += f" The City page we checked doesn't give a day for {' or '.join(missing)}; ask the City."
     return {"q": f"What day is bulky item pickup in {city}?", "a": a}
 
+def _city_prog(c, k):
+    rx = RULE_KINDS[k][1]
+    return next((x for x in c["listings"] if x["type"] == "city bulk pickup" and rx.search(x["id"])), None)
+
+def mattress_bulk_faq(c):
+    """'Does bulk pickup take mattresses in {city}?' (top Search Console query, run #45). Built only from the City's own
+    furniture and mattress listings: the furniture listing's verbatim mattress exclusion, the mattress program's name,
+    first cost sentence, day sentence and verbatim not-accepted items."""
+    city = c["name"]; fur = _city_prog(c, 0); mat = _city_prog(c, 1)
+    if not mat:
+        return None
+    excl = next((i for i in (fur or {}).get("items_not_accepted", []) if re.search(r"mattress", i, re.I)), None)
+    a = (f"Not with regular bulky item pickup. {city}'s furniture pickup listing names this as not accepted: \"{excl}.\" "
+         if excl else f"{city} collects mattresses through a separate program from its furniture pickup. ")
+    a += f"The official mattress option is {mat['name']}. Cost: {_sent(mat.get('cost'))}"
+    lt = mat.get("lead_time", "")
+    if lt and not lt.startswith("Not stated"):
+        a += f" When: {_day_sent(lt)}"
+    na = [i for i in mat.get("items_not_accepted", []) if not re.match(r"other non-mattress", i, re.I)]
+    if na:
+        a += " Not accepted by that program: " + "; ".join(na) + "."
+    return {"q": f"Does bulk pickup take mattresses in {city}?", "a": a.strip()}
+
 def city_faq(c):
     """Computed fan-out answers from the listing fields (never hand-written)."""
     ls = c["listings"]; city = c["name"]; n = len(ls)
@@ -279,6 +302,8 @@ def city_faq(c):
     if not any(_DAYW.search(x["q"]) and x["q"].lower().startswith("what day") for x in c.get("quick_answers", [])):
         d = pickup_day_faq(c)
         if d: out.insert(0, d)
+    m = mattress_bulk_faq(c)
+    if m: out.insert(1 if out and out[0]["q"].startswith("What day") else 0, m)
     out.append({"q": f"What are the ways to get rid of bulky items in {city}?",
                 "a": f"We list {n} options in {city}: " + "; ".join(f"{t} ({k})" for t, k in cnt) + ". Each listing links to the page we checked."})
     return out
@@ -603,6 +628,15 @@ def rules_faq(rows):
         qas.append({"q": "What day is bulky item pickup in Boston-area cities?",
                     "a": "For furniture and other bulky items, per each City's own page: " + " ".join(days)
                          + " Mattresses and appliances can have a separate day or booking step; see each city's page."})
+    mats = []
+    for c, cells in rows:
+        f, m = cells[0], cells[1]
+        if not m: continue
+        sep = bool(f and any(re.search(r"mattress", i, re.I) for i in f.get("items_not_accepted", [])))
+        mats.append(f'{c["name"]}: {"not with furniture pickup; " if sep else ""}{m["name"]}, {_sent(m.get("cost"))}')
+    if mats:
+        qas.append({"q": "Does bulk pickup take mattresses in Boston-area cities?",
+                    "a": f"Each of these {len(mats)} cities handles mattresses through its own mattress program, per the City pages we checked. " + " ".join(mats)})
     return qas
 
 def rules_page():
