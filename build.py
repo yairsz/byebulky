@@ -422,7 +422,8 @@ def sibling_guides(g, city):
     return f"<h2>More {e(city['name'])} item guides</h2><ul>" + "".join(
         f'<li><a href="{U("/" + x["path"] + "/")}">{e(x["title"])}</a></li>' for x in sib) + "</ul>"
 
-ITEM_PHRASE = {"Mattress": "a mattress", "Couch": "a couch or sofa", "Appliances": "a fridge, AC, TV or other appliance"}
+ITEM_PHRASE = {"Mattress": "a mattress", "Couch": "a couch or sofa", "Appliances": "a fridge, AC, TV or other appliance",
+               "September 1 move-out": "furniture, mattresses and appliances when moving out", "Donation rules": "furniture by donating it"}
 
 def options_heading(g, city, n):
     """Intent-matched heading for the listing section (added 2026-10-26, run #22): replaces generic "Options"."""

@@ -36,7 +36,11 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [ ] Portland, OR page
 - [ ] Nationwide guide: "Which charities still pick up furniture?" (Salvation Army, Habitat ReStores, ReSupply; sources only)
 - [ ] Nationwide guide: "Mattress disposal rules by state" (start with states with laws: MA ban, CA/CT/RI/OR mattress stewardship programs, each sourced)
-- [ ] Boston: "Moving out of a Boston apartment on Sept 1: getting rid of furniture" (curbside rules only; no invented dates)
+- [x] Boston: "Moving out of a Boston apartment on Sept 1" (/boston/september-1-move-out/), done 2026-10-29 (keyword-targets row 5)
+- [x] Boston: charity donation rules (/boston/donation-rules/), done 2026-10-29 (keyword-targets row 6; Goodwill Mass added)
+- [ ] Boston: re-check the City move-in news release for 2027 (usually late August) and update /boston/september-1-move-out/
+- [ ] Boston donation rules: add St. Vincent de Paul Boston, The Furniture Trust, Boomerangs if their own pages state accepted items
+- [ ] Donation rules pages for Cambridge/Somerville (Goodwill Cambridge 520 Mass Ave; Habitat Watertown ReStore once open)
 - [x] Boston: how to get rid of paint (/boston/paint/) and propane tanks (/boston/propane-tank/), done 2026-10-28 (keyword-targets row 7)
 - [ ] Other cities: paint + propane guides (Cambridge, Somerville, Newton, Brookline, Quincy HHW days; Brookline Recycling Center and Newton RRC are MassDEP-listed host facilities)
 - [ ] Boston: re-check Zero Waste Day page for the 2027 schedule once posted (update /boston/paint/ and /boston/propane-tank/ after Nov 21, 2026)

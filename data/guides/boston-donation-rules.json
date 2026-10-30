@@ -1,0 +1,115 @@
+{
+  "path": "boston/donation-rules",
+  "city": "boston",
+  "short": "Donation rules",
+  "last_verified": "2026-10-29",
+  "title": "Does Goodwill, Habitat or Salvation Army Take It? Boston Rules",
+  "meta_description": "What Boston-area charities say they take: mattresses, couches, bed frames, TVs, appliances. Habitat ReStore, Goodwill, Salvation Army and more, quoted.",
+  "h1": "Does Habitat, Goodwill or the Salvation Army take mattresses, couches and TVs? Boston-area donation rules",
+  "options_h": "Every charity and donation option we list: 8 ways to donate furniture in Boston",
+  "intro": "Most \"does this charity take it\" answers online say \"it depends on your local store.\" Here is what the Boston-area organizations themselves say, checked on their own pages on October 29, 2026. Every yes or no below is quoted from the charity's donation list; where a charity doesn't say, we say that too.",
+  "quick_answers": [
+    {
+      "q": "Does Habitat for Humanity ReStore in Boston take mattresses?",
+      "a": "No. Habitat Greater Boston's ReStore lists mattresses and box springs among items it does not accept, along with sofa beds, sofas with slip covers, futons, and platform and trundle beds."
+    },
+    {
+      "q": "Does Goodwill take furniture in Boston?",
+      "a": "Only small pieces. Goodwill's Massachusetts donation list accepts small home furnishings that one person can carry and says it is unable to accept large furniture, including office and outdoor furniture."
+    },
+    {
+      "q": "Does Goodwill take mattresses or TVs?",
+      "a": "No. Goodwill's Massachusetts list says it can't accept mattresses, box springs, waterbeds, bed frames, futons, futon frames, pillows, sofa beds, or televisions."
+    },
+    {
+      "q": "Does the Salvation Army take mattresses?",
+      "a": "The Salvation Army's national pickup FAQ lists mattresses among gently used items its thrift stores generally accept, but says accepted items vary by location and to call 800-SA-TRUCK for your area."
+    },
+    {
+      "q": "Which Boston-area charities take mattresses?",
+      "a": "Of the organizations we checked, Household Goods (Acton) takes standard-size mattresses and box springs without stains or rips, and Furnishing Hope lists mattresses and box springs among the furniture it accepts. Habitat ReStore, Goodwill and the Thrift Shop of Boston say they don't."
+    }
+  ],
+  "sections": [
+    {
+      "h": "Habitat for Humanity ReStore (West Roxbury): what it takes",
+      "p": "Habitat Greater Boston's ReStore accepts furniture such as bed frames, headboards and footboards, dressers, coffee and end tables, desks 3 by 5 feet or smaller, tables and chairs, and upholstered furniture that isn't ripped, worn, broken, dated or faded, plus appliances less than eight years old. It does not accept mattresses or box springs, sofa beds, sofas with slip covers, futons, platform and trundle beds, hutches, sideboards and china cabinets, TV armoires and entertainment centers, fitness equipment, paint, or hazardous materials. Donations must be in working order, and staff can refuse any item. Drop-off is Tuesday through Saturday, 9:30 a.m. to 4 p.m.; pickup is arranged through ReSupply, a paid service. Habitat says a second ReStore is opening soon at 44 Green River Way in Watertown.",
+      "sources": [
+        {
+          "label": "Habitat Greater Boston ReStore",
+          "url": "https://habitatboston.org/restore/"
+        }
+      ]
+    },
+    {
+      "h": "Goodwill (Massachusetts): small furniture only, no mattresses or TVs",
+      "p": "Goodwill's Massachusetts donation list accepts small home furnishings that one person can carry, small kitchen appliances, small electronic devices, clothing, housewares, books, bicycles and sporting goods. It says it is unable to accept large furniture (including office and outdoor), mattresses, box springs, bed frames, futons, sofa beds, televisions, exercise equipment, pianos and organs, cabinets and doors, paint and other hazardous materials, and used toys. Staff are trained to decline items based on condition, size or inability to reuse. Boston donation centers include 1010 Harrison Avenue, 965 Commonwealth Avenue in Allston/Brighton, and 470 West Broadway in South Boston. The City of Boston's moving page lists Goodwill among groups that arrange free pickups of good-condition furniture, but Goodwill's own pages describe drop-off only.",
+      "sources": [
+        {
+          "label": "Goodwill: What to donate",
+          "url": "https://goodwillmass.org/what-to-donate/"
+        },
+        {
+          "label": "Goodwill: Stores and donation centers",
+          "url": "https://goodwillmass.org/store-hours-locations/"
+        },
+        {
+          "label": "City of Boston: Moving",
+          "url": "https://www.boston.gov/moving"
+        }
+      ]
+    },
+    {
+      "h": "The Salvation Army: pickup, with local rules",
+      "p": "The Salvation Army schedules free donation pickups through satruck.org and 800-SA-TRUCK. Its FAQ says that, in general, its thrift stores accept unbroken furniture, mattresses, and working appliances that aren't built in, and can't accept appliances with mechanical problems, gas appliances, or built-in appliances such as ovens and dishwashers. It also says that because local ordinances and needs vary, the best way to learn what's accepted in your area is to call 800-SA-TRUCK. We could not confirm Boston-specific rules on its site.",
+      "sources": [
+        {
+          "label": "Salvation Army: satruck.org FAQ",
+          "url": "https://satruck.org/faq"
+        },
+        {
+          "label": "Salvation Army: satruck.org",
+          "url": "https://satruck.org/"
+        }
+      ]
+    },
+    {
+      "h": "Household Goods (Acton): mattresses, couches and newer appliances",
+      "p": "Household Goods accepts standard-size mattresses and box springs, bed frames with all parts, bunk beds, dressers, couches, sofa beds and futons, tables, and refrigerators, washers and electric dryers newer than 10 years, plus flat-screen TVs under 55 inches and less than 10 years old. It does not take mattresses with any stains or rips, office furniture, glass-top items, or outdoor furniture. Its volunteer pickup only covers Acton and eight nearby towns, so Boston donors drop off in Acton or book a paid pickup partner.",
+      "sources": [
+        {
+          "label": "Household Goods: Donation guidelines",
+          "url": "https://www.householdgoods.org/donate/donate-goods/donation-guidelines/"
+        },
+        {
+          "label": "Household Goods: Pickup",
+          "url": "https://www.householdgoods.org/donate/donate-goods/pickup/"
+        }
+      ]
+    },
+    {
+      "h": "Furnishing Hope and the Thrift Shop of Boston",
+      "p": "Furnishing Hope lists mattresses and box springs, beds, dressers, sofas and upholstered chairs, tables, TV stands and entertainment centers among the furniture it accepts, new or gently used with no stains, odors or pet hair. It asks for photos first and picks up only donations of at least six substantial furniture items, with a suggested donation of $250 to $400. The Thrift Shop of Boston in Roslindale does not take couches, futons or sleep sofas, or beds of any kind (headboards, frames, mattresses or box springs); it charges a pickup fee that it says is usually $50 to $150.",
+      "sources": [
+        {
+          "label": "Furnishing Hope: Donate",
+          "url": "https://www.furnishinghopema.org/donate-1"
+        },
+        {
+          "label": "Thrift Shop of Boston: Donate",
+          "url": "https://thriftshopofboston.org/donate-your-stuff/"
+        }
+      ]
+    }
+  ],
+  "listing_ids": [
+    "habitat-greater-boston-restore",
+    "goodwill-mass",
+    "salvation-army-satruck",
+    "household-goods-acton",
+    "furnishing-hope",
+    "thrift-shop-of-boston",
+    "savers-west-roxbury",
+    "resupply-boston"
+  ]
+}

@@ -55,7 +55,7 @@
       "lead_time": "Your regular trash collection day (find it in the Trash Day app or the City's schedule search).",
       "cost": "No fee is mentioned on the City page. Check with 311 if unsure.",
       "service_area": "Addresses that receive City of Boston curbside trash collection. Large buildings (7+ units) should check the City's large-building page and their property manager.",
-      "last_verified": "2026-10-27",
+      "last_verified": "2026-10-29",
       "id": "boston-curbside-furniture",
       "name": "City of Boston curbside furniture collection",
       "type": "city bulk pickup",
@@ -83,7 +83,7 @@
       "lead_time": "Not stated, check with them",
       "cost": "No fee is mentioned on the City page. Check with 311 if unsure.",
       "service_area": "City of Boston residents in buildings with 6 units or fewer. Buildings with more units must use their property manager or a private hauler.",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-10-29",
       "id": "boston-mattress-recycling",
       "name": "City of Boston curbside mattress & box spring recycling (appointment)",
       "type": "city bulk pickup",
@@ -110,7 +110,7 @@
       "lead_time": "Not stated, check with them",
       "cost": "No fee is mentioned on the City page. Check with 311 if unsure.",
       "service_area": "City of Boston residents.",
-      "last_verified": "2026-10-27",
+      "last_verified": "2026-10-29",
       "id": "boston-special-items",
       "name": "City of Boston special item collection (fridges, ACs, TVs, monitors)",
       "type": "city bulk pickup",
@@ -152,8 +152,8 @@
       "stairs_inside": "Drop-off: staff help unload at the store. In-home pickup is arranged through ReSupply (paid; see the ReSupply listing).",
       "lead_time": "Drop-off Tuesday to Saturday, 9:30 a.m. to 4:00 p.m. (as posted).",
       "cost": "Drop-off fee: not stated. Pickup is through ReSupply, a paid service.",
-      "service_area": "Drop-off at the West Roxbury store. Habitat says a second ReStore is set to open in Watertown in fall 2026.",
-      "last_verified": "2026-10-27",
+      "service_area": "Drop-off at the West Roxbury store. Habitat says a second ReStore is opening soon at 44 Green River Way in Watertown, MA, this fall (opening day not announced as of 2026-10-29).",
+      "last_verified": "2026-10-29",
       "id": "habitat-greater-boston-restore",
       "name": "Habitat for Humanity Greater Boston ReStore (West Roxbury)",
       "type": "drop-off",
@@ -214,7 +214,7 @@
       "lead_time": "Furniture drop-off in Acton on Tuesdays, Thursdays, and Saturdays, 9 a.m. to 12 p.m. Pickup timing: not stated.",
       "cost": "No pickup fee, but they request a tax-deductible donation, suggested at $250 to $400 depending on the size of the donation. Pickup requires at least six substantial furniture items.",
       "service_area": "Serves Boston-area families. Pickup area not stated, check with them.",
-      "last_verified": "2026-10-27",
+      "last_verified": "2026-10-29",
       "id": "furnishing-hope",
       "name": "Furnishing Hope of Massachusetts",
       "type": "furniture bank",
@@ -251,7 +251,7 @@
       "lead_time": "Drop-off Tuesdays, Thursdays, and Saturdays, 9 a.m. to noon. Volunteer pickups typically scheduled 4+ weeks ahead. Paid pickups through ReSupply or ReMARKable Donations in as soon as 2 business days.",
       "cost": "Drop-off: not stated. Volunteer pickup: minimum $35 donation requested. Paid pickups (ReSupply / ReMARKable Donations): for a fee.",
       "service_area": "Volunteer pickup only in Acton, Boxborough, Carlisle, Concord, Littleton, Maynard, Stow, Sudbury, and Westford, so not Boston. Boston donors can drop off in Acton or use the paid pickup partners.",
-      "last_verified": "2026-10-27",
+      "last_verified": "2026-10-29",
       "id": "household-goods-acton",
       "name": "Household Goods (Acton)",
       "type": "furniture bank",
@@ -291,7 +291,7 @@
       "lead_time": "Drop-off by appointment on Tuesdays, Thursdays, and Saturdays. Pickup timing: not stated.",
       "cost": "Furniture pickup has a fee that depends on location and volume, usually $50 to $150 (as posted).",
       "service_area": "Not stated, check with them",
-      "last_verified": "2026-10-27",
+      "last_verified": "2026-10-29",
       "id": "thrift-shop-of-boston",
       "name": "The Thrift Shop of Boston (Roslindale)",
       "type": "charity pickup",
@@ -347,7 +347,7 @@
       "lead_time": "Not stated, check with them",
       "cost": "Advertised as a free donation pickup on satruck.org. Local terms: check with them.",
       "service_area": "Enter a Boston ZIP on satruck.org to see whether pickup is offered at your address. I could not confirm Boston coverage on 2026-10-21.",
-      "last_verified": "2026-10-27",
+      "last_verified": "2026-10-29",
       "id": "salvation-army-satruck",
       "name": "The Salvation Army donation pickup (1-800-SA-TRUCK)",
       "type": "charity pickup",
@@ -357,7 +357,8 @@
         "Working, non-built-in appliances (per national FAQ)"
       ],
       "source_urls": [
-        "https://satruck.org/"
+        "https://satruck.org/",
+        "https://satruck.org/faq"
       ]
     },
     {
@@ -901,6 +902,48 @@
       ],
       "last_verified": "2026-10-28",
       "notes": "Listed on MassDEP's Safely Manage Household Hazardous Products page; we did not check Clean Harbors' own site."
+    },
+    {
+      "id": "goodwill-mass",
+      "name": "Goodwill (Morgan Memorial Goodwill Industries) donation centers",
+      "type": "drop-off",
+      "items_accepted": [
+        "Small home furnishings (1-person-carry items only)",
+        "Small kitchen appliances",
+        "Small electronic devices",
+        "Clothing, shoes, linens",
+        "Housewares, cookware, dishes",
+        "Books and media",
+        "Bicycles",
+        "Sporting goods",
+        "Antiques, collectibles, artwork"
+      ],
+      "items_not_accepted": [
+        "Large furniture, including office and outdoor",
+        "Mattresses, box springs, waterbeds, bed frames, futons, futon frames, pillows",
+        "Sofa beds",
+        "Televisions",
+        "Exercise equipment",
+        "Pianos and organs",
+        "Plumbing or building supplies (cabinets, doors, etc.)",
+        "Hazardous materials (paint, oil, cleaning products, batteries, extinguishers)",
+        "Used toys"
+      ],
+      "condition_rules": "Clean and in good, usable condition. Goodwill says its staff are trained to decline items based on condition, size, or inability to reuse.",
+      "stairs_inside": "No. Drop-off only; Goodwill's donation pages do not mention a pickup service.",
+      "lead_time": "Donation centers are open seven days a week. Boston locations: 1010 Harrison Avenue (donation center Monday to Sunday, 8 a.m. to 5 p.m.); 965 Commonwealth Avenue, Allston/Brighton (Monday to Saturday 10 a.m. to 7 p.m., Sunday 11 a.m. to 6 p.m.); 470 West Broadway, South Boston (Monday to Saturday 10 a.m. to 6 p.m., Sunday 12 p.m. to 6 p.m.).",
+      "cost": "No fee is mentioned on Goodwill's donation pages.",
+      "service_area": "Drop-off at Goodwill stores in Massachusetts; Goodwill says all its stores accept donations.",
+      "address": "1010 Harrison Avenue, Boston, MA 02119 (also 965 Commonwealth Avenue, Boston, MA 02215 and 470 West Broadway, South Boston, MA 02127)",
+      "book_url": "https://goodwillmass.org/what-to-donate/",
+      "phone": "617-541-1270 (Harrison Ave store)",
+      "email": null,
+      "source_urls": [
+        "https://goodwillmass.org/what-to-donate/",
+        "https://goodwillmass.org/store-hours-locations/"
+      ],
+      "last_verified": "2026-10-29",
+      "notes": "The City of Boston's moving page lists Goodwill among organizations that arrange a free pickup of good-condition furniture, but Goodwill's own donation pages (checked 2026-10-29) describe drop-off only and say it does not accept large furniture."
     }
   ]
 }
