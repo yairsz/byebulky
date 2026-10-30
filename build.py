@@ -321,6 +321,16 @@ TYPE_HEADINGS = {"city bulk pickup": "City bulk item pickup for {city} residents
 def type_heading(t, city):
     return TYPE_HEADINGS.get(t, t.title()).format(city=city)
 
+def mattress_spot(c):
+    """Hub -> mattress guide contextual link (run #50, cannibalization fix): SC showed "mattress removal somerville"
+    split between /somerville/ and /somerville/mattress/. The hub stays on general bulky items and hands mattress
+    intent to the dedicated guide with the target anchor. Count is computed from the guide's listing_ids."""
+    g = next((x for x in GUIDES if x["city"] == c["slug"] and x["short"] == "Mattress"), None)
+    if not g: return ""
+    n = len(g.get("listing_ids", []))
+    return (f'<p><strong>Getting rid of a mattress?</strong> See our <a href="{U("/" + g["path"] + "/")}">{e(c["name"])} mattress removal '
+            f'and pickup guide</a>: {n} option{"s" if n != 1 else ""} with cost, booking steps and sources.</p>')
+
 def city_page(c):
     set_page(f"/{c['slug']}/")
     used_types = [t for t in TYPES if any(l["type"] == t for l in c["listings"])]
@@ -338,10 +348,11 @@ def city_page(c):
     if guides:
         glinks = "<h2>Item guides for " + e(c["name"]) + "</h2><ul>" + "".join(f'<li><a href="{U("/" + g["path"] + "/")}">{e(g["title"])}</a></li>' for g in guides) + "</ul>"
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › {e(c['name'])}, {e(c['state'])}</p>
-<h1>How to get rid of a couch, mattress or furniture in {e(c['name'])}</h1>
+<h1>{e(c.get('h1') or ('How to get rid of a couch, mattress or furniture in ' + c['name']))}</h1>
 <p class="lead">{e(c['intro'])}</p>
 <p class="meta">{len(c['listings'])} options · every listing links to its source · last verified {e(c['last_verified'])}{(" · page updated " + e(MODIFIED[f"/{c['slug']}/"])) if MODIFIED.get(f"/{c['slug']}/", c['last_verified']) != c['last_verified'] else ""}</p>
 <div class="qa">{qa}</div>
+{mattress_spot(c)}
 {loadup_slot()}
 {glinks}
 {other_city_hubs(c)}
