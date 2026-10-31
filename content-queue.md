@@ -5,6 +5,9 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [x] How to get rid of a mattress in Boston (/boston/mattress/), done 2026-10-21
 - [x] How to get rid of a couch/sofa in Boston (/boston/couch/), done 2026-10-21: reuse curbside furniture, ReSupply, Furnishing Hope, Household Goods; add a note on who refuses sofas (Habitat: slip-covered sofas/sofa beds; Thrift Shop of Boston)
 - [x] How to get rid of a refrigerator / AC / TV in Boston (/boston/appliances/), done 2026-10-22: City special collection + Habitat (<8 yrs) + Household Goods (<10 yrs)
+- [x] How to get rid of a piano in Boston (/boston/piano/) + hot tub (/boston/hot-tub/), done 2026-10-30 (keyword-targets row 8)
+- [ ] Box spring section/quick answers on /boston/mattress/ (keyword-targets row 8 remainder)
+- [ ] Hot tub: find an official Boston-area transfer station or scrap/recycling page that states hot tub acceptance and fees
 - [x] Brookline, MA city page + mattress guide (published 2026-10-27; keyword-targets row 4)
 - [ ] Brookline: couch guide (Town $20 special item; reuse Habitat/Household Goods/LoadUp) and appliances guide ($30 white goods, Mass Save, HHW drop-off)
 - [ ] Boston: verify and add The Furniture Trust, St. Vincent de Paul Boston, Goodwill Mass furniture policy, Boomerangs (sites failed to load 2026-10-21)

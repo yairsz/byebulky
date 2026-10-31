@@ -14,7 +14,7 @@ ROOT = Path(__file__).parent
 OUT = ROOT / "site"
 CFG = json.loads((ROOT / "site.json").read_text())
 NS = "Not stated, check with them"
-TYPES = ["city bulk pickup", "charity pickup", "drop-off", "furniture bank", "paid hauler", "retailer haul-away", "utility recycling program"]
+TYPES = ["city bulk pickup", "charity pickup", "drop-off", "furniture bank", "paid hauler", "retailer haul-away", "utility recycling program", "free giveaway listing"]
 REQUIRED = ["id", "name", "type", "items_accepted", "condition_rules", "stairs_inside", "lead_time", "cost",
             "service_area", "source_urls", "last_verified"]
 
@@ -317,7 +317,8 @@ TYPE_HEADINGS = {"city bulk pickup": "City bulk item pickup for {city} residents
                  "furniture bank": "Furniture banks for {city} residents",
                  "paid hauler": "Paid junk removal and hauling for {city} residents",
                  "retailer haul-away": "Retailer haul-away for {city} residents",
-                 "utility recycling program": "Utility appliance recycling programs for {city} residents"}
+                 "utility recycling program": "Utility appliance recycling programs for {city} residents",
+                 "free giveaway listing": "Free giveaway listing sites for {city} residents"}
 
 def type_heading(t, city):
     return TYPE_HEADINGS.get(t, t.title()).format(city=city)
@@ -424,7 +425,8 @@ def sibling_guides(g, city):
         f'<li><a href="{U("/" + x["path"] + "/")}">{e(x["title"])}</a></li>' for x in sib) + "</ul>"
 
 ITEM_PHRASE = {"Mattress": "a mattress", "Couch": "a couch or sofa", "Appliances": "a fridge, AC, TV or other appliance",
-               "September 1 move-out": "furniture, mattresses and appliances when moving out", "Donation rules": "furniture by donating it"}
+               "September 1 move-out": "furniture, mattresses and appliances when moving out", "Donation rules": "furniture by donating it",
+               "Piano": "a piano", "Hot tub": "a hot tub or spa"}
 
 def options_heading(g, city, n):
     """Intent-matched heading for the listing section (added 2026-10-26, run #22): replaces generic "Options"."""

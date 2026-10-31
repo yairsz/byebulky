@@ -279,7 +279,8 @@
         "Office furniture, large desks",
         "TV armoires",
         "Older/CRT/rear-projection TVs",
-        "Cribs"
+        "Cribs",
+        "Pianos"
       ],
       "address": "33 Corinth Street, Roslindale, MA 02131",
       "notes": "Email photos, your location, and timeframe to request a furniture pickup. Proceeds support The Home for Little Wanderers.",
@@ -391,12 +392,12 @@
       "book_url": "https://goloadup.com/junk-removal/",
       "phone": null,
       "email": null,
-      "condition_rules": "No donation-quality requirement stated; this is junk removal.",
+      "condition_rules": "No donation-quality requirement stated; this is junk removal. Hot tubs must be fully drained before pickup, and any electrical, gas, or plumbing connections must be disconnected by a licensed professional first; LoadUp's Loaders don't do that work. A hardwired 240-volt tub needs a licensed electrician to disconnect it.",
       "stairs_inside": "Yes. Full-service option removes items from inside (basement, attic, upstairs); curbside option also offered.",
       "lead_time": "Same-day pickup available in most areas and next-day almost everywhere else (per LoadUp's national page).",
-      "cost": "Per LoadUp's national page: full-service from $75, curbside from $70, priority/same-day from $85. Guaranteed price shown before booking. Item pages list TV disposal from $80, fridge disposal from $115, and washer removal from $85 (starting prices; final price confirmed by ZIP, item, and pickup conditions).",
+      "cost": "Per LoadUp's national page: full-service from $75, curbside from $70, priority/same-day from $85. Guaranteed price shown before booking. Item pages list TV disposal from $80, fridge disposal from $115, and washer removal from $85 (starting prices; final price confirmed by ZIP, item, and pickup conditions). LoadUp's piano page lists piano removal from $430 (in-home) or $425 (curbside), and its hot tub page lists hot tub removal from $875 (in-home) or $870 (curbside); starting prices, final price confirmed by ZIP code and pickup conditions.",
       "service_area": "LoadUp says it serves all 50 states. Enter your Boston ZIP to confirm.",
-      "last_verified": "2026-10-27",
+      "last_verified": "2026-10-30",
       "id": "loadup",
       "name": "LoadUp junk removal",
       "type": "paid hauler",
@@ -405,10 +406,14 @@
         "Mattresses",
         "Couches",
         "Appliances",
-        "General junk"
+        "General junk",
+        "Pianos (upright, spinet, console, studio, baby grand, grand, digital, electric)",
+        "Above-ground hot tubs and spas (including swim spas and inflatable tubs)"
       ],
       "source_urls": [
-        "https://goloadup.com/junk-removal/"
+        "https://goloadup.com/junk-removal/",
+        "https://goloadup.com/piano-removal/",
+        "https://goloadup.com/hot-tub-removal/"
       ]
     },
     {
@@ -944,6 +949,113 @@
       ],
       "last_verified": "2026-10-29",
       "notes": "The City of Boston's moving page lists Goodwill among organizations that arrange a free pickup of good-condition furniture, but Goodwill's own donation pages (checked 2026-10-29) describe drop-off only and say it does not accept large furniture."
+    },
+    {
+      "id": "cmcb-piano-donation",
+      "name": "Community Music Center of Boston (grand piano donations)",
+      "type": "drop-off",
+      "items_accepted": [
+        "Grand pianos in very fine condition (limited number)",
+        "Digital keyboards and keyboard stands",
+        "Brass, string, percussion and woodwind instruments, guitars, ukuleles"
+      ],
+      "items_not_accepted": [
+        "Instruments that need significant repair"
+      ],
+      "condition_rules": "CMCB says it is accepting a limited number of grand piano donations as it prepares to open its Nubian Square campus, and only pianos in very fine condition. Fill out the instrument donation form on its In-Kind Donations page; if the piano looks viable, a CMCB piano faculty member visits to evaluate it before CMCB can accept it.",
+      "stairs_inside": "No. CMCB says it is not responsible for donation transportation or support, so you arrange and pay for moving the piano.",
+      "lead_time": "Not stated, check with them",
+      "cost": "No fee to donate is stated; you arrange the move. CMCB says donations over $5,000 in estimated value need a qualified appraisal paid for by the donor plus IRS form 8283 for a tax receipt.",
+      "service_area": "Boston (Community Music Center of Boston).",
+      "address": null,
+      "book_url": "https://cmcb.org/in-kind-donations/",
+      "phone": null,
+      "email": "development@cmcb.org",
+      "source_urls": [
+        "https://cmcb.org/in-kind-donations/"
+      ],
+      "last_verified": "2026-10-30",
+      "notes": "Upright pianos aren't mentioned on CMCB's page; its piano call names grand pianos only."
+    },
+    {
+      "id": "pianos-for-education",
+      "name": "PianosForEducation.org (piano donation with pickup)",
+      "type": "charity pickup",
+      "items_accepted": [
+        "Acoustic pianos in good operational order",
+        "Electronic player and/or recording pianos",
+        "A few digital pianos"
+      ],
+      "items_not_accepted": [
+        "Pianos that don't meet its review criteria",
+        "Other musical instruments"
+      ],
+      "condition_rules": "Submit the Donate Piano form with what you know about the piano and its condition, plus at least three close-up photos: the model number, the serial number, and a front view with the bench in front. Volunteers reply by email within seven business days with an acceptance, a request for more information, or a notice that the piano doesn't qualify.",
+      "stairs_inside": "Not stated, check with them. After acceptance, its nationwide pickup vendor schedules the pickup with you.",
+      "lead_time": "Reply within seven business days. Pickup happens on the vendor's next route through your area: sometimes very quick, other times a few weeks.",
+      "cost": "No fee is stated on its donation process page. It says it emails an IRS donation letter within 30 days of receiving the piano (it is a 501(c)(3), EIN 46-1995748).",
+      "service_area": "All 50 U.S. states, including Massachusetts.",
+      "address": null,
+      "book_url": "https://pianosforeducation.org/donate-piano",
+      "phone": null,
+      "email": null,
+      "source_urls": [
+        "https://pianosforeducation.org/piano-donation-process-how-it-works/"
+      ],
+      "last_verified": "2026-10-30",
+      "notes": null
+    },
+    {
+      "id": "piano-adoption",
+      "name": "Piano Adoption (free piano giveaway listings)",
+      "type": "free giveaway listing",
+      "items_accepted": [
+        "Pianos, digital pianos and electric keyboards you want to give away"
+      ],
+      "items_not_accepted": [],
+      "condition_rules": "You post a giveaway ad and choose who gets the piano. Its FAQ says \"free\" pianos are not really free for the taker, who has to pay to move, tune and repair them, and it advises takers to hire their own piano movers and technicians and never send money to someone offering something for free.",
+      "stairs_inside": "No. Whoever takes the piano arranges the move.",
+      "lead_time": "Its paid listing option says the ad appears immediately and runs 90 days.",
+      "cost": "Its Give Away or Donate Piano option is $19.95 USD for an ID-verified ad that appears immediately, lists in two categories and runs 90 days. No free listing option appeared on that page when we checked.",
+      "service_area": "Nationwide classifieds; its location list includes Massachusetts areas such as Greater Boston.",
+      "address": null,
+      "book_url": "https://pianoadoption.com/free-pianos/free-advertising-to-give-your-free-piano-away/",
+      "phone": null,
+      "email": null,
+      "source_urls": [
+        "https://pianoadoption.com/free-pianos/free-advertising-to-give-your-free-piano-away/",
+        "https://pianoadoption.com/free-pianos/frequently-asked-questions/"
+      ],
+      "last_verified": "2026-10-30",
+      "notes": null
+    },
+    {
+      "id": "got-junk",
+      "name": "1-800-GOT-JUNK? (piano and hot tub removal)",
+      "type": "paid hauler",
+      "items_accepted": [
+        "Pianos (grand, baby grand, upright, organs, console, digital, parlor, toy)",
+        "Hot tubs, spas and hot tub covers",
+        "Furniture",
+        "General junk"
+      ],
+      "items_not_accepted": [],
+      "condition_rules": "It says piano acceptance varies by city and some pianos may not be removable, so contact your local franchise; the crew assesses the piano on site. For a hot tub it lists steps to do first: disconnect the power, drain all the water, disassemble the pumps, heaters, power and plumbing, pack accessories separately, and clear a wide enough path.",
+      "stairs_inside": "Yes. It says it removes items from anywhere, with a two-person team doing all lifting and loading.",
+      "lead_time": "Same-day service available, per its piano and hot tub pages. Two-hour arrival window.",
+      "cost": "Free, no-obligation in-person estimate; it charges by how much truck space your items take, with a minimum charge and special single-item pricing. No dollar prices for pianos or hot tubs are listed on these pages; its prices include labor and disposal fees.",
+      "service_area": "Its locations page lists Greater Boston areas (Boston Central, Boston North, Boston West). Confirm with the local franchise.",
+      "address": null,
+      "book_url": "https://www.1800gotjunk.com/us_en/what-we-take/piano_removal",
+      "phone": "1-800-GOT-JUNK",
+      "email": null,
+      "source_urls": [
+        "https://www.1800gotjunk.com/us_en/what-we-take/piano_removal",
+        "https://www.1800gotjunk.com/us_en/what-we-take/hot_tub_removal",
+        "https://www.1800gotjunk.com/us_en/locations"
+      ],
+      "last_verified": "2026-10-30",
+      "notes": "We do not currently have an affiliate relationship with 1-800-GOT-JUNK?. If that changes, this listing will be labeled."
     }
   ]
 }

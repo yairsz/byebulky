@@ -1,0 +1,57 @@
+{
+  "path": "boston/piano",
+  "city": "boston",
+  "short": "Piano",
+  "last_verified": "2026-10-30",
+  "title": "How to Get Rid of a Piano in Boston: Donate, Give Away, Remove",
+  "meta_description": "Getting rid of a piano in Boston: donate it (CMCB grand pianos, PianosForEducation pickup), list it free to a taker, or pay for removal (LoadUp from $430).",
+  "h1": "How to get rid of a piano in Boston",
+  "intro": "Pianos are one of the hardest things to get rid of in Boston. The City's trash and special-collection pages don't mention pianos, and Goodwill and the Thrift Shop of Boston both say they don't take them. Your real choices are to donate a piano that plays well, give it away to someone who pays for the move, or pay a hauler to take it out of your home.",
+  "quick_answers": [
+    {
+      "q": "How do I get rid of a piano in Boston?",
+      "a": "If it's in good playing order, offer it to PianosForEducation.org (it reviews donations from all 50 states and its vendor picks up accepted pianos) or, for a grand piano in very fine condition, to the Community Music Center of Boston. Otherwise list it for a taker on Piano Adoption, or pay a hauler: LoadUp lists piano removal from $430, and 1-800-GOT-JUNK? gives free in-person estimates."
+    },
+    {
+      "q": "Can I get rid of a piano for free in Boston?",
+      "a": "Sometimes. PianosForEducation.org states no fee on its donation page and its pickup vendor collects accepted pianos, but only pianos that pass its review. CMCB takes a limited number of grand pianos in very fine condition, and you arrange the move. Piano Adoption's give-away ad costs $19.95, and the taker pays for moving."
+    },
+    {
+      "q": "Will Boston trash pickup take a piano?",
+      "a": "The City of Boston's trash and special collection pages don't mention pianos, so we can't say it does. The City says it won't collect items on private property, and its special collection doesn't take commercial-grade items. Ask 311 (617-635-4500) before putting a piano out."
+    },
+    {
+      "q": "Does Goodwill or the Thrift Shop of Boston take pianos?",
+      "a": "No. Goodwill's Massachusetts donation list says it is unable to accept pianos and organs, and the Thrift Shop of Boston lists pianos among items it does not accept."
+    },
+    {
+      "q": "How much does piano removal cost in Boston?",
+      "a": "LoadUp's piano page lists in-home piano removal from $430, curbside from $425 and same-day from $440, with the final price set by ZIP code and pickup conditions. 1-800-GOT-JUNK? doesn't list a piano price; it gives a free in-person estimate and charges by truck space."
+    }
+  ],
+  "sections": [
+    {
+      "h": "What the City of Boston and local thrift stores say",
+      "p": "The City of Boston's trash and special collection pages don't mention pianos. The City says it will not pick up items on private property and doesn't collect commercial-grade items, so check with 311 (617-635-4500) before you put a piano at the curb. Goodwill's Massachusetts donation list says it is unable to accept pianos and organs, and the Thrift Shop of Boston lists pianos among items it does not accept (it takes other musical instruments)."
+    },
+    {
+      "h": "Donate a piano that still plays well",
+      "p": "PianosForEducation.org accepts piano donations from all 50 states and reviews acoustic pianos, electronic player or recording pianos, and a few digital pianos in good operational order. Send its Donate Piano form with three close-up photos (model number, serial number, and a front view with the bench), and volunteers reply by email within seven business days. If it accepts, its nationwide pickup vendor schedules a pickup on its next route through your area, which can take a few weeks. In Boston, the Community Music Center of Boston is accepting a limited number of grand pianos in very fine condition for its Nubian Square campus; a CMCB piano faculty member evaluates the piano first, and CMCB says it isn't responsible for transportation."
+    },
+    {
+      "h": "Give it away to someone who pays for the move",
+      "p": "Piano Adoption is a nationwide classifieds site for free pianos, with Greater Boston among its Massachusetts areas. Its give-away ad option costs $19.95, appears immediately, runs 90 days, and you choose who gets the piano. Its FAQ warns that \"free\" pianos aren't really free for the taker, who pays to move, tune and repair them, and tells takers never to send money to someone offering something for free."
+    },
+    {
+      "h": "Paid piano removal: what LoadUp and 1-800-GOT-JUNK? charge",
+      "p": "LoadUp's piano removal page lists in-home pickup from $430, curbside from $425, same-day from $440 when booked before noon, and next-day or scheduled up to 90 days ahead from $430. It says the price depends on the instrument's size and type and the access, such as a basement or upper floor, and it removes upright, spinet, console, studio, baby grand, grand, digital and electric pianos. 1-800-GOT-JUNK? says piano acceptance varies by city and some pianos may not be removable, so contact the local franchise; it gives a free in-person estimate and charges by how much truck space your items take."
+    }
+  ],
+  "listing_ids": [
+    "pianos-for-education",
+    "cmcb-piano-donation",
+    "piano-adoption",
+    "loadup",
+    "got-junk"
+  ]
+}
