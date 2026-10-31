@@ -333,12 +333,31 @@ def mattress_spot(c):
     return (f'<p><strong>Getting rid of a mattress?</strong> See our <a href="{U("/" + g["path"] + "/")}">{e(c["name"])} mattress removal '
             f'and pickup guide</a>: {n} option{"s" if n != 1 else ""} with cost, booking steps and sources.</p>')
 
+QA_GUIDE_RX = [("Mattress", re.compile(r"mattress|box spring", re.I), "mattress removal and pickup guide"),
+               ("Couch", re.compile(r"couch|sofa", re.I), "couch removal guide"),
+               ("Appliances", re.compile(r"fridge|refrigerator|appliance", re.I), "fridge and appliance disposal guide")]
+
+def qa_guide_links(c, qas):
+    """Contextual link from a city quick answer to that city's dedicated item guide (page-level relevance;
+    each guide linked once, from the first answer that is about its item). Visible HTML only; FAQ JSON-LD unchanged."""
+    out, done = [], set()
+    for x in qas:
+        link = ""
+        for short, rx, label in QA_GUIDE_RX:
+            g = next((y for y in GUIDES if y["city"] == c["slug"] and y["short"] == short), None)
+            if g and short not in done and rx.search(x["q"]):
+                done.add(short)
+                link = f' <a href="{U("/" + g["path"] + "/")}">{e(c["name"])} {label}</a>.'
+                break
+        out.append(link)
+    return out
+
 def city_page(c):
     set_page(f"/{c['slug']}/")
     used_types = [t for t in TYPES if any(l["type"] == t for l in c["listings"])]
     opts = "".join(f'<option value="{e(t)}">{e(t.title())}</option>' for t in used_types)
     qas = c.get("quick_answers", []) + city_faq(c)
-    qa = "".join(f"<div><strong>{e(x['q'])}</strong>{e(x['a'])}</div>" for x in qas)
+    qa = "".join(f"<div><strong>{e(x['q'])}</strong>{e(x['a'])}{l}</div>" for x, l in zip(qas, qa_guide_links(c, qas)))
     groups = ""
     for t in used_types:
         cards = "".join(listing_card(l) for l in c["listings"] if l["type"] == t)
