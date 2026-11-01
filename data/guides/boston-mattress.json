@@ -2,8 +2,8 @@
   "path": "boston/mattress",
   "city": "boston",
   "short": "Mattress",
-  "last_verified": "2026-10-26",
-  "title": "City of Boston Mattress Removal: How to Book, Rules & Prices",
+  "last_verified": "2026-11-01",
+  "title": "City of Boston Mattress Removal: How to Book a 311 Pickup, Rules & Prices",
   "meta_description": "Mattresses are banned from Massachusetts trash. How to book the City of Boston's curbside mattress pickup, the rule for 7+ unit buildings, and the hauler prices the City lists, with sources.",
   "h1": "How to get rid of a mattress in Boston",
   "intro": "Mattresses and box springs can't go out with regular trash in Boston, because Massachusetts bans them from disposal. Which option you use mostly depends on how many units your building has.",
@@ -13,8 +13,12 @@
       "a": "No. Massachusetts bans mattresses and box springs from disposal, so they can't go out with regular trash in Boston."
     },
     {
-      "q": "How do I schedule City of Boston mattress removal?",
-      "a": "Book a curbside pickup online on the City's Mattress Recycling page, or call 311 (617-635-4500). It's for buildings with 6 units or fewer, by appointment only, and the City page doesn't mention a fee. Put it at the curb by 6 a.m. on your appointment day (or after 5 p.m. the night before). To cancel, use the link in your confirmation email or call 311 before 12 p.m. the day before."
+      "q": "How do I schedule a 311 mattress pickup in Boston?",
+      "a": "Book the City's curbside mattress pickup online on its Mattress Recycling page, or contact Boston 311 (call 311 or 617-635-4500, or email 311@boston.gov). It's by appointment only, for buildings with 6 units or fewer, up to 10 items per address a calendar year, and the City page doesn't mention a fee. Put it at the curb by 6 a.m. on your appointment day (or after 5 p.m. the night before). To cancel, use the link in your confirmation email or call 311 before 12 p.m. the day before. If you live in a building with 6 units or fewer but can't get an appointment, the City page links an online form to request one."
+    },
+    {
+      "q": "Should I use the City pickup or a private mattress hauler?",
+      "a": "Use the City pickup if your building has 6 units or fewer, you can get the mattress to the curb yourself, and you haven't used your 10 items for the year. Use a private hauler if your building has 7 or more units, you've hit the limit, or you need it carried out of your home: on the City's list, Lug Away charges $174 from inside the home and CC Junk Removal includes indoor removal in its $125. If you can haul it yourself, drop-off is cheapest on that list: HandUp $35, or Tough Stuff $25 with proof of Boston residency or business."
     },
     {
       "q": "What if my building has 7 or more units, and what do mattress haulers charge?",
