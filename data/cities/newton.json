@@ -20,8 +20,8 @@
    "a": "Book a whitegoods curbside pickup for $25 per item, or drop appliances and metal off free at the Resource Recovery Center. TVs and monitors cost $25 each to drop off."
   },
   {
-   "q": "What are the Newton dump (Resource Recovery Center) hours?",
-   "a": "Fall hours through October 31 are Monday to Saturday, 7 a.m. to 2:30 p.m., closed Sundays and holidays. It's at 115 Rumford Ave., Auburndale, for Newton residents only."
+   "q": "What are the Newton dump (Rumford Ave. Resource Recovery Center) hours?",
+   "a": "Winter hours, November 1 to March 27, are Monday to Friday 7 a.m. to 2:30 p.m. and Saturday 9 a.m. to 1 p.m. It's closed Sundays, holidays (including Wednesday, November 11 for Veterans Day) and sometimes after heavy rain or snow; call 617-796-1000 after a storm. It's at 115 Rumford Ave., Auburndale, for Newton residents only."
   },
   {
    "q": "What won't Newton take as bulky waste?",
@@ -161,7 +161,7 @@
    ],
    "condition_rules": "Newton residents only; proof of residency on request. For mattresses, box springs, TVs and monitors, pay online first and show proof of payment to the attendant; the number of items must match the receipt, and you unload mattresses yourself into the storage container.",
    "stairs_inside": "No. You bring the items.",
-   "lead_time": "Fall hours (September 28 to October 31): Monday to Saturday 7 a.m. to 2:30 p.m.; closed Sundays, holidays and sometimes after heavy rain. Hours after October 31 not stated yet, call 617-796-1000 before going.",
+   "lead_time": "Winter hours (November 1 to March 27): Monday to Friday 7 a.m. to 2:30 p.m., Saturday 9 a.m. to 1 p.m.; closed Sundays, holidays (including Wednesday, November 11 for Veterans Day) and sometimes after heavy rain or snow, so call 617-796-1000 after a storm.",
    "cost": "Free for appliances, metal and most electronics. $35 per mattress or box spring; $25 per TV or monitor.",
    "service_area": "Newton residents only.",
    "address": "115 Rumford Ave., Auburndale, MA 02466",
