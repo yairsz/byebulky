@@ -6,10 +6,11 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [x] How to get rid of a couch/sofa in Boston (/boston/couch/), done 2026-10-21: reuse curbside furniture, ReSupply, Furnishing Hope, Household Goods; add a note on who refuses sofas (Habitat: slip-covered sofas/sofa beds; Thrift Shop of Boston)
 - [x] How to get rid of a refrigerator / AC / TV in Boston (/boston/appliances/), done 2026-10-22: City special collection + Habitat (<8 yrs) + Household Goods (<10 yrs)
 - [x] How to get rid of a piano in Boston (/boston/piano/) + hot tub (/boston/hot-tub/), done 2026-10-30 (keyword-targets row 8)
-- [ ] Box spring section/quick answers on /boston/mattress/ (keyword-targets row 8 remainder)
+- [x] Box spring (keyword-targets row 8 remainder): dedicated guide /boston/box-spring/ published 2026-10-31
 - [ ] Hot tub: find an official Boston-area transfer station or scrap/recycling page that states hot tub acceptance and fees
 - [x] Brookline, MA city page + mattress guide (published 2026-10-27; keyword-targets row 4)
-- [ ] Brookline: couch guide (Town $20 special item; reuse Habitat/Household Goods/LoadUp) and appliances guide ($30 white goods, Mass Save, HHW drop-off)
+- [x] Brookline couch guide published 2026-10-31 (/brookline/couch/)
+- [ ] Brookline: appliances guide ($30 white goods, Mass Save, HHW drop-off)
 - [ ] Boston: verify and add The Furniture Trust, St. Vincent de Paul Boston, Goodwill Mass furniture policy, Boomerangs (sites failed to load 2026-10-21)
 - [x] Cambridge, MA city page (/cambridge/) + mattress guide (/cambridge/mattress/), done 2026-10-24 (keyword-targets ByeBulky row 2)
 - [x] Quincy, MA city page (PUBLISHED 2026-10-25 → /quincy/ + /quincy/mattress/)
@@ -57,3 +58,5 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [ ] Re-verify Household Goods phone in boston/cambridge/somerville listings (978-763-1198 there; householdgoods.org showed 978-635-1710 on 2026-10-25)
 - [ ] Newton, MA: appliances guide (/newton/appliances/): $25 whitegoods curbside, free RRC drop-off, $25 TV/monitor drop-off (data already in newton.json)
 - [ ] Newton: re-check Resource Recovery Center winter hours after Oct 31, 2026
+- [ ] Cambridge, Somerville, Newton, Quincy: box spring guides (each city counts box springs as separate items; reuse city listings)
+- [ ] Boston mattress guide: link to /boston/box-spring/ from the box spring sentence (needs a build.py prose-link hook)

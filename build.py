@@ -445,7 +445,7 @@ def sibling_guides(g, city):
 
 ITEM_PHRASE = {"Mattress": "a mattress", "Couch": "a couch or sofa", "Appliances": "a fridge, AC, TV or other appliance",
                "September 1 move-out": "furniture, mattresses and appliances when moving out", "Donation rules": "furniture by donating it",
-               "Piano": "a piano", "Hot tub": "a hot tub or spa"}
+               "Piano": "a piano", "Hot tub": "a hot tub or spa", "Box spring": "a box spring"}
 
 def options_heading(g, city, n):
     """Intent-matched heading for the listing section (added 2026-10-26, run #22): replaces generic "Options"."""
