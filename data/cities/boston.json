@@ -395,9 +395,9 @@
       "condition_rules": "No donation-quality requirement stated; this is junk removal. Hot tubs must be fully drained before pickup, and any electrical, gas, or plumbing connections must be disconnected by a licensed professional first; LoadUp's Loaders don't do that work. A hardwired 240-volt tub needs a licensed electrician to disconnect it.",
       "stairs_inside": "Yes. Full-service option removes items from inside (basement, attic, upstairs); curbside option also offered.",
       "lead_time": "Same-day pickup available in most areas and next-day almost everywhere else (per LoadUp's national page).",
-      "cost": "Per LoadUp's national page: full-service from $75, curbside from $70, priority/same-day from $85. Guaranteed price shown before booking. Item pages list TV disposal from $80, fridge disposal from $115, and washer removal from $85 (starting prices; final price confirmed by ZIP, item, and pickup conditions). LoadUp's piano page lists piano removal from $430 (in-home) or $425 (curbside), and its hot tub page lists hot tub removal from $875 (in-home) or $870 (curbside); starting prices, final price confirmed by ZIP code and pickup conditions. LoadUp's box spring page lists box spring removal from $70 (in-home) or $65 (curbside), or from $15 as an add-on to another pickup such as a mattress; starting prices, final price confirmed before booking.",
+      "cost": "LoadUp's Boston page (checked 2026-11-02) says junk removal starts at $105, with additional items from +$15, and curbside or outdoor pickup takes $5 off. Its Boston price list shows furniture and mattress removal from $120, appliance pickup from $105, and lists couch removal from $120, TV removal from $115, refrigerator removal from $150, washer and dryer removal from $120 and hot tub removal from $910. Some older LoadUp pages still show lower figures (its national page says full-service from $75, and its Boston couch page says from $75), so treat the Boston page as the current guide. LoadUp's piano page lists piano removal from $430 (in-home) or $425 (curbside), and its box spring page lists box spring removal from $70 (in-home) or $65 (curbside), or from $15 as an add-on to another pickup such as a mattress. All are starting prices; the final price is shown by ZIP, item and pickup conditions before booking.",
       "service_area": "LoadUp says it serves all 50 states. Enter your Boston ZIP to confirm.",
-      "last_verified": "2026-10-31",
+      "last_verified": "2026-11-02",
       "id": "loadup",
       "name": "LoadUp junk removal",
       "type": "paid hauler",
@@ -412,6 +412,7 @@
         "Above-ground hot tubs and spas (including swim spas and inflatable tubs)"
       ],
       "source_urls": [
+        "https://goloadup.com/junk-removal/ma/boston/",
         "https://goloadup.com/junk-removal/",
         "https://goloadup.com/piano-removal/",
         "https://goloadup.com/hot-tub-removal/",
