@@ -90,6 +90,16 @@ def fit_meta(title, desc, suffix=None):
             desc = cut[: cut.rfind(" ")].rstrip(",;:-–—(") + "…"
     return title, desc
 
+def og_image(path, title):
+    """og:image/twitter tags if scripts/og_images.py made static/og/<slug>.png for this page."""
+    sl = "home" if path.strip("/") == "" else path.strip("/").replace("/", "-")
+    if not (ROOT / "static" / "og" / f"{sl}.png").exists():
+        return '<meta name="twitter:card" content="summary">'
+    img = base_url() + f"/static/og/{sl}.png"
+    return (f'<meta property="og:image" content="{e(img)}"><meta property="og:image:width" content="1200">'
+            f'<meta property="og:image:height" content="630"><meta property="og:image:alt" content="{e(title)}">'
+            f'<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{e(img)}">')
+
 def page(title, desc, path, body, jsonld=None):
     desc = META_DESC.get(path, desc)
     title, desc = fit_meta(title, desc)
@@ -108,6 +118,7 @@ def page(title, desc, path, body, jsonld=None):
 <link rel="alternate" type="application/atom+xml" title="{e(CFG['site_name'])}" href="{e(base_url())}/feed.xml">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}">
 <meta property="og:type" content="website"><meta property="og:url" content="{e(url)}">
+{og_image(path, title)}
 <link rel="stylesheet" href="{U('/static/style.css')}">{ld}
 </head><body>
 <header class="site"><div class="wrap"><a class="logo" href="{U('/')}">Bye<span>Bulky</span></a>
