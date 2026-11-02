@@ -88,3 +88,4 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. One 
 
 ## Mattress cost data page (added 2026-10-26, run #26)
 - `/boston-area-mattress-disposal-cost/` is built by `mattress_cost_page()`: the City programs table (`home_mattress_compare`) plus every listing on a "Mattress" guide whose `cost` contains a "$" (City programs excluded; same id + same cost text across cities = one row). Cells are verbatim fields. A new city's mattress guide joins automatically; keep `cost` fields honest and starting with the price sentence. Linked from the home page and every mattress guide. Never hand-write prices on this page.
+- **Share images:** publish.sh runs scripts/og_images.py between two builds, so each new page gets a 1200x630 og:image made from its title. Nothing to do by hand.
