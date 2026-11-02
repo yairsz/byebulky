@@ -50,9 +50,9 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [ ] Boston: re-check Zero Waste Day page for the 2027 schedule once posted (update /boston/paint/ and /boston/propane-tank/ after Nov 21, 2026)
 - [ ] Boston: how to get rid of a bed frame or dresser (/boston/bed-frame/): curbside furniture + Habitat/Household Goods/Furnishing Hope rules
 - [ ] Boston: how to get rid of a washer, dryer, or dishwasher (not in City special collection; donation + haulers only)
-- [ ] Cambridge, MA: appliances guide (/cambridge/appliances/): $25 permit ($20 age 62+), free-permit items, Wed/Thu scheduling (data already in cambridge.json)
+- [x] Cambridge appliances guide published 2026-11-01 (/cambridge/appliances/, 8 listings)
 - [ ] Cambridge: get a saved snapshot of the City permit portal fee text (JS page) and re-confirm whether the City's large-item page drops the 'mattresses are free' note
-- [ ] Somerville: appliances guide (/somerville/appliances/): $25 white goods sticker, free TV/monitor 311 pickup, DPW e-waste drop-off (data already in somerville.json)
+- [x] Somerville appliances guide published 2026-11-01 (/somerville/appliances/, 7 listings)
 - [ ] Somerville: check whether ReSupply or Furnishing Hope pick up in Somerville (not stated on 2026-10-23); find Waste Wizard rules for couches with bed bugs
 - [ ] Quincy appliances guide (/quincy/appliances/): Capitol Waste call-ahead rules + DPW Yard (no fridges/dishwashers); ask Capitol Waste/City whether there is an appliance fee (not stated on City pages 2026-10-25)
 - [ ] Re-verify Household Goods phone in boston/cambridge/somerville listings (978-763-1198 there; householdgoods.org showed 978-635-1710 on 2026-10-25)
@@ -60,3 +60,6 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [ ] Newton: re-check Resource Recovery Center winter hours after Oct 31, 2026
 - [ ] Cambridge, Somerville, Newton, Quincy: box spring guides (each city counts box springs as separate items; reuse city listings)
 - [ ] Boston mattress guide: link to /boston/box-spring/ from the box spring sentence (needs a build.py prose-link hook)
+- [ ] Somerville appliances: ask 311 or find a City page stating which day stickered white goods are collected (not stated 2026-11-01)
+- [ ] Cambridge: re-check the permit portal (now cambridgema.portal.opengov.com) for fee text once it renders without JS; City page vs portal differ on exercise equipment (paid 'larger motorized' vs free 'exercise equipment')
+- [ ] Brookline, Quincy, Newton: re-check LoadUp city pages (Cambridge and Somerville pages moved to 'from $105' on 2026-11-01)

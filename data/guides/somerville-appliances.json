@@ -1,0 +1,71 @@
+{
+  "path": "somerville/appliances",
+  "city": "somerville",
+  "short": "Appliances",
+  "last_verified": "2026-11-01",
+  "title": "Somerville Appliance Pickup: $25 Sticker, Free TV Pickup",
+  "meta_description": "Somerville picks up fridges, washers, stoves and ACs with a $25 white goods sticker, and TVs and monitors free via 311. Where to buy, rules, and other options.",
+  "h1": "How to get rid of a refrigerator, washer, AC or TV in Somerville, MA",
+  "intro": "Somerville collects large appliances at the curb if each one carries a $25 White Goods Sticker, and it picks up TVs and computer monitors for free when you call 311. Small electronics can go to the DPW Yard. Here's where to buy the sticker, the rules for each item, and the donation and paid options if your appliance still works or you can't get it to the curb.",
+  "quick_answers": [
+    {
+      "q": "Does Somerville pick up appliances?",
+      "a": "Yes, at the curb, if each appliance has a $25 White Goods Sticker. The City's trash page lists air conditioners, dryers, refrigerators, stoves, washers, water coolers and water heaters, and its service guide also lists freezers and dehumidifiers. Buy the sticker online, at DPW (One Franey Road) or at City Hall."
+    },
+    {
+      "q": "How much does it cost to get rid of a refrigerator in Somerville?",
+      "a": "$25 for a White Goods Sticker, one per item. Remove the door before putting the fridge on the sidewalk. If it still works and your electric utility is a Mass Save Sponsor (Cape Light Compact, Eversource, National Grid or Unitil), Mass Save offers a no-cost pickup and a $75 rebate in 2026 instead."
+    },
+    {
+      "q": "Where do I buy a white goods sticker in Somerville?",
+      "a": "Online through the City's payment site, at DPW, One Franey Road, or at City Hall, 93 Highland Avenue. The City's trash page says DPW takes check or money order and City Hall takes cash, check, credit card or money order; its service guide says DPW takes check, credit, debit or money order (no cash)."
+    },
+    {
+      "q": "How do I get rid of an old TV in Somerville?",
+      "a": "Call 311 (617-666-3311) to schedule a free curbside pickup of TVs and computer monitors, or drop them off at the DPW Yard, One Franey Road, as electronic waste on weekdays with proof of residency. TVs or monitors with broken glass aren't accepted."
+    },
+    {
+      "q": "Can I put a microwave in the trash in Somerville?",
+      "a": "The City's trash page says small household appliances, including microwave ovens, may go out with regular trash, but asks you to consider dropping them off for electronics recycling at the DPW Yard instead."
+    }
+  ],
+  "sections": [
+    {
+      "h": "Large appliances: the $25 White Goods Sticker",
+      "p": "Large appliances need a $25 White Goods Sticker, one sticker per item. The City's trash page lists air conditioners, dryers, refrigerators, stoves, washers, water coolers (bubblers) and water heaters, and the City's environmental service guide also lists freezers and dehumidifiers. Remove the refrigerator door before putting it on the sidewalk (the guide says refrigerators and freezers go out with doors detached), and don't block pedestrian traffic. The City's trash page doesn't say which day stickered appliances are collected, so check with 311 (617-666-3311)."
+    },
+    {
+      "h": "Where to buy the sticker",
+      "p": "Buy it online through the City's payment site, at DPW, One Franey Road, or at City Hall. The trash page says DPW takes check or money order and City Hall takes cash, check, credit card or money order; the service guide says DPW takes check, credit, debit or money order, with no cash. Bring a check or money order to DPW if you want to be safe."
+    },
+    {
+      "h": "TVs and computer monitors: free pickup through 311",
+      "p": "Call 311 to schedule a free curbside pickup of TVs and computer monitors, or drop them off at the DPW Yard, One Franey Road. Old TVs or monitors with broken glass are not accepted for electronic waste recycling."
+    },
+    {
+      "h": "Microwaves, computers and small electronics",
+      "p": "Residents can drop off electronic waste at the DPW Yard (1 Franey Road) on weekdays from 8:30 a.m. to 12 p.m. and 1 p.m. to 3:30 p.m., with proof of residency such as a driver's license or utility bill shown at the guard shack. Accepted items include desktop computers and laptops, TVs and monitors without broken glass, printers, copiers and scanners, audio equipment, DVD and VHS players, cables, and small appliances such as microwaves, blenders, toasters and coffee makers. Drop-off is for residents only, not contractors, and the City can refuse any drop-off. The City's trash page also says small household appliances, microwaves and computer accessories may go out with regular trash; that line gives the drop-off hours as any weekday 8 a.m. to 4 p.m., which differs from the e-waste hours above."
+    },
+    {
+      "h": "Recycle a working fridge or freezer and get $75 (Mass Save)",
+      "p": "Mass Save offers a no-cost pickup and a $75 rebate for an inefficient, working refrigerator or freezer, for Massachusetts electric customers whose Mass Save Sponsor is Cape Light Compact, Eversource, National Grid or Unitil. The unit must be plugged in, cooling and empty at pickup and measure 10 to 30 cubic feet inside; disconnect any water line and remove all doors before putting it outside. Inside pickup is only available with one flight of stairs or fewer. Pickup must happen in 2026 for the $75. A working dehumidifier picked up with the fridge earns $30. Schedule online or call 866-527-SAVE (7283); the rebate takes 6 to 8 weeks."
+    },
+    {
+      "h": "Donating a working appliance",
+      "p": "The Habitat for Humanity Greater Boston ReStore in West Roxbury accepts appliances less than eight years old, including refrigerators, washers, dryers, free-standing stoves, cooktops and microwaves, and dishwashers only if never installed; everything must work. Household Goods in Acton takes refrigerators, washers, electric dryers and air conditioners up to 18\" x 30\" x 24\" if newer than 10 years, plus flat-screen TVs under 55\" and under 10 years old with an attached base and power cord. Its volunteer pickup doesn't cover Somerville, so drop off in Acton or use its paid pickup partners."
+    },
+    {
+      "h": "Paid pickup from inside your home",
+      "p": "The City only collects from the curb. LoadUp's Somerville page lists appliance pickup from $105 and says its loaders carry items out from any room. Confirm the final price before you book."
+    }
+  ],
+  "listing_ids": [
+    "somerville-white-goods",
+    "somerville-tv-monitor-pickup",
+    "somerville-dpw-ewaste",
+    "mass-save-fridge-recycling",
+    "habitat-greater-boston-restore",
+    "household-goods-acton",
+    "loadup"
+  ]
+}

@@ -121,15 +121,16 @@
    "cost": "$25 per item, or $20 if the resident is 62 or older, per the City's permit application page. Free permit for bicycles, metal desks and cabinets, grills, exercise equipment, lawnmowers and snowblowers. Paying online adds a convenience fee ($0.99 + 2.99% by card, or $5.50 by e-check); paying in person avoids it.",
    "service_area": "Cambridge residents.",
    "address": "Permits in person: DPW, 147 Hampshire Street (Mon 8:30 a.m.-8 p.m., Tue-Thu 8:30 a.m.-5 p.m., Fri 8:30 a.m.-12 p.m.; check, money order, cash or credit card)",
-   "book_url": "https://cambridgema.viewpointcloud.com/categories/1101/record-types/6612",
+   "book_url": "https://cambridgema.portal.opengov.com/categories/1101/record-types/6612",
    "phone": "617-349-4800",
    "email": "theworks@cambridgema.gov",
    "source_urls": [
     "https://www.cambridgema.gov/Services/furnitureappliancelargeitemdisposal",
-    "https://cambridgema.viewpointcloud.com/categories/1101/record-types/6612"
+    "https://cambridgema.viewpointcloud.com/categories/1101/record-types/6612",
+    "https://cambridgema.portal.opengov.com/categories/1101/record-types/6612"
    ],
-   "last_verified": "2026-10-24",
-   "notes": "Fee and convenience-fee amounts are from the City's online permit application page (cambridgema.viewpointcloud.com), which loads with JavaScript; the main City page lists which items need a paid or free permit but not the amount."
+   "last_verified": "2026-11-01",
+   "notes": "Fee and convenience-fee amounts are from the City's online permit application page, which loads with JavaScript; the main City page lists which items need a paid or free permit but not the amount. As of 2026-11-01 the City page links the application at cambridgema.portal.opengov.com. The City page says Freon is removed from air conditioners, dehumidifiers, freezers and refrigerators to meet the Clean Air Act, and all appliances are then sent to a local scrap metal recycling facility."
   },
   {
    "id": "cambridge-utec-mattress",
@@ -193,7 +194,7 @@
    "source_urls": [
     "https://www.cambridgema.gov/services/recyclingcenter"
    ],
-   "last_verified": "2026-10-24",
+   "last_verified": "2026-11-01",
    "notes": "Not for furniture, mattresses or large appliances."
   },
   {
@@ -249,7 +250,7 @@
    "lead_time": "Donation drop-off Tuesday to Saturday, 9:30 a.m. to 4:00 p.m. (as posted).",
    "cost": "Drop-off fee: not stated. Pickup is through ReSupply, a paid service.",
    "service_area": "Drop-off at the West Roxbury store. Habitat says a second ReStore is set to open in Watertown in fall 2026. In-home pickup is booked through ReSupply, whose Boston page lists Cambridge among the communities it serves.",
-   "last_verified": "2026-10-24",
+   "last_verified": "2026-11-01",
    "id": "habitat-greater-boston-restore",
    "name": "Habitat for Humanity Greater Boston ReStore (West Roxbury)",
    "type": "drop-off",
@@ -287,7 +288,7 @@
    "lead_time": "Drop-off Tuesdays, Thursdays, and Saturdays, 9 a.m. to noon. Volunteer pickups typically scheduled 4+ weeks ahead. Paid pickups through ReSupply or ReMARKable Donations in as soon as 2 business days.",
    "cost": "Drop-off: not stated. Volunteer pickup: minimum $35 donation requested. Paid pickups (ReSupply / ReMARKable Donations): for a fee.",
    "service_area": "Volunteer pickup only in Acton, Boxborough, Carlisle, Concord, Littleton, Maynard, Stow, Sudbury and Westford, so not Cambridge. Cambridge donors can drop off in Acton or use the paid pickup partners (ReSupply or Mark's Moving/ReMARKable Donations).",
-   "last_verified": "2026-10-24",
+   "last_verified": "2026-11-01",
    "id": "household-goods-acton",
    "name": "Household Goods (Acton)",
    "type": "furniture bank",
@@ -372,10 +373,10 @@
    "email": null,
    "condition_rules": "No donation-quality requirement stated; this is junk removal.",
    "stairs_inside": "Yes. LoadUp says its loaders carry items out from any room (bedroom, basement, attic, upstairs); curbside option also offered.",
-   "lead_time": "Next-day or same-day pickup when you book before 12 p.m. (per LoadUp's Cambridge page).",
-   "cost": "Per LoadUp's pages: junk removal full-service from $75, curbside from $70, priority from $85. Mattress removal from $85. Starting prices; the final price is shown by ZIP and item before booking.",
+   "lead_time": "LoadUp's Cambridge page says same-day pickup if you book by noon, and elsewhere on the same page \"same-day availability if you book before 2PM\"; it notes same-day availability may vary by location.",
+   "cost": "LoadUp's Cambridge page (checked 2026-11-01) says junk removal starts at $105, with additional items from +$15; its Cambridge price list shows appliance pickup from $105 (add-on from +$15) and furniture and mattress removal from $120 (add-on from +$30). Its national junk removal page lists TV disposal from $80, fridge disposal from $115 and washer removal from $85, and its national mattress page lists mattress removal from $85. Starting prices; the final price is shown by ZIP and item before booking.",
    "service_area": "LoadUp has a Cambridge, MA page covering Cambridgeport, North Cambridge and East Cambridge. Enter your ZIP to confirm.",
-   "last_verified": "2026-10-24",
+   "last_verified": "2026-11-01",
    "id": "loadup",
    "name": "LoadUp junk removal",
    "type": "paid hauler",
@@ -388,6 +389,7 @@
    ],
    "source_urls": [
     "https://goloadup.com/junk-removal/ma/cambridge/",
+    "https://goloadup.com/cambridge/appliance-removal/",
     "https://goloadup.com/junk-removal/",
     "https://goloadup.com/mattress-removal/"
    ]
@@ -477,6 +479,35 @@
    ],
    "last_verified": "2026-10-24",
    "notes": "Listed by the City of Cambridge as a paid mattress option. Its page describes Cambridge's UTEC program as free, which no longer matches the City's $45 fee."
+  },
+  {
+   "id": "mass-save-fridge-recycling",
+   "name": "Mass Save refrigerator and freezer recycling ($75 rebate)",
+   "type": "utility recycling program",
+   "items_accepted": [
+    "Working refrigerators (inside size 10 to 30 cubic feet)",
+    "Working freezers (inside size 10 to 30 cubic feet)",
+    "Working dehumidifiers ($30 rebate, only with a fridge or freezer pickup)"
+   ],
+   "items_not_accepted": [
+    "Refrigerators or freezers that don't work (must be plugged in and cooling at pickup)",
+    "Units smaller than 10 or larger than 30 cubic feet inside"
+   ],
+   "condition_rules": "Must be an inefficient, working unit that is plugged in, cooling, and empty at pickup; disconnect any water line first. You must own it and it must be at your residence or business. All doors must be removed before placing it outside. Maximum two units per equipment type per electric account per calendar year. Only for Massachusetts electric customers whose Mass Save Sponsor is Cape Light Compact, Eversource, National Grid or Unitil.",
+   "stairs_inside": "Inside pickup only where there is one flight of stairs or fewer (per Mass Save); with more stairs you must make the item accessible for outside pickup.",
+   "lead_time": "Not stated, check with them. Rebate processing takes 6 to 8 weeks after pickup.",
+   "cost": "No-cost pickup plus a $75 rebate (pickup must happen between January 1 and December 31, 2026).",
+   "service_area": "Massachusetts electric customers whose Mass Save Sponsor is Cape Light Compact, Eversource, National Grid or Unitil. Check that your electric utility is one of these.",
+   "address": null,
+   "book_url": "https://www.masssave.com/residential/rebates-and-incentives/appliance-recycling/refrigerator-and-freezer-recycling",
+   "phone": "866-527-SAVE (7283)",
+   "email": null,
+   "source_urls": [
+    "https://www.masssave.com/residential/rebates-and-incentives/appliance-recycling/refrigerator-and-freezer-recycling",
+    "https://www.masssave.com/residential/rebates-and-incentives/appliance-recycling"
+   ],
+   "last_verified": "2026-11-01",
+   "notes": "Have your electric account number handy when scheduling, per Mass Save."
   }
  ]
 }

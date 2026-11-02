@@ -130,7 +130,7 @@
    "book_url": "https://epay.cityhallsystems.com/?key=somerville.ma.us&type=wg",
    "phone": "311 or 617-666-3311",
    "email": null,
-   "last_verified": "2026-10-27",
+   "last_verified": "2026-11-01",
    "id": "somerville-white-goods",
    "name": "City of Somerville large appliance (white goods) pickup ($25 sticker)",
    "type": "city bulk pickup",
@@ -139,13 +139,13 @@
     "Washers and dryers",
     "Refrigerators and freezers (remove the door first)",
     "Stoves",
-    "Dehumidifiers",
+    "Dehumidifiers (listed in the City's service guide)",
     "Water heaters",
     "Water coolers (bubblers)"
    ],
-   "condition_rules": "One $25 White Goods Sticker per item. Place curbside without blocking pedestrian traffic. Remove refrigerator doors before putting them on the sidewalk.",
+   "condition_rules": "One $25 White Goods Sticker per item. Place curbside without blocking pedestrian traffic. Remove refrigerator doors before putting them on the sidewalk (the City's service guide says refrigerators and freezers go out with doors detached).",
    "stairs_inside": "No. Curbside only.",
-   "lead_time": "Not stated, check with them",
+   "lead_time": "Not stated, check with 311. The City's trash page doesn't say which day stickered appliances are collected.",
    "cost": "$25 per appliance (sticker).",
    "service_area": "Somerville residents (eligibility beyond that is not stated on the page, check with 311).",
    "source_urls": [
@@ -162,7 +162,7 @@
    "book_url": "https://www.somervillema.gov/311",
    "phone": "311 or 617-666-3311",
    "email": null,
-   "last_verified": "2026-10-27",
+   "last_verified": "2026-11-01",
    "id": "somerville-tv-monitor-pickup",
    "name": "City of Somerville TV & computer monitor pickup (free, via 311)",
    "type": "city bulk pickup",
@@ -185,11 +185,11 @@
     "TVs or monitors with broken glass"
    ],
    "address": "DPW Yard, 1 Franey Road, Somerville, MA 02145",
-   "notes": null,
+   "notes": "The City's trash page also says small household appliances, microwaves and computer accessories may go out with regular trash, but asks residents to consider dropping them off for electronics recycling; that line gives the hours as any weekday 8 a.m. to 4 p.m., while the e-waste section and program page say 8:30 a.m. to 12 p.m. and 1 p.m. to 3:30 p.m.",
    "book_url": null,
    "phone": null,
    "email": null,
-   "last_verified": "2026-10-27",
+   "last_verified": "2026-11-01",
    "id": "somerville-dpw-ewaste",
    "name": "Somerville DPW Yard electronics & small appliance drop-off",
    "type": "drop-off",
@@ -257,7 +257,7 @@
    "lead_time": "Donation drop-off Tuesday to Saturday, 9:30 a.m. to 4:00 p.m. (as posted).",
    "cost": "Drop-off fee: not stated. Pickup is through ReSupply, a paid service.",
    "service_area": "Drop-off at the West Roxbury store. Habitat says a second ReStore is set to open in Watertown in fall 2026. In-home pickup is booked through ReSupply; whether it serves your Somerville address isn't stated, so check when booking.",
-   "last_verified": "2026-10-27",
+   "last_verified": "2026-11-01",
    "id": "habitat-greater-boston-restore",
    "name": "Habitat for Humanity Greater Boston ReStore (West Roxbury)",
    "type": "drop-off",
@@ -294,7 +294,7 @@
    "lead_time": "Drop-off Tuesdays, Thursdays, and Saturdays, 9 a.m. to noon. Volunteer pickups typically scheduled 4+ weeks ahead. Paid pickups through ReSupply or ReMARKable Donations in as soon as 2 business days.",
    "cost": "Drop-off: not stated. Volunteer pickup: minimum $35 donation requested. Paid pickups (ReSupply / ReMARKable Donations): for a fee.",
    "service_area": "Volunteer pickup only in Acton, Boxborough, Carlisle, Concord, Littleton, Maynard, Stow, Sudbury and Westford, so not Somerville. Somerville donors can drop off in Acton or use the paid pickup partners.",
-   "last_verified": "2026-10-27",
+   "last_verified": "2026-11-01",
    "id": "household-goods-acton",
    "name": "Household Goods (Acton)",
    "type": "furniture bank",
@@ -377,10 +377,10 @@
    "email": null,
    "condition_rules": "No donation-quality requirement stated; this is junk removal.",
    "stairs_inside": "Yes. LoadUp says its loaders carry items out from any room (bedroom, basement, attic, upstairs); curbside option also offered.",
-   "lead_time": "Same-day available when you book before noon, subject to local availability (per LoadUp).",
-   "cost": "Per LoadUp's pages: junk removal full-service from $75, curbside from $70, priority from $85. Mattress removal from $85; bed frame add-on from $25 (standalone from $80); dresser add-on from $30 (standalone from $85). Starting prices; the final price is shown by ZIP and item before booking.",
-   "service_area": "LoadUp says it serves customers nationwide. Enter your Somerville ZIP to confirm.",
-   "last_verified": "2026-10-27",
+   "lead_time": "LoadUp's Somerville page says same-day pickup if you book by noon, and elsewhere on the same page \"same-day availability if you book before 2PM\"; it notes same-day availability may vary by location.",
+   "cost": "LoadUp's Somerville page (checked 2026-11-01) says junk removal starts at $105, with additional items from +$15; its Somerville price list shows appliance pickup from $105 (add-on from +$15) and furniture and mattress removal from $120 (add-on from +$30). Its national junk removal page lists TV disposal from $80, fridge disposal from $115 and washer removal from $85, and its national mattress page lists mattress removal from $85. Starting prices; the final price is shown by ZIP and item before booking.",
+   "service_area": "LoadUp has a Somerville, MA page. Enter your ZIP to confirm.",
+   "last_verified": "2026-11-01",
    "id": "loadup",
    "name": "LoadUp junk removal",
    "type": "paid hauler",
@@ -392,9 +392,39 @@
     "General junk"
    ],
    "source_urls": [
+    "https://goloadup.com/junk-removal/ma/somerville/",
     "https://goloadup.com/junk-removal/",
     "https://goloadup.com/mattress-removal/"
    ]
+  },
+  {
+   "id": "mass-save-fridge-recycling",
+   "name": "Mass Save refrigerator and freezer recycling ($75 rebate)",
+   "type": "utility recycling program",
+   "items_accepted": [
+    "Working refrigerators (inside size 10 to 30 cubic feet)",
+    "Working freezers (inside size 10 to 30 cubic feet)",
+    "Working dehumidifiers ($30 rebate, only with a fridge or freezer pickup)"
+   ],
+   "items_not_accepted": [
+    "Refrigerators or freezers that don't work (must be plugged in and cooling at pickup)",
+    "Units smaller than 10 or larger than 30 cubic feet inside"
+   ],
+   "condition_rules": "Must be an inefficient, working unit that is plugged in, cooling, and empty at pickup; disconnect any water line first. You must own it and it must be at your residence or business. All doors must be removed before placing it outside. Maximum two units per equipment type per electric account per calendar year. Only for Massachusetts electric customers whose Mass Save Sponsor is Cape Light Compact, Eversource, National Grid or Unitil.",
+   "stairs_inside": "Inside pickup only where there is one flight of stairs or fewer (per Mass Save); with more stairs you must make the item accessible for outside pickup.",
+   "lead_time": "Not stated, check with them. Rebate processing takes 6 to 8 weeks after pickup.",
+   "cost": "No-cost pickup plus a $75 rebate (pickup must happen between January 1 and December 31, 2026).",
+   "service_area": "Massachusetts electric customers whose Mass Save Sponsor is Cape Light Compact, Eversource, National Grid or Unitil. Check that your electric utility is one of these.",
+   "address": null,
+   "book_url": "https://www.masssave.com/residential/rebates-and-incentives/appliance-recycling/refrigerator-and-freezer-recycling",
+   "phone": "866-527-SAVE (7283)",
+   "email": null,
+   "source_urls": [
+    "https://www.masssave.com/residential/rebates-and-incentives/appliance-recycling/refrigerator-and-freezer-recycling",
+    "https://www.masssave.com/residential/rebates-and-incentives/appliance-recycling"
+   ],
+   "last_verified": "2026-11-01",
+   "notes": "Have your electric account number handy when scheduling, per Mass Save."
   }
  ]
 }
