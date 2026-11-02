@@ -297,9 +297,9 @@
    "condition_rules": "No donation-quality requirement stated; this is junk removal.",
    "stairs_inside": "Yes. LoadUp says its loaders carry items out from any room (bedroom, basement, attic, upstairs); curbside option also offered.",
    "lead_time": "Same-day and next-day service when available (per LoadUp).",
-   "cost": "LoadUp's Newton page says junk removal starts at $80 for a single bulky item (labor, transportation and disposal included). Its mattress page lists mattress removal from $85. The final price is shown by ZIP and item before booking.",
+   "cost": "LoadUp's Newton page says junk removal starts at $105 (curbside or driveway pickup takes $5 off), and its Newton price list shows mattress removal from $120. The final price is shown by ZIP and item before booking.",
    "service_area": "LoadUp has Newton, MA junk removal and bulky item pickup pages. Enter your ZIP to confirm.",
-   "last_verified": "2026-10-26",
+   "last_verified": "2026-11-02",
    "id": "loadup",
    "name": "LoadUp junk removal",
    "type": "paid hauler",
@@ -344,6 +344,36 @@
     "https://bikesnotbombs.org/bike-recycling/",
     "https://www.newtonma.gov/government/public-works/sustainable-materials-management/reuse"
    ]
+  },
+  {
+   "id": "mattress-mattress-pro",
+   "name": "Mattress Pro Recycling",
+   "type": "paid hauler",
+   "items_accepted": [
+    "Mattresses (any size, including memory foam and hybrid)",
+    "Box springs",
+    "Futons",
+    "Mattress toppers",
+    "Bed frames and other items by quote (text photos)"
+   ],
+   "items_not_accepted": [
+    "Wet, moldy or pest-infested mattresses"
+   ],
+   "condition_rules": "Mattresses must be dry and free of mold or pests. Pickup only; no customer drop-offs.",
+   "stairs_inside": "Its home page says to leave the mattress curbside or in an accessible outdoor spot by the pickup day, so plan to get it outside yourself.",
+   "lead_time": "Book a date online. For a same-day pickup after 2 p.m., call or text 857-404-2496.",
+   "cost": "$125 per mattress, $125 per box spring, $50 per topper, any size (per its booking page, checked 2026-11-02). Bed frames and unlisted items: quote by text.",
+   "service_area": "Its home page lists Newton first among the towns it serves (also Brookline, Cambridge, Waltham, Watertown, Somerville and more).",
+   "address": "221 Jackson Street, Newton, MA 02459 (as listed by the City of Boston)",
+   "book_url": "https://mattressprorecycling.com/schedule/",
+   "phone": "857-404-2496",
+   "email": null,
+   "source_urls": [
+    "https://mattressprorecycling.com/schedule/",
+    "https://mattressprorecycling.com/"
+   ],
+   "last_verified": "2026-11-02",
+   "notes": "Takes futons and mattress toppers; Newton's mattress program excludes futon mattresses. We do not have an affiliate relationship with Mattress Pro Recycling."
   }
  ]
 }

@@ -2,7 +2,7 @@
  "path": "newton/mattress",
  "city": "newton",
  "short": "Mattress",
- "last_verified": "2026-10-26",
+ "last_verified": "2026-11-02",
  "title": "Newton MA Mattress Disposal: $60 Pickup or $35 Drop-Off",
  "meta_description": "Newton mattress disposal: $60 per item curbside pickup or $35 drop-off at the Rumford Ave Resource Recovery Center. How to pay, schedule and set out.",
  "h1": "Newton mattress disposal and pickup: the $60 curbside and $35 drop-off options",
@@ -11,6 +11,10 @@
   {
    "q": "Does Newton pick up mattresses?",
    "a": "Yes, for $60 per mattress or box spring. Pay online, and for payments received by 10 p.m. Sunday the curbside collection should be arranged for Thursday of the following week."
+  },
+  {
+   "q": "Should I use the City's $60 pickup, the $35 drop-off, or a private mattress hauler in Newton?",
+   "a": "If you can get the mattress into a car, the $35 drop-off at the Resource Recovery Center on Rumford Ave. is the cheapest option (residents only, you unload it yourself). If you can get it to the curb but can't haul it, the City's $60 curbside pickup is next. The City collects at the curb only, so hire someone if it has to be carried out of the house: LoadUp's Newton price list starts mattress removal at $120 and says its loaders carry items from any room. Mattress Pro Recycling lists Newton among the towns it serves and charges $125 per mattress or box spring and $50 per topper, but its home page says to leave the mattress curbside or in an accessible outdoor spot."
   },
   {
    "q": "Where can I drop off a mattress in Newton?",
@@ -48,7 +52,7 @@
   },
   {
    "h": "Need it carried out of the house?",
-   "p": "ReSupply runs paid in-home pickups that include mattresses, with starting prices of $19, $49 and $99 plus a separate booking fee, and its Boston page lists Newton among the communities it serves. LoadUp's Newton page says junk removal starts at $80 for a single bulky item, and its mattress page lists removal from $85 with loaders carrying items out from any room. Confirm the final price when you book."
+   "p": "ReSupply runs paid in-home pickups that include mattresses, with starting prices of $19, $49 and $99 plus a separate booking fee, and its Boston page lists Newton among the communities it serves. LoadUp's Newton page says junk removal starts at $105, lists mattress removal from $120, and says its loaders carry items out from any room. Mattress Pro Recycling, which lists Newton among the towns it serves, charges $125 per mattress or box spring and $50 per topper and also takes futons, but it picks up from the curb or an accessible outdoor spot. Confirm the final price when you book."
   },
   {
    "h": "Donating a mattress in good condition",
@@ -60,6 +64,7 @@
   "newton-resource-recovery-center",
   "resupply-boston",
   "loadup",
+  "mattress-mattress-pro",
   "household-goods-acton",
   "habitat-greater-boston-restore"
  ]
