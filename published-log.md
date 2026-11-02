@@ -55,3 +55,4 @@
 | 2026-11-01 | Deployed /cambridge/appliances/, /somerville/appliances/ (+ LoadUp corrections on /cambridge/mattress/, /somerville/mattress/) | 8 / 7 | pages-build-deployment run 41386856757 success (Pages status built); all 4 pages 200 on https://byebulky.com; both new pages in sitemap and llms.txt; IndexNow 200 (api.indexnow.org + bing: 9 URLs incl. hubs, mattress guides, home, sitemap, llms.txt) | Pushed main@6e567b3. |
 2026-11-02 12:44 Clarity tag + privacy section; IndexNow / and /privacy/
 2026-11-02 12:47 Clarity privacy wording verified vs Microsoft docs; IndexNow /privacy/ 200
+- 2026-11-02 3:15 PM ET (improvement run #80): LoadUp prices on /boston/, /boston/couch/, /boston/appliances/, /quincy/, /quincy/mattress/ updated to LoadUp's current Boston/Quincy pages (from $105; couch/mattress $120). IndexNow 200 (api.indexnow.org, bing).
