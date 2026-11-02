@@ -104,7 +104,7 @@
    "book_url": "https://www.somervillema.gov/payonline",
    "phone": "311 or 617-666-3311",
    "email": null,
-   "last_verified": "2026-10-27",
+   "last_verified": "2026-11-02",
    "id": "somerville-mattress-recycling",
    "name": "City of Somerville mattress & box spring recycling ($55 sticker + 311 appointment)",
    "type": "city bulk pickup",
@@ -380,7 +380,7 @@
    "lead_time": "LoadUp's Somerville page says same-day pickup if you book by noon, and elsewhere on the same page \"same-day availability if you book before 2PM\"; it notes same-day availability may vary by location.",
    "cost": "LoadUp's Somerville page (checked 2026-11-01) says junk removal starts at $105, with additional items from +$15; its Somerville price list shows appliance pickup from $105 (add-on from +$15) and furniture and mattress removal from $120 (add-on from +$30). Its national junk removal page lists TV disposal from $80, fridge disposal from $115 and washer removal from $85, and its national mattress page lists mattress removal from $85. Starting prices; the final price is shown by ZIP and item before booking.",
    "service_area": "LoadUp has a Somerville, MA page. Enter your ZIP to confirm.",
-   "last_verified": "2026-11-01",
+   "last_verified": "2026-11-02",
    "id": "loadup",
    "name": "LoadUp junk removal",
    "type": "paid hauler",
@@ -425,6 +425,36 @@
    ],
    "last_verified": "2026-11-01",
    "notes": "Have your electric account number handy when scheduling, per Mass Save."
+  },
+  {
+   "id": "mattress-mattress-pro",
+   "name": "Mattress Pro Recycling",
+   "type": "paid hauler",
+   "items_accepted": [
+    "Mattresses (any size, including memory foam and hybrid)",
+    "Box springs",
+    "Futons",
+    "Mattress toppers",
+    "Bed frames and other items by quote (text photos)"
+   ],
+   "items_not_accepted": [
+    "Wet, moldy or pest-infested mattresses"
+   ],
+   "condition_rules": "Mattresses must be dry and free of mold or pests. Pickup only; no customer drop-offs.",
+   "stairs_inside": "Not stated, check with them",
+   "lead_time": "Book a date online. For a same-day pickup after 2 p.m., call or text 857-404-2496.",
+   "cost": "$125 per mattress, $125 per box spring, $50 per topper, any size (per its booking page, checked 2026-11-02). Bed frames and unlisted items: quote by text.",
+   "service_area": "Its home page lists Somerville among the towns it serves (also Cambridge, Newton, Brookline, Watertown, Belmont, Arlington and more).",
+   "address": "221 Jackson Street, Newton, MA 02459 (as listed by the City of Boston)",
+   "book_url": "https://mattressprorecycling.com/schedule/",
+   "phone": "857-404-2496",
+   "email": null,
+   "source_urls": [
+    "https://mattressprorecycling.com/schedule/",
+    "https://mattressprorecycling.com/"
+   ],
+   "last_verified": "2026-11-02",
+   "notes": "Takes futons and mattress toppers, which the City of Somerville's mattress program refuses. We do not have an affiliate relationship with Mattress Pro Recycling."
   }
  ]
 }

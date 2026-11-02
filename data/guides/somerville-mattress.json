@@ -2,7 +2,7 @@
  "path": "somerville/mattress",
  "city": "somerville",
  "short": "Mattress",
- "last_verified": "2026-10-27",
+ "last_verified": "2026-11-02",
  "title": "Somerville Mattress Removal & Pickup: $55 Sticker, 311 Options",
  "meta_description": "Somerville mattress pickup costs $55 per item with a sticker and a 311 appointment by 3:30 p.m. the day before. Rules, limits, donation and hauler options.",
  "h1": "Somerville mattress removal and pickup: the $55 sticker, 311 scheduling and other options",
@@ -11,6 +11,10 @@
   {
    "q": "Does the City of Somerville pick up mattresses?",
    "a": "Yes, curbside by appointment, for households in buildings with 6 or fewer units that get City trash collection. You need a $55 Disposal Sticker on each item and a 311 appointment."
+  },
+  {
+   "q": "Should I use the City's $55 sticker pickup or a private mattress hauler in Somerville?",
+   "a": "Use the City pickup if your building has 6 or fewer units with City trash collection and you can get the mattress to the curb yourself: it costs $55 per mattress or box spring ($110 for the pair), and the City says its crew can't enter private property. Hire a hauler if your building has 7 or more units or private trash, you're over the two-bulk-items-a-week limit, you need it carried out, or the City refuses the item (futons, toppers, torn or soiled mattresses). LoadUp's Somerville price list starts mattress removal at $120 and says its loaders carry items out from any room. Mattress Pro Recycling lists Somerville among the towns it serves, and its booking page lists $125 per mattress or box spring and $50 per topper."
   },
   {
    "q": "How much does Somerville mattress disposal cost?",
@@ -56,7 +60,7 @@
   },
   {
    "h": "7+ unit building, or more than two items this week",
-   "p": "The City says buildings with private trash service, and residents over the two-items-a-week limit, need to hire a mattress recycling hauler (or plan pickups over several weeks). LoadUp, below, lists mattress removal from $120 on its Somerville page (from $85 on its national mattress page) and says its loaders carry it out from any room."
+   "p": "The City says buildings with private trash service, and residents over the two-items-a-week limit, need to hire a mattress recycling hauler (or plan pickups over several weeks). LoadUp, below, lists mattress removal from $120 on its Somerville page (from $85 on its national mattress page) and says its loaders carry it out from any room. Mattress Pro Recycling, which lists Somerville among the towns it serves, charges $125 per mattress or box spring and $50 per topper on its booking page, and also takes futons and toppers."
   },
   {
    "h": "Donating, or getting the store to take it",
@@ -70,6 +74,7 @@
  "listing_ids": [
   "somerville-mattress-recycling",
   "household-goods-acton",
+  "mattress-mattress-pro",
   "loadup"
  ]
 }
