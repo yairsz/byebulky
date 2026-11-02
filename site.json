@@ -8,5 +8,6 @@
   "base_url_note": "Switch base_url to https://byebulky.com once the custom domain is live (canonical URLs + sitemap use it). Links are relative, so nothing else changes.",
   "ga_measurement_id": "G-9X5YM8W757",
   "cname": "byebulky.com",
-  "indexnow_key": "3d3897972edded33dac80fec4bebc3e3"
+  "indexnow_key": "3d3897972edded33dac80fec4bebc3e3",
+  "clarity_project_id": "z7gso98mvr"
 }

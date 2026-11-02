@@ -89,3 +89,8 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. One 
 ## Mattress cost data page (added 2026-10-26, run #26)
 - `/boston-area-mattress-disposal-cost/` is built by `mattress_cost_page()`: the City programs table (`home_mattress_compare`) plus every listing on a "Mattress" guide whose `cost` contains a "$" (City programs excluded; same id + same cost text across cities = one row). Cells are verbatim fields. A new city's mattress guide joins automatically; keep `cost` fields honest and starting with the price sentence. Linked from the home page and every mattress guide. Never hand-write prices on this page.
 - **Share images:** publish.sh runs scripts/og_images.py between two builds, so each new page gets a 1200x630 og:image made from its title. Nothing to do by hand. After publishing, `git add static/og/` and commit the new PNGs so main matches what is live.
+
+## Microsoft Clarity (added 2026-11-02)
+- Clarity tag is rendered in every page <head> right after the GA4 tag by `clarity_tag()` in build.py, from `site.json` `clarity_project_id` (remove the field to disable; privacy page section also keys off it).
+- Project IDs: ByeBulky `z7gso98mvr`, Nibbables `z7gtb12n7l`. Account: malteado001@gmail.com. Dashboard: https://clarity.microsoft.com
+- AI-assistant referral data (ChatGPT, Perplexity, Copilot, Gemini etc.) is in the Clarity dashboard traffic/channel views (Dashboard > Traffic / Channels, filter by referrer/channel). Include it in traffic reports alongside GA4.
