@@ -10,7 +10,7 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [ ] Hot tub: find an official Boston-area transfer station or scrap/recycling page that states hot tub acceptance and fees
 - [x] Brookline, MA city page + mattress guide (published 2026-10-27; keyword-targets row 4)
 - [x] Brookline couch guide published 2026-10-31 (/brookline/couch/)
-- [ ] Brookline: appliances guide ($30 white goods, Mass Save, HHW drop-off)
+- [ ] Brookline: appliances guide (2026-11-02: brooklinema.gov blocked tonight, retry) ($30 white goods, Mass Save, HHW drop-off)
 - [ ] Boston: verify and add The Furniture Trust, St. Vincent de Paul Boston, Goodwill Mass furniture policy, Boomerangs (sites failed to load 2026-10-21)
 - [x] Cambridge, MA city page (/cambridge/) + mattress guide (/cambridge/mattress/), done 2026-10-24 (keyword-targets ByeBulky row 2)
 - [x] Quincy, MA city page (PUBLISHED 2026-10-25 → /quincy/ + /quincy/mattress/)
@@ -63,3 +63,8 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [ ] Somerville appliances: ask 311 or find a City page stating which day stickered white goods are collected (not stated 2026-11-01)
 - [ ] Cambridge: re-check the permit portal (now cambridgema.portal.opengov.com) for fee text once it renders without JS; City page vs portal differ on exercise equipment (paid 'larger motorized' vs free 'exercise equipment')
 - [ ] Brookline, Quincy, Newton: re-check LoadUp city pages (Cambridge and Somerville pages moved to 'from $105' on 2026-11-01)
+
+- [x] Quincy: appliances guide (PUBLISHED 2026-11-02 → /quincy/appliances/)
+- [x] Newton: appliances guide (PUBLISHED 2026-11-02 → /newton/appliances/)
+- [ ] Quincy: couch/furniture guide (two bulky items per week rule)
+- [ ] Newton: couch guide ($20 bulky item pickup, 150 lb limit)

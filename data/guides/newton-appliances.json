@@ -1,0 +1,67 @@
+{
+  "path": "newton/appliances",
+  "city": "newton",
+  "short": "Appliances",
+  "last_verified": "2026-11-02",
+  "title": "Newton Appliance Pickup: $25 Whitegoods, Free RRC Drop-Off",
+  "meta_description": "Newton picks up fridges, washers, ACs and TVs for $25 per item, or drop them free at the Resource Recovery Center (TVs $25). Mass Save $75, donations.",
+  "h1": "How to get rid of a refrigerator, washer, AC or TV in Newton, MA",
+  "intro": "Newton calls appliances, electronics and metal items \"whitegoods.\" The City picks them up at the curb for $25 per item, or you can drop them off at no cost at the Resource Recovery Center in Auburndale (TVs and monitors cost $25 each). Here are the rules, plus the Mass Save rebate, donation and paid options.",
+  "quick_answers": [
+    {
+      "q": "Does Newton pick up appliances?",
+      "a": "Yes. Newton's whitegoods curbside pickup costs $25 per item and covers stoves, refrigerators, freezers, dishwashers, washers, dryers, dehumidifiers, air conditioners, microwaves, water coolers and water heaters. Pay online first; payments received by 10 p.m. Sunday are collected Thursday of the following week."
+    },
+    {
+      "q": "Where can I drop off appliances for free in Newton?",
+      "a": "At the Resource Recovery Center, 115 Rumford Ave., Auburndale, for Newton residents. Appliances, metal and most electronics are free; TVs and monitors cost $25 each, paid in advance."
+    },
+    {
+      "q": "How much does it cost to get rid of a TV in Newton?",
+      "a": "$25 either way: $25 per item for whitegoods curbside pickup, or a $25 prepaid fee to drop a TV or monitor at the Resource Recovery Center."
+    },
+    {
+      "q": "How do I get rid of a refrigerator in Newton?",
+      "a": "Remove all doors and secure drawers, then book the $25 whitegoods curbside pickup or drop it off free at the Resource Recovery Center. If it still works, the City points to Mass Save's no-cost pickup with a $75 rebate."
+    },
+    {
+      "q": "What are the Newton Resource Recovery Center winter hours?",
+      "a": "From November 1 to March 27: Monday to Friday 7 a.m. to 2:30 p.m., Saturday 9 a.m. to 1 p.m. It's closed Sundays, holidays (including Wednesday, November 11 for Veterans Day) and sometimes after heavy rain or snow."
+    }
+  ],
+  "sections": [
+    {
+      "h": "Curbside whitegoods pickup: $25 per item",
+      "p": "Newton's whitegoods curbside pickup costs $25 per item. It covers large appliances (stoves, refrigerators, freezers, dishwashers, washers, dryers, dehumidifiers, air conditioners, microwaves, water coolers, water heaters), metal items such as filing cabinets and exercise equipment, lawn mowers and snow blowers with fluids removed, and e-waste such as TVs, computers, monitors and printers. Pay online first. For payments received by 10 p.m. Sunday, collection should be arranged for Thursday of the following week, unless there's a trash delay on Thursday. Remove all refrigerator and freezer doors and secure drawers before setting out. Pickup is from the curb only."
+    },
+    {
+      "h": "After you pay, and the refund rule",
+      "p": "The City's flyer says you should get an email from Newton Customer Service within 1-2 business days and a reminder the business day before your pickup; set items out by 7 a.m. on collection day. Refunds are only issued if you cancel and receive a cancellation email by 10 a.m. the business day before collection."
+    },
+    {
+      "h": "Free drop-off at the Resource Recovery Center (TVs $25)",
+      "p": "Newton residents can drop off appliances, metal items and electronics at no cost at the Resource Recovery Center, 115 Rumford Ave., Auburndale. TVs and monitors cost $25 each; pay online first and show proof of payment to the attendant. Winter hours (November 1 to March 27) are Monday to Friday 7 a.m. to 2:30 p.m. and Saturday 9 a.m. to 1 p.m. It's closed Sundays, holidays (including Wednesday, November 11 for Veterans Day) and sometimes after heavy rain or snow, so call 617-796-1000 after a storm. Proof of Newton residency may be requested."
+    },
+    {
+      "h": "Recycle a working fridge or freezer and get $75 (Mass Save)",
+      "p": "Newton's Recycle at the Curb page points residents to Mass Save. Mass Save offers a no-cost pickup and a $75 rebate for an inefficient, working refrigerator or freezer, for Massachusetts electric customers whose Mass Save Sponsor is Cape Light Compact, Eversource, National Grid or Unitil. The unit must be plugged in, cooling and empty at pickup and measure 10 to 30 cubic feet inside; disconnect any water line and remove all doors before putting it outside. Inside pickup is only available with one flight of stairs or fewer. Pickup must happen in 2026 for the $75. A working dehumidifier picked up with the fridge earns $30. Schedule online or call 866-527-SAVE (7283)."
+    },
+    {
+      "h": "Donating a working appliance",
+      "p": "The Habitat for Humanity Greater Boston ReStore in West Roxbury accepts working appliances less than eight years old, including refrigerators, washers, dryers, free-standing stoves, cooktops, microwaves and never-installed dishwashers, with drop-off Tuesday to Saturday, 9:30 a.m. to 4:00 p.m.; in-home pickup is booked through ReSupply, a paid service. Household Goods in Acton takes refrigerators, washers, electric dryers and air conditioners up to 18\" x 30\" x 24\" if newer than 10 years, plus flat-screen TVs under 55\" and under 10 years old; its volunteer pickup doesn't cover Newton, so drop off in Acton or use its paid pickup partners."
+    },
+    {
+      "h": "Paid pickup from inside your home",
+      "p": "The City only collects from the curb. LoadUp's Newton page lists appliance pickup from $105 and says its loaders carry items out from any room. Confirm the final price before you book."
+    }
+  ],
+  "listing_ids": [
+    "newton-whitegoods-curbside",
+    "newton-resource-recovery-center",
+    "mass-save-fridge-recycling",
+    "habitat-greater-boston-restore",
+    "resupply-boston",
+    "household-goods-acton",
+    "loadup"
+  ]
+}

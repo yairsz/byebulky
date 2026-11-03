@@ -1,0 +1,71 @@
+{
+  "path": "quincy/appliances",
+  "city": "quincy",
+  "short": "Appliances",
+  "last_verified": "2026-11-02",
+  "title": "Quincy Appliance Pickup: Fridge, Washer, TV (Call 855-533-3400)",
+  "meta_description": "Quincy picks up stoves, fridges, washers, dryers and TVs at the curb when you call (855) 533-3400. DPW Yard drop-off (no fridges), Mass Save $75, donations.",
+  "h1": "How to get rid of a refrigerator, washer, stove or TV in Quincy, MA",
+  "intro": "Quincy collects appliances, TVs and computer monitors at the curb on your regular trash day if you call (855) 533-3400 ahead of time. Most appliances, but not refrigerators or dishwashers, can also go to the residents-only DPW Yard at 55 Sea St. Here are the City's rules, plus the Mass Save rebate, donation and paid options if your appliance still works or you need it carried out.",
+  "quick_answers": [
+    {
+      "q": "Does Quincy pick up appliances?",
+      "a": "Yes, at the curb. Call (855) 533-3400 to schedule pickup of stoves, refrigerators, washing machines, dryers, dehumidifiers and water heaters, and put the item out on your regular trash day. The City's pages don't state a fee, so ask when you call."
+    },
+    {
+      "q": "How do I get rid of a refrigerator in Quincy?",
+      "a": "Call (855) 533-3400 at least two full business days before your regular trash day for curbside pickup. Refrigerators are not accepted at the DPW Yard. If it still works and your electric utility is a Mass Save Sponsor (Cape Light Compact, Eversource, National Grid or Unitil), Mass Save offers a no-cost pickup and a $75 rebate in 2026."
+    },
+    {
+      "q": "How do I get rid of an old TV in Quincy?",
+      "a": "Call (855) 533-3400 by 3 p.m. at least two full business days before your regular trash day, then put the TV or monitor at the curb on your trash day. Electronics are also accepted at the DPW Yard, 55 Sea St."
+    },
+    {
+      "q": "What does the Quincy DPW Yard take?",
+      "a": "Washers, dryers, water heaters, stoves, air conditioners, scrap metal and electronics, but no refrigerators or dishwashers. It's for Quincy residents only, with a valid Massachusetts driver's license, Monday to Friday 7:30 a.m. to 3 p.m. and Saturdays 7:30 a.m. to 2:30 p.m. through December 5, 2026."
+    },
+    {
+      "q": "Can I put a microwave in the trash in Quincy?",
+      "a": "Yes. The City's page says microwave ovens may be placed curbside for regular trash pickup."
+    }
+  ],
+  "sections": [
+    {
+      "h": "Curbside appliance pickup: call (855) 533-3400",
+      "p": "The City's \"How do I get rid of\" page says to call (855) 533-3400 to schedule curbside pickup of stoves, refrigerators, washing machines, dryers, dehumidifiers and water heaters, by 3 p.m. one full business day before your regular trash day, for collection on your regular trash day. The same page says refrigerators need at least two full business days' notice, and the City's Trash page says two full business days for appliances, TVs and monitors, so calling two business days ahead covers both. The City's pages don't state a fee; ask when you call. Pickup is from the curb only."
+    },
+    {
+      "h": "TVs and computer monitors",
+      "p": "For TVs and monitors (CRTs), call (855) 533-3400 by 3 p.m. at least two full business days before your regular trash day, then put the TV or monitor at the curb on your trash day. The City says all home, entertainment and business electronics are also accepted at the DPW Yard."
+    },
+    {
+      "h": "DPW Yard drop-off, 55 Sea St. (no refrigerators or dishwashers)",
+      "p": "The DPW Yard accepts washers, dryers, water heaters, stoves, air conditioners, scrap metal and electronics, but not refrigerators or dishwashers. It's for Quincy residents only and requires a valid Massachusetts driver's license. Hours are Monday to Friday 7:30 a.m. to 3:00 p.m. and Saturday 7:30 a.m. to 2:30 p.m. from April 4 through December 5, 2026. Enter from the Sea St. parking lot next to the Police Station. A fee isn't stated."
+    },
+    {
+      "h": "Microwaves",
+      "p": "The City's page says microwave ovens may be placed curbside for regular trash pickup."
+    },
+    {
+      "h": "Recycle a working fridge or freezer and get $75 (Mass Save)",
+      "p": "Mass Save offers a no-cost pickup and a $75 rebate for an inefficient, working refrigerator or freezer, for Massachusetts electric customers whose Mass Save Sponsor is Cape Light Compact, Eversource, National Grid or Unitil. The unit must be plugged in, cooling and empty at pickup and measure 10 to 30 cubic feet inside; disconnect any water line and remove all doors before putting it outside. Inside pickup is only available with one flight of stairs or fewer. Pickup must happen in 2026 for the $75. A working dehumidifier picked up with the fridge earns $30. Schedule online or call 866-527-SAVE (7283)."
+    },
+    {
+      "h": "Donating a working appliance",
+      "p": "The City suggests donating stoves, washers, dryers and dishwashers to Viet Nam Veterans at (800) 775-8387. The Habitat for Humanity Greater Boston ReStore in West Roxbury accepts working appliances less than eight years old, including refrigerators, washers, dryers, free-standing stoves, cooktops, microwaves and never-installed dishwashers, with drop-off Tuesday to Saturday, 9:30 a.m. to 4:00 p.m. Household Goods in Acton takes refrigerators, washers, electric dryers and air conditioners up to 18\" x 30\" x 24\" if newer than 10 years, plus flat-screen TVs under 55\" and under 10 years old; its volunteer pickup doesn't cover Quincy, so drop off in Acton or use its paid pickup partners."
+    },
+    {
+      "h": "Paid pickup from inside your home",
+      "p": "The City only collects from the curb. LoadUp's Quincy page lists appliance pickup from $105 and says its loaders carry items out from any room. Confirm the final price before you book."
+    }
+  ],
+  "listing_ids": [
+    "quincy-appliance-tv-pickup",
+    "quincy-dpw-yard",
+    "quincy-curbside-furniture",
+    "mass-save-fridge-recycling",
+    "habitat-greater-boston-restore",
+    "household-goods-acton",
+    "loadup"
+  ]
+}
