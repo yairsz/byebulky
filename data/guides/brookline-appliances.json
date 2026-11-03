@@ -1,0 +1,71 @@
+{
+  "path": "brookline/appliances",
+  "city": "brookline",
+  "short": "Appliances",
+  "last_verified": "2026-11-03",
+  "title": "Brookline Appliance Pickup: $30 Town White Goods Collection",
+  "meta_description": "Brookline picks up fridges, stoves, ACs and TVs for $30 per item on Tuesdays if you're on Town trash service. How to book, Mass Save $75, donations.",
+  "h1": "How to get rid of a refrigerator, stove, AC or TV in Brookline, MA",
+  "intro": "If you're on Brookline's Town Waste Collection Service, the Department of Public Works picks up white goods and electronics at the curb for $30 per item, collected on Tuesdays. Book and pay a week ahead. Here's how it works, plus the free seasonal drop-off, the Mass Save rebate, donation and paid options.",
+  "quick_answers": [
+    {
+      "q": "Does Brookline pick up appliances?",
+      "a": "Yes, for residents on Town Waste Collection Service. Electronics and white goods (stoves, refrigerators, air conditioners, TVs and CRTs) cost $30 per item. Schedule and pay at least one week ahead; they're collected on Tuesdays."
+    },
+    {
+      "q": "How do I book an appliance pickup in Brookline?",
+      "a": "Register on the Town's Accela permit portal and request a bulky item pickup, or schedule and pay in person at Town Hall, 333 Washington St., 4th floor. Your confirmation email gives the collection date. Questions: 617-730-2156 or dpwinfo@brooklinema.gov."
+    },
+    {
+      "q": "How many appliances can I put out at once in Brookline?",
+      "a": "Up to four bulky, metal, white goods and/or mattress items per week, combined."
+    },
+    {
+      "q": "Can I drop off a microwave or TV for free in Brookline?",
+      "a": "Only in season. The Town says tires, electronics and small appliances such as microwaves can go free to the Household Hazardous Waste Recycling Facility at the Transfer Station, 815 Newton St., which is open May through October. Outside that season, use the $30 pickup."
+    },
+    {
+      "q": "Can I get money for recycling an old fridge in Brookline?",
+      "a": "Possibly. Mass Save offers a no-cost pickup and a $75 rebate for an inefficient, working refrigerator or freezer for eligible Massachusetts electric customers, if it's picked up in 2026."
+    }
+  ],
+  "sections": [
+    {
+      "h": "Town white goods pickup: $30 per item",
+      "p": "Brookline's Department of Public Works collects bulky, metal, white goods and mattress items for residents on Town Waste Collection Service, up to four items per week. Electronics and white goods cost $30 per item. The Town lists stoves, refrigerators, air conditioners, CRTs and TVs among these items. White goods, electronics and metals are collected on Tuesdays each week; your confirmation email from the Town gives the date. Pickup is at the curb."
+    },
+    {
+      "h": "How to book and pay",
+      "p": "Pickups must be scheduled one week in advance and paid for before pickup. Register an account on the Town's Accela permit portal, then request a pickup, or schedule and pay in person at Town Hall (333 Washington St., 4th floor). Refund requests must be made 48 hours in advance; service fees aren't refunded, and refunds come as a mailed check."
+    },
+    {
+      "h": "Free drop-off for small appliances and electronics (May to October)",
+      "p": "The Town says tires, electronics and small appliances such as microwaves can be brought at no cost to the Household Hazardous Waste Recycling Facility at Brookline's Transfer Station, 815 Newton Street. It's open May through October, 7:30 a.m. to 12:30 p.m. on Tuesdays (the Bulky Items page says every Tuesday; the hazardous waste pages say every other Tuesday, so check before you go). Brookline residents only, with ID and proof of residency."
+    },
+    {
+      "h": "On private trash service?",
+      "p": "The Town pickup is only for households on Town Waste Collection Service. If you use a private hauler, ask your hauler, see the Town's list of permitted private waste haulers, or use a paid pickup service."
+    },
+    {
+      "h": "Recycle a working fridge or freezer and get $75 (Mass Save)",
+      "p": "Mass Save offers a no-cost pickup and a $75 rebate for an inefficient, working refrigerator or freezer, for Massachusetts electric customers whose Mass Save Sponsor is Cape Light Compact, Eversource, National Grid or Unitil. The unit must be plugged in, cooling and empty at pickup and measure 10 to 30 cubic feet inside. Pickup must happen in 2026 for the $75. Schedule online or call 866-527-SAVE (7283)."
+    },
+    {
+      "h": "Donating a working appliance",
+      "p": "The Habitat for Humanity Greater Boston ReStore in West Roxbury accepts working appliances less than eight years old, including refrigerators, washers, dryers, free-standing stoves, cooktops, microwaves and never-installed dishwashers. Household Goods in Acton takes some newer appliances and flat-screen TVs; check its size and age limits before you go."
+    },
+    {
+      "h": "Paid pickup from inside your home",
+      "p": "The Town collects only from the curb. LoadUp says its Brookline team picks up appliances and electronics and carries items out for you. Confirm the price before you book."
+    }
+  ],
+  "listing_ids": [
+    "brookline-electronics-whitegoods-pickup",
+    "brookline-hhw-transfer-station",
+    "mass-save-fridge-recycling",
+    "habitat-greater-boston-restore",
+    "household-goods-acton",
+    "brookline-private-waste-haulers",
+    "loadup"
+  ]
+}

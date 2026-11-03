@@ -10,7 +10,7 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [ ] Hot tub: find an official Boston-area transfer station or scrap/recycling page that states hot tub acceptance and fees
 - [x] Brookline, MA city page + mattress guide (published 2026-10-27; keyword-targets row 4)
 - [x] Brookline couch guide published 2026-10-31 (/brookline/couch/)
-- [ ] Brookline: appliances guide (2026-11-02: brooklinema.gov blocked tonight, retry) ($30 white goods, Mass Save, HHW drop-off)
+- [x] Brookline: appliances guide (2026-11-02: brooklinema.gov blocked tonight, retry) ($30 white goods, Mass Save, HHW drop-off) — published 2026-11-03 run #85
 - [ ] Boston: verify and add The Furniture Trust, St. Vincent de Paul Boston, Goodwill Mass furniture policy, Boomerangs (sites failed to load 2026-10-21)
 - [x] Cambridge, MA city page (/cambridge/) + mattress guide (/cambridge/mattress/), done 2026-10-24 (keyword-targets ByeBulky row 2)
 - [x] Quincy, MA city page (PUBLISHED 2026-10-25 → /quincy/ + /quincy/mattress/)
