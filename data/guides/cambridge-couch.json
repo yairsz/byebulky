@@ -1,0 +1,59 @@
+{
+  "path": "cambridge/couch",
+  "city": "cambridge",
+  "short": "Couch",
+  "last_verified": "2026-11-03",
+  "title": "Cambridge Couch Removal & Sofa Disposal: Free Curbside Pickup",
+  "meta_description": "Cambridge couch disposal: one free furniture piece a week at the curb on trash day. Where to donate a sofa and who removes it from inside, sourced.",
+  "h1": "How to get rid of a couch or sofa in Cambridge",
+  "intro": "If the City collects your trash, the cheapest way to get rid of a couch in Cambridge is to put it at the curb on trash day: residents may put out one piece of furniture per week, free, with no permit. If the couch is still in good shape you can donate it, and if it has to come down from an upstairs apartment you'll need a paid service.",
+  "quick_answers": [
+    {
+      "q": "Does Cambridge pick up couches?",
+      "a": "Yes. Residents may put one piece of furniture, such as a couch, out per week on trash day, with no permit. Put it at the curb after 6 p.m. the night before or by 7 a.m. on collection day. Metal furniture is the exception and needs a free permit."
+    },
+    {
+      "q": "How much does it cost to get rid of a couch in Cambridge?",
+      "a": "City curbside pickup of one furniture piece a week is free. LoadUp's Cambridge price list shows furniture removal from $120, and ReSupply's paid donation pickups start at $19, $49 or $99 plus a booking fee."
+    },
+    {
+      "q": "Can I put two couches out in Cambridge?",
+      "a": "The City allows one piece of bulky waste per household per week, so a second couch waits until the next trash day. The City's older brochure says one piece per building, so check with DPW if you share a building."
+    },
+    {
+      "q": "Will someone take a couch out of my apartment in Cambridge?",
+      "a": "Not the City, which collects at the curb only. ReSupply says its teams collect from inside your home, including upper floors of walk-ups and triple-deckers, and LoadUp says its loaders carry items out from any room."
+    },
+    {
+      "q": "Where can I donate a couch in Cambridge?",
+      "a": "Furnishing Hope of Massachusetts takes sofas and upholstered chairs, but pickup needs at least six substantial furniture items. The Habitat Greater Boston ReStore takes upholstered furniture in good shape (not sofa beds or slip-covered sofas), and Household Goods in Acton takes couches, sofa beds and futons."
+    }
+  ],
+  "sections": [
+    {
+      "h": "Free curbside pickup: one piece a week, no permit",
+      "p": "The City of Cambridge lets residents put one piece of furniture, such as a couch, table or chair, out per week on trash day, and says there are some exceptions; use its Get Rid of It Right tool to check an item and find your trash day. Put it at the curb after 6 p.m. the night before or by 7 a.m. on collection day. Collection runs one day behind after a holiday. The weekly item is for households whose trash the City collects. Violations of the Refuse & Litter Ordinance can be fined up to $300 per violation per day. For questions, call DPW at 617-349-4800 or email theworks@cambridgema.gov."
+    },
+    {
+      "h": "Exceptions: metal furniture and mattresses",
+      "p": "Metal furniture and other metal items are banned from Cambridge trash; metal desks and cabinets need a free permit. Mattresses and box springs are banned from trash too and go through the City's separate UTEC program."
+    },
+    {
+      "h": "Paid couch removal from inside your home",
+      "p": "ReSupply says its furniture teams collect from inside your home, including upper floors of walk-ups and triple-deckers; its pickups start at $19, $49 and $99 depending on the pickup, plus a separate booking fee, and the City's reuse page describes it as an in-home, fee-based option. LoadUp says its loaders carry items out from any room; its Cambridge page says junk removal starts at $105 and its Cambridge price list shows furniture removal from $120. Marvin Junk Removal's Cambridge page says junk removal starts at $120 and that it carries items out from any floor."
+    },
+    {
+      "h": "Donating a sofa in good condition",
+      "p": "Furnishing Hope of Massachusetts, based in Harvard Square, accepts sofas and upholstered chairs that are clean and in good condition; send photos first. It charges no pickup fee but requests a tax-deductible donation, suggested at $250 to $400, and pickup needs at least six substantial furniture items. The Habitat Greater Boston ReStore in West Roxbury accepts upholstered furniture that isn't ripped, worn, broken, dated or faded, but not sofa beds, futons or sofas with slip covers. Household Goods in Acton accepts couches, sofa beds and futons in good condition at its drop-off, Tuesdays, Thursdays and Saturdays from 9 a.m. to noon."
+    }
+  ],
+  "listing_ids": [
+    "cambridge-curbside-furniture",
+    "furnishing-hope",
+    "habitat-greater-boston-restore",
+    "household-goods-acton",
+    "resupply-boston",
+    "loadup",
+    "mattress-marvin"
+  ]
+}
