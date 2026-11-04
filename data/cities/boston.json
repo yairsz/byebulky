@@ -10,22 +10,50 @@
     {
       "q": "Can I put a couch out for trash in Boston?",
       "a": "Yes, if you get City curbside trash collection. The City of Boston says furniture can go out neatly next to your trash barrels on your regular collection day, with no appointment, at the curb by 6 a.m. and not before 5 p.m. the evening before. The City page doesn't mention a fee, and it picks up curbside only. To donate instead, check the ReStore and furniture banks below; most require clean, undamaged pieces.",
-      "sources": [{"label": "City of Boston: trash and recycling", "url": "https://www.boston.gov/departments/public-works/trash"}]
+      "sources": [
+        {
+          "label": "City of Boston: trash and recycling",
+          "url": "https://www.boston.gov/departments/public-works/trash"
+        }
+      ]
     },
     {
       "q": "Mattress or box spring?",
       "a": "Mattresses are banned from Massachusetts trash. In a building with 6 units or fewer, book the City's curbside mattress pickup appointment (the City page mentions no fee). In 7+ units, use your property manager or one of the mattress haulers below.",
-      "sources": [{"label": "City of Boston: mattress recycling", "url": "https://www.boston.gov/departments/public-works/mattress-recycling"}]
+      "sources": [
+        {
+          "label": "City of Boston: mattress recycling",
+          "url": "https://www.boston.gov/departments/public-works/mattress-recycling"
+        }
+      ]
     },
     {
       "q": "Fridge, AC, TV or monitor?",
       "a": "Book a City special item collection. Remove fridge doors and all food first.",
-      "sources": [{"label": "City of Boston: special collection items", "url": "https://www.boston.gov/departments/public-works/special-collection-items"}]
+      "sources": [
+        {
+          "label": "City of Boston: special collection items",
+          "url": "https://www.boston.gov/departments/public-works/special-collection-items"
+        }
+      ]
     },
     {
       "q": "Can't carry it to the curb?",
-      "a": "City pickups are curbside only. Paid options that come inside include ReSupply (donation pickup), LoadUp, and several mattress haulers.",
-      "sources": [{"label": "ReSupply", "url": "https://resupply.com/boston/furniture-donation-pickup/"}, {"label": "LoadUp", "url": "https://goloadup.com/junk-removal/ma/boston/"}]
+      "a": "City pickups are curbside only. Paid options that come inside include ReSupply (donation pickup), LoadUp, and two mattress haulers (Lug Away and CC Junk).",
+      "sources": [
+        {
+          "label": "ReSupply",
+          "url": "https://resupply.com/boston/furniture-donation-pickup/"
+        },
+        {
+          "label": "LoadUp",
+          "url": "https://goloadup.com/junk-removal/ma/boston/"
+        },
+        {
+          "label": "City of Boston mattress hauler list",
+          "url": "https://www.boston.gov/departments/public-works/large-residential-buildings"
+        }
+      ]
     }
   ],
   "resources": [

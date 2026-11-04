@@ -260,12 +260,18 @@ def qa_block(qas, heading=None):
 
 def qa_src(x):
     """Visible per-answer citation (2026-11-04): a quick answer may carry {"sources":[{label,url}]} so the reader can check
-    the exact page the answer restates. Only URLs already in that page's listings are allowed (asserted below)."""
+    the exact page the answer restates. Only URLs already on that page are allowed (asserted below).
+
+    Some answers make no outside claim at all: they count our own cards ("We list 14 options in Cambridge"). Those carry
+    {"self": True} instead of a URL, and the line says so plainly rather than dressing our own count up as a citation."""
     src = x.get("sources") or []
-    if not src:
+    selfc = bool(x.get("self"))
+    if not src and not selfc:
         return ""
-    return ('<p class="meta src">Source: ' + " · ".join(
-        f'<a href="{e(r["url"])}" rel="nofollow noopener" target="_blank">{e(r["label"])}</a>' for r in src) + "</p>")
+    bits = [f'<a href="{e(r["url"])}" rel="nofollow noopener" target="_blank">{e(r["label"])}</a>' for r in src]
+    if selfc:
+        bits.append(x.get("selfnote") or "this site's own listing counts on this page, not an outside source")
+    return '<p class="meta src">Source: ' + " · ".join(bits) + "</p>"
 
 def _names(ls):
     n = [l["name"] for l in ls]
@@ -409,7 +415,8 @@ def city_faq(c):
     # Left uncited on purpose: this answer is a count of our own listing cards on this same page and names no outside
     # program, so there is no external page to check it against (2026-11-04).
     out.append({"q": f"What are the ways to get rid of bulky items in {city}?",
-                "a": f"We list {n} options in {city}: " + "; ".join(f"{t} ({k})" for t, k in cnt) + ". Each listing links to the page we checked."})
+                "a": f"We list {n} options in {city}: " + "; ".join(f"{t} ({k})" for t, k in cnt) + ". Each listing links to the page we checked.",
+                "self": True})
     return out
 
 # City-specific section headings (learning 2026-10-25, Jesse Cunningham "AI micro directories": every city page is a
@@ -648,7 +655,13 @@ def guide_page(g, city):
     for x in g.get("quick_answers", []):
         assert x.get("q") and x.get("a"), f"guide {g['path']} has an empty quick answer"
     # A quick answer may only cite a page this guide already cites: a listing's source, or a section's source.
-    allowed = {u for l in ls for u in l["source_urls"]} | {r["url"] for sec in g.get("sections", []) for r in sec.get("sources", [])}
+    # (2026-11-04) A guide is a subpage of its city page, so it may also cite any source that page already cites
+    # (the City's own program pages, a charity the guide discusses but doesn't card). The URL must still exist in the
+    # city's data: nothing can be cited that we did not actually record and check.
+    allowed = ({u for l in ls for u in l["source_urls"]}
+               | {r["url"] for sec in g.get("sections", []) for r in sec.get("sources", [])}
+               | {u for l in city["listings"] for u in l["source_urls"]}
+               | {r["url"] for r in city.get("resources", [])})
     for x in g.get("quick_answers", []):
         for r in x.get("sources") or []:
             assert r.get("url") in allowed, f"guide {g['path']} answer '{x['q']}' cites {r.get('url')}, which is not a source of any listing on this page"
@@ -675,7 +688,7 @@ def _first(s):
 def home_mattress_compare(cities, with_qa=True):
     """Home-page cross-city table of each City's own mattress program, built only from listing fields
     (cost, service_area, stairs_inside, book_url, phone, source_urls, last_verified). Added run #18 (data-gap tactic)."""
-    rows, qa = [], []
+    rows, qa, cmp_ls = [], [], []
     for c in cities:
         l = next((x for x in c["listings"] if x.get("type") == "city bulk pickup" and "mattress" in x["id"]), None)
         if not l:
@@ -691,12 +704,14 @@ def home_mattress_compare(cities, with_qa=True):
                     f'<td><a href="{e(l["book_url"])}" rel="noopener" target="_blank">Book</a>' + (f" or call {e(l['phone'])}" if l.get("phone") else "") + "</td>"
                     f"<td>{src}<br><span class=\"meta\">checked {e(l.get('last_verified', ''))}</span></td></tr>")
         qa.append(f"{c['name']}: {_first(l.get('cost'))}")
+        cmp_ls.append(l)
     if len(rows) < 2:
         return "", None
     names = [c["name"] for c in cities]
     q = {"q": f"How much does it cost to get rid of a mattress in {', '.join(names[:-1])} or {names[-1]}?",
          "a": "Through each City's own mattress pickup, per the official pages: " + " ".join(qa) +
-              " Massachusetts bans mattresses and box springs from the trash, so they need one of these programs, a donation outlet or a hauler."}
+              " Massachusetts bans mattresses and box springs from the trash, so they need one of these programs, a donation outlet or a hauler.",
+         "sources": faq_sources(cmp_ls)}
     html = (f"<h2>City mattress pickup compared: {e(', '.join(names))}</h2>"
             "<p>Each City runs its own mattress and box spring program, and the fees and rules differ. This table is built from the official City pages linked in each row.</p>"
             '<div class="tablewrap"><table class="cmp"><thead><tr><th scope="col">City</th><th scope="col">Fee</th><th scope="col">Who qualifies</th>'
@@ -835,26 +850,31 @@ def rules_faq(rows):
         if groups["free"]: parts.append("Free per the official pages: " + " ".join(f'{c["name"]}: {_sent(l["cost"])}' for c, l in groups["free"]))
         if groups["paid"]: parts.append("Fee charged: " + " ".join(f'{c["name"]}: {_sent(l["cost"])}' for c, l in groups["paid"]))
         if groups["unstated"]: parts.append("No fee stated on the official page (ask the City): " + ", ".join(c["name"] for c, _ in groups["unstated"]) + ".")
+        named = [l for g in groups.values() for _c, l in g]
         qas.append({"q": f"Which Boston-area cities pick up {noun} for free, and what do the others charge?",
-                    "a": " ".join(parts)})
-    days = []
+                    "a": " ".join(parts), "sources": faq_sources(named)})
+    days, day_ls = [], []
     for c, cells in rows:
         l = cells[0]
         if l and not l.get("lead_time", "").startswith("Not stated"):
             days.append(f'{c["name"]}: {_day_sent(l["lead_time"])}')
+            day_ls.append(l)
     if days:
         qas.append({"q": "What day is bulky item pickup in Boston-area cities?",
                     "a": "For furniture and other bulky items, per each City's own page: " + " ".join(days)
-                         + " Mattresses and appliances can have a separate day or booking step; see each city's page."})
-    mats = []
+                         + " Mattresses and appliances can have a separate day or booking step; see each city's page.",
+                    "sources": faq_sources(day_ls)})
+    mats, mat_ls = [], []
     for c, cells in rows:
         f, m = cells[0], cells[1]
         if not m: continue
         sep = bool(f and any(re.search(r"mattress", i, re.I) for i in f.get("items_not_accepted", [])))
         mats.append(f'{c["name"]}: {"not with furniture pickup; " if sep else ""}{m["name"]}, {_sent(m.get("cost"))}')
+        mat_ls.append(m)
     if mats:
         qas.append({"q": "Does bulk pickup take mattresses in Boston-area cities?",
-                    "a": f"Each of these {len(mats)} cities handles mattresses through its own mattress program, per the City pages we checked. " + " ".join(mats)})
+                    "a": f"Each of these {len(mats)} cities handles mattresses through its own mattress program, per the City pages we checked. " + " ".join(mats),
+                    "sources": faq_sources(mat_ls)})
     return qas
 
 def rules_page():
@@ -941,17 +961,21 @@ def nocar_page():
         {"q": "Who will carry a couch or mattress out of my apartment or down the stairs around Boston?",
          "a": "Of the pickup options we list, these say on their own page (or the City's list) that they come inside or handle stairs: "
               + " ".join(f'{r["l"]["name"]}: {_cell(r["l"]["stairs_inside"], 200)}' for r in inside)
-              + " Confirm the price and access details with them before you book."},
+              + " Confirm the price and access details with them before you book.",
+         "sources": faq_sources([r["l"] for r in inside])},
         {"q": "Will the City come inside to pick up furniture, a mattress or an appliance?",
          "a": f"No, not per the official pages we cite: {curb_n} of the {n_city} City or Town pickup programs we list for {', '.join(names[:-1])} and {names[-1]} "
               "say curbside only, so the item has to be at the curb (or where trash is collected) on pickup day."
-              + ("" if not other else f" The page for {_names([{'name': x} for x in other])} doesn't say either way; check with the City.")},
+              + ("" if not other else f" The page for {_names([{'name': x} for x in other])} doesn't say either way; check with the City."),
+         "sources": faq_sources([l for c in CITIES for l in c["listings"] if l["type"] == "city bulk pickup"])},
         {"q": "I live in a big apartment building. Can I use City bulky item or mattress pickup?",
          "a": "It depends on the building size and who collects your trash. The official pages say: "
-              + " ".join(f'{c["name"]} ({l["name"]}): {l["service_area"]}' for c, l in big)},
+              + " ".join(f'{c["name"]} ({l["name"]}): {l["service_area"]}' for c, l in big),
+         "sources": faq_sources([l for _c, l in big])},
         {"q": "Can I get rid of a bulky item without a car?",
          "a": f"Yes. Besides City curbside pickup, we list {len(inside) + len(cond)} charity pickups, furniture banks, haulers and other programs that come to you. "
-              f"{len(inside)} of them say they will come inside or handle stairs; for the others, access is limited or not stated, so ask when you book."},
+              f"{len(inside)} of them say they will come inside or handle stairs; for the others, access is limited or not stated, so ask when you book.",
+         "sources": faq_sources([r["l"] for r in inside + cond])},
     ]
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › No car or big building</p>
 <h1>No car, upstairs apartment or big building? Bulky item pickup options around Boston</h1>
@@ -1055,12 +1079,15 @@ def tool_page():
     stat_li = "".join(f'<li>{e(l)}: {n} options listed across the {len(CITIES)} cities. {a} list a dollar amount in their cost wording; {u} list none (no fee mentioned, free, quote only, or not stated).</li>' for _, l, n, a, u in st)
     qas = [{"q": f"How do I find out what my city charges to pick up a {w}?",
             "a": f"Pick your city and item on the ByeBulky bulky item pickup cost checker. It shows the City or Town program's fee in the official page's own words, "
-                 f"when it collects and who qualifies, plus every other option on our {', '.join(names[:-1])} and {names[-1]} pages that lists the item, each with its source and the date we checked it."}
+                 f"when it collects and who qualifies, plus every other option on our {', '.join(names[:-1])} and {names[-1]} pages that lists the item, each with its source and the date we checked it.",
+            "self": True, "selfnote": "this answer describes the tool on this page; each fee it shows is linked to the official page it came from"}
            for w in ("couch, mattress or fridge",)]
     for sl, l, n, a, u in st:
         qas.append({"q": f"How many Boston-area options publish a price for getting rid of a {TOOL_NOUN[sl]}?",
                     "a": f"Of the {n} options on our {', '.join(names[:-1])} and {names[-1]} pages that list {l.lower()}, {a} include a dollar amount in their published cost wording "
-                         f"and {u} don't (the source says no fee, free, quote only, or doesn't say). Counts are from our data as of {MODIFIED.get(TOOL_PATH, '')}; pick a city above to read each one's own wording."})
+                         f"and {u} don't (the source says no fee, free, quote only, or doesn't say). Counts are from our data as of {MODIFIED.get(TOOL_PATH, '')}; pick a city above to read each one's own wording.",
+                    "self": True,
+                    "selfnote": f"counted from the cost wording each listing publishes, with every listing's own source linked in the table on this page"})
     mod = MODIFIED.get(TOOL_PATH, "")
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › Bulky item pickup cost checker</p>
 <h1>Bulky item pickup cost checker: what will my city charge?</h1>
@@ -1109,7 +1136,7 @@ def home(cities):
 {home_guides(cities)}
 <h2>Why this exists</h2>
 <p>Charities change what they accept, some stop picking up furniture altogether, and city rules differ from one place to the next. People end up calling three places and still having a couch on the curb. We collect the rules from official sources, link every listing to its source, and date when we last checked it.</p>
-<p class="meta">Listings last verified {e(max([c["last_verified"] for c in cities] + [l["last_verified"] for c in cities for l in c["listings"]]))}.</p>
+<p class="meta">Listings last verified between {e(min([c["last_verified"] for c in cities] + [l["last_verified"] for c in cities for l in c["listings"]]))} and {e(max([c["last_verified"] for c in cities] + [l["last_verified"] for c in cities for l in c["listings"]]))}; each listing shows its own check date.</p>
 <p><a href="{U('/about/')}">How we verify listings &amp; how this site makes money →</a></p>"""
     return page(f"{CFG['site_name']}: Get Rid of Furniture, Mattresses & Appliances",
                 "Verified, city-by-city options for getting rid of couches, mattresses, furniture and appliances: city pickup, donation pickup, drop-off, furniture banks and haulers.", "/", body, faq_ld([cmp_q]) if cmp_q else None)

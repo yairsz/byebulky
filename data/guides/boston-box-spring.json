@@ -11,26 +11,88 @@
     {
       "q": "Can I throw a box spring in the trash in Boston?",
       "a": "No. The City of Boston says recycling mattresses is a state requirement and it will not collect mattresses or box springs with curbside trash. You need a mattress pickup appointment instead.",
-      "sources": [{"label": "City of Boston: mattress recycling", "url": "https://www.boston.gov/departments/public-works/mattress-recycling"}]
+      "sources": [
+        {
+          "label": "City of Boston: mattress recycling",
+          "url": "https://www.boston.gov/departments/public-works/mattress-recycling"
+        }
+      ]
     },
     {
       "q": "How do I get rid of a box spring for free in Boston?",
       "a": "If your building has 6 units or fewer, book the City's curbside mattress pickup online or call 311 (617-635-4500). The City accepts box springs, and its page doesn't mention a fee. If you're buying a new Saatva mattress, Saatva says its delivery team takes away the old mattress and foundation or box spring for free when you check the removal box at checkout.",
-      "sources": [{"label": "City of Boston: mattress recycling", "url": "https://www.boston.gov/departments/public-works/mattress-recycling"}, {"label": "Saatva", "url": "https://saatvahelp.saatva.com/hc/en-us/articles/360041763093-Does-Saatva-remove-my-old-mattress"}]
+      "sources": [
+        {
+          "label": "City of Boston: mattress recycling",
+          "url": "https://www.boston.gov/departments/public-works/mattress-recycling"
+        },
+        {
+          "label": "Saatva",
+          "url": "https://saatvahelp.saatva.com/hc/en-us/articles/360041763093-Does-Saatva-remove-my-old-mattress"
+        }
+      ]
     },
     {
       "q": "How do I get rid of a box spring from an apartment in Boston?",
       "a": "The City only collects from buildings with 6 units or fewer, and only at the curb. In a bigger building, ask your property manager or use a hauler on the City's list: Tough Stuff Recycling charges $75 per box spring for pickup and CC Junk Removal & Hauling charges $125 with indoor removal included (as listed by the City). LoadUp's box spring page lists in-home removal from $70.",
-      "sources": [{"label": "City of Boston: mattress recycling", "url": "https://www.boston.gov/departments/public-works/mattress-recycling"}, {"label": "City of Boston: large residential buildings", "url": "https://www.boston.gov/departments/public-works/large-residential-buildings"}, {"label": "LoadUp", "url": "https://goloadup.com/box-spring-removal/"}]
+      "sources": [
+        {
+          "label": "City of Boston: mattress recycling",
+          "url": "https://www.boston.gov/departments/public-works/mattress-recycling"
+        },
+        {
+          "label": "City of Boston: large residential buildings",
+          "url": "https://www.boston.gov/departments/public-works/large-residential-buildings"
+        },
+        {
+          "label": "LoadUp",
+          "url": "https://goloadup.com/box-spring-removal/"
+        }
+      ]
     },
     {
       "q": "How much does box spring removal cost in Boston?",
       "a": "City pickup has no fee mentioned on the City page. Paid options list Tough Stuff Recycling $75 for pickup or $25 to drop off with proof of Boston residency, HandUp Mattress Recycling $35 to drop off, CC Junk Removal & Hauling $125 with indoor removal (all as listed by the City), and LoadUp from $70 in-home or $65 curbside, or from $15 added to a mattress pickup.",
-      "sources": [{"label": "City of Boston: large residential buildings", "url": "https://www.boston.gov/departments/public-works/large-residential-buildings"}, {"label": "LoadUp", "url": "https://goloadup.com/box-spring-removal/"}, {"label": "City of Boston: mattress recycling", "url": "https://www.boston.gov/departments/public-works/mattress-recycling"}]
+      "sources": [
+        {
+          "label": "City of Boston: large residential buildings",
+          "url": "https://www.boston.gov/departments/public-works/large-residential-buildings"
+        },
+        {
+          "label": "LoadUp",
+          "url": "https://goloadup.com/box-spring-removal/"
+        },
+        {
+          "label": "City of Boston: mattress recycling",
+          "url": "https://www.boston.gov/departments/public-works/mattress-recycling"
+        }
+      ]
     },
     {
       "q": "Can I donate a box spring in Boston?",
-      "a": "Only if it's clean and undamaged, and only to a few places. Furnishing Hope and Household Goods list box springs among accepted donations, but Household Goods refuses mattresses with stains or rips and its volunteer pickup doesn't serve Boston. The Habitat Greater Boston ReStore, Goodwill Massachusetts and the Thrift Shop of Boston all say they don't accept box springs."
+      "a": "Only if it's clean and undamaged, and only to a few places. Furnishing Hope and Household Goods list box springs among accepted donations, but Household Goods refuses mattresses with stains or rips and its volunteer pickup doesn't serve Boston. The Habitat Greater Boston ReStore, Goodwill Massachusetts and the Thrift Shop of Boston all say they don't accept box springs.",
+      "sources": [
+        {
+          "label": "Furnishing Hope",
+          "url": "https://www.furnishinghopema.org/donate-1"
+        },
+        {
+          "label": "Household Goods",
+          "url": "https://www.householdgoods.org/donate/donate-goods/donation-guidelines/"
+        },
+        {
+          "label": "Habitat Greater Boston ReStore",
+          "url": "https://habitatboston.org/restore/"
+        },
+        {
+          "label": "Goodwill Massachusetts",
+          "url": "https://goodwillmass.org/what-to-donate/"
+        },
+        {
+          "label": "The Thrift Shop of Boston",
+          "url": "https://thriftshopofboston.org/donate-your-stuff/"
+        }
+      ]
     }
   ],
   "sections": [
