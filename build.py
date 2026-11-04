@@ -200,17 +200,23 @@ def listing_card(l, item_rx=None):
 # No personal data: only the destination host and URL, plus whether the link is a labeled affiliate link.
 OUTBOUND_JS = """<script>
 (function(){
+var sent={};
 function send(a){
   if(typeof gtag!=='function'){return;}
   var u;try{u=new URL(a.getAttribute('href'),location.href);}catch(e){return;}
   if(!u||!u.hostname||u.hostname===location.hostname){return;}
-  var p={link_domain:u.hostname,link_url:u.href,affiliate_link:a.getAttribute('data-affiliate')==='true'?1:0};
-  gtag('event','outbound_click',p);
+  if(sent[u.href]){return;}   /* one hit per destination per page view, so a re-triggered click cannot double-count */
+  sent[u.href]=1;
+  gtag('event','outbound_click',{link_domain:u.hostname,link_url:u.href,
+    affiliate_link:a.getAttribute('data-affiliate')==='true'?1:0,
+    transport_type:'beacon'});   /* beacon survives the navigation that follows the click */
 }
 document.addEventListener('click',function(ev){
+  if(ev.__bbOut){return;}
   var t=ev.target;var a=t&&t.closest?t.closest('a[href]'):null;if(!a){return;}
   var h=a.getAttribute('href')||'';
   if(h.charAt(0)==='#'||h.indexOf('mailto:')===0||h.indexOf('tel:')===0){return;}
+  ev.__bbOut=1;
   send(a);
 },true);
 })();
@@ -1250,6 +1256,10 @@ def main():
     mg = [g for g in GUIDES if g["short"] == "Mattress"]
     MODIFIED[COST_PATH] = max(MODIFIED[f"/{g['path']}/"] for g in mg)
     MODIFIED[RULES_PATH] = max(l["last_verified"] for c in cities for l in c["listings"] if l["type"] == "city bulk pickup")
+    # Bump BEFORE anything renders: page() reads MODIFIED for dateModified and the visible "page updated" line,
+    # so a post-render bump changed the sitemap only and left JSON-LD/visible dates stale (caught 2026-11-04).
+    for path in EDITED_2026_11_04:
+        if path in MODIFIED: MODIFIED[path] = max(MODIFIED[path], "2026-11-04")
     pages = {"/": home(cities), "/about/": about(cities), "/privacy/": privacy_page()}
     for c in cities: pages[f"/{c['slug']}/"] = city_page(c)
     for g in GUIDES: pages[f"/{g['path']}/"] = guide_page(g, bycity[g["city"]])
@@ -1259,8 +1269,6 @@ def main():
     pages[NOCAR_PATH] = nocar_page()
     MODIFIED[TOOL_PATH] = max(l["last_verified"] for c in cities for l in c["listings"])
     pages[TOOL_PATH] = tool_page()
-    for path in EDITED_2026_11_04:
-        if path in MODIFIED: MODIFIED[path] = max(MODIFIED[path], "2026-11-04")
     for path, h in pages.items():
         d = OUT / path.strip("/"); d.mkdir(parents=True, exist_ok=True); (d / "index.html").write_text(h)
     global PREFIX

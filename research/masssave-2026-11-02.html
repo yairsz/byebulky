@@ -1,0 +1,678 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"bab4f2f43c","applicationID":"227205806","transactionName":"ZlBSNkRWWBYHVENYXF8aZwdUR1cCAxhnQ1xVQFMWFnNTEQdeWxFjUFJV","queueTime":0,"applicationTime":297,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]},feature_flags:["rum_v2"]};(window.NREUM||(NREUM={})).loader_config={licenseKey:"bab4f2f43c",applicationID:"227205806",browserID:"227212848"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport" />
+    <!-- Google Tag Manager -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MSPNC9X');</script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P85RW6T');</script>
+<!-- End Google Tag Manager -->
+    
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-55PMJS');</script>
+<!-- End Google Tag Manager -->
+
+
+
+<title>Massachusetts Fridge and Freezer Recycle Rebates &amp; Eligibility </title>
+
+<meta name="keywords" content=""/>
+<meta name="description" content="Recycle your old and inefficient fridge or freezer and you&#39;ll receive a rebate - we&#39;ll even pick it up for you!"/>
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Massachusetts Fridge and Freezer Recycle Rebates &amp; Eligibility"/>
+<meta property="og:description" content="Recycle your old and inefficient fridge or freezer and you&#39;ll receive a rebate - we&#39;ll even pick it up for you!" />
+<meta property="og:url" content="https://www.masssave.com/en/residential/rebates-offers-services/appliance-recycling/refrigerator-and-freezer-recycling" />
+<meta property="og:site_name" content="Mass Save" />
+
+<meta property="og:image" content="https://www.masssave.com/-/media/Images/Shop/Recycling/fridge-freezer-recylcling/Mass-Save-Refrigerator-Recycling.jpg?h=272&amp;w=350&amp;hash=D1B24A986A63EC84A852A11D4BB3953E"/>
+<meta property="og:image:secure_url" content="https://www.masssave.com/-/media/Images/Shop/Recycling/fridge-freezer-recylcling/Mass-Save-Refrigerator-Recycling.jpg?h=272&amp;w=350&amp;hash=D1B24A986A63EC84A852A11D4BB3953E" />
+<meta property="og:image:width" content="350" />
+<meta property="og:image:height" content="272" />
+<meta property="og:image:alt" content="Icon for Refrigerator Recycling programs in Massachusetts" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Recycle your old and inefficient fridge or freezer and you&#39;ll receive a rebate - we&#39;ll even pick it up for you!" />
+<meta name="twitter:title" content="Massachusetts Fridge and Freezer Recycle Rebates &amp; Eligibility" />
+<meta name="twitter:site" content="@MassSave" />
+<meta name="twitter:creator" content="@MassSave" />
+<meta name="twitter:image" content="https://www.masssave.com/-/media/Images/Shop/Recycling/fridge-freezer-recylcling/Mass-Save-Refrigerator-Recycling.jpg?h=272&amp;w=350&amp;hash=D1B24A986A63EC84A852A11D4BB3953E" />
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="/scripts/Sitecore.Foundation.Frameworks.min.js?v=add304fb9c7a44f4808e30cf8f8427d8"></script>
+<script src="/scripts/Sitecore.Foundation.Theming.min.js?v=add304fb9c7a44f4808e30cf8f8427d8"></script>
+
+    <link href="/styles/masssave-generated.css?v=add304fb9c7a44f4808e30cf8f8427d8" rel="stylesheet" />
+
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.masssave.com/residential/rebates-offers-services/appliance-recycling/refrigerator-and-freezer-recycling">
+
+    <!-- Facebook Domain Verification -->
+    <meta name="facebook-domain-verification" content="pl22petn4abyf8n9iynx3gysm2mh0d" />
+
+    <script type="text/javascript" src="/js/objectFitPolyfill.min.js"></script>
+    
+    <!-- start forms styles-->
+    
+    <!-- end forms styles-->
+</head>
+
+<body class="header-static ">
+            <style type="text/css">
+                #locationPin, #locationPinMobile {
+                    display: none;
+                }
+            </style>
+
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSPNC9X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P85RW6T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55PMJS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <div id="main-container">
+        <header class="header-static">
+            <div class="skip-link" tabIndex="-1"><a href="#main-content">Skip to main content</a></div>
+            
+            
+
+
+<div class="js-global-header-mount"
+     data-language-data='[{"href":"/en/residential/rebates-offers-services/appliance-recycling/refrigerator-and-freezer-recycling/","label":"English","selected":true},{"href":"/pt/residential/rebates-offers-services/appliance-recycling/refrigerator-and-freezer-recycling/","label":"Português","selected":false},{"href":"/es/residential/rebates-offers-services/appliance-recycling/refrigerator-and-freezer-recycling/","label":"Español","selected":false}]'
+     data-logos='{"desktop":"/-/media/MassSave/Startup/Logos/mass-save-logo-d.svg?h=2615&w=6222&hash=78BA0C5F2E6E7F88305C474B32D5FF80","logoAlt":"Mass Save Logo, Energy savings that matter","mobile":"/-/media/MassSave/Startup/Logos/mass-save-logo-d.svg?h=2615&w=6222&hash=78BA0C5F2E6E7F88305C474B32D5FF80"}'
+     data-utility='{"searchLabel":"Search","yourLocationLabel":null,"rightNavItems":[{"label":"About","url":"/en/about-us","iconClass":"","isButton":false},{"label":"FAQ","url":"/en/frequently-asked-questions","iconClass":"","isButton":false},{"label":"News","url":"/en/about/news-and-events","iconClass":"","isButton":false},{"label":"Contact","url":"/en/contact","iconClass":"","isButton":false}],"buttonNavItems":[{"label":"GET STARTED","url":"/en/get-started","iconClass":"","isButton":true}]}'
+     data-nav-data='[{"navLabel":"Residential","navUrl":"/en/residential","hasSubNav":true,"subNav":[{"navLabel":"Find Energy Savings For You","iconClass":"ms-icon-home","navUrl":"","hasSubNav":true,"linkType":"","subNav":[{"navLabel":"Homeowners","iconClass":"ms-icon-","navUrl":"/en/get-started/homeowners","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Landlords","iconClass":"ms-icon-","navUrl":"/en/multi-family/energy-assessments/landlords-with-1-4-unit-properties","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Renters","iconClass":"ms-icon-","navUrl":"/en/residential/for-renters","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Income-Based Assistance","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/income-based-offers","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"New Construction","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/new-home-construction","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Renovations & Additions","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/renovations-and-additions","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Multi-Family (5+ Unit) Properties","iconClass":"ms-icon-","navUrl":"/en/multi-family/energy-assessments/multi-family-facilities-5-units-plus","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Condos","iconClass":"ms-icon-","navUrl":"/en/residential/condos","hasSubNav":false,"linkType":"internal","subNav":[]}]},{"navLabel":"Explore Rebates, Offers and Services","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Home Energy Assessments","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/home-energy-assessments","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Appliances & Products","iconClass":"ms-icon-energy-assessment","navUrl":"/en/residential/rebates-offers-services/appliances-and-products","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Clothes Dryers","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/appliances-and-products/clothes-dryers","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Clothes Washers","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/appliances-and-products/clothes-washers","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Electric Stoves","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/appliances-and-products/cooktoprebates","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Lawn Equipment","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/appliances-and-products/lawnequipment","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Pool Pumps","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/appliances-and-products/pool-pumps","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Advanced Power Strips","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/appliances-and-products/advanced-power-strips","hasSubNav":false,"linkType":"internal","subNav":null}]},{"navLabel":"Appliance Recycling","iconClass":"ms-icon-energy-assessment","navUrl":"/en/residential/rebates-offers-services/appliance-recycling","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Dehumidifier Recycling","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/appliance-recycling/dehumidifier","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Refrigerator & Freezer Recycling","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/appliance-recycling/refrigerator-and-freezer-recycling","hasSubNav":false,"linkType":"internal","subNav":null}]},{"navLabel":"Battery Storage & EVs","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/battery-storage-and-evs","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Battery Storage","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/battery-storage-and-evs/batteries","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"EV Charging Equipment & Accessories","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/battery-storage-and-evs/ev-charging-equipment","hasSubNav":false,"linkType":"internal","subNav":null}]},{"navLabel":"ConnectedSolutions","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/connectedsolutions","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Enroll Your Battery Storage","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/battery-storage-and-evs/batteries","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Enroll Your Thermostat","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/connectedsolutions/connectedsolutions-thermostat","hasSubNav":false,"linkType":"internal","subNav":null}]},{"navLabel":"Decarbonization Consultations","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/decarbonization-consultations","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Heating & Cooling","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/heating-and-cooling","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Air Source Heat Pumps","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/heating-and-cooling/heat-pumps/air-source-heat-pumps","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Air to Water Heat Pumps","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/heating-and-cooling/heat-pumps/air-to-water-heat-pumps","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Ground Source Heat Pumps","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/heating-and-cooling/heat-pumps/ground-source-heat-pumps","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Heat Pumps","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/heating-and-cooling/heat-pumps","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Integrated Controls","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/heating-and-cooling/integrated-controls","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Room Air Conditioners","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/heating-and-cooling/room-air-conditioners","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Smart & Programmable Thermostats","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/heating-and-cooling/smart-and-programmable-thermostats","hasSubNav":false,"linkType":"internal","subNav":null}]},{"navLabel":"Insulation & Windows","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/insulation-and-windows","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Insulation & Air Sealing","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/insulation-and-windows/insulation-and-air-sealing","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Windows","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/insulation-and-windows/windows","hasSubNav":false,"linkType":"internal","subNav":null}]},{"navLabel":"Water Heating","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/water-heating","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Heat Pump Water Heaters","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/water-heating/heat-pump-water-heaters","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Shower Fixtures, TSVs & Faucet Aerators","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/water-heating/shower-fixtures","hasSubNav":false,"linkType":"internal","subNav":null}]},{"navLabel":"0% Financing","iconClass":"ms-icon-","navUrl":"/en/residential/rebates-offers-services/financing","hasSubNav":false,"linkType":"internal","subNav":[]}]},{"navLabel":"Start Your Path to Home Electrification","iconClass":"ms-icon-","navUrl":"","hasSubNav":true,"linkType":"","subNav":[{"navLabel":"Home Electrification","iconClass":"ms-icon-","navUrl":"/en/about-us/electrification/residential","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Multi-Family (5+ Unit) Property Electrification","iconClass":"ms-icon-","navUrl":"/en/about-us/electrification/multi-family","hasSubNav":false,"linkType":"internal","subNav":[]}]},{"navLabel":"Shop Discounted Products","iconClass":"ms-icon-","navUrl":"/en/residential/shop-products","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Shop Products Online","iconClass":"ms-icon-","navUrl":"https://www.poweredbyefi.org/masssave","hasSubNav":false,"linkType":"external","subNav":[]},{"navLabel":"Shop Heat Pump Water Heaters Online","iconClass":"ms-icon-","navUrl":"https://hpwh.masssave.com/default/welcome/","hasSubNav":false,"linkType":"external","subNav":[]},{"navLabel":"Find In-Store Discounts","iconClass":"ms-icon-","navUrl":"/en/residential/shop-products/store-finder","hasSubNav":false,"linkType":"internal","subNav":[]}]}],"featuredNav":{"featureText":"Start Saving","featureDescription":"Incentives, services, and support to help Massachusetts residents enjoy all the good things energy efficiency brings.","featureUrl":"/en/get-started/get-started-residential","featureUrlText":"GET STARTED","featureImage":"","linkType":"internal"}},{"navLabel":"Business","navUrl":"/en/business","hasSubNav":true,"subNav":[{"navLabel":"Discover Solutions For Your Industry","iconClass":"ms-icon-","navUrl":"/en/business/solutions-by-sector","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Data Centers","iconClass":"ms-icon-","navUrl":"/en/business/solutions-by-sector/data-centers","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Education (K-12)","iconClass":"ms-icon-","navUrl":"/en/business/solutions-by-sector/education-k12","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Food Service","iconClass":"ms-icon-","navUrl":"/en/business/solutions-by-sector/food-service","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Grocery Stores","iconClass":"ms-icon-","navUrl":"/en/business/solutions-by-sector/grocery-stores","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Healthcare","iconClass":"ms-icon-","navUrl":"/en/business/solutions-by-sector/healthcare","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Hospitality","iconClass":"ms-icon-","navUrl":"/en/business/solutions-by-sector/hospitality","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Laboratories","iconClass":"ms-icon-","navUrl":"/en/business/solutions-by-sector/laboratories","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Landlords & Renters","iconClass":"ms-icon-","navUrl":"/en/business/solutions-by-sector/landlord-renters","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Manufacturing","iconClass":"ms-icon-","navUrl":"/en/business/solutions-by-sector/manufacturing","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Multi-Family (5+ Unit) Properties","iconClass":"ms-icon-","navUrl":"/en/multi-family","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Municipalities","iconClass":"ms-icon-","navUrl":"/en/business/solutions-by-sector/municipalities","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Non-profits","iconClass":"ms-icon-","navUrl":"/en/business/solutions-by-sector/non-profits","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Offices","iconClass":"ms-icon-","navUrl":"/en/business/solutions-by-sector/offices","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Property Management","iconClass":"ms-icon-","navUrl":"/en/business/solutions-by-sector/property-management","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Retail","iconClass":"ms-icon-","navUrl":"/en/business/solutions-by-sector/retail","hasSubNav":false,"linkType":"internal","subNav":[]}]},{"navLabel":"Explore Products, Services, and Offers","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Energy Assessments & Technical Assistance","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/energy-assessments-technical-assistance","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Solutions for Small Business Customers","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/energy-assessments-technical-assistance#smallbusiness","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Solutions for Large Commercial & Industrial Customers","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/energy-assessments-technical-assistance#largecommercial","hasSubNav":false,"linkType":"internal","subNav":null}]},{"navLabel":"Building & HVAC Controls","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/building-and-hvac-controls","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Building Management Systems & Controls","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/building-and-hvac-controls/building-management-systems-and-controls-incentives","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"EBCx & MBCx","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/existing-building-and-monitor-based-commissioning","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Vending Misers","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/building-and-hvac-controls/vending-misers","hasSubNav":false,"linkType":"internal","subNav":null}]},{"navLabel":"Building Insulation & Weatherization","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/building-insulation-and-weatherization","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Pre-Weatherization Barrier Mitigation","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/building-insulation-and-weatherization/pre-weatherization-barrier-mitigation","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Buildings Under 20,000 Square Feet","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/building-insulation-and-weatherization/building-insulation-and-weatherization-incentives","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Buildings 20,000 - 100,000 Square Feet","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/building-insulation-and-weatherization/custom-building-insulation-and-weatherization-incentives","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Buildings Over 100,000 Square Feet","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/custom-incentives-and-technical-support/custom-incentives","hasSubNav":false,"linkType":"internal","subNav":null}]},{"navLabel":"Commercial ConnectedSolutions","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/commercialconnectedsolutions","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Custom Incentives & Technical Support","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/custom-incentives-and-technical-support","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Technical Assistance & Engineering Services","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/custom-incentives-and-technical-support/technical-assistance-and-engineering-services","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Custom Incentives","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/custom-incentives-and-technical-support/custom-incentives","hasSubNav":false,"linkType":"internal","subNav":null}]},{"navLabel":"Deep Energy Retrofit","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/deep-energy-retrofit","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Heating & Cooling","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/heating-and-cooling","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Air Conditioning","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/heating-and-cooling/air-conditioning","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Boilers & Furnaces","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/heating-and-cooling/boilers-and-furnaces","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Chillers","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/heating-and-cooling/chillers","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Cooling Plants","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/heating-and-cooling/cooling-plants","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Heat Pumps","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/heating-and-cooling/heat-pumps","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Thermostats","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/heating-and-cooling/thermostats","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Energy Recovery Ventilators","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/heating-and-cooling/energy-recovery-ventilators","hasSubNav":false,"linkType":"internal","subNav":null}]},{"navLabel":"Lighting & Controls","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/lighting-and-controls","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Get Lighting Upgrade Recommendations","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/energy-assessments-technical-assistance","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Instant Incentives","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/lighting-and-controls/instant-lighting-incentives","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Upgrade Existing Lighting","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/lighting-and-controls/upgrade-existing-lighting","hasSubNav":false,"linkType":"internal","subNav":null}]},{"navLabel":"New Construction & Major Renovations","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/new-construction-and-major-renovations","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Specialty Equipment","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/specialty-equipment","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Cold Storage & Lab Grade Equipment","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/specialty-equipment/cold-storage-and-lab-grade-equipment","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Commercial Refrigeration","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/specialty-equipment/commercial-refrigeration","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Compressed Air Systems","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/specialty-equipment/compressed-air-systems","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Food Service Equipment","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/specialty-equipment/food-service-equipment","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Electric Forklifts and Chargers","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/specialty-equipment/forklift-electrification","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Industrial Air Curtains","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/specialty-equipment/industrial-air-curtains","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Lawn Equipment","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/specialty-equipment/lawn-equipment","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Laundry Equipment","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/specialty-equipment/laundry-equipment","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Pumps","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/specialty-equipment/pumps","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Steam Systems & Solutions","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/specialty-equipment/steam-systems-and-solutions","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Variable Speed Drives & Motors","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/specialty-equipment/variable-speed-drives-and-motors","hasSubNav":false,"linkType":"internal","subNav":null}]},{"navLabel":"Water Heating & Pipe Insulation","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/water-heating-and-pipe-insulation","hasSubNav":true,"linkType":"internal","subNav":[{"navLabel":"Water Heaters","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/water-heating-and-pipe-insulation/water-heaters","hasSubNav":false,"linkType":"internal","subNav":null},{"navLabel":"Pipe Insulation","iconClass":"ms-icon-","navUrl":"/en/business/rebates-offers-services/water-heating-and-pipe-insulation/pipe-insulation","hasSubNav":false,"linkType":"internal","subNav":null}]}]},{"navLabel":"Start Your Path to Business Electrification","iconClass":"ms-icon-","navUrl":"","hasSubNav":true,"linkType":"","subNav":[{"navLabel":"Business Electrification","iconClass":"ms-icon-","navUrl":"/en/about-us/electrification/business","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Multi-Family (5+ Unit) Property Electrification","iconClass":"ms-icon-","navUrl":"/en/about-us/electrification/multi-family","hasSubNav":false,"linkType":"internal","subNav":[]}]},{"navLabel":"Shop Discounted Products Online","iconClass":"ms-icon-","navUrl":"https://www.poweredbyefi.org/masssavebusiness/","hasSubNav":false,"linkType":"external","subNav":[]}],"featuredNav":{"featureText":"Start Saving","featureDescription":"Incentives, services, and support to help Massachusetts businesses enjoy all the good things energy efficiency brings.","featureUrl":"/en/get-started/get-started-business","featureUrlText":"GET STARTED","featureImage":"","linkType":"internal"}},{"navLabel":"Community","navUrl":"/en/community","hasSubNav":true,"subNav":[{"navLabel":"Community Education Grant","iconClass":"ms-icon-","navUrl":"/en/community/education-grant","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Community First Partnerships","iconClass":"ms-icon-","navUrl":"/en/community/community-partnership","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Community Insights Newsletter","iconClass":"ms-icon-","navUrl":"/en/community/community-insights","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Mass Save Impact Awards","iconClass":"ms-icon-","navUrl":"/en/community/mass-save-impact-awards","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Municipal Energy Manager Grant","iconClass":"ms-icon-","navUrl":"/en/community/municipal-energy-manager-grant","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Municipality Hub","iconClass":"ms-icon-","navUrl":"/en/community/municipality-hub","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"School Resources","iconClass":"ms-icon-","navUrl":"/en/community/school-resources","hasSubNav":false,"linkType":"internal","subNav":[]}],"featuredNav":{"featureText":"Mass Save Impact Awards","featureDescription":"The Sponsors of Mass Save are proud to present the Mass Save Impact Awards, recognizing organizations and communities for their leadership in energy efficiency, electrification, building modernization, and other initiatives that are helping shape a more sustainable and resilient Commonwealth.","featureUrl":"/en/community/mass-save-impact-awards","featureUrlText":"LEARN MORE","featureImage":"/-/media/Images/Partners-Hero-Images/2026-Impact-Awards.jpeg?h=2615&w=6222&hash=1106B6CC6C5CF162A9F4AF8E54F0C386","linkType":"internal"}},{"navLabel":"Trade Partners","navUrl":"/en/trade-partners","hasSubNav":true,"subNav":[{"navLabel":"Engagement Opportunities","iconClass":"ms-icon-","navUrl":"","hasSubNav":true,"linkType":"","subNav":[{"navLabel":"Contractors","iconClass":"ms-icon-","navUrl":"/en/trade-partners/contractors","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Distributors","iconClass":"ms-icon-","navUrl":"/en/trade-partners/distributors","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Manufacturers","iconClass":"ms-icon-","navUrl":"/en/trade-partners/manufacturers","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Requests for Proposals","iconClass":"ms-icon-","navUrl":"/en/trade-partners/requests-for-proposals","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Career Board","iconClass":"ms-icon-","navUrl":"/en/trade-partners/career-board","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"New Technologies & Solutions","iconClass":"ms-icon-","navUrl":"/en/trade-partners/new-technologies-and-solutions","hasSubNav":false,"linkType":"internal","subNav":[]}]},{"navLabel":"Workforce Engagement","iconClass":"ms-icon-","navUrl":"","hasSubNav":true,"linkType":"","subNav":[{"navLabel":"Supplier Engagement Summit","iconClass":"ms-icon-","navUrl":"/en/trade-partners/supplier-engagement-summit","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Clean Energy Pathways","iconClass":"ms-icon-","navUrl":"/en/trade-partners/clean-energy-pathways","hasSubNav":false,"linkType":"internal","subNav":[]}]},{"navLabel":"Training & Resources","iconClass":"ms-icon-","navUrl":"","hasSubNav":true,"linkType":"","subNav":[{"navLabel":"Business Quick Tools & Resources","iconClass":"ms-icon-","navUrl":"/en/trade-partners/business-quick-tools-and-resources","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Energy Code Training & Technical Support","iconClass":"ms-icon-","navUrl":"/en/trade-partners/energy-code-training-and-technical-support","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Events & Trainings Calendar","iconClass":"ms-icon-","navUrl":"/en/trade-partners/events-and-trainings-calendar","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Residential Quick Tools & Resources","iconClass":"ms-icon-","navUrl":"/en/trade-partners/residential-quick-tools-and-resources","hasSubNav":false,"linkType":"internal","subNav":[]},{"navLabel":"Mass Save Sponsor Directory","iconClass":"ms-icon-","navUrl":"/en/trade-partners/mass-save-sponsor-directory","hasSubNav":false,"linkType":"internal","subNav":[]}]}],"featuredNav":{"featureText":"Events and Trainings Calendar","featureDescription":"Stay up-to-date on the latest energy efficiency technologies and best practices, and refresh or upgrade your skill sets through trainings and events.","featureUrl":"/en/trade-partners/events-and-trainings-calendar","featureUrlText":"VIEW THE CALENDAR","featureImage":"","linkType":"internal"}}]'
+     data-sponsors='{"noZipDetectedOnLoad":true,"showBanner":false,"zipInputError":"Please enter a valid zip code","zipInputMessage":"Zip code changed successfully","ourSponsorsLabel":"Your Sponsors","zip":null,"zipCookieName":"MassSave#zip","unableToDetectLabel":"We could not determine your location.","sponsorBannerServiceAreaLabel":"Your Service Area is: ","changeLabel":"CHANGE?","enterZipCodeLabel":"Enter your Zip Code","enterZipCodeLongLabel":"Enter your Zip code to find your local Service Providers","sponsorsIncludeLabel":"Your Sponsors include","noSponsorsLabel":"Unfortunately your zip code is not in our Service Area.","cancelWarning":"Without verifying your zip code, we will not be able to serve location specific content.  Click OK to proceed or click Cancel to specify a zip code."}'
+     data-search-data='{"searchTitle":"Search","searchLabel":"Global search input","searchModalTitle":"Search Mass Save","searchInputPlaceholder":"Enter Search Term","searchActionUrl":"/en/search"}'
+>
+</div>
+
+
+
+
+            
+
+    <div class="alertBanner__message" style="background-color: #3C68A3">
+        <style>
+.alertBanner__message a.heading-4 {
+  margin-top: 25px;
+}
+
+.alertBanner__message {
+    border-bottom: 1px solid #64b006;
+}
+
+@media screen and (min-width: 768px) {
+  .alertBanner__message a.heading-4 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+</style>
+<a class="heading-4" style="color: white;" href="https://www.masssave.com/en/frequently-asked-questions-scam-safety">Scam attempts are on the rise. Protect yourself with <span style="text-decoration: underline;">these tips.</span></a>
+    </div>
+
+            
+        </header>
+        <main role="main" id="main-content" tabIndex="-1">
+
+<div id="large-hero" class="row"></div>
+
+
+<!-- Inline style needed to switch between mobile and desktop-->
+<style>
+    @media (max-width: 767px) {
+        .hero__media-container--video {
+            display: none;
+        }
+    }
+
+    @media (min-width: 767px) {
+        .hero__media-container--image {
+            display: none;
+        }
+
+        .hero__media-container--image-no-video {
+            display: initial;
+        }
+    }
+
+    .hero__media-container::before, .main-hero-right::before {
+     }
+
+    .hero__media-container-SLSID992::before {
+        background-color: rgba(0, 0, 0, .4 )
+    }
+
+    #large-hero-background-image-with-mobile {
+        background-image: url(https://www.masssave.com/-/media/Images/Residential/Refrigerators-Image-header.jpg?h=240&amp;w=432&amp;hash=DD2C4B4F373635604DED63E07D1D599F);
+    }
+    @media (max-width: 767px) {
+        #large-hero-background-image-with-mobile {
+            background-image: url(https://www.masssave.com/-/media/Images/Residential/Refrigerators-Image-header.jpg?h=240&amp;w=432&amp;hash=DD2C4B4F373635604DED63E07D1D599F);
+        }
+    }
+    #large-hero-background-image {
+        background-image: url(https://www.masssave.com/-/media/Images/Residential/Refrigerators-Image-header.jpg?h=240&amp;w=432&amp;hash=DD2C4B4F373635604DED63E07D1D599F);
+    }
+    @media only screen and (min-width: 1999px) {
+    .hero__content-container .col-xs-12 {
+        width: 100%;
+        }
+    }
+    @media only screen and (min-width: 992px) {
+    .hero__content-container .col-xs-12 {
+        width: 100%;
+        }
+    }
+</style>
+
+    <section class="container-fluid hero hero--overlay  hero--overlay-no-video ">
+        <div class="hero__content-container container">
+            <div class="col-md-12">
+                    <h1 class="hero__title">Refrigerator and Freezer Recycling</h1>
+                    <div class="hero__subtitle">
+                        Get a $75 Rebate and a no-cost pickup
+                    </div>
+                    <div class="hero__cta"></div>
+            </div>
+        </div>
+        <div class="hero__media-container hero__media-container-SLSID992 hero__media-container--image hero__media-container--image-no-video">
+            <picture class="hero__picture">
+                <source media="(max-width: 768px)"
+                        srcset="https://www.masssave.com/-/media/Images/Residential/Refrigerators-Image-header.jpg?h=240&amp;w=432&amp;hash=DD2C4B4F373635604DED63E07D1D599F" />
+                        <img src="/-/media/Images/Residential/Refrigerators-Image-header.jpg" width="432" height="240">
+            </picture>
+        </div>
+    </section>
+
+<section class="section section-full   ">
+  <div class=" ">
+    <div class="single-column-wrap container">
+        <div class="row ">
+            <div class="col-xs-12">
+                
+
+<div class="row padding-top">
+    <div class="col-xs-12">
+                <a href="/en/residential/rebates-offers-services/appliance-recycling" class="tertiary-link blue">
+                    <i class="ms-icon-back" aria-hidden="true"></i>
+                    Back to Appliance Recycling
+                </a>
+    </div>
+</div>
+
+
+            </div>
+        </div>
+    </div>
+</div><div class="padding-bottom ">
+
+    <div class="two-column-wrap container">
+        <div class="row ">
+            <div class="col-md-6 ">
+                
+
+
+<div class="product-details marg-bot-40">
+    <p>Do you have an inefficient, working refrigerator or freezer using electricity unnecessarily? Recycle it and get a no-cost pickup and removal - plus, a $75 rebate. </p>
+<p>Refrigerators and freezers that use inefficient technology can increase electricity costs by up to $100 a year compared to newer, ENERGY STAR certified models. When you schedule an appliance pick up through the Sponsors of Mass Save,  you will save  and your unit will be responsibly recycled - 95% of a refrigerator or freezer can be recycled. Schedule your no-cost pickup today. </p>
+</div>
+            </div>
+            <div class="col-md-6 ">
+                
+
+
+<script type="text/javascript">
+    $(window).on('load', function (e) {
+        if ($.trim($('.button-container-flex:first').text()) === '') {
+            $('.button-container-flex:first').addClass('empty');
+        }
+        if ($.trim($('.linkbutton-container-flex:first').text()) === '') {
+            $('.linkbutton-container-flex:first').addClass('empty');
+        }
+    });
+</script>
+    <script type="text/javascript">
+        $(window).on('load', function (e) {
+            var isMobile = false;
+            if (window.matchMedia('screen and (max-width: 767px)').matches) {
+                isMobile = true;
+            }
+            var lazy;
+            if (!isMobile) {
+                lazy = $('.carousel.content-promo__carousel').find("img[data-src]:first");
+                lazy.attr("src", lazy.data('src'));
+                $('.content-promo__container:not(.content-promo__carousel .content-promo__container)').find("img[data-src]").each(function (i, img) {
+                    $(img).attr("src", $(img).data('src'));
+                });
+
+            } else {
+                lazy = $('.carousel.content-promo__carousel').find("img[data-mobile-src]:first");
+                lazy.attr("src", lazy.data('mobile-src'));
+                $('.content-promo__container:not(.content-promo__carousel .content-promo__container)').find("img[data-mobile-src]").each(function (i, img) {
+                    $(img).attr("src", $(img).data('mobile-src'));
+                });
+            }
+            $('.carousel.content-promo__carousel').on('slide.bs.carousel', function (ev) {
+                var lazy;
+                if (!isMobile) {
+                    lazy = $(ev.relatedTarget).find("img[data-src]");
+                    lazy.attr("src", lazy.data('src'));
+                } else {
+                    lazy = $(ev.relatedTarget).find("img[data-mobile-src]");
+                    lazy.attr("src", lazy.data('mobile-src'));
+                }
+            });
+        });
+    </script>
+<div class="content-promo__container content-promo__container--bg-gray content-promo__container-image--top  ">
+                <div class="content-promo__image-wrapper">
+                <img data-src="/-/media/Images/Residential/Fridge-promo.jpg" data-mobile-src="/-/media/Images/Residential/Fridge-promo.jpg" width="639" height="360" class="content-promo__image Default" />
+            </div>
+    <div class="content-promo__content-container Left">
+                
+        <div class="content-promo__buttons-container">
+            <div class="button-container">
+                
+            </div>
+            <div class="linkbutton-container-flex">
+                
+            </div>
+                <div class="button-container-flex content-promo-item">
+                    <a class="content-promo__link content-promo__primary-link btn btn-primary" target="_blank" href="https://masssaveappliancepickup.timetap.com/#/" >Schedule Pickup Online</a>
+                </div>
+                            <div class="linkbutton-container-flex content-promo-item">
+                    <a class="content-promo__link content-promo__secondary-link btn btn-link" target="" href="tel:866-527-7283" >Or Call 866-527-SAVE (7283)</a>
+                </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class=" ">
+    <div class="single-column-wrap container">
+        <div class="row ">
+            <div class="col-xs-12">
+                
+
+
+<section class="container-fluid">
+    <div class="tabbed-content component js-tabbed-content">
+        <div class="tabbed-content__control-wrapper">
+            <button type="button"
+                    class="btn tabbed-content__control-button tabbed-content__control-button--previous js-tabbed-content__previous-button"
+                    aria-label="previous tab">
+                <i class="ms-icon-back" aria-hidden="true"></i>
+            </button>
+            <div class="tabbed-content__tab-controls js-tabbed-content-controls"
+                    role="tablist"
+                    aria-orientation="horizontal"></div>
+            <button type="button"
+                    class="btn tabbed-content__control-button tabbed-content__control-button--next js-tabbed-content__next-button"
+                    aria-label="next tab">
+                <i class="ms-icon-back right" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="tabbed-content__panels">
+                <div class="tabbed-content__panel js-tabbed-content-panel" role="tabpanel">
+                    <div class="tabbed-content__tab js-tabbed-content-tab">
+                        <div class="btn tabbed-content__tab-button js-tabbed-content-tab-button"
+                                role="tab"
+                                type="button">
+                            How to Participate
+                        </div>
+                    </div>
+                    <section>
+                        
+
+<div class="secondary-page-content">
+    <ol>
+    <li>Check eligibility requirements.&nbsp;</li>
+    <li>Schedule your no-cost pickup online or by phone. Have your electric account number handy to avoid scheduling delays.
+    <ol><a rel="noopener noreferrer" href="https://masssaveappliancepickup.timetap.com/#/#/#####"" target="_blank">Schedule pickup online</a> <br />
+        Or call 866-527-SAVE (7283)</ol>
+        </li>
+        <li>Allow 6-8 weeks after pickup for rebate processing.<br />
+        <br />
+        <strong>Have an inefficient, working dehumidifier?</strong>
+        <br />
+        Receive a $30 rebate for recycling your inefficient dehumidifier when you schedule a pick-up for a qualifying refrigerator or freezer. Alternatively, see if there is a <a href="/en/residential/rebates-offers-services/appliance-recycling/dehumidifier">dehumidifier turn-in event</a>&nbsp;near you.<br />
+        <br />
+        </li>
+    </ol>
+</div>
+
+                    </section>
+                </div>
+                <div class="tabbed-content__panel js-tabbed-content-panel" role="tabpanel">
+                    <div class="tabbed-content__tab js-tabbed-content-tab">
+                        <div class="btn tabbed-content__tab-button js-tabbed-content-tab-button"
+                                role="tab"
+                                type="button">
+                            Eligibility
+                        </div>
+                    </div>
+                    <section>
+                        
+
+<div class="secondary-page-content">
+    <ol>
+    <li>This offer is available to Massachusetts electric customers whose Mass Save Sponsor is Cape Light Compact, Eversource, National Grid or Unitil.</li>
+    <li>It must be an inefficient, working refrigerator or freezer. If you are also recycling a dehumidifier, it must be scheduled with a refrigerator or freezer pickup. </li>
+    <li>Refrigerators and freezers must be plugged in, working (cooling), and empty at the time of pick-up. If your refrigerator has a water line, please disconnect it before the team arrives.</li>
+    <li>Refrigerators and freezers must have an inside measurement between 10 and 30 cubic feet, which is the standard size for most units. <strong>Per state laws, all doors must be removed from the refrigerator/freezer before placing outside for pickup to avoid paying fines</strong>. You can read more about the law <a href="/-/media/Files/PDFs/Save/Residential/General-Law--Part-IV-Title-I-Chapter-271-Section-46.pdf">here</a>. </li>
+    <li>The appliance must be located at your residence or business at the time of collection. </li>
+    <li>Eco+ is only able to do inside pick-ups for locations with one flight of stairs or fewer. If there are more stairs, it will be the customer&rsquo;s responsibility to make the item accessible for outside pick-up. </li>
+    <li>You must be the owner of the appliance being recycled. </li>
+    <li>A maximum of two units per equipment type per electric account per calendar year will be accepted.</li>
+    <li>Pick-up must occur between January 1, 2026 &ndash; December 31, 2026 to receive the $75 rebate.<br />
+    <br />
+    </li>
+</ol>
+</div>
+
+                    </section>
+                </div>
+        </div>
+    </div>
+</section>
+
+            </div>
+        </div>
+    </div>
+</div>
+</section>        </main>
+        <footer class="global-footer">
+            
+<div class="global-footer__container">
+    <div class="global-footer__top-section">
+        
+        <nav class="global-footer__left-links" aria-label="Main area">
+            
+
+<ul class="global-footer__nav-links">
+    
+
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="/en/residential" target="|Custom" title="Residential">
+            <i class="ms-icon-" alt="Residential" aria-hidden="false"></i>
+            <span class="">Residential</span>
+        </a>
+    </li>
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="/en/business" target="|Custom" title="Business">
+            <i class="ms-icon-" alt="Business" aria-hidden="false"></i>
+            <span class="">Business</span>
+        </a>
+    </li>
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="/en/community" target="|Custom" title="Community">
+            <i class="ms-icon-" alt="Community" aria-hidden="false"></i>
+            <span class="">Community</span>
+        </a>
+    </li>
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="/en/trade-partners" target="|Custom" title="Trade Partners">
+            <i class="ms-icon-" alt="Trade Partners" aria-hidden="false"></i>
+            <span class="">Trade Partners</span>
+        </a>
+    </li>
+
+</ul>
+
+<ul class="global-footer__nav-links">
+    
+
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="/en/residential/shop-products" target="" title="Shop">
+            <i class="ms-icon-" alt="Shop" aria-hidden="false"></i>
+            <span class="">Shop</span>
+        </a>
+    </li>
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="/en/blog" target="" title="Blog">
+            <i class="ms-icon-" alt="Blog" aria-hidden="false"></i>
+            <span class="">Blog</span>
+        </a>
+    </li>
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="/en/contact" target="" title="Contact">
+            <i class="ms-icon-" alt="Contact" aria-hidden="false"></i>
+            <span class="">Contact</span>
+        </a>
+    </li>
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="/en/media-inquiries" target="|Custom" title="Media Inquiries">
+            <i class="ms-icon-" alt="Media Inquiries" aria-hidden="false"></i>
+            <span class="">Media Inquiries</span>
+        </a>
+    </li>
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="https://www.masssavedata.com/public/home" target="" title="Mass Save Data">
+            <i class="ms-icon-" alt="Mass Save Data" aria-hidden="false"></i>
+            <span class="">Mass Save Data</span>
+        </a>
+    </li>
+
+</ul>
+
+    <h2 class="global-footer__sponsor-title">Serving Customers Of</h2>
+<ul class="global-footer__sponsor-links">
+    
+
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="https://www.berkshiregas.com" target="_blank" title="Berkshire Gas">
+            <i class="ms-icon-" alt="Berkshire Gas" aria-hidden="false"></i>
+            <span class="">Berkshire Gas</span>
+        </a>
+    </li>
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="http://www.capelightcompact.org/" target="_blank" title="Cape Light Compact">
+            <i class="ms-icon-" alt="Cape Light Compact" aria-hidden="false"></i>
+            <span class="">Cape Light Compact</span>
+        </a>
+    </li>
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="http://www.eversource.com" target="_blank" title="Eversource">
+            <i class="ms-icon-" alt="Eversource" aria-hidden="false"></i>
+            <span class="">Eversource</span>
+        </a>
+    </li>
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="http://www.libertyutilities.com" target="_blank" title="Liberty Utilities">
+            <i class="ms-icon-" alt="Liberty Utilities" aria-hidden="false"></i>
+            <span class="">Liberty Utilities</span>
+        </a>
+    </li>
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="http://www.nationalgridus.com" target="_blank" title="National Grid">
+            <i class="ms-icon-" alt="National Grid" aria-hidden="false"></i>
+            <span class="">National Grid</span>
+        </a>
+    </li>
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="http://www.unitil.com" target="_blank" title="Unitil">
+            <i class="ms-icon-" alt="Unitil" aria-hidden="false"></i>
+            <span class="">Unitil</span>
+        </a>
+    </li>
+
+</ul>
+        </nav>
+        <div class="global-footer__right-links">
+            
+        </div>
+    </div>
+    <div class="global-footer__bottom-section">
+        <div class="global-footer__bottom-section-container">
+            
+            
+
+
+
+<nav class="global-footer__social-links" aria-label="social media">
+    <ul class="global-footer__social-links-list">
+        
+
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="https://www.facebook.com/MassSavers" target="_blank" title="Facebook">
+            <i class="ms-icon-facebook" alt="Facebook" aria-hidden="true"></i>
+            <span class="sr-only">Facebook</span>
+        </a>
+    </li>
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="https://twitter.com/MassSave" target="_blank" title="Twitter">
+            <i class="ms-icon-twitter" alt="Twitter" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span>
+        </a>
+    </li>
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="https://www.youtube.com/user/masssave" target="_blank" title="YouTube">
+            <i class="ms-icon-youtube" alt="YouTube" aria-hidden="true"></i>
+            <span class="sr-only">YouTube</span>
+        </a>
+    </li>
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="https://www.linkedin.com/company/mass-save" target="_blank" title="LinkedIn">
+            <i class="ms-icon-linkedin" alt="LinkedIn" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span>
+        </a>
+    </li>
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="https://www.instagram.com/Masssave/" target="_blank" title="Instagram">
+            <i class="ms-icon-instagram" alt="Instagram" aria-hidden="true"></i>
+            <span class="sr-only">Instagram</span>
+        </a>
+    </li>
+
+    </ul>
+</nav>
+
+
+
+<nav class="global-footer__legal-links" aria-label="legal">
+    <ul class="global-footer__legal-links-list">
+        
+
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="/en/privacy-policy" target="" >
+            <i class="ms-icon-" alt="Privacy" aria-hidden="false"></i>
+            <span class="">Privacy</span>
+        </a>
+    </li>
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="/en/accessibility" target="" >
+            <i class="ms-icon-" alt="Accessibility" aria-hidden="false"></i>
+            <span class="">Accessibility</span>
+        </a>
+    </li>
+    <li class="global-footer__link-item">
+        <a class="global-footer__link link" href="/en/terms-and-conditions" target="" >
+            <i class="ms-icon-" alt="Terms &amp; Conditions" aria-hidden="false"></i>
+            <span class="">Terms &amp; Conditions</span>
+        </a>
+    </li>
+
+    </ul>
+</nav>
+        </div>
+        <div class="global-footer__copyright">
+            
+
+&copy; 2026 The RCS Network. All rights reserved. The Mass Save logo is a service mark of The RCS Network.
+        </div>
+    </div>
+</div>
+        </footer>
+        
+
+        
+        <script src="/bower_components/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
+        <script src="https://use.typekit.net/ujo6eax.js"></script>
+        <script type="text/javascript">
+            //JS that must run onload
+            function setCookie(c_name, value, exdays) {
+                var exdate = new Date();
+                exdate.setDate(exdate.getDate() + exdays);
+                var c_value = escape(value) + ((exdays == null) ? "" : ";path=/; expires=" + exdate.toUTCString());
+                document.cookie = c_name + "=" + c_value;
+            }
+
+            function getCookie(c_name) {
+                var i, x, y, ARRcookies = document.cookie.split(";");
+                for (i = 0; i < ARRcookies.length; i++) {
+                    x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+                    y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+                    x = x.replace(/^\s+|\s+$/g, "");
+                    if (x == c_name) {
+                        return unescape(y);
+                    }
+                }
+            }
+
+            function goToUrl(url, target) {
+                if (target == "_blank") {
+                    window.open(url, '_blank');
+                } else {
+                    document.location.href = url;
+                }
+            }
+        </script>
+        <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+
+        <!-- below added for GTM tracking -->
+        <div id="sponsor-banner-expand-click" style="height:1px;width:1px"></div>
+        <div id="location-pin-click" style="height:1px;width:1px"></div>
+        <div id="homepage-solutions-box-multifamily-click" style="height:1px;width:1px"></div>
+        <div id="homepage-solutions-box-home-click" style="height:1px;width:1px"></div>
+        <div id="homepage-solutions-box-business-click" style="height:1px;width:1px"></div>
+    </div>
+
+    <script type='text/javascript' src='/js/common.js'></script>
+    <script src="/js/build/js/libraries-generated.js"></script>
+    <script src="/js/build/js/polyfill-generated.js"></script>
+    <script src="/js/build/js/index-generated.js"></script>
+    <script src="/Scripts/Global/Analytics/sitecore-goal-firing.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.min.css">
+    <!-- start forms scrips-->
+    
+    <!-- end forms scripts-->
+</body>
+</html>
