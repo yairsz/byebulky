@@ -64,7 +64,7 @@ ABOUT_UPDATED = "2026-11-04"     # bump when /about/ text changes
 # Pages whose wording changed on 2026-11-04 (query-phrase headings, titles, listing-card filter). Their visible
 # "Last verified" date stays the date the sources were read; MODIFIED (dateModified + sitemap lastmod) takes the later
 # of that and this, so a reader can see when the text changed without a false claim that the sources were re-read.
-EDITED_2026_11_04 = ["/boston/", "/boston/appliances/", "/boston/couch/", "/boston/donation-rules/", "/boston/mattress/",
+EDITED_2026_11_04 = ["/", "/boston/", "/boston/appliances/", "/boston/couch/", "/boston/donation-rules/", "/boston/mattress/",
                      "/boston/paint/", "/boston/propane-tank/", "/boston/september-1-move-out/", "/newton/",
                      "/quincy/mattress/", "/boston-area-mattress-disposal-cost/", "/brookline/mattress/",
                      "/cambridge/mattress/", "/newton/mattress/", "/somerville/mattress/"]
