@@ -1085,7 +1085,7 @@ def home(cities):
 {home_guides(cities)}
 <h2>Why this exists</h2>
 <p>Charities change what they accept, some stop picking up furniture altogether, and city rules differ from one place to the next. People end up calling three places and still having a couch on the curb. We collect the rules from official sources, link every listing to its source, and date when we last checked it.</p>
-<p class="meta">Listings last verified {e(MODIFIED.get('/', ''))}.</p>
+<p class="meta">Listings last verified {e(max([c["last_verified"] for c in cities] + [l["last_verified"] for c in cities for l in c["listings"]]))}.</p>
 <p><a href="{U('/about/')}">How we verify listings &amp; how this site makes money →</a></p>"""
     return page(f"{CFG['site_name']}: Get Rid of Furniture, Mattresses & Appliances",
                 "Verified, city-by-city options for getting rid of couches, mattresses, furniture and appliances: city pickup, donation pickup, drop-off, furniture banks and haulers.", "/", body, faq_ld([cmp_q]) if cmp_q else None)
