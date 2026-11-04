@@ -10,23 +10,28 @@
   "quick_answers": [
     {
       "q": "Does the City of Cambridge pick up appliances?",
-      "a": "Yes, curbside, but you need a disposal permit first. The City's permit page charges $25 per item, or $20 if the resident is 62 or older, for items such as refrigerators and freezers, washers and dryers, stoves, air conditioners, dehumidifiers, water heaters and TVs or monitors over 20 inches. Apply online or in person at DPW, 147 Hampshire Street."
+      "a": "Yes, curbside, but you need a disposal permit first. The City's permit page charges $25 per item, or $20 if the resident is 62 or older, for items such as refrigerators and freezers, washers and dryers, stoves, air conditioners, dehumidifiers, water heaters and TVs or monitors over 20 inches. Apply online or in person at DPW, 147 Hampshire Street.",
+      "sources": [{"label": "City of Cambridge: furniture, appliance and large item disposal", "url": "https://www.cambridgema.gov/Services/furnitureappliancelargeitemdisposal"}]
     },
     {
       "q": "How much does it cost to get rid of a refrigerator in Cambridge, MA?",
-      "a": "The City permit is $25 per item ($20 for residents 62 or older), plus an online convenience fee if you pay by card ($0.99 + 2.99%) or e-check ($5.50); paying in person at DPW avoids it. Remove the doors first. If the fridge still works and your electric utility is a Mass Save Sponsor (Cape Light Compact, Eversource, National Grid or Unitil), Mass Save offers a no-cost pickup and a $75 rebate in 2026 instead."
+      "a": "The City permit is $25 per item ($20 for residents 62 or older), plus an online convenience fee if you pay by card ($0.99 + 2.99%) or e-check ($5.50); paying in person at DPW avoids it. Remove the doors first. If the fridge still works and your electric utility is a Mass Save Sponsor (Cape Light Compact, Eversource, National Grid or Unitil), Mass Save offers a no-cost pickup and a $75 rebate in 2026 instead.",
+      "sources": [{"label": "City of Cambridge: furniture, appliance and large item disposal", "url": "https://www.cambridgema.gov/Services/furnitureappliancelargeitemdisposal"}, {"label": "City of Cambridge: appliance and large item permit application", "url": "https://cambridgema.portal.opengov.com/categories/1101/record-types/6612"}, {"label": "Mass Save", "url": "https://www.masssave.com/residential/rebates-and-incentives/appliance-recycling/refrigerator-and-freezer-recycling"}]
     },
     {
       "q": "When does Cambridge pick up large appliances?",
-      "a": "The City says most permit items are scheduled for Wednesdays or Thursdays. Put the item at the curb by 7 a.m. on your collection day, or after 6 p.m. the night before. An item isn't on the collection schedule until all fees are paid."
+      "a": "The City says most permit items are scheduled for Wednesdays or Thursdays. Put the item at the curb by 7 a.m. on your collection day, or after 6 p.m. the night before. An item isn't on the collection schedule until all fees are paid.",
+      "sources": [{"label": "City of Cambridge: furniture, appliance and large item disposal", "url": "https://www.cambridgema.gov/Services/furnitureappliancelargeitemdisposal"}, {"label": "City of Cambridge: appliance and large item permit application", "url": "https://cambridgema.portal.opengov.com/categories/1101/record-types/6612"}]
     },
     {
       "q": "Do I need a permit to throw out a TV in Cambridge?",
-      "a": "Only for TVs and computer monitors over 20 inches (measured diagonally), which need the $25 permit. Small TVs and monitors of 20 inches or less need no permit: place them close to the curb edge by 7 a.m. on your regular collection day."
+      "a": "Only for TVs and computer monitors over 20 inches (measured diagonally), which need the $25 permit. Small TVs and monitors of 20 inches or less need no permit: place them close to the curb edge by 7 a.m. on your regular collection day.",
+      "sources": [{"label": "City of Cambridge: furniture, appliance and large item disposal", "url": "https://www.cambridgema.gov/Services/furnitureappliancelargeitemdisposal"}]
     },
     {
       "q": "What large items can go out in Cambridge without a permit?",
-      "a": "The City lists furniture such as couches and tables (one piece per week on trash day), small electronics such as microwaves, stereos, box fans and small printers, TVs and monitors 20 inches or smaller, one toilet or sink per household on collection day, and carpet or lumber in up to 3 tied bundles of 3' x 3' x 1'."
+      "a": "The City lists furniture such as couches and tables (one piece per week on trash day), small electronics such as microwaves, stereos, box fans and small printers, TVs and monitors 20 inches or smaller, one toilet or sink per household on collection day, and carpet or lumber in up to 3 tied bundles of 3' x 3' x 1'.",
+      "sources": [{"label": "City of Cambridge: furniture, appliance and large item disposal", "url": "https://www.cambridgema.gov/Services/furnitureappliancelargeitemdisposal"}]
     }
   ],
   "sections": [

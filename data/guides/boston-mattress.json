@@ -10,7 +10,8 @@
   "quick_answers": [
     {
       "q": "Can I throw a mattress in the trash in Boston?",
-      "a": "No. Massachusetts bans mattresses and box springs from disposal, so they can't go out with regular trash in Boston."
+      "a": "No. Massachusetts bans mattresses and box springs from disposal, so they can't go out with regular trash in Boston.",
+      "sources": [{"label": "City of Boston: mattress recycling", "url": "https://www.boston.gov/departments/public-works/mattress-recycling"}]
     },
     {
       "q": "How do I schedule a 311 mattress pickup in Boston?",
@@ -19,15 +20,18 @@
     },
     {
       "q": "Should I use the City pickup or a private mattress hauler?",
-      "a": "Use the City pickup if your building has 6 units or fewer, you can get the mattress to the curb yourself, and you haven't used your 10 items for the year. Use a private hauler if your building has 7 or more units, you've hit the limit, or you need it carried out of your home: on the City's list, Lug Away charges $174 from inside the home and CC Junk Removal includes indoor removal in its $125. If you can haul it yourself, drop-off is cheapest on that list: HandUp $35, or Tough Stuff $25 with proof of Boston residency or business."
+      "a": "Use the City pickup if your building has 6 units or fewer, you can get the mattress to the curb yourself, and you haven't used your 10 items for the year. Use a private hauler if your building has 7 or more units, you've hit the limit, or you need it carried out of your home: on the City's list, Lug Away charges $174 from inside the home and CC Junk Removal includes indoor removal in its $125. If you can haul it yourself, drop-off is cheapest on that list: HandUp $35, or Tough Stuff $25 with proof of Boston residency or business.",
+      "sources": [{"label": "City of Boston: mattress recycling", "url": "https://www.boston.gov/departments/public-works/mattress-recycling"}, {"label": "City of Boston: large residential buildings", "url": "https://www.boston.gov/departments/public-works/large-residential-buildings"}]
     },
     {
       "q": "What if my building has 7 or more units, and what do mattress haulers charge?",
-      "a": "The City does not collect mattresses from buildings with more than six units. Ask your property manager or use a private hauler the City lists. Prices on the City's list include Tough Stuff Recycling $75 per pickup, Burns Cleanout $100, Lug Away $124 curbside or $174 from inside the home, and CC Junk Removal $125 with indoor removal included. The others quote on request."
+      "a": "The City does not collect mattresses from buildings with more than six units. Ask your property manager or use a private hauler the City lists. Prices on the City's list include Tough Stuff Recycling $75 per pickup, Burns Cleanout $100, Lug Away $124 curbside or $174 from inside the home, and CC Junk Removal $125 with indoor removal included. The others quote on request.",
+      "sources": [{"label": "City of Boston: mattress recycling", "url": "https://www.boston.gov/departments/public-works/mattress-recycling"}, {"label": "City of Boston: large residential buildings", "url": "https://www.boston.gov/departments/public-works/large-residential-buildings"}]
     },
     {
       "q": "What if the mattress is soiled or has bed bugs?",
-      "a": "For the City pickup, bag and seal it completely. Don't cut or crush it."
+      "a": "For the City pickup, bag and seal it completely. Don't cut or crush it.",
+      "sources": [{"label": "City of Boston: mattress recycling", "url": "https://www.boston.gov/departments/public-works/mattress-recycling"}]
     },
     {
       "q": "Can I donate a used mattress in Boston?",

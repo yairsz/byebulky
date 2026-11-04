@@ -10,23 +10,28 @@
   "quick_answers": [
     {
       "q": "Does Newton pick up appliances?",
-      "a": "Yes. Newton's whitegoods curbside pickup costs $25 per item and covers stoves, refrigerators, freezers, dishwashers, washers, dryers, dehumidifiers, air conditioners, microwaves, water coolers and water heaters. Pay online first; payments received by 10 p.m. Sunday are collected Thursday of the following week."
+      "a": "Yes. Newton's whitegoods curbside pickup costs $25 per item and covers stoves, refrigerators, freezers, dishwashers, washers, dryers, dehumidifiers, air conditioners, microwaves, water coolers and water heaters. Pay online first; payments received by 10 p.m. Sunday are collected Thursday of the following week.",
+      "sources": [{"label": "City of Newton: large-item flyer", "url": "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000"}]
     },
     {
       "q": "Where can I drop off appliances for free in Newton?",
-      "a": "At the Resource Recovery Center, 115 Rumford Ave., Auburndale, for Newton residents. Appliances, metal and most electronics are free; TVs and monitors cost $25 each, paid in advance."
+      "a": "At the Resource Recovery Center, 115 Rumford Ave., Auburndale, for Newton residents. Appliances, metal and most electronics are free; TVs and monitors cost $25 each, paid in advance.",
+      "sources": [{"label": "City of Newton: Resource Recovery Center", "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-resource-recovery-center"}]
     },
     {
       "q": "How much does it cost to get rid of a TV in Newton?",
-      "a": "$25 either way: $25 per item for whitegoods curbside pickup, or a $25 prepaid fee to drop a TV or monitor at the Resource Recovery Center."
+      "a": "$25 either way: $25 per item for whitegoods curbside pickup, or a $25 prepaid fee to drop a TV or monitor at the Resource Recovery Center.",
+      "sources": [{"label": "City of Newton: large-item flyer", "url": "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000"}, {"label": "City of Newton: Resource Recovery Center", "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-resource-recovery-center"}]
     },
     {
       "q": "How do I get rid of a refrigerator in Newton?",
-      "a": "Remove all doors and secure drawers, then book the $25 whitegoods curbside pickup or drop it off free at the Resource Recovery Center. If it still works, the City points to Mass Save's no-cost pickup with a $75 rebate."
+      "a": "Remove all doors and secure drawers, then book the $25 whitegoods curbside pickup or drop it off free at the Resource Recovery Center. If it still works, the City points to Mass Save's no-cost pickup with a $75 rebate.",
+      "sources": [{"label": "City of Newton: large-item flyer", "url": "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000"}, {"label": "City of Newton: Resource Recovery Center", "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-resource-recovery-center"}, {"label": "City of Newton: recycle at the curb", "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-curb"}]
     },
     {
       "q": "What are the Newton Resource Recovery Center winter hours?",
-      "a": "From November 1 to March 27: Monday to Friday 7 a.m. to 2:30 p.m., Saturday 9 a.m. to 1 p.m. It's closed Sundays, holidays (including Wednesday, November 11 for Veterans Day) and sometimes after heavy rain or snow."
+      "a": "From November 1 to March 27: Monday to Friday 7 a.m. to 2:30 p.m., Saturday 9 a.m. to 1 p.m. It's closed Sundays, holidays (including Wednesday, November 11 for Veterans Day) and sometimes after heavy rain or snow.",
+      "sources": [{"label": "City of Newton: Resource Recovery Center", "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-resource-recovery-center"}]
     }
   ],
   "sections": [

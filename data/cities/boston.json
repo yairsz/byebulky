@@ -14,15 +14,18 @@
     },
     {
       "q": "Mattress or box spring?",
-      "a": "Mattresses are banned from Massachusetts trash. In a building with 6 units or fewer, book the City's curbside mattress pickup appointment (the City page mentions no fee). In 7+ units, use your property manager or one of the mattress haulers below."
+      "a": "Mattresses are banned from Massachusetts trash. In a building with 6 units or fewer, book the City's curbside mattress pickup appointment (the City page mentions no fee). In 7+ units, use your property manager or one of the mattress haulers below.",
+      "sources": [{"label": "City of Boston: mattress recycling", "url": "https://www.boston.gov/departments/public-works/mattress-recycling"}]
     },
     {
       "q": "Fridge, AC, TV or monitor?",
-      "a": "Book a City special item collection. Remove fridge doors and all food first."
+      "a": "Book a City special item collection. Remove fridge doors and all food first.",
+      "sources": [{"label": "City of Boston: special collection items", "url": "https://www.boston.gov/departments/public-works/special-collection-items"}]
     },
     {
       "q": "Can't carry it to the curb?",
-      "a": "City pickups are curbside only. Paid options that come inside include ReSupply (donation pickup), LoadUp, and several mattress haulers."
+      "a": "City pickups are curbside only. Paid options that come inside include ReSupply (donation pickup), LoadUp, and several mattress haulers.",
+      "sources": [{"label": "ReSupply", "url": "https://resupply.com/boston/furniture-donation-pickup/"}, {"label": "LoadUp", "url": "https://goloadup.com/junk-removal/ma/boston/"}]
     }
   ],
   "resources": [

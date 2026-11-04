@@ -10,23 +10,28 @@
   "quick_answers": [
     {
       "q": "Does Somerville pick up appliances?",
-      "a": "Yes, at the curb, if each appliance has a $25 White Goods Sticker. The City's trash page lists air conditioners, dryers, refrigerators, stoves, washers, water coolers and water heaters, and its service guide also lists freezers and dehumidifiers. Buy the sticker online, at DPW (One Franey Road) or at City Hall."
+      "a": "Yes, at the curb, if each appliance has a $25 White Goods Sticker. The City's trash page lists air conditioners, dryers, refrigerators, stoves, washers, water coolers and water heaters, and its service guide also lists freezers and dehumidifiers. Buy the sticker online, at DPW (One Franey Road) or at City Hall.",
+      "sources": [{"label": "City of Somerville: trash and recycling", "url": "https://www.somervillema.gov/trash-and-recycling"}]
     },
     {
       "q": "How much does it cost to get rid of a refrigerator in Somerville?",
-      "a": "$25 for a White Goods Sticker, one per item. Remove the door before putting the fridge on the sidewalk. If it still works and your electric utility is a Mass Save Sponsor (Cape Light Compact, Eversource, National Grid or Unitil), Mass Save offers a no-cost pickup and a $75 rebate in 2026 instead."
+      "a": "$25 for a White Goods Sticker, one per item. Remove the door before putting the fridge on the sidewalk. If it still works and your electric utility is a Mass Save Sponsor (Cape Light Compact, Eversource, National Grid or Unitil), Mass Save offers a no-cost pickup and a $75 rebate in 2026 instead.",
+      "sources": [{"label": "City of Somerville: trash and recycling", "url": "https://www.somervillema.gov/trash-and-recycling"}, {"label": "Mass Save", "url": "https://www.masssave.com/residential/rebates-and-incentives/appliance-recycling/refrigerator-and-freezer-recycling"}]
     },
     {
       "q": "Where do I buy a white goods sticker in Somerville?",
-      "a": "Online through the City's payment site, at DPW, One Franey Road, or at City Hall, 93 Highland Avenue. The City's trash page says DPW takes check or money order and City Hall takes cash, check, credit card or money order; its service guide says DPW takes check, credit, debit or money order (no cash)."
+      "a": "Online through the City's payment site, at DPW, One Franey Road, or at City Hall, 93 Highland Avenue. The City's trash page says DPW takes check or money order and City Hall takes cash, check, credit card or money order; its service guide says DPW takes check, credit, debit or money order (no cash).",
+      "sources": [{"label": "City of Somerville: trash and recycling", "url": "https://www.somervillema.gov/trash-and-recycling"}]
     },
     {
       "q": "How do I get rid of an old TV in Somerville?",
-      "a": "Call 311 (617-666-3311) to schedule a free curbside pickup of TVs and computer monitors, or drop them off at the DPW Yard, One Franey Road, as electronic waste on weekdays with proof of residency. TVs or monitors with broken glass aren't accepted."
+      "a": "Call 311 (617-666-3311) to schedule a free curbside pickup of TVs and computer monitors, or drop them off at the DPW Yard, One Franey Road, as electronic waste on weekdays with proof of residency. TVs or monitors with broken glass aren't accepted.",
+      "sources": [{"label": "City of Somerville: trash and recycling", "url": "https://www.somervillema.gov/trash-and-recycling"}, {"label": "City of Somerville: electronic waste recycling program", "url": "https://www.somervillema.gov/departments/dpw/programs/electronic-waste-recycling-program"}]
     },
     {
       "q": "Can I put a microwave in the trash in Somerville?",
-      "a": "The City's trash page says small household appliances, including microwave ovens, may go out with regular trash, but asks you to consider dropping them off for electronics recycling at the DPW Yard instead."
+      "a": "The City's trash page says small household appliances, including microwave ovens, may go out with regular trash, but asks you to consider dropping them off for electronics recycling at the DPW Yard instead.",
+      "sources": [{"label": "City of Somerville: trash and recycling", "url": "https://www.somervillema.gov/trash-and-recycling"}, {"label": "City of Somerville: electronic waste recycling program", "url": "https://www.somervillema.gov/departments/dpw/programs/electronic-waste-recycling-program"}]
     }
   ],
   "sections": [

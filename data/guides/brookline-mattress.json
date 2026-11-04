@@ -10,23 +10,28 @@
  "quick_answers": [
   {
    "q": "Does Brookline pick up mattresses?",
-   "a": "Yes, for $65 per mattress or box spring, if you're on Town Waste Collection Service. Book and pay at least one week ahead; mattresses are collected on Tuesdays."
+   "a": "Yes, for $65 per mattress or box spring, if you're on Town Waste Collection Service. Book and pay at least one week ahead; mattresses are collected on Tuesdays.",
+   "sources": [{"label": "Town of Brookline: bulky items and overflow waste", "url": "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"}]
   },
   {
    "q": "How do I schedule mattress pickup in Brookline?",
-   "a": "Request a bulky item pickup on the Town's Accela permit portal (create an account first) or pay in person at Town Hall, 333 Washington St., 4th floor. Your confirmation email gives the collection date."
+   "a": "Request a bulky item pickup on the Town's Accela permit portal (create an account first) or pay in person at Town Hall, 333 Washington St., 4th floor. Your confirmation email gives the collection date.",
+   "sources": [{"label": "Town of Brookline: bulky items and overflow waste", "url": "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"}]
   },
   {
    "q": "Is a box spring a separate charge in Brookline?",
-   "a": "Yes. The Town charges $65 for each mattress and $65 for each box spring."
+   "a": "Yes. The Town charges $65 for each mattress and $65 for each box spring.",
+   "sources": [{"label": "Town of Brookline: bulky items and overflow waste", "url": "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"}]
   },
   {
    "q": "Can I put a mattress in the trash in Brookline?",
-   "a": "No. Brookline says mattresses and box springs must be recycled to comply with MassDEP regulations, so they go through the paid bulky pickup."
+   "a": "No. Brookline says mattresses and box springs must be recycled to comply with MassDEP regulations, so they go through the paid bulky pickup.",
+   "sources": [{"label": "Town of Brookline: bulky items and overflow waste", "url": "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"}]
   },
   {
    "q": "Will someone take a mattress from inside my home in Brookline?",
-   "a": "Not the Town, which collects at the curb. LoadUp says its loaders carry a mattress out from wherever it is, including upstairs bedrooms; its Brookline price list shows mattress removal from $120."
+   "a": "Not the Town, which collects at the curb. LoadUp says its loaders carry a mattress out from wherever it is, including upstairs bedrooms; its Brookline price list shows mattress removal from $120.",
+   "sources": [{"label": "Town of Brookline: bulky items and overflow waste", "url": "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"}, {"label": "LoadUp", "url": "https://goloadup.com/junk-removal/ma/brookline/"}]
   }
  ],
  "sections": [

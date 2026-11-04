@@ -10,23 +10,28 @@
   "quick_answers": [
     {
       "q": "Does Somerville pick up couches?",
-      "a": "Yes. The City picks up two pieces of furniture per week, free, at the curb with your regular trash. Put it out after 4 p.m. the day before and by 7 a.m. on collection day, without blocking the sidewalk."
+      "a": "Yes. The City picks up two pieces of furniture per week, free, at the curb with your regular trash. Put it out after 4 p.m. the day before and by 7 a.m. on collection day, without blocking the sidewalk.",
+      "sources": [{"label": "City of Somerville: trash and recycling", "url": "https://www.somervillema.gov/trash-and-recycling"}]
     },
     {
       "q": "How much does it cost to get rid of a couch in Somerville?",
-      "a": "City curbside furniture pickup is free. LoadUp's Somerville price list shows furniture removal from $120, with the final price shown by ZIP before booking."
+      "a": "City curbside furniture pickup is free. LoadUp's Somerville price list shows furniture removal from $120, with the final price shown by ZIP before booking.",
+      "sources": [{"label": "City of Somerville: trash and recycling", "url": "https://www.somervillema.gov/trash-and-recycling"}, {"label": "LoadUp", "url": "https://goloadup.com/junk-removal/ma/somerville/"}]
     },
     {
       "q": "Do I need a sticker or appointment to throw out a couch in Somerville?",
-      "a": "No sticker is listed for furniture. Stickers apply to mattresses and box springs ($55 each, plus a 311 appointment) and large appliances ($25)."
+      "a": "No sticker is listed for furniture. Stickers apply to mattresses and box springs ($55 each, plus a 311 appointment) and large appliances ($25).",
+      "sources": [{"label": "City of Somerville: trash and recycling", "url": "https://www.somervillema.gov/trash-and-recycling"}]
     },
     {
       "q": "Will someone take a couch out of my apartment in Somerville?",
-      "a": "Not the City, which collects at the curb only. LoadUp says its loaders carry items out from any room, including upstairs."
+      "a": "Not the City, which collects at the curb only. LoadUp says its loaders carry items out from any room, including upstairs.",
+      "sources": [{"label": "City of Somerville: trash and recycling", "url": "https://www.somervillema.gov/trash-and-recycling"}, {"label": "LoadUp", "url": "https://goloadup.com/junk-removal/ma/somerville/"}]
     },
     {
       "q": "Where can I donate a couch near Somerville?",
-      "a": "The Habitat Greater Boston ReStore in West Roxbury takes upholstered furniture that isn't ripped, worn, broken, dated or faded, but not sofa beds, futons or sofas with slip covers. Household Goods in Acton takes couches, sofa beds and futons that are clean and in good condition."
+      "a": "The Habitat Greater Boston ReStore in West Roxbury takes upholstered furniture that isn't ripped, worn, broken, dated or faded, but not sofa beds, futons or sofas with slip covers. Household Goods in Acton takes couches, sofa beds and futons that are clean and in good condition.",
+      "sources": [{"label": "Habitat for Humanity Greater Boston ReStore", "url": "https://habitatboston.org/restore/"}, {"label": "Household Goods", "url": "https://www.householdgoods.org/donate/donate-goods/donation-guidelines/"}]
     }
   ],
   "sections": [

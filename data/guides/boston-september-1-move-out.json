@@ -11,23 +11,28 @@
   "quick_answers": [
     {
       "q": "Can I leave furniture on the curb when I move out in Boston?",
-      "a": "Yes, on your scheduled collection day, and the City page doesn't mention a fee. The City says household furniture can be put out with your normal curbside trash and recycling on your collection day, by 6 a.m. or after 5 p.m. the night before, placed along the curb so the sidewalk stays clear. The City strongly encourages donating it instead."
+      "a": "Yes, on your scheduled collection day, and the City page doesn't mention a fee. The City says household furniture can be put out with your normal curbside trash and recycling on your collection day, by 6 a.m. or after 5 p.m. the night before, placed along the curb so the sidewalk stays clear. The City strongly encourages donating it instead.",
+      "sources": [{"label": "City of Boston: trash and recycling", "url": "https://www.boston.gov/departments/public-works/trash"}, {"label": "City of Boston: moving", "url": "https://www.boston.gov/moving"}]
     },
     {
       "q": "Can I put a mattress out on the curb on September 1 in Boston?",
-      "a": "Not without an appointment. Because of the Massachusetts mattress disposal ban, Boston no longer collects mattresses or box springs with regular trash. You must book a free curbside pickup at boston.gov/mattress; the City program only serves buildings with six units or fewer."
+      "a": "Not without an appointment. Because of the Massachusetts mattress disposal ban, Boston no longer collects mattresses or box springs with regular trash. You must book a free curbside pickup at boston.gov/mattress; the City program only serves buildings with six units or fewer.",
+      "sources": [{"label": "City of Boston: mattress recycling", "url": "https://www.boston.gov/departments/public-works/mattress-recycling"}, {"label": "City of Boston: moving", "url": "https://www.boston.gov/moving"}]
     },
     {
       "q": "How do I get rid of a fridge, TV or air conditioner when moving out of Boston?",
-      "a": "Book a City special item pickup through 311 or online. The City does not collect special items without an appointment, takes at most 5 items per appointment and 10 per calendar year, and won't take a fridge or freezer unless the doors are removed and the food is out."
+      "a": "Book a City special item pickup through 311 or online. The City does not collect special items without an appointment, takes at most 5 items per appointment and 10 per calendar year, and won't take a fridge or freezer unless the doors are removed and the food is out.",
+      "sources": [{"label": "City of Boston: special collection items", "url": "https://www.boston.gov/departments/public-works/special-collection-items"}]
     },
     {
       "q": "I live in a building with 7 or more units. Who takes my mattress?",
-      "a": "Not the City's mattress program. The City says residents of buildings with seven or more units should ask their property manager how to recycle a mattress; private mattress haulers are another option."
+      "a": "Not the City's mattress program. The City says residents of buildings with seven or more units should ask their property manager how to recycle a mattress; private mattress haulers are another option.",
+      "sources": [{"label": "City of Boston: mattress recycling", "url": "https://www.boston.gov/departments/public-works/mattress-recycling"}, {"label": "City of Boston: large residential buildings", "url": "https://www.boston.gov/departments/public-works/large-residential-buildings"}]
     },
     {
       "q": "How far ahead should I book a donation pickup for September 1?",
-      "a": "It depends on the organization. Household Goods says its volunteer pickups are typically scheduled four or more weeks ahead, while its paid partners can come in as soon as two business days, and ReSupply's Boston page lists priority pickups in 24 to 48 hours. Other donation pickups don't state a lead time."
+      "a": "It depends on the organization. Household Goods says its volunteer pickups are typically scheduled four or more weeks ahead, while its paid partners can come in as soon as two business days, and ReSupply's Boston page lists priority pickups in 24 to 48 hours. Other donation pickups don't state a lead time.",
+      "sources": [{"label": "Household Goods", "url": "https://www.householdgoods.org/donate/donate-goods/pickup/"}, {"label": "ReSupply", "url": "https://resupply.com/donate-furniture-in-boston/"}]
     }
   ],
   "sections": [

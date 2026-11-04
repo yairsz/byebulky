@@ -9,19 +9,23 @@
   "quick_answers": [
     {
       "q": "How do I schedule a bulky item pickup in Brookline?",
-      "a": "Register on the Town's Accela permit portal and request a pickup, or pay in person at Town Hall. Book and pay at least one week before collection; up to four items per week."
+      "a": "Register on the Town's Accela permit portal and request a pickup, or pay in person at Town Hall. Book and pay at least one week before collection; up to four items per week.",
+      "sources": [{"label": "Town of Brookline: bulky items and overflow waste", "url": "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"}]
     },
     {
       "q": "How much is bulky item pickup in Brookline, MA?",
-      "a": "$20 per special item such as wood or upholstered furniture or a rug, $30 per electronic or white good, and $65 per mattress or box spring. Online card payments carry a service fee."
+      "a": "$20 per special item such as wood or upholstered furniture or a rug, $30 per electronic or white good, and $65 per mattress or box spring. Online card payments carry a service fee.",
+      "sources": [{"label": "Town of Brookline: bulky items and overflow waste", "url": "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"}]
     },
     {
       "q": "What day is bulk trash pickup in Brookline?",
-      "a": "Furniture put out as trash, like desks and chairs, goes on your regular trash day. Mattresses, electronics, metal and white goods are collected on Tuesdays. Your confirmation email gives each item's date."
+      "a": "Furniture put out as trash, like desks and chairs, goes on your regular trash day. Mattresses, electronics, metal and white goods are collected on Tuesdays. Your confirmation email gives each item's date.",
+      "sources": [{"label": "Town of Brookline: bulky items and overflow waste", "url": "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"}]
     },
     {
       "q": "What won't Brookline pick up?",
-      "a": "Construction or remodel material, car parts, gym equipment and pianos, plus apartment, attic or basement clean-outs. The Town says to use a private permitted waste hauler for those."
+      "a": "Construction or remodel material, car parts, gym equipment and pianos, plus apartment, attic or basement clean-outs. The Town says to use a private permitted waste hauler for those.",
+      "sources": [{"label": "Town of Brookline: bulky items and overflow waste", "url": "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"}, {"label": "Town of Brookline: private waste haulers", "url": "https://www.brooklinema.gov/3762/Private-Waste-Haulers"}]
     }
   ],
   "resources": [

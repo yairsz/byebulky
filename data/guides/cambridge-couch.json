@@ -10,23 +10,28 @@
   "quick_answers": [
     {
       "q": "Does Cambridge pick up couches?",
-      "a": "Yes. Residents may put one piece of furniture, such as a couch, out per week on trash day, with no permit. Put it at the curb after 6 p.m. the night before or by 7 a.m. on collection day. Metal furniture is the exception and needs a free permit."
+      "a": "Yes. Residents may put one piece of furniture, such as a couch, out per week on trash day, with no permit. Put it at the curb after 6 p.m. the night before or by 7 a.m. on collection day. Metal furniture is the exception and needs a free permit.",
+      "sources": [{"label": "City of Cambridge: trash collection", "url": "https://www.cambridgema.gov/Services/trashcollection"}, {"label": "City of Cambridge: furniture, appliance and large item disposal", "url": "https://www.cambridgema.gov/Services/furnitureappliancelargeitemdisposal"}]
     },
     {
       "q": "How much does it cost to get rid of a couch in Cambridge?",
-      "a": "City curbside pickup of one furniture piece a week is free. LoadUp's Cambridge price list shows furniture removal from $120, and ReSupply's paid donation pickups start at $19, $49 or $99 plus a booking fee."
+      "a": "City curbside pickup of one furniture piece a week is free. LoadUp's Cambridge price list shows furniture removal from $120, and ReSupply's paid donation pickups start at $19, $49 or $99 plus a booking fee.",
+      "sources": [{"label": "City of Cambridge: trash collection", "url": "https://www.cambridgema.gov/Services/trashcollection"}, {"label": "LoadUp", "url": "https://goloadup.com/junk-removal/ma/cambridge/"}, {"label": "ReSupply", "url": "https://resupply.com/boston/"}]
     },
     {
       "q": "Can I put two couches out in Cambridge?",
-      "a": "The City allows one piece of bulky waste per household per week, so a second couch waits until the next trash day. The City's older brochure says one piece per building, so check with DPW if you share a building."
+      "a": "The City allows one piece of bulky waste per household per week, so a second couch waits until the next trash day. The City's older brochure says one piece per building, so check with DPW if you share a building.",
+      "sources": [{"label": "City of Cambridge: trash collection", "url": "https://www.cambridgema.gov/Services/trashcollection"}]
     },
     {
       "q": "Will someone take a couch out of my apartment in Cambridge?",
-      "a": "Not the City, which collects at the curb only. ReSupply says its teams collect from inside your home, including upper floors of walk-ups and triple-deckers, and LoadUp says its loaders carry items out from any room."
+      "a": "Not the City, which collects at the curb only. ReSupply says its teams collect from inside your home, including upper floors of walk-ups and triple-deckers, and LoadUp says its loaders carry items out from any room.",
+      "sources": [{"label": "City of Cambridge: trash collection", "url": "https://www.cambridgema.gov/Services/trashcollection"}, {"label": "ReSupply", "url": "https://resupply.com/boston/"}, {"label": "LoadUp", "url": "https://goloadup.com/junk-removal/ma/cambridge/"}]
     },
     {
       "q": "Where can I donate a couch in Cambridge?",
-      "a": "Furnishing Hope of Massachusetts takes sofas and upholstered chairs, but pickup needs at least six substantial furniture items. The Habitat Greater Boston ReStore takes upholstered furniture in good shape (not sofa beds or slip-covered sofas), and Household Goods in Acton takes couches, sofa beds and futons."
+      "a": "Furnishing Hope of Massachusetts takes sofas and upholstered chairs, but pickup needs at least six substantial furniture items. The Habitat Greater Boston ReStore takes upholstered furniture in good shape (not sofa beds or slip-covered sofas), and Household Goods in Acton takes couches, sofa beds and futons.",
+      "sources": [{"label": "Furnishing Hope", "url": "https://www.furnishinghopema.org/donate-1"}, {"label": "Habitat for Humanity Greater Boston ReStore", "url": "https://habitatboston.org/restore/"}, {"label": "Household Goods", "url": "https://www.householdgoods.org/donate/donate-goods/donation-guidelines/"}]
     }
   ],
   "sections": [

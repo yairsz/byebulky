@@ -10,7 +10,8 @@
   "quick_answers": [
     {
       "q": "Can I throw out a fridge, AC, or old TV in Boston?",
-      "a": "Not with regular trash. The City says Massachusetts law bans items containing Freon or cathode ray tubes (CRTs) from the trash, so Boston collects them through a separate special item collection by appointment (the City page doesn't mention a fee; book online or call 311)."
+      "a": "Not with regular trash. The City says Massachusetts law bans items containing Freon or cathode ray tubes (CRTs) from the trash, so Boston collects them through a separate special item collection by appointment (the City page doesn't mention a fee; book online or call 311).",
+      "sources": [{"label": "City of Boston: special collection items", "url": "https://www.boston.gov/departments/public-works/special-collection-items"}]
     },
     {
       "q": "Does Boston pick up old fridges, ACs, or TVs?",
@@ -24,23 +25,28 @@
     },
     {
       "q": "How do I recycle a refrigerator in Boston?",
-      "a": "Don't put it out with the trash: the City says Massachusetts law bans items containing Freons from the trash, and that professionals must remove the Freons for safe disposal, which is why fridges and freezers go through its special item collection by appointment (311 or 617-635-4500, doors off and food out). If the fridge still works and your utility is a Mass Save Sponsor, Mass Save's no-cost pickup says your unit \"will be responsibly recycled\" and that \"95% of a refrigerator or freezer can be recycled.\" The City also notes that many retailers accept certain appliances for recycling."
+      "a": "Don't put it out with the trash: the City says Massachusetts law bans items containing Freons from the trash, and that professionals must remove the Freons for safe disposal, which is why fridges and freezers go through its special item collection by appointment (311 or 617-635-4500, doors off and food out). If the fridge still works and your utility is a Mass Save Sponsor, Mass Save's no-cost pickup says your unit \"will be responsibly recycled\" and that \"95% of a refrigerator or freezer can be recycled.\" The City also notes that many retailers accept certain appliances for recycling.",
+      "sources": [{"label": "City of Boston: special collection items", "url": "https://www.boston.gov/departments/public-works/special-collection-items"}, {"label": "Mass Save", "url": "https://www.masssave.com/residential/rebates-and-incentives/appliance-recycling/refrigerator-and-freezer-recycling"}]
     },
     {
       "q": "Do I have to remove the fridge doors?",
-      "a": "Yes. Remove all doors from fridges and freezers, including mini fridges, and take out all food. Fridges or freezers with doors attached or food inside will not be collected."
+      "a": "Yes. Remove all doors from fridges and freezers, including mini fridges, and take out all food. Fridges or freezers with doors attached or food inside will not be collected.",
+      "sources": [{"label": "City of Boston: special collection items", "url": "https://www.boston.gov/departments/public-works/special-collection-items"}]
     },
     {
       "q": "Does the City take dishwashers or water heaters?",
-      "a": "No. Dishwashers, water heaters, and plumbing fixtures are not part of this program; the City says to donate them or hire a private hauler."
+      "a": "No. Dishwashers, water heaters, and plumbing fixtures are not part of this program; the City says to donate them or hire a private hauler.",
+      "sources": [{"label": "City of Boston: special collection items", "url": "https://www.boston.gov/departments/public-works/special-collection-items"}]
     },
     {
       "q": "Where can I donate a working appliance or TV near Boston?",
-      "a": "Appliances: the Habitat for Humanity Greater Boston ReStore in West Roxbury accepts working appliances less than eight years old, and Household Goods in Acton takes refrigerators, washers, electric dryers, and some air conditioners newer than 10 years. TVs: Household Goods takes flat-screen TVs under 55\" and under 10 years old with an attached base and power cord, and the Thrift Shop of Boston takes smart flat-screen TVs but not older, CRT, or rear-projection TVs. Size and age rules are below."
+      "a": "Appliances: the Habitat for Humanity Greater Boston ReStore in West Roxbury accepts working appliances less than eight years old, and Household Goods in Acton takes refrigerators, washers, electric dryers, and some air conditioners newer than 10 years. TVs: Household Goods takes flat-screen TVs under 55\" and under 10 years old with an attached base and power cord, and the Thrift Shop of Boston takes smart flat-screen TVs but not older, CRT, or rear-projection TVs. Size and age rules are below.",
+      "sources": [{"label": "Habitat for Humanity Greater Boston ReStore", "url": "https://habitatboston.org/restore/"}, {"label": "Household Goods", "url": "https://www.householdgoods.org/donate/donate-goods/donation-guidelines/"}, {"label": "Thrift Shop of Boston", "url": "https://thriftshopofboston.org/donate-your-stuff/"}]
     },
     {
       "q": "Where can I donate a TV for free near me in Boston?",
-      "a": "The Salvation Army advertises free donation pickup (1-800-SA-TRUCK) but doesn't take TVs older than 5 years or large console TVs. The Thrift Shop of Boston in Roslindale takes smart flat-screen TVs by drop-off appointment, and Household Goods in Acton takes flat screens under 55\" and under 10 years old with an attached base and power cord; neither states a drop-off fee. Old CRT TVs can go to the City's special item collection by appointment through 311."
+      "a": "The Salvation Army advertises free donation pickup (1-800-SA-TRUCK) but doesn't take TVs older than 5 years or large console TVs. The Thrift Shop of Boston in Roslindale takes smart flat-screen TVs by drop-off appointment, and Household Goods in Acton takes flat screens under 55\" and under 10 years old with an attached base and power cord; neither states a drop-off fee. Old CRT TVs can go to the City's special item collection by appointment through 311.",
+      "sources": [{"label": "The Salvation Army", "url": "https://satruck.org/faq"}, {"label": "Thrift Shop of Boston", "url": "https://thriftshopofboston.org/donate-your-stuff/"}, {"label": "Household Goods", "url": "https://www.householdgoods.org/donate/donate-goods/donation-guidelines/"}, {"label": "City of Boston: special collection items", "url": "https://www.boston.gov/departments/public-works/special-collection-items"}]
     }
   ],
   "sections": [

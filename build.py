@@ -297,16 +297,31 @@ def _day_sent(s):
         if one == s and not rest: break
     return _sent(s)
 
+def faq_sources(ls):
+    """Per-answer citation for an answer the build generates (2026-11-04). One entry per listing the sentence names,
+    using that listing's own primary source URL, and its name (minus a trailing price parenthetical) as the label.
+    Same rule as the hand-written answers: a generated answer may only cite a page already on that page."""
+    out, seen = [], set()
+    for l in ls:
+        urls = l.get("source_urls") or []
+        if not urls or urls[0] in seen:
+            continue
+        seen.add(urls[0])
+        out.append({"label": l["name"], "url": urls[0]})
+    return out
+
 def pickup_day_faq(c):
     """'What day is bulky item pickup in {city}?' (Google autocomplete, run #44). Verbatim day sentences from the City's
-    own furniture, mattress and appliance listings; says so when the official page names no day."""
-    city = c["name"]; parts = []; missing = []
+    own furniture, mattress and appliance listings; says so when the official page names no day. Each program the
+    answer names is cited in sources (2026-11-04)."""
+    city = c["name"]; parts = []; missing = []; cited = []
     for label, rx in RULE_KINDS:
         l = next((x for x in c["listings"] if x["type"] == "city bulk pickup" and rx.search(x["id"])), None)
         lt = (l or {}).get("lead_time", "")
         if not l or lt.startswith("Not stated"):
             missing.append(label.lower()); continue
         ds = _day_sent(lt)
+        cited.append(l)
         hit = next((x for x in parts if x[1] == ds), None)
         if hit: hit[0].append(label.lower())
         else: parts.append([[label], ds])
@@ -316,7 +331,7 @@ def pickup_day_faq(c):
     a = " ".join(parts)
     if missing:
         a += f" The City page we checked doesn't give a day for {' or '.join(missing)}; ask the City."
-    return {"q": f"What day is bulky item pickup in {city}?", "a": a}
+    return {"q": f"What day is bulky item pickup in {city}?", "a": a, "sources": faq_sources(cited)}
 
 def _city_prog(c, k):
     rx = RULE_KINDS[k][1]
@@ -339,7 +354,9 @@ def mattress_bulk_faq(c):
     na = [i for i in mat.get("items_not_accepted", []) if not re.match(r"other non-mattress", i, re.I)]
     if na:
         a += " Not accepted by that program: " + "; ".join(na) + "."
-    return {"q": f"Does bulk pickup take mattresses in {city}?", "a": a.strip()}
+    # Cites the mattress program it names, plus the furniture program whose exclusion it quotes (2026-11-04).
+    return {"q": f"Does bulk pickup take mattresses in {city}?", "a": a.strip(),
+            "sources": faq_sources([mat] + ([fur] if excl else []))}
 
 def city_faq(c):
     """Computed fan-out answers from the listing fields (never hand-written)."""
@@ -354,7 +371,8 @@ def city_faq(c):
              f"{len(no)} {'is' if len(no) == 1 else 'are'} curbside or drop-off only"
              + (f", {other} give partial details (see each listing)" if other else "")
              + f", and {len(unk)} {'doesn' if len(unk) == 1 else 'don'}'t say, so ask them. Fees and conditions vary; check each listing.")
-        out.append({"q": f"Who will pick up bulky items from inside my home in {city}?", "a": a})
+        out.append({"q": f"Who will pick up bulky items from inside my home in {city}?", "a": a,
+                    "sources": faq_sources(yes)})
     # Multi-condition (item x inside-pickup) answers. Learning 2026-10-25, Neil Patel "AI Mode ... 5 New Rules":
     # long, specific queries trigger AI answers far more often and need cited sources. Counted from fields only.
     for item, rx in ITEM_RX:
@@ -379,7 +397,8 @@ def city_faq(c):
              f"{'says it' if len(my) == 1 else 'say they'} will collect it from inside your home: {_names(my)}. "
              + (rest_s[0].upper() + rest_s[1:] + ". " if rest_s else "")
              + "Prices and conditions differ; check each listing.")
-        out.append({"q": f"Who will take a {item} out of my apartment or house (not just from the curb) in {city}?", "a": a})
+        out.append({"q": f"Who will take a {item} out of my apartment or house (not just from the curb) in {city}?",
+                    "a": a, "sources": faq_sources(my)})
     cnt = [(t, sum(1 for l in ls if l["type"] == t)) for t in TYPES]
     cnt = [(t, k) for t, k in cnt if k]
     if not any(_DAYW.search(x["q"]) and x["q"].lower().startswith("what day") for x in c.get("quick_answers", [])):
@@ -387,6 +406,8 @@ def city_faq(c):
         if d: out.insert(0, d)
     m = mattress_bulk_faq(c)
     if m: out.insert(1 if out and out[0]["q"].startswith("What day") else 0, m)
+    # Left uncited on purpose: this answer is a count of our own listing cards on this same page and names no outside
+    # program, so there is no external page to check it against (2026-11-04).
     out.append({"q": f"What are the ways to get rid of bulky items in {city}?",
                 "a": f"We list {n} options in {city}: " + "; ".join(f"{t} ({k})" for t, k in cnt) + ". Each listing links to the page we checked."})
     return out
@@ -456,6 +477,9 @@ def city_page(c):
     used_types = [t for t in TYPES if any(l["type"] == t for l in c["listings"])]
     opts = "".join(f'<option value="{e(t)}">{e(t.title())}</option>' for t in used_types)
     qas = c.get("quick_answers", []) + city_faq(c)
+    for x in qas:  # generated answers are held to the same rule as hand-written ones (2026-11-04)
+        for r in x.get("sources") or []:
+            assert r.get("url") in _allowed, f"city {c['slug']} answer '{x['q']}' cites {r.get('url')}, which is not a source of any listing on this page"
     qa = "".join(f"<div><h3>{e(x['q'])}</h3>{e(x['a'])}{l}{qa_src(x)}</div>" for x, l in zip(qas, qa_guide_links(c, qas)))
     groups = ""
     for t in used_types:

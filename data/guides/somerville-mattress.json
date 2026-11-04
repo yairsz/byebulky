@@ -10,27 +10,33 @@
  "quick_answers": [
   {
    "q": "Does the City of Somerville pick up mattresses?",
-   "a": "Yes, curbside by appointment, for households in buildings with 6 or fewer units that get City trash collection. You need a $55 Disposal Sticker on each item and a 311 appointment."
+   "a": "Yes, curbside by appointment, for households in buildings with 6 or fewer units that get City trash collection. You need a $55 Disposal Sticker on each item and a 311 appointment.",
+   "sources": [{"label": "City of Somerville: mattress and box spring recycling", "url": "https://www.somervillema.gov/mattressrecycling"}]
   },
   {
    "q": "Should I use the City's $55 sticker pickup or a private mattress hauler in Somerville?",
-   "a": "Use the City pickup if your building has 6 or fewer units with City trash collection and you can get the mattress to the curb yourself: it costs $55 per mattress or box spring ($110 for the pair), and the City says its crew can't enter private property. Hire a hauler if your building has 7 or more units or private trash, you're over the two-bulk-items-a-week limit, you need it carried out, or the City refuses the item (futons, toppers, torn or soiled mattresses). LoadUp's Somerville price list starts mattress removal at $120 and says its loaders carry items out from any room. Mattress Pro Recycling lists Somerville among the towns it serves, and its booking page lists $125 per mattress or box spring and $50 per topper."
+   "a": "Use the City pickup if your building has 6 or fewer units with City trash collection and you can get the mattress to the curb yourself: it costs $55 per mattress or box spring ($110 for the pair), and the City says its crew can't enter private property. Hire a hauler if your building has 7 or more units or private trash, you're over the two-bulk-items-a-week limit, you need it carried out, or the City refuses the item (futons, toppers, torn or soiled mattresses). LoadUp's Somerville price list starts mattress removal at $120 and says its loaders carry items out from any room. Mattress Pro Recycling lists Somerville among the towns it serves, and its booking page lists $125 per mattress or box spring and $50 per topper.",
+   "sources": [{"label": "City of Somerville: mattress and box spring recycling", "url": "https://www.somervillema.gov/mattressrecycling"}, {"label": "LoadUp", "url": "https://goloadup.com/junk-removal/ma/somerville/"}, {"label": "Mattress Pro Recycling", "url": "https://mattressprorecycling.com/"}]
   },
   {
    "q": "How much does Somerville mattress disposal cost?",
-   "a": "$55 per mattress and $55 per box spring. A mattress and its box spring count as two items, so the pair costs $110."
+   "a": "$55 per mattress and $55 per box spring. A mattress and its box spring count as two items, so the pair costs $110.",
+   "sources": [{"label": "City of Somerville: mattress and box spring recycling", "url": "https://www.somervillema.gov/mattressrecycling"}]
   },
   {
    "q": "How do I schedule a Somerville mattress pickup?",
-   "a": "Contact 311 (617-666-3311, the 311 app, online form or live chat) no later than 3:30 p.m. the day before collection. You need the physical sticker in hand before you schedule."
+   "a": "Contact 311 (617-666-3311, the 311 app, online form or live chat) no later than 3:30 p.m. the day before collection. You need the physical sticker in hand before you schedule.",
+   "sources": [{"label": "City of Somerville: mattress and box spring recycling", "url": "https://www.somervillema.gov/mattressrecycling"}]
   },
   {
    "q": "Can I just put my mattress out with the trash in Somerville?",
-   "a": "No. Massachusetts bans mattresses from the trash. Unscheduled mattresses put out with trash are left on the curb and may be fined."
+   "a": "No. Massachusetts bans mattresses from the trash. Unscheduled mattresses put out with trash are left on the curb and may be fined.",
+   "sources": [{"label": "City of Somerville: mattress and box spring recycling", "url": "https://www.somervillema.gov/mattressrecycling"}]
   },
   {
    "q": "What if my Somerville building has 7 or more units?",
-   "a": "The City won't collect it. Ask your building manager, or hire a mattress recycling hauler."
+   "a": "The City won't collect it. Ask your building manager, or hire a mattress recycling hauler.",
+   "sources": [{"label": "City of Somerville: mattress and box spring recycling", "url": "https://www.somervillema.gov/mattressrecycling"}]
   }
  ],
  "sections": [

@@ -10,23 +10,28 @@
   "quick_answers": [
     {
       "q": "Does Brookline pick up appliances?",
-      "a": "Yes, for residents on Town Waste Collection Service. Electronics and white goods (stoves, refrigerators, air conditioners, TVs and CRTs) cost $30 per item. Schedule and pay at least one week ahead; they're collected on Tuesdays."
+      "a": "Yes, for residents on Town Waste Collection Service. Electronics and white goods (stoves, refrigerators, air conditioners, TVs and CRTs) cost $30 per item. Schedule and pay at least one week ahead; they're collected on Tuesdays.",
+      "sources": [{"label": "Town of Brookline: bulky items and overflow waste", "url": "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"}]
     },
     {
       "q": "How do I book an appliance pickup in Brookline?",
-      "a": "Register on the Town's Accela permit portal and request a bulky item pickup, or schedule and pay in person at Town Hall, 333 Washington St., 4th floor. Your confirmation email gives the collection date. Questions: 617-730-2156 or dpwinfo@brooklinema.gov."
+      "a": "Register on the Town's Accela permit portal and request a bulky item pickup, or schedule and pay in person at Town Hall, 333 Washington St., 4th floor. Your confirmation email gives the collection date. Questions: 617-730-2156 or dpwinfo@brooklinema.gov.",
+      "sources": [{"label": "Town of Brookline: bulky items and overflow waste", "url": "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"}]
     },
     {
       "q": "How many appliances can I put out at once in Brookline?",
-      "a": "Up to four bulky, metal, white goods and/or mattress items per week, combined."
+      "a": "Up to four bulky, metal, white goods and/or mattress items per week, combined.",
+      "sources": [{"label": "Town of Brookline: bulky items and overflow waste", "url": "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"}]
     },
     {
       "q": "Can I drop off a microwave or TV for free in Brookline?",
-      "a": "Only in season. The Town says tires, electronics and small appliances such as microwaves can go free to the Household Hazardous Waste Recycling Facility at the Transfer Station, 815 Newton St., which is open May through October. Outside that season, use the $30 pickup."
+      "a": "Only in season. The Town says tires, electronics and small appliances such as microwaves can go free to the Household Hazardous Waste Recycling Facility at the Transfer Station, 815 Newton St., which is open May through October. Outside that season, use the $30 pickup.",
+      "sources": [{"label": "Town of Brookline: bulky items and overflow waste", "url": "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"}]
     },
     {
       "q": "Can I get money for recycling an old fridge in Brookline?",
-      "a": "Possibly. Mass Save offers a no-cost pickup and a $75 rebate for an inefficient, working refrigerator or freezer for eligible Massachusetts electric customers, if it's picked up in 2026."
+      "a": "Possibly. Mass Save offers a no-cost pickup and a $75 rebate for an inefficient, working refrigerator or freezer for eligible Massachusetts electric customers, if it's picked up in 2026.",
+      "sources": [{"label": "Mass Save", "url": "https://www.masssave.com/residential/rebates-and-incentives/appliance-recycling/refrigerator-and-freezer-recycling"}]
     }
   ],
   "sections": [

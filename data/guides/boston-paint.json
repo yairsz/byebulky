@@ -10,27 +10,33 @@
   "quick_answers": [
     {
       "q": "How do you dispose of paint in Boston?",
-      "a": "It depends on the type. Latex and acrylic (water-based) paint isn't hazardous, the City says: let it dry out in the can (cat litter or a paint hardener speeds this up) and put it out on your trash day with the lid off. Oil-based paint can't go in the trash; bring it to a free City Zero Waste Day drop-off. The next one is Saturday, November 21, 2026, 8:30 a.m. to 12 p.m., at 315 Gardner Street, West Roxbury."
+      "a": "It depends on the type. Latex and acrylic (water-based) paint isn't hazardous, the City says: let it dry out in the can (cat litter or a paint hardener speeds this up) and put it out on your trash day with the lid off. Oil-based paint can't go in the trash; bring it to a free City Zero Waste Day drop-off. The next one is Saturday, November 21, 2026, 8:30 a.m. to 12 p.m., at 315 Gardner Street, West Roxbury.",
+      "sources": [{"label": "City of Boston: Zero Waste Day", "url": "https://www.boston.gov/departments/public-works/zero-waste-day"}, {"label": "MassDEP: safely manage household hazardous products", "url": "https://www.mass.gov/info-details/safely-manage-household-hazardous-products"}]
     },
     {
       "q": "How do I get rid of latex paint in Boston?",
-      "a": "Dry it out and put it in the regular trash. The City says to mix an equal amount of cat litter into the paint in the can (or use a commercial paint hardener or shredded newspaper), stir until it thickens and won't spill, and let it sit for an hour. Once it's completely dry it can go in the garbage; remove the lid so collectors can see it's dry."
+      "a": "Dry it out and put it in the regular trash. The City says to mix an equal amount of cat litter into the paint in the can (or use a commercial paint hardener or shredded newspaper), stir until it thickens and won't spill, and let it sit for an hour. Once it's completely dry it can go in the garbage; remove the lid so collectors can see it's dry.",
+      "sources": [{"label": "City of Boston: Zero Waste Day", "url": "https://www.boston.gov/departments/public-works/zero-waste-day"}, {"label": "MassDEP: safely manage household hazardous products", "url": "https://www.mass.gov/info-details/safely-manage-household-hazardous-products"}]
     },
     {
       "q": "Where do I take oil-based paint in Boston?",
-      "a": "To a City of Boston Zero Waste Day drop-off. They're free for Boston residents. The next one is Saturday, November 21, 2026, 8:30 a.m. to 12 p.m. at 315 Gardner Street, West Roxbury."
+      "a": "To a City of Boston Zero Waste Day drop-off. They're free for Boston residents. The next one is Saturday, November 21, 2026, 8:30 a.m. to 12 p.m. at 315 Gardner Street, West Roxbury.",
+      "sources": [{"label": "City of Boston: Zero Waste Day", "url": "https://www.boston.gov/departments/public-works/zero-waste-day"}]
     },
     {
       "q": "How much paint can I bring to a Boston Zero Waste Day?",
-      "a": "Up to 20 gallons of paint, motor oil, gasoline, and chemicals combined, in containers of 5 gallons or less, with labels the City can read. Bring a photo ID, utility bill, or lease to show you live in Boston; the City doesn't take waste from businesses."
+      "a": "Up to 20 gallons of paint, motor oil, gasoline, and chemicals combined, in containers of 5 gallons or less, with labels the City can read. Bring a photo ID, utility bill, or lease to show you live in Boston; the City doesn't take waste from businesses.",
+      "sources": [{"label": "City of Boston: Zero Waste Day", "url": "https://www.boston.gov/departments/public-works/zero-waste-day"}]
     },
     {
       "q": "How do I get rid of cans of paint in South Boston?",
-      "a": "South Boston is a Boston neighborhood, so the citywide rules apply: dry latex or acrylic paint and put it out with your trash with the lid off, and bring oil-based paint to a City Zero Waste Day drop-off."
+      "a": "South Boston is a Boston neighborhood, so the citywide rules apply: dry latex or acrylic paint and put it out with your trash with the lid off, and bring oil-based paint to a City Zero Waste Day drop-off.",
+      "sources": [{"label": "City of Boston: Zero Waste Day", "url": "https://www.boston.gov/departments/public-works/zero-waste-day"}]
     },
     {
       "q": "Can I donate leftover paint in Boston?",
-      "a": "The City suggests donating paint that's too good to trash to someone who can use it, and MassDEP mentions paint swaps and reuse businesses such as Recolor Paints."
+      "a": "The City suggests donating paint that's too good to trash to someone who can use it, and MassDEP mentions paint swaps and reuse businesses such as Recolor Paints.",
+      "sources": [{"label": "City of Boston: Zero Waste Day", "url": "https://www.boston.gov/departments/public-works/zero-waste-day"}, {"label": "MassDEP: safely manage household hazardous products", "url": "https://www.mass.gov/info-details/safely-manage-household-hazardous-products"}]
     }
   ],
   "sections": [

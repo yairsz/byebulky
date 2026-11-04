@@ -10,27 +10,33 @@
  "quick_answers": [
   {
    "q": "Does Newton pick up mattresses?",
-   "a": "Yes, for $60 per mattress or box spring. Pay online, and for payments received by 10 p.m. Sunday the curbside collection should be arranged for Thursday of the following week."
+   "a": "Yes, for $60 per mattress or box spring. Pay online, and for payments received by 10 p.m. Sunday the curbside collection should be arranged for Thursday of the following week.",
+   "sources": [{"label": "City of Newton: large-item flyer", "url": "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000"}]
   },
   {
    "q": "Should I use the City's $60 pickup, the $35 drop-off, or a private mattress hauler in Newton?",
-   "a": "If you can get the mattress into a car, the $35 drop-off at the Resource Recovery Center on Rumford Ave. is the cheapest option (residents only, you unload it yourself). If you can get it to the curb but can't haul it, the City's $60 curbside pickup is next. The City collects at the curb only, so hire someone if it has to be carried out of the house: LoadUp's Newton price list starts mattress removal at $120 and says its loaders carry items from any room. Mattress Pro Recycling lists Newton among the towns it serves and charges $125 per mattress or box spring and $50 per topper, but its home page says to leave the mattress curbside or in an accessible outdoor spot."
+   "a": "If you can get the mattress into a car, the $35 drop-off at the Resource Recovery Center on Rumford Ave. is the cheapest option (residents only, you unload it yourself). If you can get it to the curb but can't haul it, the City's $60 curbside pickup is next. The City collects at the curb only, so hire someone if it has to be carried out of the house: LoadUp's Newton price list starts mattress removal at $120 and says its loaders carry items from any room. Mattress Pro Recycling lists Newton among the towns it serves and charges $125 per mattress or box spring and $50 per topper, but its home page says to leave the mattress curbside or in an accessible outdoor spot.",
+   "sources": [{"label": "City of Newton: large-item flyer", "url": "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000"}, {"label": "City of Newton: Resource Recovery Center", "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-resource-recovery-center"}, {"label": "LoadUp", "url": "https://goloadup.com/junk-removal/ma/newton/"}, {"label": "Mattress Pro Recycling", "url": "https://mattressprorecycling.com/"}]
   },
   {
    "q": "Where can I drop off a mattress in Newton?",
-   "a": "At the Resource Recovery Center, 115 Rumford Ave., Auburndale, for $35 per item. Pay online first, bring proof of payment, and unload it into the storage container yourself."
+   "a": "At the Resource Recovery Center, 115 Rumford Ave., Auburndale, for $35 per item. Pay online first, bring proof of payment, and unload it into the storage container yourself.",
+   "sources": [{"label": "City of Newton: large-item flyer", "url": "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000"}, {"label": "City of Newton: Resource Recovery Center", "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-resource-recovery-center"}]
   },
   {
    "q": "Does a box spring count as a separate item in Newton?",
-   "a": "Yes. Each mattress and each box spring counts as one item, and a split box spring counts as two."
+   "a": "Yes. Each mattress and each box spring counts as one item, and a split box spring counts as two.",
+   "sources": [{"label": "City of Newton: large-item flyer", "url": "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000"}]
   },
   {
    "q": "Can I put a mattress out with bulky trash in Newton?",
-   "a": "No. Newton stopped accepting mattresses and box springs as bulky waste on November 1, 2022, because of the statewide disposal ban. Futon mattresses and sleeper sofas are the exception and go out as $20 bulky items."
+   "a": "No. Newton stopped accepting mattresses and box springs as bulky waste on November 1, 2022, because of the statewide disposal ban. Futon mattresses and sleeper sofas are the exception and go out as $20 bulky items.",
+   "sources": [{"label": "City of Newton: recycle at the curb", "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-curb"}, {"label": "City of Newton: managing household trash", "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/managing-solid-waste"}]
   },
   {
    "q": "Will someone take a mattress from inside my home in Newton?",
-   "a": "Not the City, which collects at the curb only. Paid services such as ReSupply and LoadUp say their teams carry items out from inside your home."
+   "a": "Not the City, which collects at the curb only. Paid services such as ReSupply and LoadUp say their teams carry items out from inside your home.",
+   "sources": [{"label": "City of Newton: recycle at the curb", "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-curb"}, {"label": "ReSupply", "url": "https://resupply.com/boston/"}, {"label": "LoadUp", "url": "https://goloadup.com/junk-removal/ma/newton/"}]
   }
  ],
  "sections": [

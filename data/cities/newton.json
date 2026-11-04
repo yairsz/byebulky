@@ -12,19 +12,23 @@
   "quick_answers": [
     {
       "q": "Does Newton have bulky item pickup?",
-      "a": "Yes. Pay $20 per item online and the City arranges curbside collection, usually on Thursday of the following week if you pay by 10 p.m. Sunday. Set it out by 7 a.m. on collection day."
+      "a": "Yes. Pay $20 per item online and the City arranges curbside collection, usually on Thursday of the following week if you pay by 10 p.m. Sunday. Set it out by 7 a.m. on collection day.",
+      "sources": [{"label": "City of Newton: large-item flyer", "url": "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000"}]
     },
     {
       "q": "How much is mattress pickup in Newton, MA?",
-      "a": "$60 per mattress or box spring for curbside collection, or $35 per item to drop it off yourself at the Resource Recovery Center, 115 Rumford Ave. Pay online first either way."
+      "a": "$60 per mattress or box spring for curbside collection, or $35 per item to drop it off yourself at the Resource Recovery Center, 115 Rumford Ave. Pay online first either way.",
+      "sources": [{"label": "City of Newton: large-item flyer", "url": "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000"}]
     },
     {
       "q": "How do I get rid of a refrigerator, washer or TV in Newton?",
-      "a": "Book a whitegoods curbside pickup for $25 per item, or drop appliances and metal off free at the Resource Recovery Center. TVs and monitors cost $25 each to drop off."
+      "a": "Book a whitegoods curbside pickup for $25 per item, or drop appliances and metal off free at the Resource Recovery Center. TVs and monitors cost $25 each to drop off.",
+      "sources": [{"label": "City of Newton: large-item flyer", "url": "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000"}]
     },
     {
       "q": "What are the Newton dump (Rumford Ave. Resource Recovery Center) hours?",
-      "a": "Winter hours, November 1 to March 27, are Monday to Friday 7 a.m. to 2:30 p.m. and Saturday 9 a.m. to 1 p.m. It's closed Sundays, holidays (including Wednesday, November 11 for Veterans Day) and sometimes after heavy rain or snow; call 617-796-1000 after a storm. It's at 115 Rumford Ave., Auburndale, for Newton residents only."
+      "a": "Winter hours, November 1 to March 27, are Monday to Friday 7 a.m. to 2:30 p.m. and Saturday 9 a.m. to 1 p.m. It's closed Sundays, holidays (including Wednesday, November 11 for Veterans Day) and sometimes after heavy rain or snow; call 617-796-1000 after a storm. It's at 115 Rumford Ave., Auburndale, for Newton residents only.",
+      "sources": [{"label": "City of Newton: Resource Recovery Center", "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-resource-recovery-center"}]
     },
     {
       "q": "Is there a bulk waste drop off in Newton?",
@@ -33,7 +37,8 @@
     },
     {
       "q": "What won't Newton take as bulky waste?",
-      "a": "Mattresses, box springs, appliances, metal, electronics, items over 150 lbs, cardboard, construction materials, and move-out or clean-out loads, which need a private hauler."
+      "a": "Mattresses, box springs, appliances, metal, electronics, items over 150 lbs, cardboard, construction materials, and move-out or clean-out loads, which need a private hauler.",
+      "sources": [{"label": "City of Newton: managing household trash", "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/managing-solid-waste"}]
     }
   ],
   "resources": [

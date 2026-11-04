@@ -10,23 +10,28 @@
   "quick_answers": [
     {
       "q": "Does Quincy pick up appliances?",
-      "a": "Yes, at the curb. Call (855) 533-3400 to schedule pickup of stoves, refrigerators, washing machines, dryers, dehumidifiers and water heaters, and put the item out on your regular trash day. The City's pages don't state a fee, so ask when you call."
+      "a": "Yes, at the curb. Call (855) 533-3400 to schedule pickup of stoves, refrigerators, washing machines, dryers, dehumidifiers and water heaters, and put the item out on your regular trash day. The City's pages don't state a fee, so ask when you call.",
+      "sources": [{"label": "City of Quincy: how can I get rid of", "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"}]
     },
     {
       "q": "How do I get rid of a refrigerator in Quincy?",
-      "a": "Call (855) 533-3400 at least two full business days before your regular trash day for curbside pickup. Refrigerators are not accepted at the DPW Yard. If it still works and your electric utility is a Mass Save Sponsor (Cape Light Compact, Eversource, National Grid or Unitil), Mass Save offers a no-cost pickup and a $75 rebate in 2026."
+      "a": "Call (855) 533-3400 at least two full business days before your regular trash day for curbside pickup. Refrigerators are not accepted at the DPW Yard. If it still works and your electric utility is a Mass Save Sponsor (Cape Light Compact, Eversource, National Grid or Unitil), Mass Save offers a no-cost pickup and a $75 rebate in 2026.",
+      "sources": [{"label": "City of Quincy: how can I get rid of", "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"}, {"label": "City of Quincy: DPW Yard", "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/the_dpw_yard.php"}, {"label": "Mass Save", "url": "https://www.masssave.com/residential/rebates-and-incentives/appliance-recycling/refrigerator-and-freezer-recycling"}]
     },
     {
       "q": "How do I get rid of an old TV in Quincy?",
-      "a": "Call (855) 533-3400 by 3 p.m. at least two full business days before your regular trash day, then put the TV or monitor at the curb on your trash day. Electronics are also accepted at the DPW Yard, 55 Sea St."
+      "a": "Call (855) 533-3400 by 3 p.m. at least two full business days before your regular trash day, then put the TV or monitor at the curb on your trash day. Electronics are also accepted at the DPW Yard, 55 Sea St.",
+      "sources": [{"label": "City of Quincy: how can I get rid of", "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"}, {"label": "City of Quincy: DPW Yard", "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/the_dpw_yard.php"}]
     },
     {
       "q": "What does the Quincy DPW Yard take?",
-      "a": "Washers, dryers, water heaters, stoves, air conditioners, scrap metal and electronics, but no refrigerators or dishwashers. It's for Quincy residents only, with a valid Massachusetts driver's license, Monday to Friday 7:30 a.m. to 3 p.m. and Saturdays 7:30 a.m. to 2:30 p.m. through December 5, 2026."
+      "a": "Washers, dryers, water heaters, stoves, air conditioners, scrap metal and electronics, but no refrigerators or dishwashers. It's for Quincy residents only, with a valid Massachusetts driver's license, Monday to Friday 7:30 a.m. to 3 p.m. and Saturdays 7:30 a.m. to 2:30 p.m. through December 5, 2026.",
+      "sources": [{"label": "City of Quincy: DPW Yard", "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/the_dpw_yard.php"}]
     },
     {
       "q": "Can I put a microwave in the trash in Quincy?",
-      "a": "Yes. The City's page says microwave ovens may be placed curbside for regular trash pickup."
+      "a": "Yes. The City's page says microwave ovens may be placed curbside for regular trash pickup.",
+      "sources": [{"label": "City of Quincy: how can I get rid of", "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"}]
     }
   ],
   "sections": [

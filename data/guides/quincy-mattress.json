@@ -10,23 +10,28 @@
  "quick_answers": [
   {
    "q": "Does the City of Quincy pick up mattresses?",
-   "a": "Yes, free for Quincy residents in homes, condos or buildings with 8 units or fewer, through South Shore Recycle ($60 per unit for larger buildings and non-residents). Call (617) 837-1299 or book online. Mattresses are no longer picked up on your regular trash day and are scheduled by vehicle and staff availability."
+   "a": "Yes, free for Quincy residents in homes, condos or buildings with 8 units or fewer, through South Shore Recycle ($60 per unit for larger buildings and non-residents). Call (617) 837-1299 or book online. Mattresses are no longer picked up on your regular trash day and are scheduled by vehicle and staff availability.",
+   "sources": [{"label": "City of Quincy: how can I get rid of", "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"}, {"label": "South Shore Recycle", "url": "https://www.southshorerecycle.com/residential"}, {"label": "South Shore Recycle", "url": "https://www.southshorerecycle.com/contact-us"}]
   },
   {
    "q": "Is Quincy mattress pickup free?",
-   "a": "Yes for Quincy residents in homes, condos or buildings with 8 units or fewer. South Shore Recycle charges $60 per unit for larger Quincy buildings (8+ units) and non-Quincy residents."
+   "a": "Yes for Quincy residents in homes, condos or buildings with 8 units or fewer. South Shore Recycle charges $60 per unit for larger Quincy buildings (8+ units) and non-Quincy residents.",
+   "sources": [{"label": "South Shore Recycle", "url": "https://www.southshorerecycle.com/residential"}, {"label": "South Shore Recycle", "url": "https://www.southshorerecycle.com/contact-us"}, {"label": "City of Quincy: how can I get rid of", "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"}]
   },
   {
    "q": "Will South Shore Recycle take the mattress from inside my apartment?",
-   "a": "No. It says all pickups are curbside only and it doesn't collect from inside units, hallways or common areas, so the mattress has to be outside before pickup."
+   "a": "No. It says all pickups are curbside only and it doesn't collect from inside units, hallways or common areas, so the mattress has to be outside before pickup.",
+   "sources": [{"label": "South Shore Recycle", "url": "https://www.southshorerecycle.com/residential"}]
   },
   {
    "q": "Does Quincy pick up box springs?",
-   "a": "Yes. South Shore Recycle lists box springs and bed foundations of all sizes, including platform bases and adjustable base frames."
+   "a": "Yes. South Shore Recycle lists box springs and bed foundations of all sizes, including platform bases and adjustable base frames.",
+   "sources": [{"label": "South Shore Recycle", "url": "https://www.southshorerecycle.com/what-we-take"}]
   },
   {
    "q": "Can I put a mattress out with the trash in Quincy?",
-   "a": "No. The City says mattresses are no longer picked up on your regular trash day; schedule South Shore Recycle instead. Massachusetts has banned mattresses from the trash since November 1, 2022."
+   "a": "No. The City says mattresses are no longer picked up on your regular trash day; schedule South Shore Recycle instead. Massachusetts has banned mattresses from the trash since November 1, 2022.",
+   "sources": [{"label": "City of Quincy: how can I get rid of", "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"}]
   }
  ],
  "sections": [

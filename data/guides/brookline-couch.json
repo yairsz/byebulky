@@ -10,23 +10,28 @@
   "quick_answers": [
     {
       "q": "Does Brookline pick up couches?",
-      "a": "Yes, for residents on Town Waste Collection Service. A couch counts as a special item (wood or upholstered furniture), which costs $20. Book and pay one week in advance, online through the Town's Accela permit portal or in person at Town Hall."
+      "a": "Yes, for residents on Town Waste Collection Service. A couch counts as a special item (wood or upholstered furniture), which costs $20. Book and pay one week in advance, online through the Town's Accela permit portal or in person at Town Hall.",
+      "sources": [{"label": "Town of Brookline: bulky items and overflow waste", "url": "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"}]
     },
     {
       "q": "How much does it cost to get rid of a couch in Brookline?",
-      "a": "The Town charges $20 per special item such as a couch, and online card payments carry a service fee. LoadUp's Brookline price list shows furniture removal, including sofas, from $120, with the final price shown by ZIP before booking."
+      "a": "The Town charges $20 per special item such as a couch, and online card payments carry a service fee. LoadUp's Brookline price list shows furniture removal, including sofas, from $120, with the final price shown by ZIP before booking.",
+      "sources": [{"label": "Town of Brookline: bulky items and overflow waste", "url": "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"}, {"label": "LoadUp", "url": "https://goloadup.com/junk-removal/ma/brookline/"}]
     },
     {
       "q": "How do I schedule a bulky item pickup for a couch in Brookline?",
-      "a": "Create an account on the Town's Accela permit portal, then request a bulky item pickup, or schedule and pay in person at Town Hall, 333 Washington St., 4th floor. Your confirmation email gives the collection date. For help, email dpwinfo@brooklinema.gov or call DPW at 617-730-2156."
+      "a": "Create an account on the Town's Accela permit portal, then request a bulky item pickup, or schedule and pay in person at Town Hall, 333 Washington St., 4th floor. Your confirmation email gives the collection date. For help, email dpwinfo@brooklinema.gov or call DPW at 617-730-2156.",
+      "sources": [{"label": "Town of Brookline: bulky items and overflow waste", "url": "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"}]
     },
     {
       "q": "Will someone take a couch out of my apartment in Brookline?",
-      "a": "Not the Town, which collects at the curb. LoadUp says its loaders haul away sofas, futons and sectionals from anywhere on your property. The Town won't take apartment clean-outs and points residents to private permitted waste haulers for those."
+      "a": "Not the Town, which collects at the curb. LoadUp says its loaders haul away sofas, futons and sectionals from anywhere on your property. The Town won't take apartment clean-outs and points residents to private permitted waste haulers for those.",
+      "sources": [{"label": "Town of Brookline: bulky items and overflow waste", "url": "https://www.brooklinema.gov/3758/Bulky-Items-Overflow-Waste"}, {"label": "LoadUp", "url": "https://goloadup.com/junk-removal/ma/brookline/"}, {"label": "Town of Brookline: private waste haulers", "url": "https://www.brooklinema.gov/3762/Private-Waste-Haulers"}]
     },
     {
       "q": "Where can I donate a couch near Brookline?",
-      "a": "The Habitat Greater Boston ReStore in West Roxbury takes upholstered furniture that isn't ripped, worn, broken, dated or faded, but not sofa beds or sofas with slip covers. Household Goods in Acton takes couches, sofa beds and futons that are clean and in good condition, at its drop-off or through paid pickup partners."
+      "a": "The Habitat Greater Boston ReStore in West Roxbury takes upholstered furniture that isn't ripped, worn, broken, dated or faded, but not sofa beds or sofas with slip covers. Household Goods in Acton takes couches, sofa beds and futons that are clean and in good condition, at its drop-off or through paid pickup partners.",
+      "sources": [{"label": "Habitat for Humanity Greater Boston ReStore", "url": "https://habitatboston.org/restore/"}, {"label": "Household Goods", "url": "https://www.householdgoods.org/donate/donate-goods/pickup/"}]
     }
   ],
   "sections": [

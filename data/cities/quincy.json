@@ -9,27 +9,33 @@
   "quick_answers": [
     {
       "q": "Does Quincy have bulky item pickup?",
-      "a": "Yes. Two bulky items per week, such as sofas, chairs, recliners and lawn furniture, can go out curbside on your regular trash day without calling. It covers one- to eight-family homes and condos."
+      "a": "Yes. Two bulky items per week, such as sofas, chairs, recliners and lawn furniture, can go out curbside on your regular trash day without calling. It covers one- to eight-family homes and condos.",
+      "sources": [{"label": "City of Quincy: how can I get rid of", "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"}]
     },
     {
       "q": "Who is Quincy's trash company?",
-      "a": "Capitol Waste Services, Inc. collects Quincy's curbside trash and recycling for one- to eight-family homes and condos, Monday through Friday, per the City. Report a missed pickup at (855) 533-3400. It isn't contracted for move-outs or clean-outs, so hire a private vendor for those."
+      "a": "Capitol Waste Services, Inc. collects Quincy's curbside trash and recycling for one- to eight-family homes and condos, Monday through Friday, per the City. Report a missed pickup at (855) 533-3400. It isn't contracted for move-outs or clean-outs, so hire a private vendor for those.",
+      "sources": [{"label": "City of Quincy: waste", "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/trash.php"}, {"label": "City of Quincy: how can I get rid of", "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"}]
     },
     {
       "q": "How do I schedule mattress pickup in Quincy, MA?",
-      "a": "Call South Shore Recycle at (617) 837-1299 or book online. It's free for Quincy residents in homes, condos or buildings with 8 units or fewer, and it's no longer collected on trash day."
+      "a": "Call South Shore Recycle at (617) 837-1299 or book online. It's free for Quincy residents in homes, condos or buildings with 8 units or fewer, and it's no longer collected on trash day.",
+      "sources": [{"label": "City of Quincy: how can I get rid of", "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"}, {"label": "South Shore Recycle", "url": "https://www.southshorerecycle.com/residential"}, {"label": "South Shore Recycle", "url": "https://www.southshorerecycle.com/contact-us"}]
     },
     {
       "q": "How do I get rid of a refrigerator, washer or TV in Quincy?",
-      "a": "Call Capitol Waste at (855) 533-3400 by 3 p.m. before your trash day: at least one full business day ahead for most appliances, two for refrigerators, TVs and monitors."
+      "a": "Call Capitol Waste at (855) 533-3400 by 3 p.m. before your trash day: at least one full business day ahead for most appliances, two for refrigerators, TVs and monitors.",
+      "sources": [{"label": "City of Quincy: how can I get rid of", "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"}]
     },
     {
       "q": "What can I drop off at the Quincy DPW Yard?",
-      "a": "Appliances (no refrigerators or dishwashers), scrap metal such as desks, bed frames and exercise equipment, electronics, recycling, textiles and books at 55 Sea St. It's for Quincy residents with a MA driver's license."
+      "a": "Appliances (no refrigerators or dishwashers), scrap metal such as desks, bed frames and exercise equipment, electronics, recycling, textiles and books at 55 Sea St. It's for Quincy residents with a MA driver's license.",
+      "sources": [{"label": "City of Quincy: DPW Yard", "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/the_dpw_yard.php"}]
     },
     {
       "q": "What large items won't Quincy pick up at the curb?",
-      "a": "Toilets and construction or demolition debris, move-out and clean-out loads, oil-based paint and tires. Apartment buildings with more than eight units must hire a private hauler."
+      "a": "Toilets and construction or demolition debris, move-out and clean-out loads, oil-based paint and tires. Apartment buildings with more than eight units must hire a private hauler.",
+      "sources": [{"label": "City of Quincy: how can I get rid of", "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"}, {"label": "City of Quincy: waste", "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/trash.php"}]
     }
   ],
   "resources": [

@@ -11,7 +11,8 @@
   "quick_answers": [
     {
       "q": "Does Habitat for Humanity ReStore in Boston take mattresses?",
-      "a": "No. Habitat Greater Boston's ReStore lists mattresses and box springs among items it does not accept, along with sofa beds, sofas with slip covers, futons, and platform and trundle beds."
+      "a": "No. Habitat Greater Boston's ReStore lists mattresses and box springs among items it does not accept, along with sofa beds, sofas with slip covers, futons, and platform and trundle beds.",
+      "sources": [{"label": "Habitat for Humanity Greater Boston ReStore", "url": "https://habitatboston.org/restore/"}]
     },
     {
       "q": "Does Goodwill take furniture in Boston?",
@@ -30,15 +31,18 @@
     },
     {
       "q": "Does Goodwill take mattresses or TVs?",
-      "a": "No. Goodwill's Massachusetts list says it can't accept mattresses, box springs, waterbeds, bed frames, futons, futon frames, pillows, sofa beds, or televisions."
+      "a": "No. Goodwill's Massachusetts list says it can't accept mattresses, box springs, waterbeds, bed frames, futons, futon frames, pillows, sofa beds, or televisions.",
+      "sources": [{"label": "Goodwill Massachusetts", "url": "https://goodwillmass.org/what-to-donate/"}]
     },
     {
       "q": "Does the Salvation Army take mattresses?",
-      "a": "The Salvation Army's national pickup FAQ lists mattresses among gently used items its thrift stores generally accept, but says accepted items vary by location and to call 800-SA-TRUCK for your area."
+      "a": "The Salvation Army's national pickup FAQ lists mattresses among gently used items its thrift stores generally accept, but says accepted items vary by location and to call 800-SA-TRUCK for your area.",
+      "sources": [{"label": "The Salvation Army", "url": "https://satruck.org/faq"}]
     },
     {
       "q": "Which Boston-area charities take mattresses?",
-      "a": "Of the organizations we checked, Household Goods (Acton) takes standard-size mattresses and box springs without stains or rips, and Furnishing Hope lists mattresses and box springs among the furniture it accepts. Habitat ReStore, Goodwill and the Thrift Shop of Boston say they don't."
+      "a": "Of the organizations we checked, Household Goods (Acton) takes standard-size mattresses and box springs without stains or rips, and Furnishing Hope lists mattresses and box springs among the furniture it accepts. Habitat ReStore, Goodwill and the Thrift Shop of Boston say they don't.",
+      "sources": [{"label": "Household Goods", "url": "https://www.householdgoods.org/donate/donate-goods/donation-guidelines/"}, {"label": "Furnishing Hope", "url": "https://www.furnishinghopema.org/donate-1"}, {"label": "Habitat for Humanity Greater Boston ReStore", "url": "https://habitatboston.org/restore/"}, {"label": "Goodwill Massachusetts", "url": "https://goodwillmass.org/what-to-donate/"}, {"label": "Thrift Shop of Boston", "url": "https://thriftshopofboston.org/donate-your-stuff/"}]
     }
   ],
   "sections": [

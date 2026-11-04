@@ -15,23 +15,28 @@
     },
     {
       "q": "Which free option should I use?",
-      "a": "If you have a standard 20 lb. grill tank and don't want to wait, Blue Rhino recycling is the quickest free route, since it's offered at retail locations year-round. If you have small 1 lb. camping cylinders, several tanks, or a tank Blue Rhino won't take, the City's Zero Waste Day is the better fit because its list says \"Propane tanks - empty or full\" with no size limit, but it only runs on set dates and is for Boston residents. If you still grill, an exchange at Blue Rhino or AmeriGas gets rid of the old tank when you buy a full one."
+      "a": "If you have a standard 20 lb. grill tank and don't want to wait, Blue Rhino recycling is the quickest free route, since it's offered at retail locations year-round. If you have small 1 lb. camping cylinders, several tanks, or a tank Blue Rhino won't take, the City's Zero Waste Day is the better fit because its list says \"Propane tanks - empty or full\" with no size limit, but it only runs on set dates and is for Boston residents. If you still grill, an exchange at Blue Rhino or AmeriGas gets rid of the old tank when you buy a full one.",
+      "sources": [{"label": "Blue Rhino: how do I recycle my tank", "url": "https://bluerhino.com/propane-info/faqs/tank-use-faqs/how-do-i-recycle-my-tank"}, {"label": "City of Boston: Zero Waste Day", "url": "https://www.boston.gov/departments/public-works/zero-waste-day"}, {"label": "AmeriGas: buy and exchange grill tanks", "url": "https://www.amerigas.com/propane-grill-tanks/buy-exchange-grill-tanks"}]
     },
     {
       "q": "Can I throw an empty propane tank in the trash?",
-      "a": "No. MassDEP says trash compressors may puncture or damage pressurized tanks, which may lead to leaking flammable gas, even if the tank is empty. AmeriGas also says never to throw a propane cylinder in the trash."
+      "a": "No. MassDEP says trash compressors may puncture or damage pressurized tanks, which may lead to leaking flammable gas, even if the tank is empty. AmeriGas also says never to throw a propane cylinder in the trash.",
+      "sources": [{"label": "MassDEP: safely manage household hazardous products", "url": "https://www.mass.gov/info-details/safely-manage-household-hazardous-products"}, {"label": "AmeriGas: buy and exchange grill tanks", "url": "https://www.amerigas.com/propane-grill-tanks/buy-exchange-grill-tanks"}]
     },
     {
       "q": "Where can I recycle a grill propane tank for free?",
-      "a": "Blue Rhino says it accepts tanks for recycling at no cost: write \"R\" or \"RECYCLE\" on your 20 lb. tank, take it to a non-vending Blue Rhino location, and tell a store employee if there's an empty spot in the display. Boston residents can also bring tanks to a free City Zero Waste Day."
+      "a": "Blue Rhino says it accepts tanks for recycling at no cost: write \"R\" or \"RECYCLE\" on your 20 lb. tank, take it to a non-vending Blue Rhino location, and tell a store employee if there's an empty spot in the display. Boston residents can also bring tanks to a free City Zero Waste Day.",
+      "sources": [{"label": "Blue Rhino: how do I recycle my tank", "url": "https://bluerhino.com/propane-info/faqs/tank-use-faqs/how-do-i-recycle-my-tank"}, {"label": "City of Boston: Zero Waste Day", "url": "https://www.boston.gov/departments/public-works/zero-waste-day"}]
     },
     {
       "q": "How do I get rid of small 1 lb propane tanks in Boston?",
-      "a": "The City's Zero Waste Day list says \"Propane tanks - empty or full\" and doesn't set a size limit. Blue Rhino's recycling steps are written for 20 lb. grill tanks, and AmeriGas doesn't state whether its exchange locations take small camping cylinders, so ask before you go."
+      "a": "The City's Zero Waste Day list says \"Propane tanks - empty or full\" and doesn't set a size limit. Blue Rhino's recycling steps are written for 20 lb. grill tanks, and AmeriGas doesn't state whether its exchange locations take small camping cylinders, so ask before you go.",
+      "sources": [{"label": "City of Boston: Zero Waste Day", "url": "https://www.boston.gov/departments/public-works/zero-waste-day"}, {"label": "Blue Rhino: how do I recycle my tank", "url": "https://bluerhino.com/propane-info/faqs/tank-use-faqs/how-do-i-recycle-my-tank"}, {"label": "AmeriGas: buy and exchange grill tanks", "url": "https://www.amerigas.com/propane-grill-tanks/buy-exchange-grill-tanks"}]
     },
     {
       "q": "Can I swap an old or expired propane tank?",
-      "a": "AmeriGas says it accepts all brands of propane tanks and cylinders for exchange, and that you can drop an unwanted or expired tank at most of its refill or exchange locations. Blue Rhino says it exchanges any standard empty grill tank in acceptable condition."
+      "a": "AmeriGas says it accepts all brands of propane tanks and cylinders for exchange, and that you can drop an unwanted or expired tank at most of its refill or exchange locations. Blue Rhino says it exchanges any standard empty grill tank in acceptable condition.",
+      "sources": [{"label": "AmeriGas: buy and exchange grill tanks", "url": "https://www.amerigas.com/propane-grill-tanks/buy-exchange-grill-tanks"}, {"label": "Blue Rhino: how do I recycle my tank", "url": "https://bluerhino.com/propane-info/faqs/tank-use-faqs/how-do-i-recycle-my-tank"}]
     }
   ],
   "sections": [

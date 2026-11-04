@@ -10,11 +10,13 @@
   "quick_answers": [
     {
       "q": "What is the cheapest way to dispose of a sofa in Boston?",
-      "a": "Put it out with your regular trash. The City of Boston says furniture can go out with your normal curbside trash and recycling on your scheduled collection day, and its page doesn't mention a fee (call 311 if you're unsure). It must be at the curb by 6 a.m., not before 5 p.m. the evening before."
+      "a": "Put it out with your regular trash. The City of Boston says furniture can go out with your normal curbside trash and recycling on your scheduled collection day, and its page doesn't mention a fee (call 311 if you're unsure). It must be at the curb by 6 a.m., not before 5 p.m. the evening before.",
+      "sources": [{"label": "City of Boston: trash and recycling", "url": "https://www.boston.gov/departments/public-works/trash"}]
     },
     {
       "q": "Can I put a couch out with the trash in Boston?",
-      "a": "Yes. The City of Boston says furniture can go out with your normal curbside trash and recycling on your scheduled collection day, placed neatly next to your trash barrels, with no special appointment. It must be at the curb by 6 a.m., and not before 5 p.m. the evening before."
+      "a": "Yes. The City of Boston says furniture can go out with your normal curbside trash and recycling on your scheduled collection day, placed neatly next to your trash barrels, with no special appointment. It must be at the curb by 6 a.m., and not before 5 p.m. the evening before.",
+      "sources": [{"label": "City of Boston: trash and recycling", "url": "https://www.boston.gov/departments/public-works/trash"}]
     },
     {
       "q": "Is there couch recycling in Boston?",
@@ -23,23 +25,28 @@
     },
     {
       "q": "How much does couch removal cost in Boston?",
-      "a": "City curbside pickup has no fee mentioned on the City page, but it's curbside only. Paid services that come inside list starting prices: LoadUp's Boston page lists couch removal from $120 (checked Nov 2, 2026; final price confirmed by ZIP code, item, and pickup conditions), and ReSupply's Boston page lists sofas and bulky furniture starting at $99 plus a separate booking fee."
+      "a": "City curbside pickup has no fee mentioned on the City page, but it's curbside only. Paid services that come inside list starting prices: LoadUp's Boston page lists couch removal from $120 (checked Nov 2, 2026; final price confirmed by ZIP code, item, and pickup conditions), and ReSupply's Boston page lists sofas and bulky furniture starting at $99 plus a separate booking fee.",
+      "sources": [{"label": "City of Boston: trash and recycling", "url": "https://www.boston.gov/departments/public-works/trash"}, {"label": "LoadUp", "url": "https://goloadup.com/junk-removal/ma/boston/"}, {"label": "ReSupply", "url": "https://resupply.com/boston/furniture-donation-pickup/"}]
     },
     {
       "q": "Will the City take a couch from inside my apartment?",
-      "a": "No. The City picks up curbside only, not from inside your home or on private property. Paid services such as ReSupply (donation pickup) and LoadUp (junk removal) can come inside; get the final price before booking."
+      "a": "No. The City picks up curbside only, not from inside your home or on private property. Paid services such as ReSupply (donation pickup) and LoadUp (junk removal) can come inside; get the final price before booking.",
+      "sources": [{"label": "City of Boston: trash and recycling", "url": "https://www.boston.gov/departments/public-works/trash"}, {"label": "ReSupply", "url": "https://resupply.com/boston/furniture-donation-pickup/"}, {"label": "LoadUp", "url": "https://goloadup.com/junk-removal/ma/boston/"}]
     },
     {
       "q": "Where can I donate a couch near Boston?",
-      "a": "Household Goods in Acton lists couches, sofa beds, and futons that are clean, complete, and not torn or stained. Furnishing Hope of Massachusetts accepts sofas with no stains, odors, pet hair, or major wear, but its pickup requires at least six substantial furniture items and it requests a donation."
+      "a": "Household Goods in Acton lists couches, sofa beds, and futons that are clean, complete, and not torn or stained. Furnishing Hope of Massachusetts accepts sofas with no stains, odors, pet hair, or major wear, but its pickup requires at least six substantial furniture items and it requests a donation.",
+      "sources": [{"label": "Household Goods", "url": "https://www.householdgoods.org/donate/donate-goods/donation-guidelines/"}, {"label": "Furnishing Hope", "url": "https://www.furnishinghopema.org/donate-1"}]
     },
     {
       "q": "Does the Habitat ReStore in Boston take sofas?",
-      "a": "The Habitat for Humanity Greater Boston ReStore does not accept sofa beds or sofas with slip covers, and other upholstered furniture can't be ripped, worn, broken, dated, or faded. The Thrift Shop of Boston does not accept couches."
+      "a": "The Habitat for Humanity Greater Boston ReStore does not accept sofa beds or sofas with slip covers, and other upholstered furniture can't be ripped, worn, broken, dated, or faded. The Thrift Shop of Boston does not accept couches.",
+      "sources": [{"label": "Habitat for Humanity Greater Boston ReStore", "url": "https://habitatboston.org/restore/"}, {"label": "Thrift Shop of Boston", "url": "https://thriftshopofboston.org/donate-your-stuff/"}]
     },
     {
       "q": "Will a furniture store take my old couch when it delivers a new one? (Room & Board, IKEA, Bob's, Jordan's)",
-      "a": "Only some do, and only if you arrange it when you buy. Bob's Discount Furniture sells removal with a new-furniture delivery ($150 for the first piece, $50 each additional). IKEA offers sofa removal from $30 with an in-store sofa purchase and in-home delivery in select markets, not with online orders. Jordan's Furniture says its delivery team cannot move or remove existing furniture. Room & Board's delivery and FAQ pages describe assembly, placement and packaging removal and don't mention taking old furniture. Checked Oct 29, 2026."
+      "a": "Only some do, and only if you arrange it when you buy. Bob's Discount Furniture sells removal with a new-furniture delivery ($150 for the first piece, $50 each additional). IKEA offers sofa removal from $30 with an in-store sofa purchase and in-home delivery in select markets, not with online orders. Jordan's Furniture says its delivery team cannot move or remove existing furniture. Room & Board's delivery and FAQ pages describe assembly, placement and packaging removal and don't mention taking old furniture. Checked Oct 29, 2026.",
+      "sources": [{"label": "Bob's Discount Furniture: removal service", "url": "https://help.mybobs.com/docs/bobs-furniture-removal-service"}, {"label": "IKEA: removal services", "url": "https://www.ikea.com/us/en/customer-service/services/removal/"}, {"label": "Jordan's Furniture: delivery and pickup", "url": "https://www.jordans.com/customer-service/delivery-pickup"}, {"label": "Room & Board: delivery", "url": "https://www.roomandboard.com/customer-service/delivery"}]
     }
   ],
   "sections": [
