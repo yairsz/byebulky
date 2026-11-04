@@ -51,6 +51,7 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. One 
 - Anything with a price: re-check every 60 days.
 
 ## After publishing (added 2026-10-23)
+- **Outbound click events (added 2026-11-04):** every page carries a listener that fires the GA4 event `outbound_click` with `link_domain`, `link_url` and `affiliate_link` (0/1). Use that event, not GA4's generic `click`, when a traffic report says how many visitors went to a hauler, a charity or a City page. Links to be labeled as affiliate carry `data-affiliate="true"`; there are none today.
 - Submit new/changed URLs to IndexNow: POST https://api.indexnow.org/indexnow with {"host","key": site.json indexnow_key, "keyLocation": "https://<host>/<key>.txt", "urlList": [...]} (expect 200/202).
 - **Non-Google engines (added 2026-10-23, required):** every new or changed page MUST go out through IndexNow (POST above; one call to api.indexnow.org is shared with Bing, Yandex, Seznam, Naver, Yep, Internet Archive and Amazonbot). Expect HTTP 200/202 and log it in published-log.md.
 - **llms.txt:** `build.py` regenerates `/llms.txt` from each page's title + meta description, so a new page appears automatically. If you add a new kind of page (new path pattern), update `LLMS_SECTIONS` / `LLMS_SUMMARY` / `LLMS_NOTES` in build.py so llms.txt stays accurate, and check `site/llms.txt` after building. Never put anything in llms.txt that the site itself does not say.

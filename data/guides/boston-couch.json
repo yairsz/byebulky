@@ -17,8 +17,9 @@
       "a": "Yes. The City of Boston says furniture can go out with your normal curbside trash and recycling on your scheduled collection day, placed neatly next to your trash barrels, with no special appointment. It must be at the curb by 6 a.m., and not before 5 p.m. the evening before."
     },
     {
-      "q": "Can you recycle a couch in Boston?",
-      "a": "The City of Boston's page says furniture goes out with your normal curbside trash and recycling on collection day, and it doesn't describe a separate couch recycling program. To keep a usable couch out of the trash, donate it: Household Goods in Acton and Furnishing Hope of Massachusetts take sofas in good condition (rules below). LoadUp, a paid junk removal service, says usable goods are donated or recycled whenever possible and anything left goes to an approved disposal facility."
+      "q": "Is there couch recycling in Boston?",
+      "sources": [{"label": "City of Boston: trash and recycling", "url": "https://www.boston.gov/departments/public-works/trash"}],
+      "a": "The City of Boston's page says furniture goes out with your normal curbside trash and recycling on collection day, and it doesn't describe a separate couch recycling program. To keep a usable couch out of the trash, donate it to Household Goods in Acton or Furnishing Hope."
     },
     {
       "q": "How much does couch removal cost in Boston?",

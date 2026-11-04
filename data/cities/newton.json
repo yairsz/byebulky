@@ -6,6 +6,9 @@
   "title": "Newton MA Bulky Item Pickup: $20 Fee, Mattress & Dump Rules",
   "meta_description": "Newton bulky item pickup is $20 per item, mattresses $60 curbside or $35 drop-off, appliances $25 or free at the Rumford Ave center. All sourced.",
   "intro": "Newton doesn't take big items with the regular trash. You pay online for a curbside pickup, usually on Thursday of the following week: $20 for furniture, $60 for a mattress or box spring, $25 for an appliance or TV. Or bring it to the Resource Recovery Center on Rumford Avenue. Here's what each option takes, what it costs, and where we got it.",
+  "type_headings": {
+    "drop-off": "Bulk waste drop off locations for Newton residents"
+  },
   "quick_answers": [
     {
       "q": "Does Newton have bulky item pickup?",
@@ -22,6 +25,11 @@
     {
       "q": "What are the Newton dump (Rumford Ave. Resource Recovery Center) hours?",
       "a": "Winter hours, November 1 to March 27, are Monday to Friday 7 a.m. to 2:30 p.m. and Saturday 9 a.m. to 1 p.m. It's closed Sundays, holidays (including Wednesday, November 11 for Veterans Day) and sometimes after heavy rain or snow; call 617-796-1000 after a storm. It's at 115 Rumford Ave., Auburndale, for Newton residents only."
+    },
+    {
+      "q": "Is there a bulk waste drop off in Newton?",
+      "a": "Yes, at the Resource Recovery Center, 115 Rumford Ave., for Newton residents only. It takes mattresses and box springs ($35 each), appliances, scrap metal and electronics (TVs and monitors $25), and large rigid plastic. It does not take couches; those use the $20 bulky pickup.",
+      "sources": [{"label": "Newton: Recycle at the Resource Recovery Center", "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-resource-recovery-center"}]
     },
     {
       "q": "What won't Newton take as bulky waste?",
@@ -290,7 +298,7 @@
         "Hazardous materials such as certain paints, chemicals, asbestos and medical waste"
       ],
       "address": null,
-      "notes": "We do not currently have an affiliate relationship with LoadUp. If that changes, this listing will be labeled.",
+      "notes": "",
       "book_url": "https://goloadup.com/junk-removal/",
       "phone": null,
       "email": null,
@@ -373,7 +381,7 @@
         "https://mattressprorecycling.com/"
       ],
       "last_verified": "2026-11-02",
-      "notes": "Takes futons and mattress toppers; Newton's mattress program excludes futon mattresses. We do not have an affiliate relationship with Mattress Pro Recycling."
+      "notes": "Takes futons and mattress toppers; Newton's mattress program excludes futon mattresses."
     },
     {
       "id": "mass-save-fridge-recycling",

@@ -60,8 +60,15 @@ META = {}  # path -> (title, description); feeds llms.txt
 # path -> YYYY-MM-DD the page's content was last verified/changed. Filled in main() from the data files
 # (never "today" by default), and used for WebPage dateModified JSON-LD, visible dates and sitemap lastmod.
 MODIFIED = {}
-ABOUT_UPDATED = "2026-10-24"     # bump when /about/ text changes
-PRIVACY_UPDATED = "2026-10-23"   # matches privacy.EFFECTIVE
+ABOUT_UPDATED = "2026-11-04"     # bump when /about/ text changes
+# Pages whose wording changed on 2026-11-04 (query-phrase headings, titles, listing-card filter). Their visible
+# "Last verified" date stays the date the sources were read; MODIFIED (dateModified + sitemap lastmod) takes the later
+# of that and this, so a reader can see when the text changed without a false claim that the sources were re-read.
+EDITED_2026_11_04 = ["/boston/", "/boston/appliances/", "/boston/couch/", "/boston/donation-rules/", "/boston/mattress/",
+                     "/boston/paint/", "/boston/propane-tank/", "/boston/september-1-move-out/", "/newton/",
+                     "/quincy/mattress/", "/boston-area-mattress-disposal-cost/", "/brookline/mattress/",
+                     "/cambridge/mattress/", "/newton/mattress/", "/somerville/mattress/"]
+PRIVACY_UPDATED = "2026-11-04"   # matches privacy.EFFECTIVE
 
 def org_ld():
     return {"@type": "Organization", "@id": base_url() + "/#org", "name": CFG["site_name"], "url": base_url() + "/",
@@ -81,12 +88,17 @@ def webpage_ld(title, desc, path):
 # Reworded only from the page's own description; no new facts. Keep <= 158 chars.
 META_DESC = {'/boston/mattress/': "Mattresses are banned from Massachusetts trash. Book Boston's curbside mattress pickup (6 units or fewer) or use a hauler in 7+ unit buildings.", '/boston/': 'Every verified way to get rid of a couch, mattress, furniture or appliance in Boston: City pickup, ReStore, furniture banks and haulers, with sources.', '/boston/couch/': "Boston lets you put furniture out with regular trash. Here's how it works, which charities take sofas, and paid pickup options, with sources.", '/': 'Verified, city-by-city ways to get rid of couches, mattresses, furniture and appliances: city pickup, donation pickup, drop-off and haulers.'}
 
+TITLE_CAP = 65
 def fit_meta(title, desc, suffix=None):
-    """Keep SERP snippets readable: titles <= 70 chars (keep the brand suffix unless longer; drop the site-name suffix if needed),
-    descriptions <= 158 chars (cut at the last full sentence, else the last word + ellipsis).
+    """Keep SERP snippets readable: titles <= 65 chars (drop the site-name suffix if that is all that overflows, else cut at a
+    word boundary), descriptions <= 158 chars (cut at the last full sentence, else the last word + ellipsis).
     Only shortens; never adds wording."""
-    if suffix and title.endswith(suffix) and len(title) > 70:
+    if suffix and title.endswith(suffix) and len(title) > TITLE_CAP:
         title = title[: -len(suffix)]
+    if len(title) > TITLE_CAP:
+        cut = title[: TITLE_CAP + 1]
+        sp = cut.rfind(" ")
+        title = (cut[:sp] if sp >= 40 else title[:TITLE_CAP]).rstrip(" ,;:-–—(&")
     if len(desc) > 158:
         cut = desc[:158]
         ends = [cut.rfind(p) for p in (". ", "? ", "! ")]
@@ -115,6 +127,7 @@ def page(title, desc, path, body, jsonld=None):
     lds = [x for x in ((jsonld if isinstance(jsonld, list) else [jsonld]) + [video_ld(path), webpage_ld(title, desc, path)]) if x]
     ld = "".join(f'<script type="application/ld+json">{json.dumps(x)}</script>' for x in lds)
     year = datetime.date.today().year
+    nav_cities = "".join(f'<a href="{U("/" + c["slug"] + "/")}">{e(c["name"])}</a>' for c in CITIES)
     return f"""<!doctype html>
 <html lang="en"><head>{ga_snippet()}{clarity_tag()}
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -128,12 +141,13 @@ def page(title, desc, path, body, jsonld=None):
 {og_image(path, title)}
 <link rel="stylesheet" href="{U('/static/style.css')}">{ld}
 </head><body>
+{OUTBOUND_JS}
 <header class="site"><div class="wrap"><a class="logo" href="{U('/')}">Bye<span>Bulky</span></a>
-<nav><a href="{U('/boston/')}">Boston</a><a href="{U('/about/')}">How we verify</a></nav></div></header>
+<nav>{nav_cities}<a href="{U('/about/')}">How we verify</a></nav></div></header>
 <main><div class="wrap">
 {body}
 </div></main>
-<footer><div class="wrap">© {year} {e(CFG['site_name'])}. Information is gathered from official sources and can change. Always confirm with the organization before you haul anything. <a href="{U('/about/')}">Affiliate disclosure &amp; how we verify</a>. <a href="{U('/privacy/')}">Privacy policy</a>. <a href="{YT_CHANNEL}" rel="noopener" target="_blank">ByeBulky on YouTube</a>.</div></footer>
+<footer><div class="wrap">© {year} {e(CFG['site_name'])}. Information is gathered from official sources and can change. Always confirm with the organization before you haul anything. <a href="{U('/about/')}">How we make money &amp; how we verify</a>. <a href="{U('/privacy/')}">Privacy policy</a>. <a href="{YT_CHANNEL}" rel="noopener" target="_blank">ByeBulky on YouTube</a>.</div></footer>
 </body></html>"""
 
 
@@ -143,17 +157,26 @@ def report_link(name):
     subj = _q(f"Report a change: {name}")
     return f'<p class="meta report"><a href="mailto:{privacy.CONTACT}?subject={subj}">Report a change</a></p>'
 
-def listing_card(l):
+GENERIC_ITEM_RX = re.compile(r"^\s*(furniture|general junk|household goods)", re.I)
+def listing_card(l, item_rx=None):
     for k in REQUIRED:
         assert k in l, f"listing {l.get('id')} missing {k}"
     assert l["type"] in TYPES, f"bad type {l['type']} in {l['id']}"
     assert l["source_urls"], f"listing {l['id']} has no source"
-    items = "".join(f"<li>{e(i)}</li>" for i in l["items_accepted"])
+    acc = l["items_accepted"]
+    if item_rx:
+        # Item guides show only the accepted items that concern the guide's item (2026-11-04): stops fridge/TV specs
+        # appearing on mattress pages. Verbatim items only; if none match, the full list is shown unchanged.
+        keep = [i for i in acc if re.search(item_rx, i, re.I) or GENERIC_ITEM_RX.match(i)]
+        if keep and len(keep) < len(acc):
+            acc = keep
+    items = "".join(f"<li>{e(i)}</li>" for i in acc)
     notacc = ""
     if l.get("items_not_accepted"):
         notacc = "<dt>Not accepted</dt><dd><ul class='items'>" + "".join(f"<li>{e(i)}</li>" for i in l["items_not_accepted"]) + "</ul></dd>"
     book = []
-    if l.get("book_url"): book.append(f'<a href="{e(l["book_url"])}" rel="nofollow noopener" target="_blank">Website / booking</a>')
+    aff = ' data-affiliate="true"' if l.get("affiliate") else ""  # no listing sets this today: no affiliate links exist
+    if l.get("book_url"): book.append(f'<a href="{e(l["book_url"])}" rel="nofollow noopener" target="_blank"{aff}>Website / booking</a>')
     if l.get("phone"): book.append(e(l["phone"]))
     if l.get("email"): book.append(f'<a href="mailto:{e(l["email"])}">{e(l["email"])}</a>')
     book = " · ".join(book) or f'<span class="ns">{NS}</span>'
@@ -172,6 +195,27 @@ def listing_card(l):
 <dt>How to book</dt><dd>{book}</dd>{notes}
 <dt>Sources</dt><dd>{srcs} · last verified {e(l['last_verified'])}</dd></dl>{report_link(l['name'])}</article>"""
 
+# Outbound link analytics (2026-11-04): one GA4 event per click on a link that leaves byebulky.com.
+# Separate from GA4 enhanced measurement's generic "click" event, so "outbound_click" is unambiguous in reports.
+# No personal data: only the destination host and URL, plus whether the link is a labeled affiliate link.
+OUTBOUND_JS = """<script>
+(function(){
+function send(a){
+  if(typeof gtag!=='function'){return;}
+  var u;try{u=new URL(a.getAttribute('href'),location.href);}catch(e){return;}
+  if(!u||!u.hostname||u.hostname===location.hostname){return;}
+  var p={link_domain:u.hostname,link_url:u.href,affiliate_link:a.getAttribute('data-affiliate')==='true'?1:0};
+  gtag('event','outbound_click',p);
+}
+document.addEventListener('click',function(ev){
+  var t=ev.target;var a=t&&t.closest?t.closest('a[href]'):null;if(!a){return;}
+  var h=a.getAttribute('href')||'';
+  if(h.charAt(0)==='#'||h.indexOf('mailto:')===0||h.indexOf('tel:')===0){return;}
+  send(a);
+},true);
+})();
+</script>"""
+
 FILTER_JS = """<script>
 (function(){var t=document.getElementById('ft'),q=document.getElementById('fq');if(!t)return;
 function f(){var tv=t.value,qv=q.value.toLowerCase().trim();document.querySelectorAll('article.card').forEach(function(c){
@@ -183,8 +227,9 @@ def loadup_slot():
     # >>> LOADUP WIDGET PLACEHOLDER <<<  Filled only from site.json "loadup_widget_html" (empty = nothing shown).
     w = CFG.get("loadup_widget_html", "").strip()
     if not w:
-        return "<!-- LOADUP_WIDGET_PLACEHOLDER: intentionally empty until an approved LoadUp affiliate/Brand Builder embed exists (see site.json). -->"
-    return f'<section class="card" id="book-a-haul"><h2>Book a paid junk pickup</h2><p class="meta">Affiliate link: we may earn a commission. See our <a href="{U('/about/')}">disclosure</a>.</p>{w}</section>'
+        return ("<!-- LOADUP_WIDGET_PLACEHOLDER: intentionally empty. ByeBulky has no affiliate relationships and no partner "
+                "widget today; nothing is rendered here until an approved embed is added to site.json -> loadup_widget_html. -->")
+    return f'<section class="card" id="book-a-haul"><h2>Book a paid junk pickup</h2><p class="meta">This slot is reserved for a partner booking widget. ByeBulky has no affiliate relationships today and earns no commission from any link on this site; see <a href="{U('/about/')}">how we make money</a>.</p>{w}</section>'
 
 def faq_ld(qas):
     if not qas:
@@ -198,10 +243,23 @@ def crumbs_ld(items):
             "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": base_url() + u}
                                 for i, (n, u) in enumerate(items)]}
 
-def qa_block(qas):
+def qa_block(qas, heading=None):
+    """Quick answers. Each question is rendered as an h3 (2026-11-04: Search Console impressions show the questions are
+    typed almost verbatim, so the phrasing belongs in a heading, not only in body text) and feeds FAQPage JSON-LD."""
     if not qas:
         return ""
-    return '<div class="qa">' + "".join(f"<div><strong>{e(x['q'])}</strong>{e(x['a'])}</div>" for x in qas) + "</div>"
+    h = f"<h2>{e(heading)}</h2>" if heading else ""
+    return h + '<div class="qa">' + "".join(
+        f"<div><h3>{e(x['q'])}</h3>{e(x['a'])}{qa_src(x)}</div>" for x in qas) + "</div>"
+
+def qa_src(x):
+    """Visible per-answer citation (2026-11-04): a quick answer may carry {"sources":[{label,url}]} so the reader can check
+    the exact page the answer restates. Only URLs already in that page's listings are allowed (asserted below)."""
+    src = x.get("sources") or []
+    if not src:
+        return ""
+    return ('<p class="meta src">Source: ' + " · ".join(
+        f'<a href="{e(r["url"])}" rel="nofollow noopener" target="_blank">{e(r["label"])}</a>' for r in src) + "</p>")
 
 def _names(ls):
     n = [l["name"] for l in ls]
@@ -337,8 +395,21 @@ TYPE_HEADINGS = {"city bulk pickup": "City bulk item pickup for {city} residents
                  "retailer haul-away": "Retailer haul-away for {city} residents",
                  "utility recycling program": "Utility appliance recycling programs for {city} residents",
                  "free giveaway listing": "Free giveaway listing sites for {city} residents"}
+# (2026-11-04) Headings use one phrasing each. People search both "bulky item" and "bulk item" / "bulk waste", so the
+# second phrasing lives in body copy (see VOCAB_NOTE) and, where a city's own searches use it, in that city's heading via
+# data/cities/<slug>.json -> "type_headings". No page carries two near-identical headings with both spellings.
 
-def type_heading(t, city):
+VOCAB_NOTE = ('<p class="meta">On this page "bulky item", "bulk item" and "bulk waste" mean the same thing: anything '
+              "too big for the regular trash, such as furniture, a mattress or a large appliance. Cities and Towns word it "
+              "differently, so the headings below use whichever term fits that section, and each listing quotes the "
+              "program's own wording.</p>")
+
+def type_heading(t, city, override=None):
+    """Listing-type section heading. A city JSON may set "type_headings": {"<type>": "..."} to use the wording people
+    search for in that city ("bulk waste drop off" on Newton, for example). Only the searched phrase goes in the heading;
+    the other variant belongs in body text, so no page carries two near-identical headings."""
+    if override:
+        return override.format(city=city)
     return TYPE_HEADINGS.get(t, t.title()).format(city=city)
 
 def mattress_spot(c):
@@ -372,15 +443,20 @@ def qa_guide_links(c, qas):
 
 def city_page(c):
     set_page(f"/{c['slug']}/")
+    _allowed = {u for l in c["listings"] for u in l["source_urls"]} | {r["url"] for r in c.get("resources", [])}
+    for x in c.get("quick_answers", []):
+        for r in x.get("sources") or []:
+            assert r.get("url") in _allowed, f"city {c['slug']} answer '{x['q']}' cites {r.get('url')}, which is not a source of any listing on this page"
     used_types = [t for t in TYPES if any(l["type"] == t for l in c["listings"])]
     opts = "".join(f'<option value="{e(t)}">{e(t.title())}</option>' for t in used_types)
     qas = c.get("quick_answers", []) + city_faq(c)
-    qa = "".join(f"<div><strong>{e(x['q'])}</strong>{e(x['a'])}{l}</div>" for x, l in zip(qas, qa_guide_links(c, qas)))
+    qa = "".join(f"<div><h3>{e(x['q'])}</h3>{e(x['a'])}{l}{qa_src(x)}</div>" for x, l in zip(qas, qa_guide_links(c, qas)))
     groups = ""
     for t in used_types:
         cards = "".join(listing_card(l) for l in c["listings"] if l["type"] == t)
         n = sum(1 for l in c["listings"] if l["type"] == t)
-        groups += f"<h2>{e(type_heading(t, c['name']))} ({n})</h2>{cards}"
+        th = type_heading(t, c["name"], (c.get("type_headings") or {}).get(t))
+        groups += f"<h2>{e(th)} ({n})</h2>{cards}"
     res = "".join(f'<li><a href="{e(r["url"])}" rel="nofollow noopener" target="_blank">{e(r["label"])}</a></li>' for r in c.get("resources", []))
     guides = [g for g in GUIDES if g["city"] == c["slug"]]
     glinks = ""
@@ -390,7 +466,8 @@ def city_page(c):
 <h1>{e(c.get('h1') or ('How to get rid of a couch, mattress or furniture in ' + c['name']))}</h1>
 <p class="lead">{e(c['intro'])}</p>
 <p class="meta">{len(c['listings'])} options · every listing links to its source · last verified {e(c['last_verified'])}{(" · page updated " + e(MODIFIED[f"/{c['slug']}/"])) if MODIFIED.get(f"/{c['slug']}/", c['last_verified']) != c['last_verified'] else ""}</p>
-<div class="qa">{qa}</div>
+<h2>Quick answers about bulky item pickup in {e(c['name'])}</h2><div class="qa">{qa}</div>
+{VOCAB_NOTE}
 {mattress_spot(c)}
 {loadup_slot()}
 {glinks}
@@ -500,20 +577,51 @@ def guide_glance(ls, g, city):
             '<div class="tablewrap"><table class="cmp"><thead><tr><th scope="col">Option</th><th scope="col">Type</th><th scope="col">Cost</th>'
             '<th scope="col">Inside / stairs pickup</th><th scope="col">Lead time / hours</th></tr></thead><tbody>' + rows + '</tbody></table></div>')
 
-def guide_page(g, city):
-    set_page(f"/{g['path']}/")
+def item_card_ok(l, rx):
+    """True when the listing's own fields put it on an item guide's card grid: it must not describe the item only as
+    something it refuses (a "not accepted" entry with no matching accepted entry)."""
+    if not rx:
+        return True
+    return not (not any(re.search(rx, i, re.I) for i in l.get("items_accepted", []))
+                and any(re.search(rx, i, re.I) for i in l.get("items_not_accepted", [])))
+
+GUIDE_ITEM_RX = {"Mattress": r"mattress|box spring", "Couch": r"couch|sofa|sectional|upholster",
+                 "Appliances": r"refrigerat|fridge|freezer|washer|dryer|air condition|appliance",
+                 "Box spring": r"box spring", "Piano": r"piano", "Hot tub": r"hot tub|spa"}
+
+def guide_listings(g, city):
+    """Listings shown on an item guide. Two filters, both from the listing's own fields (2026-11-04, fixes fridge/TV
+    specs appearing on mattress pages):
+    1. the listing must accept the guide's item (takes_item), or be the guide author's cited option (see below);
+    2. a listing whose accepted items name *other* bulky items but never this one is dropped (generic "Furniture"/"General junk"
+       lists are kept when the guide is about furniture, and a city's own program listing is always kept for its item kind).
+    Nothing is deleted from a city page: this only controls which cards appear on an item guide."""
     ids = g.get("listing_ids", [])
     ls = [l for l in city["listings"] if l["id"] in ids]
     missing = set(ids) - {l["id"] for l in ls}
     assert not missing, f"guide {g['path']} references unknown listings {missing}"
+    rx = GUIDE_ITEM_RX.get(g["short"])
+    return ls, rx
+
+def guide_page(g, city):
+    set_page(f"/{g['path']}/")
+    ls, rx = guide_listings(g, city)
+    # A listing whose own "not accepted" list names this item is left off the card grid (it is still discussed in
+    # the sections above, with its source). Nothing is removed from the city page.
+    ls_cards = [l for l in ls if item_card_ok(l, rx)]
     secs = "".join(f"<h2>{e(s['h'])}</h2><p>{e(s['p'])}</p>" + (('<p class="meta">Sources: ' + " · ".join(f'<a href="{e(r["url"])}" rel="nofollow noopener" target="_blank">{e(r["label"])}</a>' for r in s["sources"]) + '</p>') if s.get("sources") else "") for s in g.get("sections", []))
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › <a href="{U('/' + city['slug'] + '/')}">{e(city['name'])}</a> › {e(g['short'])}</p>
 <h1>{e(g['h1'])}</h1><p class="lead">{e(g['intro'])}</p><p class="meta">Last verified {e(g['last_verified'])}{(" · page updated " + e(MODIFIED[f"/{g['path']}/"])) if MODIFIED.get(f"/{g['path']}/", g['last_verified']) != g['last_verified'] else ""}</p>
 {city_hub_line(g, city)}
-{qa_block(g.get("quick_answers"))}{guide_glance(ls, g, city)}{secs}{yt_embed('/' + g['path'] + '/', YT_CHANNEL, 'ByeBulky')}{loadup_slot()}<h2 id="all-options">{e(options_heading(g, city, len(ls)))}</h2>{''.join(listing_card(l) for l in ls)}
+{qa_block(g.get("quick_answers"), "Quick answers: " + g["short"].lower() + " in " + city["name"])}{guide_glance(ls_cards, g, city)}{secs}{yt_embed('/' + g['path'] + '/', YT_CHANNEL, 'ByeBulky')}{loadup_slot()}<h2 id="all-options">{e(options_heading(g, city, len(ls_cards)))}</h2>{''.join(listing_card(l, rx) for l in ls_cards)}
 <p><a href="{U('/' + city['slug'] + '/')}">See all {e(city['name'])} options →</a></p>{sibling_guides(g, city)}{same_item_other_cities(g)}"""
     for x in g.get("quick_answers", []):
         assert x.get("q") and x.get("a"), f"guide {g['path']} has an empty quick answer"
+    # A quick answer may only cite a page this guide already cites: a listing's source, or a section's source.
+    allowed = {u for l in ls for u in l["source_urls"]} | {r["url"] for sec in g.get("sections", []) for r in sec.get("sources", [])}
+    for x in g.get("quick_answers", []):
+        for r in x.get("sources") or []:
+            assert r.get("url") in allowed, f"guide {g['path']} answer '{x['q']}' cites {r.get('url')}, which is not a source of any listing on this page"
     lds = [faq_ld(g.get("quick_answers")),
            crumbs_ld([("Home", "/"), (city["name"], f"/{city['slug']}/"), (g["short"], f"/{g['path']}/")])]
     return page(g["title"], g["meta_description"], f"/{g['path']}/", body, lds)
@@ -534,7 +642,7 @@ def _first(s):
     i = s.find(". ")
     return s if i < 0 else s[:i + 1]
 
-def home_mattress_compare(cities):
+def home_mattress_compare(cities, with_qa=True):
     """Home-page cross-city table of each City's own mattress program, built only from listing fields
     (cost, service_area, stairs_inside, book_url, phone, source_urls, last_verified). Added run #18 (data-gap tactic)."""
     rows, qa = [], []
@@ -563,7 +671,7 @@ def home_mattress_compare(cities):
             "<p>Each City runs its own mattress and box spring program, and the fees and rules differ. This table is built from the official City pages linked in each row.</p>"
             '<div class="tablewrap"><table class="cmp"><thead><tr><th scope="col">City</th><th scope="col">Fee</th><th scope="col">Who qualifies</th>'
             '<th scope="col">Pickup location</th><th scope="col">How to book</th><th scope="col">Source</th></tr></thead><tbody>'
-            + "".join(rows) + "</tbody></table></div>" + qa_block([q]))
+            + "".join(rows) + "</tbody></table></div>" + (qa_block([q]) if with_qa else ""))
     return html, q
 
 COST_PATH = "/boston-area-mattress-disposal-cost/"
@@ -583,11 +691,31 @@ def mattress_cost_rows():
             r["guides"].append((c, g))
     return list(rows.values())
 
+def mattress_cost_answer():
+    """'How much does it cost to dispose of a mattress around Boston?' (Search Console, 2026-11-04). Built only from each
+    City's own mattress-program listing: the first sentence of its cost field, with that listing's first source as the citation."""
+    parts, srcs = [], []
+    for c in CITIES:
+        l = _city_prog(c, 1)
+        if not l:
+            continue
+        parts.append(f'{c["name"]}: {_sent(l.get("cost"))}')
+        if l.get("source_urls"):
+            srcs.append({"label": f'{c["name"]} mattress program', "url": l["source_urls"][0]})
+    if len(parts) < 2:
+        return []
+    return [{"q": "How much does it cost to dispose of a mattress around Boston?",
+             "a": "Per each City's own mattress program: " + " ".join(parts)
+                  + " Massachusetts also bans mattresses and box springs from the trash, so one of these programs is needed.",
+             "sources": srcs}]
+
 def mattress_cost_page():
     """Linkable data asset (run #26; Sturm "linkable data assets" + Skipblast "give visitors a reason to stay"):
     what mattress disposal costs around Boston, built only from listing fields already on the mattress guides."""
     set_page(COST_PATH)
-    cmp_html, cmp_q = home_mattress_compare(CITIES)
+    # with_qa=False: the cost page carries its own answer to the same question (mattress_cost_answer), worded the way
+    # people search it, so one page doesn't show two near-identical questions.
+    cmp_html, cmp_q = home_mattress_compare(CITIES, with_qa=False)
     rows = mattress_cost_rows()
     tr = ""
     for r in rows:
@@ -598,6 +726,7 @@ def mattress_cost_page():
                f'<td>{e(_cell(l.get("stairs_inside")))}</td><td>{where}</td><td>{src}<br><span class="meta">checked {e(l.get("last_verified", ""))}</span></td></tr>')
     names = [c["name"] for c in CITIES]
     n_guides = len([g for g in GUIDES if g["short"] == "Mattress"])
+    cost_qas = mattress_cost_answer()
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › Mattress disposal cost</p>
 <h1>What mattress disposal costs around Boston: City programs and published hauler prices</h1>
 <p class="lead">Mattresses and box springs can't go in the trash in Massachusetts, so you need a City program, a hauler, or (if it's clean and the charity accepts mattresses) a donation outlet. This page puts every price we've verified for {e(', '.join(names))} in one place. Each row comes from the official City page or the company's own page, linked in the row, and shows when we last checked it. A price is only shown when the source publishes one.</p>
@@ -605,12 +734,14 @@ def mattress_cost_page():
 {cmp_html}
 <h2 id="haulers">Haulers and donation pickups that publish a mattress or pickup price ({len(rows)})</h2>
 <p>These are the options on our {n_guides} city mattress guides whose own page (or the City's list) states a dollar amount. Many other haulers on those guides quote only by phone or photo, so they aren't in this table. Prices are what the source said on the date shown; confirm before you book.</p>
+{qa_block(cost_qas, "Quick answers: mattress disposal cost around Boston")}
 <div class="tablewrap"><table class="cmp"><thead><tr><th scope="col">Option</th><th scope="col">Type</th><th scope="col">Published price</th><th scope="col">Inside / stairs pickup</th><th scope="col">Listed on our guide for</th><th scope="col">Source</th></tr></thead><tbody>{tr}</tbody></table></div>
 {yt_embed(COST_PATH, YT_CHANNEL, 'ByeBulky')}
 <h2>Every mattress option, city by city</h2><ul>""" + "".join(
         f'<li><a href="{U("/" + g["path"] + "/")}">{e(g["title"])}</a> ({len(g.get("listing_ids", []))} options)</li>'
         for g in GUIDES if g["short"] == "Mattress") + "</ul>"
-    lds = [faq_ld([cmp_q]) if cmp_q else None, crumbs_ld([("Home", "/"), ("Mattress disposal cost", COST_PATH)])]
+    lds = [faq_ld(cost_qas),
+           crumbs_ld([("Home", "/"), ("Mattress disposal cost", COST_PATH)])]
     return page("Boston Mattress Disposal Cost: City Fees & Hauler Prices",
                 f"City mattress pickup fees and published hauler prices for {', '.join(names[:-1])} and {names[-1]}, with official sources.",
                 COST_PATH, body, [x for x in lds if x])
@@ -646,11 +777,16 @@ def rules_rows():
         out.append((c, cells))
     return out
 
+def card_href(c, l):
+    """Anchor for a listing: its guide's card if that guide renders the card, else its city page card."""
+    gp = next((g for g in GUIDES if g["city"] == c["slug"] and l["id"] in g.get("listing_ids", [])
+               and item_card_ok(l, GUIDE_ITEM_RX.get(g["short"]))), None)
+    return U(f"/{gp['path']}/" if gp else f"/{c['slug']}/") + "#" + l["id"]
+
 def rules_cell(c, l):
     if not l:
         return '<td><span class="ns">No separate City program on our page</span></td>'
-    gp = next((g for g in GUIDES if g["city"] == c["slug"] and l["id"] in g.get("listing_ids", [])), None)
-    href = U(f"/{gp['path']}/" if gp else f"/{c['slug']}/") + "#" + l["id"]
+    href = card_href(c, l)
     src = " ".join(f'<a href="{e(u)}" rel="noopener" target="_blank">source {i + 1}</a>' for i, u in enumerate(l.get("source_urls", [])[:2]))
     lt = _sent(l.get("lead_time"))
     return (f'<td><strong>{val(_sent(l.get("cost")))}</strong>'
@@ -829,8 +965,7 @@ def tool_options(c, k, item_key):
     return prog, others
 
 def _tool_href(c, l):
-    gp = next((g for g in GUIDES if g["city"] == c["slug"] and l["id"] in g.get("listing_ids", [])), None)
-    return U(f"/{gp['path']}/" if gp else f"/{c['slug']}/") + "#" + l["id"]
+    return card_href(c, l)
 
 def tool_result(c, slug, label, k, item_key):
     prog, others = tool_options(c, k, item_key)
@@ -957,31 +1092,49 @@ def about(cities):
     nns = sum(1 for l in ls for k in ("condition_rules", "stairs_inside", "lead_time", "cost", "service_area")
               if (l.get(k) or NS).strip().startswith(NS))
     cl = ", ".join(f'<a href="{U("/" + c["slug"] + "/")}">{e(c["name"])}</a> ({len(c["listings"])})' for c in cities)
+    # Distinct hosts and per-type counts, all computed from the data (no hand-typed numbers).
+    hosts = sorted({u.split("/")[2] for l in ls for u in l["source_urls"] if "//" in u})
+    ncity = sum(1 for l in ls if l["type"] == "city bulk pickup")
+    ndates = len({l["last_verified"] for l in ls})
     nums = f"""<h2>By the numbers</h2>
 <ul>
-<li>{len(ls)} listings across {len(cities)} cities: {cl}, plus {len(GUIDES)} item guides.</li>
+<li>{len(ls)} listings across {len(cities)} cities: {cl}, plus {len(GUIDES)} item guides. {ncity} of the listings are a City or Town program.</li>
 <li>{nsrc} distinct source pages cited, each linked from the listing that uses it.</li>
 <li>Listings were last verified between {e(dates[0])} and {e(dates[-1])}.</li>
 <li>{nns} listing fields say <span class="ns">{e(NS)}</span> because the source doesn't state them. We don't fill those in with guesses.</li>
 </ul>
 <p class="meta">These counts are computed from the site's data each time it's built. This page was last updated {e(ABOUT_UPDATED)}.</p>"""
-    body = """<h1>About ByeBulky &amp; how we verify</h1>
-<h2>How we verify</h2>
+    body = f"""<h1>About ByeBulky &amp; how we verify</h1>
+<h2>What this site is</h2>
+<p>ByeBulky is a directory of the ways to get rid of a couch, mattress, box spring or large appliance in one Boston-area city at a time. Every option is a real organization or a City program, not a category: a specific charity, a specific drop-off site, a specific hauler, and the City or Town program itself. For each one we record what it accepts, what it won't take, its condition rules, whether it collects from inside or only curbside, how long it takes, what it costs, and who it serves. Pages are organized two ways: a hub per city, and an item guide per city for mattresses, couches and appliances.</p>
+<h2>How a listing gets here</h2>
+<ol>
+<li><b>We start with the official page.</b> That means the organization's own website (its donation guidelines, service page or price list) or a government page (a City's Public Works or 311 page, a Town flyer, a state agency page such as MassDEP or Mass Save). Where a City publishes a list of haulers, the City's list is the source for what the City says about that hauler, and we label it that way.</li>
+<li><b>We read the page, not a summary of it.</b> Each field is filled from the wording on that page. A statement on a City list is not treated as the company's own statement.</li>
+<li><b>We save the page.</b> A copy of every page used is kept, so a claim can be checked against what the source said on the date we read it.</li>
+<li><b>We link the source.</b> Every listing ends with numbered links to the page or pages it came from, and the date we last checked them.</li>
+</ol>
+<h2>What "Not stated, check with them" means</h2>
+<p>Plenty of sources say what they take but not what it costs, how long pickup takes, or whether the crew comes inside. When a source doesn't say, the field says <span class="ns">Not stated, check with them</span> rather than carrying a guess or a number from another company. The same applies to fees: a cost is shown only when the organization, or the City's official list, publishes one, and "no fee is mentioned" means exactly that, not that the service is free. Where a source's own wording and another page disagree, the listing's notes say which page says what instead of picking the tidier answer. {nns} listing fields on this site currently read <span class="ns">{e(NS)}</span>.</p>
+<h2>How often listings are re-checked</h2>
+<p>Every listing carries the date it was last verified. The dates currently run from {dates[0]} to {dates[-1]} ({ndates} distinct dates), so listings were checked at different times rather than all at once. A reported error is re-checked against the source right away, and a listing's date changes only when its source has actually been read again. City and Town rules change more often than a charity's donation list, so a City program is the first thing we re-check after a policy change or a new flyer.</p>
+<h2>What we don't do</h2>
 <ul>
-<li>Every listing comes from the organization's own website or an official government page (for example, the City of Boston's Public Works pages). Each listing links to its sources.</li>
-<li>We never guess. If a source doesn't state something (a price, a lead time, whether they'll carry things down stairs), the listing says <span class="ns">Not stated, check with them</span>.</li>
-<li>Costs appear only when the organization (or the city's official list) publishes them. Prices quoted from a city's list are labeled as such.</li>
-<li>Each listing shows a "last verified" date. We re-check listings regularly, and sooner when someone reports a change.</li>
-<li>We don't publish reviews or ratings.</li>
+<li>We don't publish reviews, ratings or rankings, and we don't test or use the services. "Best" does not appear as a verdict because we haven't measured anything.</li>
+<li>We don't take payment for placement, and no organization pays to be listed or to appear above another.</li>
+<li>We don't collect quotes by phone and present them as published prices. If a hauler quotes only by phone or photo, the listing says so.</li>
+<li>We don't cover cities we haven't researched. If a city isn't listed, it's because we haven't verified its rules yet, not because there are no options.</li>
 </ul>
-<h2>Affiliate disclosure</h2>
-<p>ByeBulky is free to use and is meant to earn money through affiliate or referral partnerships, for example a commission when you book a paid junk pickup through a partner link. <strong>Right now ByeBulky has no affiliate relationships, and no link on this site earns a commission.</strong> If that changes, affiliate links and partner booking widgets will be clearly labeled where they appear. Free and City options will always be listed, and placement will never be sold in a way that hides them.</p>
+<h2>How we make money</h2>
+<p>ByeBulky is free to use. It is built to earn money later through affiliate or referral partnerships, for example a commission if someone books a paid junk pickup through a partner link. <strong>Right now ByeBulky has no affiliate relationships at all: there are no affiliate links on this site, no partner booking widget, and no link here earns a commission or carries an affiliate or tracking code.</strong> If that changes, every affiliate link will be labeled where it appears, this page and the <a href="../privacy/">privacy policy</a> will say so before it goes live, and paid options will never push a free City or charity option off the page. A "Book a paid junk pickup" slot exists in the site's template for that day; it is empty and shows nothing today.</p>
 <h2>Analytics</h2>
 <p>ByeBulky uses Google Analytics and Microsoft Clarity to collect aggregate traffic and usage statistics, such as which pages are visited, so we can see what's useful. It doesn't collect your name or email, though Google and Microsoft may set cookies to tell visits apart. Details are in our <a href="../privacy/">privacy policy</a>.</p>
 <h2>Corrections</h2>
-<p>Rules change often. If a listing is wrong or out of date, let us know and we'll re-check it against the source and update the date.</p>""" + nums
-    return page("About ByeBulky: How We Verify Listings & Disclosure",
-                "How ByeBulky verifies every listing against official sources, and how the site makes money (affiliate disclosure).", "/about/", body)
+<p>Rules change often, and a wrong price or a closed drop-off costs someone a wasted trip. Every listing has a "Report a change" link that opens an email with the listing's name in the subject. You can also write to <a href="mailto:{privacy.CONTACT}">{privacy.CONTACT}</a> and say which page and which line is wrong. We re-check it against the source, correct the listing, and update its verified date; if the source has changed its policy, the whole page gets another pass.</p>
+<h2>Sources used on this site</h2>
+<p>{len(hosts)} distinct websites are cited across the {len(ls)} listings, among them {e(', '.join(hosts[:6]))}. Each one is linked from the listing that uses it, so you can always go back to the original, and {nsrc} distinct source pages are cited in total.</p>""" + nums
+    return page("About ByeBulky: How We Verify Every Listing",
+                "How every ByeBulky listing is checked against an official source, what 'Not stated' means, how often pages are re-checked, and how the site makes money.", "/about/", body)
 
 def privacy_page():
     set_page("/privacy/")
@@ -1106,6 +1259,8 @@ def main():
     pages[NOCAR_PATH] = nocar_page()
     MODIFIED[TOOL_PATH] = max(l["last_verified"] for c in cities for l in c["listings"])
     pages[TOOL_PATH] = tool_page()
+    for path in EDITED_2026_11_04:
+        if path in MODIFIED: MODIFIED[path] = max(MODIFIED[path], "2026-11-04")
     for path, h in pages.items():
         d = OUT / path.strip("/"); d.mkdir(parents=True, exist_ok=True); (d / "index.html").write_text(h)
     global PREFIX

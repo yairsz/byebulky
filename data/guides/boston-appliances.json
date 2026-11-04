@@ -14,11 +14,13 @@
     },
     {
       "q": "Does Boston pick up old fridges, ACs, or TVs?",
-      "a": "Yes, by appointment through its special item collection; the City page doesn't mention a fee. Schedule online or call 311 (617-635-4500), and put the item where your trash normally goes by 6 a.m. on your appointment day, or after 5 p.m. the night before. Limits: 5 items per appointment and 10 per calendar year. The City collects from the curb only."
+      "a": "Yes, by appointment through its special item collection; the City page doesn't mention a fee. Schedule online or call 311 (617-635-4500), and put the item where your trash normally goes by 6 a.m. on your appointment day, or after 5 p.m. the night before. Limits: 5 items per appointment and 10 per calendar year. The City collects from the curb only.",
+      "sources": [{"label": "City of Boston: special collection items", "url": "https://www.boston.gov/departments/public-works/special-collection-items"}]
     },
     {
-      "q": "How do I get rid of a fridge for free in Boston?",
-      "a": "Two ways. The City of Boston's special item collection picks it up from the curb by appointment (311 or 617-635-4500); the City page doesn't mention a fee. If the fridge still works and your electric utility is a Mass Save Sponsor (Cape Light Compact, Eversource, National Grid or Unitil), Mass Save offers a no-cost pickup plus a $75 rebate in 2026 for units 10 to 30 cubic feet inside, and will pick up inside if there is one flight of stairs or fewer."
+      "q": "How to dispose of a fridge for free in Boston?",
+      "a": "Two ways. The City of Boston's special item collection picks it up from the curb by appointment (311 or 617-635-4500); the City page doesn't mention a fee, and doors and food must come off first. If it still works, Mass Save offers a no-cost pickup plus a $75 rebate in 2026.",
+      "sources": [{"label": "City of Boston: special collection items", "url": "https://www.boston.gov/departments/public-works/special-collection-items"}, {"label": "Mass Save: refrigerator and freezer recycling", "url": "https://www.masssave.com/residential/rebates-and-incentives/appliance-recycling/refrigerator-and-freezer-recycling"}]
     },
     {
       "q": "How do I recycle a refrigerator in Boston?",

@@ -3,14 +3,15 @@
   "city": "boston",
   "short": "Propane tanks",
   "last_verified": "2026-11-01",
-  "title": "Free Propane Tank Disposal in Boston: Grill and Small Tank Drop-Offs",
+  "title": "Free Propane Tank Disposal in Boston: Grill Tank Drop-Offs",
   "meta_description": "Where to get rid of a propane tank for free in Boston: City Zero Waste Day (empty or full; next Nov 21, 2026) or Blue Rhino recycling. Never in the trash.",
   "h1": "Free propane tank disposal in Boston",
   "intro": "Propane tanks can't go in the trash in Boston, even when they're empty. MassDEP says trash compressors can puncture or damage pressurized tanks, which can leak flammable gas. The City of Boston takes propane tanks, empty or full, at its free Zero Waste Day drop-offs for residents, and the big propane exchange brands take old grill tanks back.",
   "quick_answers": [
     {
-      "q": "Where can I dispose of a propane tank for free near Boston?",
-      "a": "Two options say they're free. Boston residents can bring propane tanks, empty or full, to a City Zero Waste Day; the next one is Saturday, November 21, 2026, 8:30 a.m. to 12 p.m. at 315 Gardner Street, West Roxbury (bring a photo ID, utility bill, or lease). Any time of year, Blue Rhino says it recycles 20 lb. grill tanks at no cost: write \"R\" or \"RECYCLE\" on the tank and take it to a non-vending Blue Rhino location. AmeriGas exchange locations also take unwanted or expired tanks, but AmeriGas doesn't state whether a drop-off without an exchange is free, so ask first."
+      "q": "Where can I find free propane tank disposal near me in Boston?",
+      "sources": [{"label": "City of Boston: Zero Waste Day", "url": "https://www.boston.gov/departments/public-works/zero-waste-day"}, {"label": "Blue Rhino: how do I recycle my tank", "url": "https://bluerhino.com/propane-info/faqs/tank-use-faqs/how-do-i-recycle-my-tank"}],
+      "a": "Two free routes. Boston residents can bring propane tanks, empty or full, to a City Zero Waste Day; the next is Saturday, November 21, 2026, 8:30 a.m. to 12 p.m. at 315 Gardner Street, West Roxbury, with proof of residency. Blue Rhino also recycles 20 lb. grill tanks at no cost."
     },
     {
       "q": "Which free option should I use?",

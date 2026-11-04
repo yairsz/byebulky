@@ -8,7 +8,7 @@ no forms, accounts or email collection; hosted on GitHub Pages (no Cloudflare/CD
 import html
 e = lambda s: html.escape(str(s), quote=True)
 
-EFFECTIVE = "November 2, 2026"
+EFFECTIVE = "November 4, 2026"
 OPERATOR = "2 Handed Coding, LLC"
 CONTACT = "developer@2handedcoding.com"
 
@@ -21,7 +21,7 @@ def body(site, domain, ga_id, video_pages, affiliate_html, filter_note, clarity_
         ga = f"""<h2>Google Analytics</h2>
 <p>Every page loads Google Analytics 4 (Google tag <code>gtag.js</code>, measurement ID <code>{e(ga_id)}</code>) from <code>www.googletagmanager.com</code>. We use it only to count visits and see which pages are useful. It's provided by Google LLC.</p>
 <ul>
-<li><strong>What it collects:</strong> the pages you view and the standard events Google Analytics records automatically (for example page views, scrolls and outbound link clicks), the page that referred you, your browser and device type, screen size, language, and an approximate location (country, region or city) that Google derives from your IP address. Google states that Google Analytics 4 does not log or store IP addresses.</li>
+<li><strong>What it collects:</strong> the pages you view, the standard events Google Analytics records automatically (for example page views and scrolls), clicks on links that leave the site (recorded with the destination's domain and the full destination URL, never with anything you type), the page that referred you, your browser and device type, screen size, language, and an approximate location (country, region or city) that Google derives from your IP address. Google states that Google Analytics 4 does not log or store IP addresses.</li>
 <li><strong>Cookies:</strong> Google Analytics sets first-party cookies named <code>_ga</code> and <code>_ga_&lt;ID&gt;</code> on {e(domain)} to tell one visit from another. Google documents a lifetime of up to 2 years for these cookies.</li>
 <li><strong>Our settings:</strong> Google signals is turned off, event-level data is kept for 2 months (the shortest option Google Analytics offers), and the property isn't linked to Google Ads. The account's data-sharing settings are on, which lets Google use the data as described in <a href="https://support.google.com/analytics/answer/1011397" rel="noopener" target="_blank">Google Analytics data-sharing settings</a>.</li>
 <li><strong>What we see:</strong> aggregate reports (page views, traffic sources, countries, device types). We don't see your name, email address or IP address.</li>

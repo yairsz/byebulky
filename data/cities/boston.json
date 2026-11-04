@@ -8,8 +8,9 @@
   "intro": "Boston has free City options for furniture, mattresses and appliances, but each has its own rules. Here's what each option takes, what it costs (only where they publish it), and where we got the information.",
   "quick_answers": [
     {
-      "q": "Can I put a couch or other furniture out with the trash in Boston?",
-      "a": "Yes, if you get City curbside trash collection. The City of Boston says furniture can go out neatly next to your trash barrels on your regular collection day, with no appointment, at the curb by 6 a.m. and not before 5 p.m. the evening before. The City page doesn't mention a fee, and it picks up curbside only. To donate instead, check the ReStore and furniture banks below; most require clean, undamaged pieces."
+      "q": "Can I put a couch out for trash in Boston?",
+      "a": "Yes, if you get City curbside trash collection. The City of Boston says furniture can go out neatly next to your trash barrels on your regular collection day, with no appointment, at the curb by 6 a.m. and not before 5 p.m. the evening before. The City page doesn't mention a fee, and it picks up curbside only. To donate instead, check the ReStore and furniture banks below; most require clean, undamaged pieces.",
+      "sources": [{"label": "City of Boston: trash and recycling", "url": "https://www.boston.gov/departments/public-works/trash"}]
     },
     {
       "q": "Mattress or box spring?",
@@ -388,7 +389,7 @@
     {
       "items_not_accepted": [],
       "address": null,
-      "notes": "We do not currently have an affiliate relationship with LoadUp. If that changes, this listing will be labeled.",
+      "notes": "",
       "book_url": "https://goloadup.com/junk-removal/",
       "phone": null,
       "email": null,
@@ -1066,7 +1067,7 @@
         "https://www.1800gotjunk.com/us_en/locations"
       ],
       "last_verified": "2026-10-30",
-      "notes": "We do not currently have an affiliate relationship with 1-800-GOT-JUNK?. If that changes, this listing will be labeled."
+      "notes": ""
     }
   ]
 }

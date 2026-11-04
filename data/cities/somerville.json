@@ -371,7 +371,7 @@
   {
    "items_not_accepted": [],
    "address": null,
-   "notes": "We do not currently have an affiliate relationship with LoadUp. If that changes, this listing will be labeled.",
+   "notes": "",
    "book_url": "https://goloadup.com/junk-removal/",
    "phone": null,
    "email": null,
@@ -454,7 +454,7 @@
     "https://mattressprorecycling.com/"
    ],
    "last_verified": "2026-11-02",
-   "notes": "Takes futons and mattress toppers, which the City of Somerville's mattress program refuses. We do not have an affiliate relationship with Mattress Pro Recycling."
+   "notes": "Takes futons and mattress toppers, which the City of Somerville's mattress program refuses."
   }
  ]
 }

@@ -3,7 +3,7 @@
   "city": "boston",
   "short": "Mattress",
   "last_verified": "2026-11-01",
-  "title": "City of Boston Mattress Removal: How to Book a 311 Pickup, Rules & Prices",
+  "title": "City of Boston Mattress Removal: Book a 311 Pickup & Prices",
   "meta_description": "Mattresses are banned from Massachusetts trash. How to book the City of Boston's curbside mattress pickup, the rule for 7+ unit buildings, and the hauler prices the City lists, with sources.",
   "h1": "How to get rid of a mattress in Boston",
   "intro": "Mattresses and box springs can't go out with regular trash in Boston, because Massachusetts bans them from disposal. Which option you use mostly depends on how many units your building has.",
@@ -14,6 +14,7 @@
     },
     {
       "q": "How do I schedule a 311 mattress pickup in Boston?",
+      "sources": [{"label": "City of Boston: mattress recycling", "url": "https://www.boston.gov/departments/public-works/mattress-recycling"}],
       "a": "Book the City's curbside mattress pickup online on its Mattress Recycling page, or contact Boston 311 (call 311 or 617-635-4500, or email 311@boston.gov). It's by appointment only, for buildings with 6 units or fewer, up to 10 items per address a calendar year, and the City page doesn't mention a fee. Put it at the curb by 6 a.m. on your appointment day (or after 5 p.m. the night before). To cancel, use the link in your confirmation email or call 311 before 12 p.m. the day before. If you live in a building with 6 units or fewer but can't get an appointment, the City page links an online form to request one."
     },
     {

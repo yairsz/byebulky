@@ -15,7 +15,18 @@
     },
     {
       "q": "Does Goodwill take furniture in Boston?",
-      "a": "Only small pieces. Goodwill's Massachusetts donation list accepts small home furnishings that one person can carry and says it is unable to accept large furniture, including office and outdoor furniture."
+      "a": "Only small pieces. Goodwill's Massachusetts donation list accepts small home furnishings that one person can carry and says it is unable to accept large furniture, including office and outdoor furniture. Staff are trained to decline items based on condition, size or inability to reuse.",
+      "sources": [{"label": "Goodwill: What to donate", "url": "https://goodwillmass.org/what-to-donate/"}]
+    },
+    {
+      "q": "Goodwill donations accepted: what does Goodwill Massachusetts take?",
+      "a": "Goodwill's Massachusetts donation list accepts small home furnishings that one person can carry, small kitchen appliances, small electronic devices, clothing, housewares, books, bicycles, sporting goods, and antiques and artwork. It says it can't accept large furniture, mattresses, box springs, bed frames, futons, sofa beds, televisions, exercise equipment, pianos, cabinets and doors, and hazardous materials.",
+      "sources": [{"label": "Goodwill: What to donate", "url": "https://goodwillmass.org/what-to-donate/"}]
+    },
+    {
+      "q": "Does Goodwill pick up furniture in Boston?",
+      "a": "Not according to Goodwill's own pages, which describe drop-off only and do not mention a pickup service. The City of Boston's moving page does list Goodwill among groups that arrange free pickups of good-condition furniture, so the City's page and Goodwill's pages don't agree.",
+      "sources": [{"label": "Goodwill: Stores and donation centers", "url": "https://goodwillmass.org/store-hours-locations/"}, {"label": "City of Boston: Moving", "url": "https://www.boston.gov/moving"}]
     },
     {
       "q": "Does Goodwill take mattresses or TVs?",

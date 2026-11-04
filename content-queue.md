@@ -1,6 +1,8 @@
 # Content queue (priority order)
 Tick `[x]` when published, and log it in published-log.md. Keep about 30 items queued. Priority = evident demand (Reddit/X threads in /workspace/niche-research/report.md) × quality of official data available.
 
+- [ ] **Newton couch guide (/newton/couch/) — TOP PRIORITY (2026-11-04 traffic audit).** Fresh-content job for the nightly: couch is the 2nd most-searched item and Newton has no couch page. Real sources needed: Newton's bulky item flyer (already in data/cities/newton.json), Habitat ReStore, Household Goods, ReSupply, LoadUp. Do not reuse the Boston copy.
+- [ ] **Quincy couch guide (/quincy/couch/) — TOP PRIORITY (2026-11-04 traffic audit).** Quincy picks up two bulky items a week curbside with no call (data already in data/cities/quincy.json); needs the City page plus charity/hauler sources before publishing.
 - [x] Boston city page (/boston/), done 2026-10-21
 - [x] How to get rid of a mattress in Boston (/boston/mattress/), done 2026-10-21
 - [x] How to get rid of a couch/sofa in Boston (/boston/couch/), done 2026-10-21: reuse curbside furniture, ReSupply, Furnishing Hope, Household Goods; add a note on who refuses sofas (Habitat: slip-covered sofas/sofa beds; Thrift Shop of Boston)

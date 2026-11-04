@@ -16,7 +16,7 @@ h3{font-size:1.1rem;margin:0 0 .3em}
 .meta{color:var(--muted);font-size:.9rem}
 .qa{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0}
 .qa div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
-.qa strong{display:block;margin-bottom:4px}
+.qa strong,.qa h3{display:block;margin:0 0 4px;font-size:1rem;font-weight:600;line-height:1.35}
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 16px}
 .filters select,.filters input{padding:8px 10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
 .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin:0 0 14px}
@@ -31,7 +31,11 @@ ul.items{margin:0;padding-left:18px}
 .note{background:var(--warn);border-radius:10px;padding:12px 14px}
 footer{border-top:1px solid var(--line);background:#fff;color:var(--muted);font-size:.9rem}
 footer .wrap{padding:18px 16px}
-@media (max-width:600px){dl{grid-template-columns:1fr}dt{margin-top:6px}h1{font-size:1.55rem}nav a{margin-left:10px}}
+.src{margin:8px 0 0;font-size:.82rem;word-break:break-word}
+@media (max-width:600px){dl{grid-template-columns:1fr}dt{margin-top:6px}h1{font-size:1.55rem}
+header.site .wrap{align-items:flex-start;flex-direction:column;gap:6px}
+nav{display:flex;flex-wrap:wrap;gap:4px 0}
+nav a{margin-left:0;margin-right:12px;line-height:1.5}}
 
 .vid{margin:20px 0}
 .yt{position:relative;width:100%;max-width:300px;aspect-ratio:9/16;background:#000;border-radius:12px;overflow:hidden}
