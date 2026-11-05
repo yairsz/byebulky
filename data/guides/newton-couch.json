@@ -1,0 +1,81 @@
+{
+  "path": "newton/couch",
+  "city": "newton",
+  "short": "Couch",
+  "last_verified": "2026-11-04",
+  "title": "Newton Couch Removal & Sofa Disposal: $20 Bulky Item Pickup",
+  "meta_description": "Newton, MA couch disposal: pay $20 online for City bulky item pickup, 150 lb limit, a sectional counts as one item. Donation and in-home removal options.",
+  "h1": "How to get rid of a couch or sofa in Newton, MA",
+  "intro": "Newton doesn't take couches with regular trash. You pay $20 per item online for a bulky item pickup, and the City collects it at the curb. A whole sectional, including loose cushions, counts as one item. If the couch is in good shape you can donate it, and if you need it carried out of the house you'll need a paid service.",
+  "quick_answers": [
+    {
+      "q": "Does Newton pick up couches?",
+      "a": "Yes, as a paid bulky item pickup: $20 per item, paid online first, collected at the curb. Set it out by 7 a.m. on the collection day.",
+      "sources": [
+        {
+          "label": "City of Newton: large item flyer",
+          "url": "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000"
+        }
+      ]
+    },
+    {
+      "q": "How much is bulky item pickup in Newton?",
+      "a": "$20 per item, per the City's flyer (updated 8/17/2026). One couch, including all sections of a sectional and its loose cushions, counts as one item; sleeper sofas also count as one item.",
+      "sources": [
+        {
+          "label": "City of Newton: large item flyer",
+          "url": "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000"
+        }
+      ]
+    },
+    {
+      "q": "Is there a weight limit for Newton bulky pickup?",
+      "a": "Yes, 150 pounds per item. Heavier items need a privately contracted service.",
+      "sources": [
+        {
+          "label": "City of Newton: Managing Household Trash",
+          "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/managing-solid-waste"
+        }
+      ]
+    },
+    {
+      "q": "When will Newton pick up my couch?",
+      "a": "For payments received by 10 p.m. Sunday, the City says collection should be arranged for Thursday of the following week. You should get an email within 1 to 2 business days and a reminder the business day before pickup.",
+      "sources": [
+        {
+          "label": "City of Newton: large item flyer",
+          "url": "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "h": "City bulky item pickup: $20 per item",
+      "p": "The City of Newton calls anything too large for the blue trash cart a bulky item, and bulky items can't go in the cart. Pay $20 per item online, then set the item out by 7 a.m. on the collection day. For payments received by 10 p.m. Sunday, collection should be arranged for Thursday of the following week. One couch, including all sections of a sectional and any loose cushions, counts as one item, and sleeper sofas count as one item. The fee and schedule are from the City's large-item flyer, updated 8/17/2026."
+    },
+    {
+      "h": "Weight limit, refunds and who qualifies",
+      "p": "There is a 150-pound limit per item; heavier items need a privately contracted service. Refunds are only given if you cancel and get a cancellation email by 10 a.m. the business day before collection, and there's no refund if the item is scavenged from the curb after that deadline. The City says move-outs and clean-outs aren't part of municipal collection, and businesses, institutions and many multi-family properties must make private arrangements."
+    },
+    {
+      "h": "Sofa beds and futons",
+      "p": "A sleeper sofa counts as one bulky item. Mattresses and box springs are not accepted as bulky waste; the City runs a separate $60 mattress pickup. See our Newton mattress guide."
+    },
+    {
+      "h": "Paid couch removal from inside your home",
+      "p": "The City collects at the curb only. LoadUp says its loaders carry items out from any room, including upstairs. Its Newton page says junk removal starts at $105, with additional items from +$15, and its Newton price list shows furniture removal from $120 (add-on from +$30). ReSupply says its furniture teams collect from inside your home, starting at $99 for bulky furniture plus a booking fee. Confirm prices for your ZIP when you book."
+    },
+    {
+      "h": "Donating a sofa in good condition",
+      "p": "The Habitat Greater Boston ReStore, 1580 VFW Parkway in West Roxbury, accepts upholstered furniture that isn't ripped, worn, broken, dated or faded, but not sofa beds, futons or sofas with slip covers; drop-off is Tuesday to Saturday, 9:30 a.m. to 4 p.m., and in-home pickup is booked through ReSupply, a paid service. Household Goods in Acton accepts couches, sofa beds and futons that are clean, complete and in good working condition; its volunteer pickup doesn't reach Newton, so drop off at 530 Main Street on Tuesdays, Thursdays or Saturdays from 9 a.m. to noon, or use its paid pickup partners."
+    }
+  ],
+  "listing_ids": [
+    "newton-bulky-item-pickup",
+    "habitat-greater-boston-restore",
+    "household-goods-acton",
+    "resupply-boston",
+    "loadup"
+  ]
+}

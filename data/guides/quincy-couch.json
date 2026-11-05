@@ -1,0 +1,94 @@
+{
+  "path": "quincy/couch",
+  "city": "quincy",
+  "short": "Couch",
+  "last_verified": "2026-11-04",
+  "title": "Quincy Couch Removal & Sofa Disposal: Curbside, No Call",
+  "meta_description": "Quincy, MA couch disposal: City curbside takes two bulky items a week, sofas included, no call needed. Where to donate a sofa and who carries it out.",
+  "h1": "How to get rid of a couch or sofa in Quincy, MA",
+  "intro": "In Quincy, sofas, chairs and recliners go out at the curb on your regular trash day with no call needed: the City allows two bulky items per week, and no furniture fee is stated on the City's pages. If the couch is in good shape you can donate it, and if you need it carried out of the house you'll need a paid service.",
+  "quick_answers": [
+    {
+      "q": "Does Quincy pick up couches?",
+      "a": "Yes. The City says two bulky items per week, including sofas, chairs, recliners and lawn furniture, may be disposed of curbside. Have it out by 7:00 a.m. on your pick-up day.",
+      "sources": [
+        {
+          "label": "City of Quincy: How can I get rid of...",
+          "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"
+        }
+      ]
+    },
+    {
+      "q": "Do I need to call to throw out a couch in Quincy?",
+      "a": "No call is needed for furniture; it goes out on your regular weekly trash day. The call-ahead line, (855) 533-3400 at least two full business days ahead, is for appliances, TVs and monitors.",
+      "sources": [
+        {
+          "label": "City of Quincy: Trash",
+          "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/trash.php"
+        }
+      ]
+    },
+    {
+      "q": "How much does it cost to get rid of a couch in Quincy?",
+      "a": "No fee is stated for curbside furniture on the City's pages. LoadUp's Quincy price list shows furniture removal from $120.",
+      "sources": [
+        {
+          "label": "City of Quincy: How can I get rid of...",
+          "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/how_can_i_get_rid_of.php"
+        },
+        {
+          "label": "LoadUp Quincy",
+          "url": "https://goloadup.com/junk-removal/ma/quincy/"
+        }
+      ]
+    },
+    {
+      "q": "Will someone take a couch out of my house in Quincy?",
+      "a": "Not the City: collection is curbside, and collectors are not required to lift anything over 50 lbs. LoadUp and ReSupply both say they collect from inside the home.",
+      "sources": [
+        {
+          "label": "City of Quincy: Trash",
+          "url": "https://www.quincyma.gov/departments/public_works/waste___recycle/trash.php"
+        },
+        {
+          "label": "LoadUp Quincy",
+          "url": "https://goloadup.com/junk-removal/ma/quincy/"
+        },
+        {
+          "label": "ReSupply Boston",
+          "url": "https://resupply.com/boston/"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "h": "Free City curbside pickup: two bulky items a week",
+      "p": "The City of Quincy says two bulky items per week, sofas, chairs, recliners and lawn furniture, may be disposed of curbside. No call is needed for furniture. Have it out by 7:00 a.m. on your pick-up day, and don't put rubbish out more than one day before collection. Curbside collectors are not required to lift anything over 50 lbs. Check the City's Interactive Curbside Collection Map for your day; holidays push collection back one day."
+    },
+    {
+      "h": "Who qualifies",
+      "p": "City curbside collection covers one- to eight-family dwellings and condominiums. Businesses and apartment buildings with more than eight units must hire a private hauler, and the City says moving-out and clean-out debris is not collected."
+    },
+    {
+      "h": "Sofa beds and futons",
+      "p": "A sleeper sofa's mattress is a separate matter: Quincy mattresses go through a separate scheduled pickup with South Shore Recycle, not regular curbside furniture collection. See our Quincy mattress guide."
+    },
+    {
+      "h": "Paid couch removal from inside your home",
+      "p": "LoadUp says its loaders carry items out from any room, including upstairs, and also offers a curbside option. Its Quincy page says junk removal starts at $105, with additional items from +$15, and its Quincy price list shows furniture removal from $120 (add-on from +$30). ReSupply's Boston page lists Quincy among the communities it serves and says its furniture teams collect from inside your home, starting at $99 for bulky furniture plus a booking fee. Confirm prices for your ZIP when you book."
+    },
+    {
+      "h": "Donating a sofa in good condition",
+      "p": "The City lists charities that accept donated furniture, including the Salvation Army, (617) 542-5420, and Household Goods Recycling Ministry. The Habitat Greater Boston ReStore, 1580 VFW Parkway in West Roxbury, accepts upholstered furniture that isn't ripped, worn, broken, dated or faded, but not sofa beds, futons or sofas with slip covers; drop-off is Tuesday to Saturday, 9:30 a.m. to 4 p.m., and in-home pickup is booked through ReSupply, a paid service. Household Goods in Acton accepts couches, sofa beds and futons that are clean, complete and in good working condition; its volunteer pickup doesn't reach Quincy, so drop off at 530 Main Street on Tuesdays, Thursdays or Saturdays from 9 a.m. to noon, or use its paid pickup partners. The Salvation Army's satruck.org advertises free donation pickup; local terms are not stated, so check with them."
+    }
+  ],
+  "listing_ids": [
+    "quincy-curbside-furniture",
+    "habitat-greater-boston-restore",
+    "household-goods-acton",
+    "salvation-army-satruck",
+    "resupply-boston",
+    "loadup"
+  ]
+}
