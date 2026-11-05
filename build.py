@@ -69,6 +69,10 @@ EDITED_2026_11_04 = ["/", "/boston/", "/boston/appliances/", "/boston/couch/", "
                      "/quincy/mattress/", "/boston-area-mattress-disposal-cost/", "/brookline/mattress/",
                      "/cambridge/mattress/", "/newton/mattress/", "/somerville/mattress/"]
 PRIVACY_UPDATED = "2026-11-04"   # matches privacy.EFFECTIVE
+# Pages whose visible body changed on 2026-11-05 (home cost-checker button, Boston hub chips,
+# Boston mattress booking button). "Last verified" stays the source-read date; MODIFIED takes the later of
+# that and this. Never use MODIFIED in a verified/checked sentence.
+EDITED_2026_11_05 = ["/", "/boston/", "/boston/mattress/"]
 
 def org_ld():
     return {"@type": "Organization", "@id": base_url() + "/#org", "name": CFG["site_name"], "url": base_url() + "/",
@@ -143,7 +147,7 @@ def page(title, desc, path, body, jsonld=None):
 </head><body>
 {OUTBOUND_JS}
 <header class="site"><div class="wrap"><a class="logo" href="{U('/')}">Bye<span>Bulky</span></a>
-<nav>{nav_cities}<a href="{U('/about/')}">How we verify</a></nav></div></header>
+<nav><div class="nav-cities-wide">{nav_cities}</div><details class="nav-cities"><summary>Cities</summary><div class="nav-panel">{nav_cities}</div></details><a href="{U('/about/')}">How we verify</a></nav></div></header>
 <main><div class="wrap">
 {body}
 </div></main>
@@ -249,6 +253,16 @@ def crumbs_ld(items):
             "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": base_url() + u}
                                 for i, (n, u) in enumerate(items)]}
 
+def qa_cta(x):
+    """Optional booking button on a quick-answer card. Uses a URL already cited on that same card; never a new one."""
+    if not re.search(r"how do I schedule a 311 mattress pickup", x.get("q") or "", re.I):
+        return ""
+    src = x.get("sources") or []
+    if not src or not src[0].get("url"):
+        return ""
+    return (f'<p><a class="btn" href="{e(src[0]["url"])}" rel="nofollow noopener" target="_blank">'
+            f'Book City mattress pickup</a></p>')
+
 def qa_block(qas, heading=None):
     """Quick answers. Each question is rendered as an h3 (2026-11-04: Search Console impressions show the questions are
     typed almost verbatim, so the phrasing belongs in a heading, not only in body text) and feeds FAQPage JSON-LD."""
@@ -256,7 +270,7 @@ def qa_block(qas, heading=None):
         return ""
     h = f"<h2>{e(heading)}</h2>" if heading else ""
     return h + '<div class="qa">' + "".join(
-        f"<div><h3>{e(x['q'])}</h3>{e(x['a'])}{qa_src(x)}</div>" for x in qas) + "</div>"
+        f"<div><h3>{e(x['q'])}</h3>{e(x['a'])}{qa_cta(x)}{qa_src(x)}</div>" for x in qas) + "</div>"
 
 def qa_src(x):
     """Visible per-answer citation (2026-11-04): a quick answer may carry {"sources":[{label,url}]} so the reader can check
@@ -487,7 +501,7 @@ def city_page(c):
     for x in qas:  # generated answers are held to the same rule as hand-written ones (2026-11-04)
         for r in x.get("sources") or []:
             assert r.get("url") in _allowed, f"city {c['slug']} answer '{x['q']}' cites {r.get('url')}, which is not a source of any listing on this page"
-    qa = "".join(f"<div><h3>{e(x['q'])}</h3>{e(x['a'])}{l}{qa_src(x)}</div>" for x, l in zip(qas, qa_guide_links(c, qas)))
+    qa = "".join(f"<div><h3>{e(x['q'])}</h3>{e(x['a'])}{l}{qa_cta(x)}{qa_src(x)}</div>" for x, l in zip(qas, qa_guide_links(c, qas)))
     groups = ""
     for t in used_types:
         cards = "".join(listing_card(l) for l in c["listings"] if l["type"] == t)
@@ -499,10 +513,20 @@ def city_page(c):
     glinks = ""
     if guides:
         glinks = "<h2>Item guides for " + e(c["name"]) + "</h2><ul>" + "".join(f'<li><a href="{U("/" + g["path"] + "/")}">{e(g["title"])}</a></li>' for g in guides) + "</ul>"
+    chips = ""
+    if c["slug"] == "boston":
+        bits = []
+        for short, label, cls in (("Mattress", "Mattress", "btn"), ("Couch", "Couch", "btn-secondary")):
+            g = next((x for x in GUIDES if x["city"] == "boston" and x["short"] == short), None)
+            if g:
+                bits.append(f'<a class="{cls}" href="{U("/" + g["path"] + "/")}">{label}</a>')
+        bits.append(f'<a class="btn-secondary" href="{U(TOOL_PATH)}">Cost checker</a>')
+        chips = '<p class="chips">' + "".join(bits) + "</p>"
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › {e(c['name'])}, {e(c['state'])}</p>
 <h1>{e(c.get('h1') or ('How to get rid of a couch, mattress or furniture in ' + c['name']))}</h1>
 <p class="lead">{e(c['intro'])}</p>
 <p class="meta">{len(c['listings'])} options · every listing links to its source · last verified {e(c['last_verified'])}{(" · page updated " + e(MODIFIED[f"/{c['slug']}/"])) if MODIFIED.get(f"/{c['slug']}/", c['last_verified']) != c['last_verified'] else ""}</p>
+{chips}
 <h2>Quick answers about bulky item pickup in {e(c['name'])}</h2><div class="qa">{qa}</div>
 {VOCAB_NOTE}
 {mattress_spot(c)}
@@ -1071,6 +1095,7 @@ def tool_page():
     and a date gets quoted'). All 18 city x item results are rendered server-side (crawlable); JS only hides the others."""
     set_page(TOOL_PATH)
     names = [c["name"] for c in CITIES]
+    data_as_of = max(l["last_verified"] for c in CITIES for l in c["listings"])
     copt = "".join(f'<option value="{e(c["slug"])}">{e(c["name"])}, {e(c["state"])}</option>' for c in CITIES)
     iopt = "".join(f'<option value="{s}">{e(l)}</option>' for s, l, _, _ in TOOL_ITEMS)
     results = "".join(tool_result(c, s, l, k, ik) for c in CITIES for s, l, k, ik in TOOL_ITEMS)
@@ -1085,15 +1110,14 @@ def tool_page():
     for sl, l, n, a, u in st:
         qas.append({"q": f"How many Boston-area options publish a price for getting rid of a {TOOL_NOUN[sl]}?",
                     "a": f"Of the {n} options on our {', '.join(names[:-1])} and {names[-1]} pages that list {l.lower()}, {a} include a dollar amount in their published cost wording "
-                         f"and {u} don't (the source says no fee, free, quote only, or doesn't say). Counts are from our data as of {MODIFIED.get(TOOL_PATH, '')}; pick a city above to read each one's own wording.",
+                         f"and {u} don't (the source says no fee, free, quote only, or doesn't say). Counts are from our data as of {data_as_of}; pick a city above to read each one's own wording.",
                     "self": True,
                     "selfnote": f"counted from the cost wording each listing publishes, with every listing's own source linked in the table on this page"})
-    mod = MODIFIED.get(TOOL_PATH, "")
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › Bulky item pickup cost checker</p>
 <h1>Bulky item pickup cost checker: what will my city charge?</h1>
 <p class="lead">Pick your city and what you're getting rid of. You'll see the City or Town pickup program's fee in the official page's own words, when it collects and who qualifies, then every charity, drop-off, furniture bank and hauler on our page for that city that lists the item, with its published cost. Nothing is estimated: if a source doesn't publish a price, we say so.</p>
 <form class="filters" onsubmit="return false"><label>City <select id="tc">{copt}</select></label> <label>Item <select id="ti">{iopt}</select></label> <a href="#" id="tall" hidden>Show all cities and items</a></form>
-<p class="meta">Data checked up to {e(mod)}. Covers {e(', '.join(names[:-1]))} and {e(names[-1])}.</p>
+<p class="meta">Data checked up to {e(data_as_of)}. Covers {e(', '.join(names[:-1]))} and {e(names[-1])}.</p>
 {results}
 <h2 id="numbers">By the numbers</h2>
 <ul>{stat_li}</ul>
@@ -1126,6 +1150,7 @@ def home(cities):
     cl = "".join(f'<a href="{U("/" + c["slug"] + "/")}">{e(c["name"])}, {e(c["state"])}<br><span class="meta">{len(c["listings"])} verified options</span></a>' for c in cities)
     body = f"""<h1>Get rid of a couch, mattress or old fridge without the runaround</h1>
 <p class="lead">{e(CFG['tagline'])} For each city we list every real option: City bulk and mattress pickup, charities that pick up, drop-off spots, furniture banks, and paid haulers. You see what each one takes, its condition rules, whether it will come inside or up stairs, and its cost. A cost is only shown when the organization publishes it.</p>
+<p class="hero-cta"><a class="btn" href="{U(TOOL_PATH)}">Check pickup cost</a></p>
 <h2>Cities</h2><div class="cities">{cl}</div>
 {cmp_html}
 <p><a href="{U(COST_PATH)}">Mattress disposal cost around Boston, including published hauler prices →</a></p>
@@ -1311,6 +1336,8 @@ def main():
     # so a post-render bump changed the sitemap only and left JSON-LD/visible dates stale (caught 2026-11-04).
     for path in EDITED_2026_11_04:
         if path in MODIFIED: MODIFIED[path] = max(MODIFIED[path], "2026-11-04")
+    for path in EDITED_2026_11_05:
+        if path in MODIFIED: MODIFIED[path] = max(MODIFIED[path], "2026-11-05")
     pages = {"/": home(cities), "/about/": about(cities), "/privacy/": privacy_page()}
     for c in cities: pages[f"/{c['slug']}/"] = city_page(c)
     for g in GUIDES: pages[f"/{g['path']}/"] = guide_page(g, bycity[g["city"]])
