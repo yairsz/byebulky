@@ -3,8 +3,8 @@
   "city": "boston",
   "short": "Donation rules",
   "last_verified": "2026-10-29",
-  "title": "Does Goodwill, Habitat or Salvation Army Take It? Boston Rules",
-  "meta_description": "What Boston-area charities say they take: mattresses, couches, bed frames, TVs, appliances. Habitat ReStore, Goodwill, Salvation Army and more, quoted.",
+  "title": "Does Goodwill Take Furniture? Boston Donation Rules",
+  "meta_description": "Does Goodwill take furniture in Boston? Goodwill Massachusetts accepts only small furnishings one person can carry. Habitat, Salvation Army and more, quoted.",
   "h1": "Does Habitat, Goodwill or the Salvation Army take mattresses, couches and TVs? Boston-area donation rules",
   "options_h": "Every charity and donation option we list: 8 ways to donate furniture in Boston",
   "intro": "Most \"does this charity take it\" answers online say \"it depends on your local store.\" Here is what the Boston-area organizations themselves say, checked on their own pages on October 29, 2026. Every yes or no below is quoted from the charity's donation list; where a charity doesn't say, we say that too.",
@@ -12,37 +12,92 @@
     {
       "q": "Does Habitat for Humanity ReStore in Boston take mattresses?",
       "a": "No. Habitat Greater Boston's ReStore lists mattresses and box springs among items it does not accept, along with sofa beds, sofas with slip covers, futons, and platform and trundle beds.",
-      "sources": [{"label": "Habitat for Humanity Greater Boston ReStore", "url": "https://habitatboston.org/restore/"}]
+      "sources": [
+        {
+          "label": "Habitat for Humanity Greater Boston ReStore",
+          "url": "https://habitatboston.org/restore/"
+        }
+      ]
     },
     {
       "q": "Does Goodwill take furniture in Boston?",
       "a": "Only small pieces. Goodwill's Massachusetts donation list accepts small home furnishings that one person can carry and says it is unable to accept large furniture, including office and outdoor furniture. Staff are trained to decline items based on condition, size or inability to reuse.",
-      "sources": [{"label": "Goodwill: What to donate", "url": "https://goodwillmass.org/what-to-donate/"}]
+      "sources": [
+        {
+          "label": "Goodwill: What to donate",
+          "url": "https://goodwillmass.org/what-to-donate/"
+        }
+      ]
     },
     {
       "q": "Goodwill donations accepted: what does Goodwill Massachusetts take?",
       "a": "Goodwill's Massachusetts donation list accepts small home furnishings that one person can carry, small kitchen appliances, small electronic devices, clothing, housewares, books, bicycles, sporting goods, and antiques and artwork. It says it can't accept large furniture, mattresses, box springs, bed frames, futons, sofa beds, televisions, exercise equipment, pianos, cabinets and doors, and hazardous materials.",
-      "sources": [{"label": "Goodwill: What to donate", "url": "https://goodwillmass.org/what-to-donate/"}]
+      "sources": [
+        {
+          "label": "Goodwill: What to donate",
+          "url": "https://goodwillmass.org/what-to-donate/"
+        }
+      ]
     },
     {
       "q": "Does Goodwill pick up furniture in Boston?",
       "a": "Not according to Goodwill's own pages, which describe drop-off only and do not mention a pickup service. The City of Boston's moving page does list Goodwill among groups that arrange free pickups of good-condition furniture, so the City's page and Goodwill's pages don't agree.",
-      "sources": [{"label": "Goodwill: Stores and donation centers", "url": "https://goodwillmass.org/store-hours-locations/"}, {"label": "City of Boston: Moving", "url": "https://www.boston.gov/moving"}]
+      "sources": [
+        {
+          "label": "Goodwill: Stores and donation centers",
+          "url": "https://goodwillmass.org/store-hours-locations/"
+        },
+        {
+          "label": "City of Boston: Moving",
+          "url": "https://www.boston.gov/moving"
+        }
+      ]
     },
     {
       "q": "Does Goodwill take mattresses or TVs?",
       "a": "No. Goodwill's Massachusetts list says it can't accept mattresses, box springs, waterbeds, bed frames, futons, futon frames, pillows, sofa beds, or televisions.",
-      "sources": [{"label": "Goodwill Massachusetts", "url": "https://goodwillmass.org/what-to-donate/"}]
+      "sources": [
+        {
+          "label": "Goodwill Massachusetts",
+          "url": "https://goodwillmass.org/what-to-donate/"
+        }
+      ]
     },
     {
       "q": "Does the Salvation Army take mattresses?",
       "a": "The Salvation Army's national pickup FAQ lists mattresses among gently used items its thrift stores generally accept, but says accepted items vary by location and to call 800-SA-TRUCK for your area.",
-      "sources": [{"label": "The Salvation Army", "url": "https://satruck.org/faq"}]
+      "sources": [
+        {
+          "label": "The Salvation Army",
+          "url": "https://satruck.org/faq"
+        }
+      ]
     },
     {
       "q": "Which Boston-area charities take mattresses?",
       "a": "Of the organizations we checked, Household Goods (Acton) takes standard-size mattresses and box springs without stains or rips, and Furnishing Hope lists mattresses and box springs among the furniture it accepts. Habitat ReStore, Goodwill and the Thrift Shop of Boston say they don't.",
-      "sources": [{"label": "Household Goods", "url": "https://www.householdgoods.org/donate/donate-goods/donation-guidelines/"}, {"label": "Furnishing Hope", "url": "https://www.furnishinghopema.org/donate-1"}, {"label": "Habitat for Humanity Greater Boston ReStore", "url": "https://habitatboston.org/restore/"}, {"label": "Goodwill Massachusetts", "url": "https://goodwillmass.org/what-to-donate/"}, {"label": "Thrift Shop of Boston", "url": "https://thriftshopofboston.org/donate-your-stuff/"}]
+      "sources": [
+        {
+          "label": "Household Goods",
+          "url": "https://www.householdgoods.org/donate/donate-goods/donation-guidelines/"
+        },
+        {
+          "label": "Furnishing Hope",
+          "url": "https://www.furnishinghopema.org/donate-1"
+        },
+        {
+          "label": "Habitat for Humanity Greater Boston ReStore",
+          "url": "https://habitatboston.org/restore/"
+        },
+        {
+          "label": "Goodwill Massachusetts",
+          "url": "https://goodwillmass.org/what-to-donate/"
+        },
+        {
+          "label": "Thrift Shop of Boston",
+          "url": "https://thriftshopofboston.org/donate-your-stuff/"
+        }
+      ]
     }
   ],
   "sections": [
