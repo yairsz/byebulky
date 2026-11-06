@@ -1,0 +1,37 @@
+{
+ "path": "cambridge/box-spring",
+ "city": "cambridge",
+ "short": "Box spring",
+ "last_verified": "2026-11-05",
+ "title": "How to Get Rid of a Box Spring in Cambridge, MA ($45 UTEC)",
+ "meta_description": "Box springs are banned from Massachusetts trash. Cambridge's UTEC curbside pickup costs $45 each; apartment haulers, drop-offs and donation rules.",
+ "h1": "How to get rid of a box spring in Cambridge",
+ "intro": "Mattresses and box springs are prohibited from disposal as trash in Massachusetts. In Cambridge, the City's contractor UTEC picks up box springs at the curb for $45 each, booked online. Here's how that works, what UTEC refuses, and what to do from a big apartment building or if you'd rather donate.",
+ "quick_answers": [
+  {"q": "Can I throw a box spring in the trash in Cambridge?",
+   "a": "No. The City of Cambridge says mattresses and box springs are prohibited from disposal as trash in Massachusetts, banned since November 1, 2022. Use the City's UTEC collection program instead.",
+   "sources": [{"label": "City of Cambridge: mattress recycling", "url": "https://www.cambridgema.gov/Services/mattressrecycling"}]},
+  {"q": "How much does box spring pickup cost in Cambridge?",
+   "a": "$45 for each mattress and each box spring through the City's UTEC program, with a $5 discount for financial hardship (call UTEC at 978-856-3997). Mattress Pro Recycling charges $125 per box spring on its booking page, and HandUp takes drop-offs in New Bedford for $35.",
+   "sources": [{"label": "City of Cambridge: mattress recycling", "url": "https://www.cambridgema.gov/Services/mattressrecycling"}, {"label": "Mattress Pro Recycling", "url": "https://mattressprorecycling.com/schedule/"}, {"label": "HandUp", "url": "https://handupmattress.com/pages/mattress-recycling"}]},
+  {"q": "How do I get rid of a box spring from an apartment in Cambridge?",
+   "a": "UTEC only collects from the curb in front of your address; the crew can't come onto private property. If your building has more than 12 units, the City says to ask your property manager first. For removal from inside, LoadUp and Marvin Junk Removal both say they carry items out from any room or floor.",
+   "sources": [{"label": "City of Cambridge: mattress recycling", "url": "https://www.cambridgema.gov/Services/mattressrecycling"}, {"label": "LoadUp Cambridge", "url": "https://goloadup.com/junk-removal/ma/cambridge/"}, {"label": "Marvin Junk Removal", "url": "https://marvinjunkremoval.net/cambridge-junk-removal"}]},
+  {"q": "Where can I drop off a box spring near Cambridge?",
+   "a": "The City says there are no drop-off locations in Cambridge. It lists Furnishing Hope (Acton; must be stain, rip and tear-free), UTEC (Haverhill) and HandUp Mattress Resale & Recycling (New Bedford), and says to contact them first for costs and scheduling.",
+   "sources": [{"label": "City of Cambridge: mattress recycling", "url": "https://www.cambridgema.gov/Services/mattressrecycling"}]}
+ ],
+ "sections": [
+  {"h": "Why a box spring can't go in Cambridge's trash",
+   "p": "The City of Cambridge says mattresses and box springs are prohibited from disposal as trash in Massachusetts; they were banned on November 1, 2022. About 180 tons of mattresses and box springs are recycled from Cambridge each year, and the City says the steel is recycled into new steel materials and the wood is chipped for mulch or used as fuel."},
+  {"h": "City pickup through UTEC: $45 per box spring",
+   "p": "Schedule online at utecinc.org/mattress-recycling, early, because the City says slots fill up quickly. The fee is $45 for each mattress and box spring, with a $5 discount for financial hardship (call UTEC at 978-856-3997). You don't need to be home: put the box spring at the curb in front of your address by 7 a.m. on collection day, and not before 6 p.m. the day before; the crew picks up before 3 p.m. The City suggests attaching a note with \"UTEC\", your order number and the pickup date. UTEC's limit is 8 pieces per pickup. Problems go to mattress-recycling@utecinc.org and recycle@cambridgema.gov."},
+  {"h": "What UTEC won't take",
+   "p": "Most box springs are accepted. The City lists these exceptions: excessively torn, punctured, soiled or moldy items; items infested, or previously infested, with bed bugs or other pests; futons, mattress pads or toppers; infant sleeping pads, air or water beds; and any other furniture or textiles. UTEC won't pick up couches, bed frames or appliances."},
+  {"h": "Big building, inside removal, or a drop-off",
+   "p": "If your building has more than 12 units, the City says to ask your property manager before scheduling, and if UTEC says your building isn't eligible you may need an alternative hauler. The City lists paid options including Mattress Pro Recycling ($125 per box spring on its booking page), Marvin Junk Removal (mattress disposal from $180 on its Cambridge page; it says it carries items out from any floor) and HandUp, whose New Bedford drop-off is $35 per mattress or box spring. LoadUp's Cambridge price list shows furniture and mattress removal from $120, and it says its loaders carry items out from any room. The City says there are no drop-off locations in Cambridge."},
+  {"h": "Selling, giving away or donating a box spring",
+   "p": "The City suggests trying Facebook Marketplace, Buy Nothing Cambridge on Facebook or Craigslist. Furnishing Hope accepts clean box springs with no stains, odors or pet hair; its pickup needs at least six substantial furniture items and it requests a suggested $250 to $400 tax-deductible donation, or you can drop off in Acton. Household Goods accepts standard-size box springs at its Acton drop-off, 530 Main Street, on Tuesdays, Thursdays and Saturdays from 9 a.m. to noon; its volunteer pickup doesn't serve Cambridge. The Habitat Greater Boston ReStore lists mattresses and box springs among items it doesn't accept."}
+ ],
+ "listing_ids": ["cambridge-utec-mattress", "mattress-mattress-pro", "mattress-marvin", "mattress-handup", "loadup", "furnishing-hope", "household-goods-acton", "habitat-greater-boston-restore"]
+}

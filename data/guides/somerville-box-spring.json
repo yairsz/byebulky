@@ -1,0 +1,40 @@
+{
+ "path": "somerville/box-spring",
+ "city": "somerville",
+ "short": "Box spring",
+ "last_verified": "2026-11-05",
+ "title": "How to Get Rid of a Box Spring in Somerville ($55 Sticker)",
+ "meta_description": "Somerville charges $55 per box spring, counted separately from the mattress. Sticker, 311 scheduling, 2-item weekly limit, apartment and donation options.",
+ "h1": "How to get rid of a box spring in Somerville",
+ "intro": "A box spring can't go out with Somerville's regular trash: State law requires discarded mattresses and box springs to be recycled. The City picks them up at the curb by appointment, but each box spring needs its own $55 Disposal Sticker, and it counts as a separate item from the mattress. Here's how it works, who qualifies, and what to do if the City pickup doesn't fit.",
+ "quick_answers": [
+  {"q": "Can I put a box spring out with the trash in Somerville?",
+   "a": "No. The City of Somerville says State law requires all discarded mattresses and box springs to be recycled. Box springs put out with trash without a scheduled pickup are left on the curb and may be fined.",
+   "sources": [{"label": "City of Somerville: mattress and box spring recycling", "url": "https://www.somervillema.gov/mattressrecycling"}]},
+  {"q": "How much does it cost to get rid of a box spring in Somerville?",
+   "a": "The City charges $55 per box spring, on top of $55 for the mattress, because each one needs its own Disposal Sticker. Mattress Pro Recycling, which lists Somerville among the towns it serves, charges $125 per box spring on its booking page.",
+   "sources": [{"label": "City of Somerville: mattress and box spring recycling", "url": "https://www.somervillema.gov/mattressrecycling"}, {"label": "Mattress Pro Recycling", "url": "https://mattressprorecycling.com/schedule/"}]},
+  {"q": "Does a mattress and box spring count as one item or two in Somerville?",
+   "a": "Two. The City says mattresses and box springs are counted as separate items, you need one sticker for each, and recycling is limited to 2 items per property each week.",
+   "sources": [{"label": "City of Somerville: mattress and box spring recycling", "url": "https://www.somervillema.gov/mattressrecycling"}]},
+  {"q": "How do I get rid of a box spring from an apartment in Somerville?",
+   "a": "City pickup is only for households in buildings with 6 or fewer units that get regular City trash collection, and only at the curb. In a building with 7 or more units, the City says to contact your building manager or a mattress recycling hauler. LoadUp says its loaders carry items out from any room.",
+   "sources": [{"label": "City of Somerville: mattress and box spring recycling", "url": "https://www.somervillema.gov/mattressrecycling"}, {"label": "LoadUp Somerville", "url": "https://goloadup.com/junk-removal/ma/somerville/"}]},
+  {"q": "Can I donate a box spring in Somerville?",
+   "a": "Some charities take box springs in good condition with no rips, stains or bed bugs; the City suggests householdgoods.org and says to contact the organization first. Household Goods in Acton accepts standard-size box springs, but its volunteer pickup doesn't serve Somerville, so you'd drop off in Acton.",
+   "sources": [{"label": "City of Somerville: mattress and box spring recycling", "url": "https://www.somervillema.gov/mattressrecycling"}, {"label": "Household Goods", "url": "https://www.householdgoods.org/donate/donate-goods/donation-guidelines/"}]}
+ ],
+ "sections": [
+  {"h": "Why a box spring can't go in Somerville's trash",
+   "p": "The City of Somerville says State law requires that all discarded mattresses and box springs be recycled. Box springs aren't allowed to simply be placed on the curb with regular trash and recycling; unscheduled ones are left on the curb and, after a grace period at the start of the program, may be subject to fines. The City says wooden box spring frames can be made into garden mulch and wood-based alternative fuel, and the steel springs into new appliances or building materials."},
+  {"h": "City pickup: $55 sticker per box spring, then call 311",
+   "p": "Since February 1, 2026, you must buy a $55 Disposal Sticker for each unit, one for each mattress and one for each box spring. Buy it online at somervillema.gov/payonline (it can take up to 10 days to arrive, and you can't schedule until the physical sticker is in hand), at DPW at One Franey Road (check, credit card or money order, no cash), or at the City Clerk's Office in City Hall, 93 Highland Avenue. Then contact 311 (617-666-3311) no later than 3:30 p.m. the day before collection. Pickup is one day after your regular trash day, except Friday trash households, who also get Friday pickup. Put the stickered box spring on the curb on public property after 4 p.m. the day before and by 7 a.m., with nothing on top and a clear 36-inch path on the sidewalk. Cancel with 311 by 12 p.m. the day before."},
+  {"h": "The 2-items-a-week limit and what the City refuses",
+   "p": "The City limits mattress and box spring recycling to 2 items per property each week, and a mattress and its box spring count as two. The City accepts all box springs, but not broken, crushed or twisted items, excessively torn, soiled or moldy items, or bed-bug-infested ones; if you suspect bed bugs or it's soiled, contact 311 for special instructions before buying a sticker."},
+  {"h": "Apartment in a building with 7+ units, or more than 2 items",
+   "p": "Residents of buildings with more than 6 units with private trash services aren't eligible; the City says to contact your building manager, and that those buildings, or anyone past the two-item weekly limit, need a mattress recycling hauler for commercial pickup. Mattress Pro Recycling lists Somerville among the towns it serves and charges $125 per box spring on its booking page. LoadUp's Somerville price list shows furniture and mattress removal from $120, and LoadUp says its loaders carry items out from any room."},
+  {"h": "Donating it, or having the store take it",
+   "p": "The City says some (not all) charities accept box springs in good condition with no rips, stains or bed bugs, and suggests householdgoods.org; contact the organization first. Household Goods accepts standard-size box springs and refuses mattresses with any stains or rips; it takes drop-offs at 530 Main Street, Acton, on Tuesdays, Thursdays and Saturdays from 9 a.m. to noon, because its volunteer pickup only covers Acton-area towns. If you're buying a new mattress, the City suggests asking the retailer whether pickup and disposal is included."}
+ ],
+ "listing_ids": ["somerville-mattress-recycling", "mattress-mattress-pro", "loadup", "household-goods-acton"]
+}

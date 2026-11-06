@@ -70,3 +70,6 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [x] Newton: appliances guide (PUBLISHED 2026-11-02 → /newton/appliances/)
 - [x] Quincy: couch/furniture guide (PUBLISHED 2026-11-04) (two bulky items per week rule)
 - [x] Newton: couch guide (PUBLISHED 2026-11-04) ($20 bulky item pickup, 150 lb limit)
+- [x] Somerville box spring guide (published 2026-11-05)
+- [x] Cambridge box spring guide (published 2026-11-05)
+- [ ] Box spring guides for Quincy, Newton, Brookline (row 8 fan-out)
