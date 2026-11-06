@@ -14,12 +14,12 @@
    "sources": [{"label": "City of Somerville: mattress and box spring recycling", "url": "https://www.somervillema.gov/mattressrecycling"}, {"label": "City of Somerville: trash and recycling", "url": "https://www.somervillema.gov/trash-and-recycling"}]
   },
   {
-   "q": "Does Somerville pick up furniture?",
+   "q": "Does Somerville pick up furniture with regular trash?",
    "a": "Yes. The City picks up two pieces of furniture per week for free, curbside with your regular trash. Tape any glass or mirrors and tie down or remove drawers and doors.",
    "sources": [{"label": "City of Somerville: trash and recycling", "url": "https://www.somervillema.gov/trash-and-recycling"}]
   },
   {
-   "q": "Where does Somerville's recycling go?",
+   "q": "Where does Somerville residential recycling go?",
    "a": "To the Casella facility in Charlestown, where the City says items from the blue recycling carts are sorted and recycled. If your trash or recycling is missed, the City says to report it no later than 3:30 p.m. the day after your scheduled collection.",
    "sources": [{"label": "City of Somerville: trash and recycling", "url": "https://www.somervillema.gov/trash-and-recycling"}]
   },
@@ -29,12 +29,12 @@
    "sources": [{"label": "City of Somerville: trash and recycling", "url": "https://www.somervillema.gov/trash-and-recycling"}]
   },
   {
-   "q": "Does Somerville pick up TVs?",
+   "q": "Does Somerville pick up TVs and computer monitors?",
    "a": "Yes, for free. Call 311 to schedule a curbside pickup of a TV or computer monitor, or drop it off at the DPW Yard, 1 Franey Road. TVs with broken glass aren't accepted.",
    "sources": [{"label": "City of Somerville: trash and recycling", "url": "https://www.somervillema.gov/trash-and-recycling"}, {"label": "City of Somerville: electronic waste recycling program", "url": "https://www.somervillema.gov/departments/dpw/programs/electronic-waste-recycling-program"}]
   },
   {
-   "q": "What large items won't Somerville take?",
+   "q": "What large items won't Somerville bulk pickup take?",
    "a": "Exercise equipment, exercise bikes, metal cabinets, building materials such as toilets, sinks and windows, motorized lawn mowers, snow blowers and car parts must be disposed of privately.",
    "sources": [{"label": "City of Somerville: trash and recycling", "url": "https://www.somervillema.gov/trash-and-recycling"}]
   }

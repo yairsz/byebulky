@@ -358,7 +358,7 @@ def _city_prog(c, k):
     return next((x for x in c["listings"] if x["type"] == "city bulk pickup" and rx.search(x["id"])), None)
 
 def mattress_bulk_faq(c):
-    """'Does bulk pickup take mattresses in {city}?' (top Search Console query, run #45). Built only from the City's own
+    """'Does {city} bulk pickup take mattresses?' (self-contained; keeps GSC 'bulk pickup'+'mattresses' terms, run #45/#PM). Built only from the City's own
     furniture and mattress listings: the furniture listing's verbatim mattress exclusion, the mattress program's name,
     first cost sentence, day sentence and verbatim not-accepted items."""
     city = c["name"]; fur = _city_prog(c, 0); mat = _city_prog(c, 1)
@@ -375,7 +375,7 @@ def mattress_bulk_faq(c):
     if na:
         a += " Not accepted by that program: " + "; ".join(na) + "."
     # Cites the mattress program it names, plus the furniture program whose exclusion it quotes (2026-11-04).
-    return {"q": f"Does bulk pickup take mattresses in {city}?", "a": a.strip(),
+    return {"q": f"Does {city} bulk pickup take mattresses?", "a": a.strip(),
             "sources": faq_sources([mat] + ([fur] if excl else []))}
 
 def city_faq(c):

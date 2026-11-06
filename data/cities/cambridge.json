@@ -9,7 +9,7 @@
  "intro": "Cambridge's bulk item pickup is free for one piece of furniture a week, set out with your regular trash, but large appliances need a paid permit and mattresses are booked separately with the City's contractor, UTEC, for $45 each. Here's what each option takes, what it costs, and where we got it.",
  "quick_answers": [
   {
-   "q": "Does Cambridge pick up furniture?",
+   "q": "Does Cambridge pick up furniture with regular trash?",
    "a": "Yes. Each household can put out one piece of bulky waste, such as a couch, table or chair, per week with regular trash collection, free. Metal furniture is banned from the trash; metal desks and filing cabinets need a free permit.",
    "sources": [
     {
@@ -37,7 +37,7 @@
    ]
   },
   {
-   "q": "Who collects trash in Cambridge?",
+   "q": "Who collects residential trash in Cambridge, MA?",
    "a": "The City does. Cambridge Public Works collects trash, recycling, food waste and yard waste from most residential buildings, per the City. Report a missed pickup after 4 p.m. on your collection day or before 9 a.m. the day after, or call Public Works at 617-349-4800. For construction and other waste, the City publishes a list of private haulers.",
    "sources": [
     {
@@ -75,7 +75,7 @@
    ]
   },
   {
-   "q": "Is there a drop-off for large items in Cambridge?",
+   "q": "Is there a City drop-off for mattresses or large items in Cambridge?",
    "a": "The City says there are no drop-off locations in Cambridge for mattresses. Its Recycling Center at 147 Hampshire Street takes small electronics and scrap metal, but not appliances.",
    "sources": [
     {
@@ -89,7 +89,7 @@
    ]
   },
   {
-   "q": "What can't go in the trash in Cambridge?",
+   "q": "What large items can't go in the trash in Cambridge?",
    "a": "Large appliances, metal items such as filing cabinets and furniture, mattresses, textiles, recyclables, yard waste, mercury items and non-alkaline batteries are banned from Cambridge trash.",
    "sources": [
     {

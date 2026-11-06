@@ -11,7 +11,7 @@
   },
   "quick_answers": [
     {
-      "q": "Does Newton have bulky item pickup?",
+      "q": "Does Newton, MA have bulky item pickup?",
       "a": "Yes. Pay $20 per item online and the City arranges curbside collection, usually on Thursday of the following week if you pay by 10 p.m. Sunday. Set it out by 7 a.m. on collection day.",
       "sources": [{"label": "City of Newton: large-item flyer", "url": "https://www.newtonma.gov/home/showpublisheddocument/130574/639227339524870000"}]
     },
@@ -31,12 +31,12 @@
       "sources": [{"label": "City of Newton: Resource Recovery Center", "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-resource-recovery-center"}]
     },
     {
-      "q": "Is there a bulk waste drop off in Newton?",
+      "q": "Is there a bulk waste drop-off for Newton residents?",
       "a": "Yes, at the Resource Recovery Center, 115 Rumford Ave., for Newton residents only. It takes mattresses and box springs ($35 each), appliances, scrap metal and metal items at no cost, electronics free except TVs and monitors ($25 each), and large rigid plastic. It does not take couches; those use the $20 bulky pickup.",
       "sources": [{"label": "Newton: Recycle at the Resource Recovery Center", "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/recycle-at-the-resource-recovery-center"}]
     },
     {
-      "q": "What won't Newton take as bulky waste?",
+      "q": "What items won't Newton take as bulky waste?",
       "a": "Mattresses, box springs, appliances, metal, electronics, items over 150 lbs, cardboard, construction materials, and move-out or clean-out loads, which need a private hauler.",
       "sources": [{"label": "City of Newton: managing household trash", "url": "https://www.newtonma.gov/government/public-works/sustainable-materials-management/managing-solid-waste"}]
     }
