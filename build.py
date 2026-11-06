@@ -69,10 +69,10 @@ EDITED_2026_11_04 = ["/", "/boston/", "/boston/appliances/", "/boston/couch/", "
                      "/quincy/mattress/", "/boston-area-mattress-disposal-cost/", "/brookline/mattress/",
                      "/cambridge/mattress/", "/newton/mattress/", "/somerville/mattress/"]
 PRIVACY_UPDATED = "2026-11-04"   # matches privacy.EFFECTIVE
-# Pages whose visible body changed on 2026-11-05 (home cost-checker button, Boston hub chips,
-# Boston mattress booking button). "Last verified" stays the source-read date; MODIFIED takes the later of
-# that and this. Never use MODIFIED in a verified/checked sentence.
-EDITED_2026_11_05 = ["/", "/boston/", "/boston/mattress/"]
+# Pages whose visible wording changed on 2026-11-05 (home cost-checker button, Boston hub chips,
+# Boston mattress booking button, donation-rules/paint title+meta CTR test). "Last verified" stays the
+# source-read date; MODIFIED takes the later of that and this. Never use MODIFIED in a verified/checked sentence.
+EDITED_2026_11_05 = ["/", "/boston/", "/boston/mattress/", "/boston/donation-rules/", "/boston/paint/"]
 
 def org_ld():
     return {"@type": "Organization", "@id": base_url() + "/#org", "name": CFG["site_name"], "url": base_url() + "/",
