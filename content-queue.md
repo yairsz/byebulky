@@ -60,7 +60,7 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [ ] Re-verify Household Goods phone in boston/cambridge/somerville listings (978-763-1198 there; householdgoods.org showed 978-635-1710 on 2026-10-25)
 - [ ] Newton, MA: appliances guide (/newton/appliances/): $25 whitegoods curbside, free RRC drop-off, $25 TV/monitor drop-off (data already in newton.json)
 - [ ] Newton: re-check Resource Recovery Center winter hours after Oct 31, 2026
-- [ ] Cambridge, Somerville, Newton, Quincy: box spring guides (each city counts box springs as separate items; reuse city listings)
+- [x] Cambridge, Somerville, Newton, Quincy: box spring guides (Cambridge+Somerville 2026-11-05; Quincy+Newton 2026-11-06; Brookline also 2026-11-06)
 - [ ] Boston mattress guide: link to /boston/box-spring/ from the box spring sentence (needs a build.py prose-link hook)
 - [ ] Somerville appliances: ask 311 or find a City page stating which day stickered white goods are collected (not stated 2026-11-01)
 - [ ] Cambridge: re-check the permit portal (now cambridgema.portal.opengov.com) for fee text once it renders without JS; City page vs portal differ on exercise equipment (paid 'larger motorized' vs free 'exercise equipment')
@@ -72,4 +72,4 @@ Tick `[x]` when published, and log it in published-log.md. Keep about 30 items q
 - [x] Newton: couch guide (PUBLISHED 2026-11-04) ($20 bulky item pickup, 150 lb limit)
 - [x] Somerville box spring guide (published 2026-11-05)
 - [x] Cambridge box spring guide (published 2026-11-05)
-- [ ] Box spring guides for Quincy, Newton, Brookline (row 8 fan-out)
+- [x] Box spring guides for Quincy, Newton, Brookline (published 2026-11-06 → /quincy/box-spring/, /newton/box-spring/, /brookline/box-spring/)
