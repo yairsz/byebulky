@@ -664,6 +664,23 @@ def guide_listings(g, city):
     rx = GUIDE_ITEM_RX.get(g["short"])
     return ls, rx
 
+COMPANION = {"Mattress": ("Box spring", "Getting rid of the box spring too?", "box spring"),
+             "Box spring": ("Mattress", "Getting rid of the mattress too?", "mattress")}
+
+def companion_link(g, city):
+    """In-body contextual link between a city's mattress and box spring guides (added 2026-11-07, Sturm/Quaid:
+    contextual links beat list links). The card count is computed from the target guide's own listings."""
+    c = COMPANION.get(g["short"])
+    if not c:
+        return ""
+    t = next((x for x in GUIDES if x["city"] == g["city"] and x["short"] == c[0]), None)
+    if not t:
+        return ""
+    tls, trx = guide_listings(t, city)
+    n = len([l for l in tls if item_card_ok(l, trx)])
+    return (f'<p>{e(c[1])} Our <a href="{U("/" + t["path"] + "/")}">{e(city["name"])} {e(c[2])} guide</a> '
+            f'lists {n} option{"s" if n != 1 else ""} for {e(city["name"])} that take{"s" if n == 1 else ""} {e("box springs" if c[2] == "box spring" else "mattresses")}, each with its source.</p>')
+
 def guide_page(g, city):
     set_page(f"/{g['path']}/")
     ls, rx = guide_listings(g, city)
@@ -673,7 +690,7 @@ def guide_page(g, city):
     secs = "".join(f"<h2>{e(s['h'])}</h2><p>{e(s['p'])}</p>" + (('<p class="meta">Sources: ' + " · ".join(f'<a href="{e(r["url"])}" rel="nofollow noopener" target="_blank">{e(r["label"])}</a>' for r in s["sources"]) + '</p>') if s.get("sources") else "") for s in g.get("sections", []))
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › <a href="{U('/' + city['slug'] + '/')}">{e(city['name'])}</a> › {e(g['short'])}</p>
 <h1>{e(g['h1'])}</h1><p class="lead">{e(g['intro'])}</p><p class="meta">Last verified {e(g['last_verified'])}{(" · page updated " + e(MODIFIED[f"/{g['path']}/"])) if MODIFIED.get(f"/{g['path']}/", g['last_verified']) != g['last_verified'] else ""}</p>
-{city_hub_line(g, city)}
+{city_hub_line(g, city)}{companion_link(g, city)}
 {qa_block(g.get("quick_answers"), "Quick answers: " + g["short"].lower() + " in " + city["name"])}{guide_glance(ls_cards, g, city)}{secs}{yt_embed('/' + g['path'] + '/', YT_CHANNEL, 'ByeBulky')}{loadup_slot()}<h2 id="all-options">{e(options_heading(g, city, len(ls_cards)))}</h2>{''.join(listing_card(l, rx) for l in ls_cards)}
 <p><a href="{U('/' + city['slug'] + '/')}">See all {e(city['name'])} options →</a></p>{sibling_guides(g, city)}{same_item_other_cities(g)}"""
     for x in g.get("quick_answers", []):
